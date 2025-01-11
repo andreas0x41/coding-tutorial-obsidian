@@ -8,3 +8,7 @@ tags:
 ---
  
 just some simple text
+
+and linking to the python info
+
+[[Python Basics]]
