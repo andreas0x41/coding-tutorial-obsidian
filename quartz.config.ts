@@ -73,7 +73,7 @@ const config: QuartzConfig = {
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
-      // TODO Plugin.HardLineBreaks(),   automatically converts single line breaks in Markdown text into hard line breaks in the HTML output
+      // Plugin.HardLineBreaks(),   automatically converts single line breaks in Markdown text into hard line breaks in the HTML output
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [
