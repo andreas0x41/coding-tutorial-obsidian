@@ -69,8 +69,13 @@ const config: QuartzConfig = {
       }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
-      Plugin.TableOfContents(),
-      Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
+      Plugin.TableOfContents({
+        maxDepth: 3,
+      }),
+      Plugin.CrawlLinks({
+        markdownLinkResolution: "shortest",
+        openLinksInNewTab: true,
+      }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
       // Plugin.HardLineBreaks(),   automatically converts single line breaks in Markdown text into hard line breaks in the HTML output
