@@ -1,6 +1,10 @@
 ---
 title: "test1"
+author: Andreas Patuzzi
+company: Auroville Institute of Applied Technology
 draft: false
+description:
+aliases:
 tags:
   - 
 ---
