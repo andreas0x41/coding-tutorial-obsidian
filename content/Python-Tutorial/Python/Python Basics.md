@@ -1,5 +1,5 @@
 ---
-title: "test1"
+title: Python Basics
 draft: false
 tags:
   - Python
