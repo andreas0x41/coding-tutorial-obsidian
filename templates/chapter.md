@@ -1,11 +1,9 @@
 ---
-title: "<% tp.file.title %>"
+title: <% tp.file.title %>
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-description:
-aliases:
+aliases: 
 tags:
-  - 
 ---
  
