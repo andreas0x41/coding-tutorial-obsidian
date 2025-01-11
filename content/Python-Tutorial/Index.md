@@ -4,8 +4,7 @@ longform:
   title: Python-Tutorial
   workflow: Default Workflow
   sceneFolder: /
-  scenes:
-    - test1
+  scenes: []
   sceneTemplate: templates/chapter.md
   ignoredFiles: []
 ---

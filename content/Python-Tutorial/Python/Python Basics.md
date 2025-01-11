@@ -1,11 +1,6 @@
 ---
-title: Python Basics
-author: Andreas Patuzzi
-created: 2023-01-01
-updated: 2024-11-01
-license: CC BY-SA 4.0
-copyright: © 2024 Andreas Patuzzi
-description: This is a small Cheatsheet for the python syntax.
+title: "test1"
+draft: false
 tags:
   - Python
   - Cheatsheet
@@ -85,22 +80,6 @@ def output(a: str, b: int) -> bool:
 ```
 
 # Operators
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Assignment with =, can be combined with arithmetic and bitwise operators e.g. x<<:=1.
 Walrus operator :=, additionally returns the assigned value, but can't be combined with operators.
 
@@ -479,32 +458,6 @@ import package_name.module_name
 
 ## Common Modules
 https://pypi.org/
-
-| Module | Description |
-| ---- | ---- |
-| [[Modules/os\|os]] | functions for interacting with the os, like file operations, environment variables, directory operations, ... |
-| [[Modules/sys\|sys]] | variables used or maintained by the interpreter, functions that interact with the Python runtime environment |
-| [[Modules/math\|math]] | mathematical functions and operations for numerical computations |
-| [[Modules/time\|time]] | functions for working with time, including timing measurements and formatting |
-| [[Modules/datetime\|datetime]] | use and manipulate dates, times, timestamps, timezones, ... |
-| [[Modules/random\|random]] | generate random numbers, selecting random elements, and implementing random-based algorithms |
-| [[Modules/json\|json]] | working with JSON data, encoding, decoding, ... |
-| [[Modules/csv\|csv]] | functionality for reading from and writing to CSV files |
-| [[Modules/collections\|collections]] | additional data structures and utility functions, named tuples, counters, deques, ... |
-| [[Modules/logging\|logging]] | flexible framework for logging messages and events in Python applications |
-| [[Modules/argparse\|argparse]] | Simplifies the process of defining and handling command-line arguments and options |
-| [[Modules/flask\|flask]] | lightweight framework for building web applications |
-| [[Modules/networkx\|networkx]] | tools for the study of the structure and dynamics of complex networks |
-| [[Modules/opencv-python\|opencv-python]] | computer vision and image processing tasks using OpenCV library |
-| [[Modules/tkinter\|tkinter]] | standard Python interface to the Tk GUI toolkit |
-| [[Modules/tensorflow\|tensorflow]] | open-source machine learning framework for building and training neural networks |
-| Scikit-Learn | machine learning library with tools for classification, regression, clustering, ... |
-| PyTorch | deep learning library, tensor computation, neural network building blocks, ... |
-| NLTK | Natural Language Toolkit for working with human language data, tokenization, stemming, tagging, parsing, ... |
-| [[Modules/numpy\|numpy]] | handling of big multidimensional arrays, vectors and matrices |
-| [[Modules/matplotlib\|matplotlib]] | plotting library for creating static, animated, and interactive graphs and visualizations |
-| dtale | pandas dataframe explorer, datascience |
-
 # OOP
 ## Standard Class
 ```python
