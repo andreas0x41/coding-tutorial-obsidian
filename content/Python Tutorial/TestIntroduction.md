@@ -4,8 +4,8 @@ draft: false
 tags:
   - 
 ---
- 
- 
+
+
 https://docs.python.org/3/
 https://docs.python.org/3/library/functions.html
 https://learnxinyminutes.com/docs/python/
@@ -77,6 +77,22 @@ def output(a: str, b: int) -> bool:
 ```
 
 # Operators
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Assignment with =, can be combined with arithmetic and bitwise operators e.g. x<<:=1.
 Walrus operator :=, additionally returns the assigned value, but can't be combined with operators.
 
@@ -354,172 +370,4 @@ ensure proper automatic `___enter___` (open) and `___exit___` (close) even in ca
 ```python
 with open(path, mode) as file:
 	file.read(), file.write(content), ...
-```
-
-# Exception Handling
-```python
-try:
-	# code block
-	raise ExceptionType("Error message") # raise/throw exception
-except ExceptionType1:
-	# exception handling for ExceptionType1
-except (ExceptionType2, ExceptionType3):
-	# exception handling for ExceptionType2 and ExceptionType3
-except Exception as e:
-	# exception handling for other exceptions
-else:
-	# if none exception
-finally:
-	#always
-```
-
-# Functions
-## Standard Functions
-```python
-def funcName(par1, par2=default, *args, **kwargs): # function with par1, par2
-	# *args takes all remaining unnamed arguments as tuple
-	# **kwargs takes all all remaining named arguments as dictionary
-	global outerVar # include variable from global scope to change it
-	def innerFuncName(): # define inner function
-		# code block
-	# code block
-	return returnValues
-```
-## Iterator Generator
-```python
-def custom_iterator():
-    while True: 
-        # Generate the next value
-        yield value # yield value but stay in function
-
-for item in custom_iterator():
-    # Process each item one by one, you can get net item with next(iterator)
-```
-## lambda
-```python
-lambda arguments: expression # inline function, e.g. lambda x, y: x + y
-```
-## Decorators
-decorate/wrap a function
-```python
-def decorator(func):
-    def wrapper():
-        print("Before function execution")
-        func()
-        print("After function execution")
-    return wrapper
-
-@decorator
-def function():
-    print("Hello, world!")
-```
-
-# Packages and Import
-## Install Packages with pip
-https://docs.python.org/3/installing/index.html
-https://pip.pypa.io/en/stable/
-```cmd
-python -m pip --version   # get pip version
-```
-```cmd
-python -m pip install SomePackage   # install SomePackage
-```
-```cmd
-python -m pip install -r requirements.txt   # install Packages listed in requirements.txt
-```
-```cmd
-python -m pip install SomePackage==1.0.4    # install SomePackage with specific version
-```
-```cmd
-python -m pip install "SomePackage>=1.0.4"  # install SomePackage with minimum version
-```
-```cmd
-python -m pip install --upgrade SomePackage   # upgrade SomePackage
-```
-```cmd
-python -m pip uninstall SomePackage   # uninstall SomePackage
-```
-```cmd
-python -m pip list   # get list of installed Packages
-```
-## import
-you can import installed packages as well as your own python files
-```python
-import module_name
-from module_name import object_name
-from module_name import object1, object2, ...
-from module_name import *
-import module_name as alias
-import package_name.module_name
-```
-
-# OOP
-## Standard Class
-```python
-class className:
-	classAttribute = 0            # classAttribute shared among instances
-    def __init__(self, par1, par2, par3):
-        # Constructor - Initializes the object
-        self.publicVar = par1
-        self._protectedVar = par2 # primarely hinting
-        self.__privateVar = par3  # no strict privacy in python	
-	
-    def methodName(self, par):    # methods like functions, self as instance reference
-        return returnValues
-	
-    @classmethod
-    def methodName(cls, par):     # cls as class reference, shared among instances
-        return returnValues
-    
-    @staticmethod
-    def methodName(par):          # method without class or instance reference
-        return returnValues
-	
-    @property
-    def attributeName(self):      # getter, defines get for attributeName
-        return self.attributeName
-	
-    @attributeName.setter
-    def attributeName(self, val): # defines set for attributeName
-        self.attributeName = val
-	
-    @attributeName.deleter
-    def attributeName(self):      # defines del for attributeName
-        del self.attributeName
-
-objName = className(a, b, c)      # calls __init__ and returns the object
-objName.publicVar      objName._protectedVar      objName._className__privateVar
-objName.methodName(par)
-objName.methodName     objName.methodName=0       del objName.methodName  
-```
-## Magic Methods
-Provide additional functionality with built in operators, methods, ...
-```python
-__repr__(self)                    # return string representation of object
-__len__(self)                     # called when using len()
-__getitem__(self, key)            # get item using [] indexing
-__setitem__(self, key, value)     # set item using [] indexing
-__delitem__(self, key)            # del item using [] indexing
-__iter__(self)                    # call when object used as iterator
-__next__(self)                    # invoked by iterator to get next element, used with iter
-__enter__(self)                   # setup and entry for context manger
-__exit__(self, ...)               # release and exit for context manager
-```
-## Inheritance
-```python
-class baseClass:
-    def __init__(self, par):      # base class initialization logic        
-	
-    def baseMethod1(self, par):   # base class method1
-    
-    def baseMethod2(self, par):   # base class method1
-
-class derivedClass(baseClass):
-    def __init__(self, par):      # if not defined base __init__ is used
-        super().__init__(par)     # call base class __init__	
-        # derivedClass initialization logic
-	
-    def baseMethod1(self, par):   # override base class method        
-	
-    def derivedMethod(self, par): # derived class method
 ```
