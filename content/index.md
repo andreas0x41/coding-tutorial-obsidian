@@ -1,7 +1,7 @@
 ---
 title: Welcome to Doing It in Public
 ---
-I'm [Nicole van der Hoeven](https://nicolevanderhoeven.com), and *Doing It in Public* is a book I'm writing about learning in public: <span style="background:#d3f8b6">what it is, why you should do it, and practical instructions for how to do it. To keep</span> up with the spirit of the book, I'm **attempting to write the book itself in public. That means that depending on when y<font color="#1f497d">ou're reading this, you may still find the book in various stag</font>es of disar**ray. Be warned! Here be dragons.
+I'm [Nicole van der Hoeven](https://nicolevanderhoeven.com), and *Doing It in Public* is a book I'm writing about learning in public: <span style="background:#d3f8b6">what it is, why you should do it, and practical instructions for how to do it. To keep</span> up with the spirit of the book,I'm attempting to write the book itself in public. That means that depending on when you're reading this, you may still find the bookin various stages of disarray. Be warned! Here be dragons.
 
 Here's a video of me talking about the context behind this book and how I came up with the idea:
 
