@@ -13,10 +13,15 @@ and linking to the python info
 
 [[Python Basics]]
 
-[!info] this is some random information
+> [!info] this is some random information
+>
+>this is inside
 
-this is inside
+
+> [!warning]- this is a warning for you
+> and it is also colapsed by default
 
 
-[!warning]- this is a warning for you
-and it is also colapsed by default
+
+> [!bug] Title
+> Contents
