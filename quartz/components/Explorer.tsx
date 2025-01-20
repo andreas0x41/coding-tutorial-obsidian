@@ -10,7 +10,7 @@ import { i18n } from "../i18n"
 
 // Options interface defined in `ExplorerNode` to avoid circular dependency
 const defaultOptions = {
-  // folderClickBehavior: "collapse",
+  folderClickBehavior: "collapse",
   folderDefaultState: "collapsed",
   useSavedState: true,
   mapFn: (node) => {
@@ -89,7 +89,7 @@ export default ((userOpts?: Partial<Options>) => {
         <button
           type="button"
           id="explorer"
-          // data-behavior={opts.folderClickBehavior}
+          data-behavior={opts.folderClickBehavior}
           data-collapsed={opts.folderDefaultState}
           data-savestate={opts.useSavedState}
           data-tree={jsonTree}
