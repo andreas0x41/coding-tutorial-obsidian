@@ -32,7 +32,13 @@ print("Hello World")
 ```
 
 
+[^1] dsfasd fasd s
 # In- and Output
+#testtag123
+adsfas
+asdf
+asdf
+
 ```python
 input(strPrompt)
 ```
@@ -100,7 +106,6 @@ Walrus operator :=, additionally returns the assigned value, but can't be combin
 | **       | Power          | a ** b | pow(a, b)      | `__pow__(self, other)`      |
 
 ## Relational Operators
-
 
 | Operator | Description      | Syntax | Function | Magic Method          |
 |----------|------------------|--------|----------|-----------------------|
@@ -532,3 +537,5 @@ class derivedClass(baseClass):
 	
     def derivedMethod(self, par): # derived class method
 ```
+
+[^1]: test Footnote 1
