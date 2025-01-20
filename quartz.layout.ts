@@ -49,11 +49,11 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Backlinks(),
   ],
   right: [
-    Component.Explorer(),
+    // Component.Explorer(),
     Component.FolderContent(),
-    Component.Head(),
-    Component.NotFound(),
-    Component.PageTitle(),
+    // Component.Head(),
+    // Component.NotFound(),
+    // Component.PageTitle(),
   ],
 }
 
