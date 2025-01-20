@@ -23,8 +23,9 @@ export const sharedPageComponents: SharedLayout = {
   ],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      "Andreas Patuzzi": "linktr.ee/andrea0x41",
+      "AIAT College": "linktr.ee/aiat.general",
+      Quartz: "https://github.com/jackyzha0/quartz",
     },
   }),
 }
@@ -48,11 +49,11 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Backlinks(),
   ],
   right: [
-    Component.ArticleTitle(),
-    Component.Backlinks(),
-    Component.Breadcrumbs(),
-    Component.ContentMeta(),
-    Component.Content(),
+    Component.Explorer(),
+    Component.FolderContent(),
+    Component.Head(),
+    Component.NotFound(),
+    Component.PageTitle(),
   ],
 }
 
