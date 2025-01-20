@@ -20,6 +20,7 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     generateSocialImages: false, //! preview when exporting     https://quartz.jzhao.xyz/features/social-images
+    // https://www.opengraph.xyz/url/https%3A%2F%2Fadp13805.github.io%2Fcoding-tutorial-obsidian
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
