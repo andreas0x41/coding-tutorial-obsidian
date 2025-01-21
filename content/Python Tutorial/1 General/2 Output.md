@@ -15,13 +15,16 @@ Python has one primary function for console output called `print()`.
 
 # Simple Print
 In general you can give the print function any value of any [[4 Datatypes|datatype]] and it will print it to the console.
-
+## Print Hello World
 This for example will print the message "Hello World" to the console.
+
 ```python
 print("Hello World") # -> Hello World
 ```
 
+## Printing Multiple Datatypes
 You can also print any other values of any [[4 Datatypes|datatype]] using this function.
+
 ```python
 print(12) # -> 12
 print(2.5) # -> 2.5
@@ -31,7 +34,7 @@ print("Some more text") # -> Some more text
 
 By default, after every printed value, there will be a Line break, so the next value will be in a new line. The code above will output the following text to the console. You can see that each output is in its own line.
 
-```cmd
+```
 12
 2.5
 True
@@ -44,8 +47,6 @@ The print fuction can take multiple comma separated values. In the output, the v
 ```python
 print("Hello", "World", "Python")
 ```
-
-
 
 # Additional Arguments for Print
 
