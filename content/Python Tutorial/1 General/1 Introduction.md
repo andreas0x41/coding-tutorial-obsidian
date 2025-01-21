@@ -1,5 +1,5 @@
 ---
-title: Python <% tp.file.title %>
+title: Python Introduction
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
@@ -10,7 +10,7 @@ tags:
   - AECD
   - GEES
 ---
-
+# Syntax
 
 
 

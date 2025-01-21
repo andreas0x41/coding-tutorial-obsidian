@@ -1,5 +1,5 @@
 ---
-title: Python <% tp.file.title %>
+title: Python Datatypes
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false

@@ -11,7 +11,6 @@ tags:
   - PythonBasics
   - PythonCheatsheet
 ---
-test reference [[Python Basics#Variables]]
 
 https://docs.python.org/3/
 https://docs.python.org/3/library/functions.html
@@ -34,16 +33,6 @@ print("Hello World")
 
 [^1] dsfasd fasd s
 # In- and Output
-#testtag123
-adsfas
-asdf
-asdf
-fadsadf
-
-dfadsf
-asd
-f
-sd   
 
 ```python
 input(strPrompt)

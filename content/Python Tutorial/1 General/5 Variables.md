@@ -1,5 +1,5 @@
 ---
-title: Python Introduction
+title: Python Variables
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
@@ -10,9 +10,6 @@ tags:
   - AECD
   - GEES
 ---
-# Chapter 1
-<sup>this is only for some students</sup>
-
 
 
 
