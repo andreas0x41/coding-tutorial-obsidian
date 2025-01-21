@@ -1,5 +1,5 @@
 ---
-title: Python Datatypes
+title: 4 Datatypes
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
