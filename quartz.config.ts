@@ -13,8 +13,7 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "google",
-      tagId: `<!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9YLBKTC73"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-Z9YLBKTC73');</script>`,
+      provider: "plausible",
     },
     locale: "en-US",
     baseUrl: "quartz.jzhao.xyz",
