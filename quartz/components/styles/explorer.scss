@@ -98,7 +98,9 @@ button#explorer {
     }
   }
   > #explorer-ul {
+    width: 100%;
     max-height: none;
+    scrollbar-width: thin;
   }
 }
 
