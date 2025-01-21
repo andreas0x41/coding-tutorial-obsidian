@@ -9,3 +9,9 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
+
+
+
+
+# Ignore Smart Environment folder
+.smart-env
