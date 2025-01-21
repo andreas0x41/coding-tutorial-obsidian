@@ -5,6 +5,10 @@ company: Auroville Institute of Applied Technology
 draft: false
 aliases: 
 tags:
+  - Python
+  - SDML
+  - AECD
+  - GEES
 ---
 
 

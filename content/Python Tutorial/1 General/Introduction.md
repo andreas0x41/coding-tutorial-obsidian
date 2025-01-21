@@ -6,7 +6,13 @@ draft: false
 aliases: 
 tags:
   - Python
+  - SDML
+  - AECD
+  - GEES
 ---
+# Chapter 1
+<sup>this is only for some students</sup>
+
 
 
 
