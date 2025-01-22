@@ -14,7 +14,7 @@
     {
       "label": "Run Quartz Git Sync",
       "type": "shell",
-      "command": "npx quartz sync",
+      "command": "npx quartz sync\nstart \"C:\\Program Files\\Obsidian\\Obsidian.exe\"",
       "group": {
         "kind": "build",
         "isDefault": true

@@ -12,7 +12,11 @@ tags:
   - Basics
 ---
 
+# Simple Datatypes
 
+
+
+# Combined Datatypes
 
 
 
