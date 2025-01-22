@@ -65,10 +65,28 @@ if x > 5:
     print("x is greater than 5")
 ```
 
-# Sources
+# Run Python Online
+The are websites that easily allow you to run python code online. If you want to run python online you have to be careful that what you want to do works and behaves similar to actually running the code on your machine. Many online compilers struggle with error messages, debugging, input, imports, ....
 
-# Online Compilers
+Below you can find a few websites that overall do a good job. It can be very helpful to have one of them open on the side while reading this tutorial, so that you can always copy, paste, run, edit, ... code from the notes to understand it better.
+## Code Chef
+<https://www.codechef.com/blogs/how-to-use-code-visualizer>
+This website has the advantage of also including a visualizer. this enables you to run code line by line, see variables and control flow and understand it much easier. 
+[Code Chef Visualizer Tutorial](https://www.codechef.com/blogs/how-to-use-code-visualizer)
+The drawback of this is that it will run the code on a separate machine so you have to provide all input values before running
+## Online GDB
+<https://www.onlinegdb.com/online_python_compiler>
+This website has the advantage of being very similar to a real command line execution. Inputs are in real time and just like in the command line. There is also Debugger available in case you want/have to use it.
+[Online GDB Debugger Tutorial](https://www.codechef.com/blogs/how-to-use-code-visualizer)
 
+## Google Colab
+<https://colab.research.google.com/>
+Google Colab is a powerful online tool for running Jupyter[^1] Notebooks online. It's a great fit for bigger projects and cloud usage of Jupyter[^1].
 # Python Installation
 
 # Visual Studio Code Installation
+
+
+# Sources
+
+[^1]: Project Jupyter is a combination of Python code and formatted Text for Documentation, it's great for explaining code, visualizations, ...
