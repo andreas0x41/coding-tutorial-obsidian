@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "Coding Notes",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -80,7 +80,7 @@ const config: QuartzConfig = {
         markdownLinkResolution: "shortest",
         openLinksInNewTab: true,
       }),
-      Plugin.Description(),
+      Plugin.Description({ descriptionLength: 250 }),
       Plugin.Latex({ renderEngine: "katex" }),
       // Plugin.HardLineBreaks(),   automatically converts single line breaks in Markdown text into hard line breaks in the HTML output
     ],
