@@ -14,37 +14,42 @@ tags:
 
 # What is Python?
 
-Python is a popular, high-level programming language created by **Guido van Rossum** and first released in **1991**. It emphasizes **readability** and uses an **indentation-based structure** to make code clean and easy to follow.
+Python is a popular, high-level programming language created by **Guido van Rossum** and first released in **1991**. It emphasizes **readability** and uses an **indentation-based structure** to make code clean and easy to follow. Today, Python is widely used for a large variety of applications.
 
-# A Brief History of Python
+# Benefits of Python
 
-1. **1991**: Python 1.0 was released, focusing on core features like exception handling and functions.
-2. **2000**: Python 2.0 introduced new features like list comprehensions and garbage collection.
-3. **2008**: Python 3.0 launched, bringing significant changes, including Unicode support.
-4. **Today**: Python is widely used in data science, web development, artificial intelligence, and more.
-
-# Why Use Python? (Benefits)
-
-- **Easy to Learn**: Its syntax resembles plain English.
-- **Versatile**: Works for web development, data analysis, automation, AI, and more.
+- **Easy to Learn**: Its syntax almost resembles plain English.
+- **Versatile**: Works for console, web development, data analysis, automation, AI, and more.
 - **Large Community**: Extensive libraries and frameworks are available for almost any task.
 - **Cross-Platform**: Python works on Windows, macOS, Linux, and more.
 
 # Drawbacks of Python
 
-- **Speed**: Python is slower compared to languages like C++ because it’s interpreted.
-- **Mobile Development**: Not ideal for mobile app development.
+- **Speed**: Python is slower and less efficient compared to languages like C++ because it’s interpreted.
 - **Runtime Errors**: Python is dynamically typed, leading to potential runtime errors.
 
 # Compiled Vs Interpreted Languages
 
 - **Compiled Languages**: Code is translated into machine code before execution (e.g., C, C++).
 - **Interpreted Languages**: Code is executed line-by-line by an interpreter (e.g., Python, JavaScript).
-- Python is an **interpreted language**, which makes it easy to debug and modify but slower than compiled languages.
 
-# Python’s Basic Syntax
+# Usecases/Applications
 
-Python's syntax is minimal and highly readable. Here's what it looks like:
+Python is used in a wide range of applications:
+
+- **Web Development**: Popular frameworks like Django and Flask make web development faster and easier.
+- **Data Science & Analytics**: Libraries such as pandas, NumPy, and Matplotlib are widely used for data manipulation and visualization.
+- **Machine Learning & AI**: Python’s simplicity makes it a go-to language for machine learning and artificial intelligence applications, with libraries like TensorFlow and scikit-learn.
+- **Automation**: Python is commonly used to write scripts for automating repetitive tasks, such as file management and web scraping.
+
+# Syntax
+
+Python's syntax is minimal and highly readable. Here are key points to remember:
+
+- **`print()`** is used for [[2 Output|output]], **`input()`** for [[3 Input|input]], and **`#`** for line [[8 Comments|comments]]
+- Python supports all basic (mathematical) **[[6 Operators|Operators]]** and many more
+- **[[5 Variables|Variables]]**: Variables will automatically get a [[4 Datatypes|datatype]] that can change however you like
+- **Indentation**: Python relies on indentation to define code blocks, unlike many other languages that use braces `{}`. Proper indentation is required, or the code will throw an error. A colon : is used to indicate the start of an indented block, such as in if statements and loops.
 
 ```python
 # A simple comment
@@ -60,35 +65,10 @@ if x > 5:
     print("x is greater than 5")
 ```
 
-# Writing Your First Python Program
+# Sources
 
-Create a file called `hello.py` and add the following code:
+# Online Compilers
 
-```python
-# This is your first Python program
-print("Hello, World!")
-```
+# Python Installation
 
-To run the program:
-
-1. Save the file as `hello.py`.
-2. Open a terminal or command prompt.
-3. Type:
-
-   ```bash
-   python hello.py
-   ```
-
-   You should see:
-
-   ```
-   Hello, World!
-   ```
-
-# Next Steps
-
-Now that you know the basics, you're ready to dive deeper into Python! In the next sections, we’ll cover:
-
-- Variables and data types.
-- Control structures (if-else, loops).
-- Functions and modules.
+# Visual Studio Code Installation
