@@ -11,7 +11,7 @@ tags:
   - GEES
   - Basics
 ---
-# Summary: Simple Print
+# Summary
 - **`print()`:** Outputs values of any datatype to the console.
 - **Defaults:** Adds a line break; blank lines if no arguments are given.
 - **Separator (`sep`)** for value separation.
