@@ -11,10 +11,9 @@ tags:
   - GEES
   - Basics
 ---
-Python has one primary function for console output called `print()`.
 
 # Simple Print
-In general you can give the print function any value of any [[4 Datatypes|datatype]] and it will print it to the console.
+Python has one primary function for console output called `print()`. In general you can give the print function any value of any [[4 Datatypes|datatype]] and it will print it to the console.
 ## Print Hello World
 This for example will print the message "Hello World" to the console.
 
@@ -34,15 +33,38 @@ print("Some more text") # -> Some more text
 
 By default, after every printed value, there will be a Line break, so the next value will be in a new line. The code above will output the following text to the console. You can see that each output is in its own line.
 
-```
+```output
 12
 2.5
 True
 Some more text
 ```
 
+## Print without Any Arguments
+If you don't give any value to the print function, it will not print anything, but still make a new line.
+
+```python
+print(1)
+print()
+print(2)
+print()
+print()
+print(3)
+```
+
+Bellow you see the exact output of these print statements.
+
+```output
+1
+
+2
+
+
+3
+```
+
 # Print Multiple Values
-The print fuction can take multiple comma separated values. In the output, the values will be separated with spaces.
+The print function can take multiple comma separated values. In the output, the values will be separated with spaces.
 
 ```python
 print("Hello", "World", "Python")
