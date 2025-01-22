@@ -9,7 +9,7 @@ tags:
   - SDML
   - AECD
   - GEES
-  - Basics
+  - General
 ---
 # Summary
 - **`print()`:** Outputs values of any datatype to the console.

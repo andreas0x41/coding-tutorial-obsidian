@@ -9,7 +9,7 @@ tags:
   - SDML
   - AECD
   - GEES
-  - Basics
+  - General
 ---
 # Summary
 - **`input()`:** Waits for user input and always returns a string.
