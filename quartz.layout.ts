@@ -10,7 +10,7 @@ export const sharedPageComponents: SharedLayout = {
       provider: "giscus",
       options: {
         // from data-repo
-        repo: "ADP13805/coding-tutorial-obsidian",
+        repo: "andreas0x41/coding-tutorial-obsidian",
         // from data-repo-id
         repoId: "R_kgDONo2oyg",
         // from data-category
