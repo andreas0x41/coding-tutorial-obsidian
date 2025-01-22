@@ -11,7 +11,7 @@ tags:
   - GEES
   - General
 ---
-
+test2
 # What is Python?
 
 Python is a popular, high-level programming language created by **Guido van Rossum** and first released in **1991**. It emphasizes **readability** and uses an **indentation-based structure** to make code clean and easy to follow. Today, Python is widely used for a large variety of applications.
@@ -83,6 +83,7 @@ This website has the advantage of being very similar to a real command line exec
 <https://colab.research.google.com/>
 Google Colab is a powerful online tool for running Jupyter[^1] Notebooks online. It's a great fit for bigger projects and cloud usage of Jupyter[^1].
 # Python Installation
+Ev
 
 # Visual Studio Code Installation
 
