@@ -44,12 +44,12 @@ Some more text
 If you don't give any value to the print function, it will not print anything, but still make a new line.
 
 ```python
-print(1)
+print(1) # -> 1
 print()
-print(2)
+print(2) # -> 2
 print()
 print()
-print(3)
+print(3) # -> 3
 ```
 
 Bellow you see the exact output of these print statements.
@@ -64,21 +64,40 @@ Bellow you see the exact output of these print statements.
 ```
 
 # Print Multiple Values
-The print function can take multiple comma separated values. In the output, the values will be separated with spaces.
+The print function can take any number of comma separated values and print all of them. In the output, the values will be separated with spaces.
 
 ```python
-print("Hello", "World", "Python")
+print("Hello", "World", "Python") # -> Hello World Python
 ```
 
 # Additional Arguments for Print
+The print function can not only take the values you want to print, you can also give some other arguments for special output.
+## Print Seperator
+You can tell the print function which value to put between the values you are printing using the `sep` parameter. You can give it any string to put between multiple values within the print, the default is a space.
 
+```python
+print("Hello", "World", "Python", sep=" | ") # -> Hello | World | Python
+print("Shopping List: Apple", "Banana", "Bread", "Milk", sep=", ") 
+# -> Shopping List: Apple, Banana, Bread, Milk
+```
 
+## Print End
+You can tell the print function which value to put after all of the printed values using the `end` parameter. You can give any string, default is a new line ('\n').
 
+```python
+print("This doesn't end with a newline", end=" ---> ")
+print("This continues on the same line.") # -> 
+```
 
-
+```output
+This doesn't end with a newline ---> This continues on the same line.
+```
 
 # Questions
-
+- [ ] Task 1
+- [ ] Task 2
+- [ ] Task 3
+- [ ] Task 4
 
 
 
