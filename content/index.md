@@ -3,8 +3,9 @@ title: AIAT Coding Tutorials
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases:
+aliases: 
 tags:
+  - ReadFirst
 ---
 
 Welcome to the Auroville Institute of Applied Technology Coding Notes. These were written by Andreas Patuzzi, with the primary focus of enabling first year colleague students to learn python.

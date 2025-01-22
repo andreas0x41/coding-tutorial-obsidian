@@ -3,13 +3,14 @@ title: 1 Introduction
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases:
+aliases: 
 tags:
   - Python
   - SDML
   - AECD
   - GEES
   - General
+  - ReadFirst
 ---
 # What is Python?
 
