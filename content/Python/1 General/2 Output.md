@@ -11,7 +11,11 @@ tags:
   - GEES
   - Basics
 ---
-
+# Summary: Simple Print
+- **`print()`:** Outputs values of any datatype to the console.
+- **Defaults:** Adds a line break; blank lines if no arguments are given.
+- **Separator (`sep`)** for value separation.
+- **End (`end`)** for what follows the output.
 # Simple Print
 Python has one primary function for console output called `print()`. In general you can give the print function any value of any [[4 Datatypes|datatype]] and it will print it to the console.
 ## Print Hello World
@@ -94,10 +98,17 @@ This doesn't end with a newline ---> This continues on the same line.
 ```
 
 # Questions
-- [ ] Task 1
-- [ ] Task 2
-- [ ] Task 3
-- [ ] Task 4
+- [ ] Can the `print()` function handle multiple datatypes in one call? If yes, how are they separated in the output by default?
+- [ ] What will be the output of the following code?  
+
+```python
+  print("Python", "is", "fun", sep="-", end="!")
+  print("Let's code.")
+```
+
+- [ ]  What does the `sep` parameter do in the `print()` function? Provide an example.
+- [ ]  If the `print()` function is called without any arguments, what will be its behavior? Provide an example output.
+- [ ]  How can you ensure the output of two `print()` statements appears on the same line?
 
 
 
