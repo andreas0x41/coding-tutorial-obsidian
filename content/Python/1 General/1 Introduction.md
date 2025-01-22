@@ -3,7 +3,7 @@ title: 1 Introduction
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases: 
+aliases:
 tags:
   - Python
   - SDML
@@ -11,9 +11,10 @@ tags:
   - GEES
   - Basics
 ---
+
 # What is Python?
 
-Python is a popular, high-level programming language created by **Guido van Rossum** and first released in **1991**. It emphasizes **readability** and uses an **indentation-based structure** to make code clean and easy to follow. 
+Python is a popular, high-level programming language created by **Guido van Rossum** and first released in **1991**. It emphasizes **readability** and uses an **indentation-based structure** to make code clean and easy to follow.
 
 # A Brief History of Python
 
@@ -73,17 +74,16 @@ To run the program:
 1. Save the file as `hello.py`.
 2. Open a terminal or command prompt.
 3. Type:
-    
-    ```bash
-    python hello.py
-    ```
-    
-    You should see:
-    
-    ```
-    Hello, World!
-    ```
-    
+
+   ```bash
+   python hello.py
+   ```
+
+   You should see:
+
+   ```
+   Hello, World!
+   ```
 
 # Next Steps
 
@@ -97,19 +97,19 @@ Now that you know the basics, you're ready to dive deeper into Python! In the ne
 
 Does this format and style match what you were envisioning? Let me know if you'd like to add or tweak anything!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="https://giscus.app/client.js" data-repo="ADP13805/coding-tutorial-obsidian" data-repo-id="R_kgDONo2oyg" data-category="Announcements" data-category-id="DIC_kwDONo2oys4CmK9U" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="en" data-loading="lazy" crossorigin="anonymous" async> </script>
+<script src="https://giscus.app/client.js"
+        data-repo="andreas0x41/coding-tutorial-obsidian"
+        data-repo-id="R_kgDONo2oyg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDONo2oys4CmK9U"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
