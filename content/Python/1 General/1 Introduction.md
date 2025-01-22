@@ -65,7 +65,7 @@ if x > 5:
 ```
 
 # Run Python Online
-The are websites that easily allow you to run python code online. If you want to run python online you have to be careful that what you want to do works and behaves similar to actually running the code on your machine. Many online compilers struggle with error messages, debugging, input, imports, ....
+The are websites that easily allow you to run python code online. If you want to run python online you have to be careful that what you want to do works and behaves similar to actually running the code on your machine. Many online compilers struggle with error messages, debugging, input, imports, multiple files, (web-)applications, ....
 
 Below you can find a few websites that overall do a good job. It can be very helpful to have one of them open on the side while reading this tutorial, so that you can always copy, paste, run, edit, ... code from the notes to understand it better.
 ## Code Chef
