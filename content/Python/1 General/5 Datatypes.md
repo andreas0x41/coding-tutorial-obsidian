@@ -134,20 +134,20 @@ You might think of string as a base datatype, but it actually behaves very simil
 ### Special Characters
 Python strings support many special characters. To use a special character first write a backslash `\` to escape the string and tell python that the next thing is a special character. After the backslash you can put one of the supported special characters. 
 
-| Character    | Description                                                                                   | Example                                     |
-| ------------ | --------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| `\n`         | Newline character. Moves the cursor to the next line.                                         | `"Hello\nWorld"` → `Hello` <br>`World`      |
-| `\t`         | Horizontal tab. Adds a tab space.                                                             | `"Hello\tWorld"` → `Hello    World`         |
-| `\\`         | Backslash. Escapes the backslash itself.                                                      | `"Path: C:\\Users"` → `Path: C:\Users`      |
-| `\'` or `''` | Escapes a single quote **within** single-quoted strings.                                      | `'It\'s a test'` → `It's a test`            |
-| `\"` or `""` | Escapes a double quote **within** double-quoted strings.                                      | `"She said \"Hello\""` → `She said "Hello"` |
-| `\r`         | Carriage return. Moves the cursor to the beginning of <br>the line and overwrites characters. | `"123456789\rWorld"` → `World6789`          |
-| `\b`         | Backspace. Removes the character before it.                                                   | `"Hello\bWorld"` → `HellWorld`              |
-| `\u****`     | Unicode character with a 4-digit hex code.                                                    | `"\u2764"` → `❤`                            |
-| `\U********` | Unicode character with an 8-digit hex code.                                                   | `"\U0001F600"` → 😀                         |
-| `\x**`       | Character with a hex value (2 digits).                                                        | `"\x48"` → `H`                              |
+| Character    | Description                                                                                  | Example                                     |
+| ------------ | -------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| `\n`         | Newline character. Moves the cursor to the next line.                                        | `"Hello\nWorld"` → `Hello` <br>`World`      |
+| `\t`         | Horizontal tab. Adds a tab space.                                                            | `"Hello\tWorld"` → `Hello    World`         |
+| `\\`         | Backslash. Escapes the backslash itself.                                                     | `"Path: C:\\Users"` → `Path: C:\Users`      |
+| `\'` or `''` | Escapes a single quote **within** single-quoted strings.                                     | `'It\'s a test'` → `It's a test`            |
+| `\"` or `""` | Escapes a double quote **within** double-quoted strings.                                     | `"She said \"Hello\""` → `She said "Hello"` |
+| `\r`         | Carriage return. Moves the cursor to the beginning<br>of the line and overwrites characters. | `"123456789\rWorld"` → `World6789`          |
+| `\b`         | Backspace. Removes the character before it.                                                  | `"Hello\bWorld"` → `HellWorld`              |
+| `\x**`       | Character with a hex value (2 digits).                                                       | `"\x48"` → `H`                              |
+| `\u****`     | Unicode character with a 4-digit hex code.                                                   | `"\u2764"` → `❤`                            |
+| `\U********` | Unicode character with an 8-digit hex code.                                                  | `"\U0001F600"` → 😀                         |
 
-Use raw strings (`r"string"`) to prevent special characters from being interpreted. For example if you do `r"line1\nstill line1"` there will not be any newline.
+If you want to prevent special characters from being interpreted you can use raw strings `r"string"`. For example if you do `r"line1\nstill line1"` there will not be any newline.
 ### Formatted String
 
 ### Tripple Quotes String
