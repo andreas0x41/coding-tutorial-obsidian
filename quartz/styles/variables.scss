@@ -17,8 +17,8 @@ $desktop: "(min-width: #{map-get($breakpoints, desktop)})";
 $pageWidth: #{map-get($breakpoints, mobile)};
 $sidePanelWidth: 380px; //default: 320px;
 $topSpacing: 2rem; // default: 6rem
-$boldWeight: 700;
-$semiBoldWeight: 600;
+$boldWeight: 800;
+$semiBoldWeight: 700;
 $normalWeight: 400;
 
 $mobileGrid: (
