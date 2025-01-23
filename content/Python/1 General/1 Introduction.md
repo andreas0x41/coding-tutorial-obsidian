@@ -49,6 +49,7 @@ Python's syntax is minimal and highly readable. Here are key points to remember:
 - **`print()`** is used for [[2 Output|output]], **`input()`** for [[3 Input|input]], and **`#`** for line [[8 Comments|comments]]
 - Python supports all basic (mathematical) **[[6 Operators|Operators]]** and many more
 - **[[5 Variables|Variables]]**: Variables will automatically get a [[4 Datatypes|datatype]] that can change however you like
+- Python is **case sensitive**, this means that if only upper/lower case of characters is different, it is a completely different thing, for example `test` is not the same as `Test`
 - **Indentation**: Python relies on indentation to define code blocks, unlike many other languages that use braces `{}`. Proper indentation is required, or the code will throw an error. A colon : is used to indicate the start of an indented block, such as in if statements and loops.
 
 ```python
