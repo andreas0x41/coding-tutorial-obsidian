@@ -1,5 +1,5 @@
 ---
-title: 5 Variables
+title: 6 Variables
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false

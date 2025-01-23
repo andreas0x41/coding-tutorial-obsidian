@@ -1,5 +1,5 @@
 ---
-title: 8 Comments
+title: 4 Comments
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
