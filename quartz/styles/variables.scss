@@ -21,6 +21,8 @@ $boldWeight: 800;
 $semiBoldWeight: 700;
 $normalWeight: 500;
 
+$font-size-multiplier: 1.5; // Adjust this value as needed
+
 $mobileGrid: (
   templateRows: "auto auto auto auto auto",
   templateColumns: "auto",
