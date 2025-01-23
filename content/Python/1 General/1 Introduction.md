@@ -46,9 +46,9 @@ Python is used in a wide range of applications:
 
 Python's syntax is minimal and highly readable. Here are key points to remember:
 
-- **`print()`** is used for [[2 Output|output]], **`input()`** for [[3 Input|input]], and **`#`** for line [[4 Comments|comments]]
-- Python supports all basic (mathematical) **[[7 Operators|Operators]]** and many more
-- **[[6 Variables|Variables]]**: Variables will automatically get a [[5 Datatypes|datatype]] that can change however you like
+- **`print()`** is used for [[2 Output|output]], **`input()`** for [[3 Input|input]], and **`#`** for line [[8 Comments|comments]]
+- Python supports all basic (mathematical) **[[6 Operators|Operators]]** and many more
+- **[[5 Variables|Variables]]**: Variables will automatically get a [[4 Datatypes|datatype]] that can change however you like
 - Python is **case sensitive**, this means that if only upper/lower case of characters is different, it is a completely different thing, for example `test` is not the same as `Test`
 - **Indentation**: Python relies on indentation to define code blocks, unlike many other languages that use braces `{}`. Proper indentation is required, or the code will throw an error. A colon : is used to indicate the start of an indented block, such as in if statements and loops.
 
@@ -82,7 +82,7 @@ This website has the advantage of being very similar to a real command line exec
 
 ## Google Colab
 <https://colab.research.google.com/>
-Google Colab is a powerful online tool for running Jupyter Notebooks[^1] online. It's a great fit for bigger projects and cloud usage of Jupyter.
+Google Colab is a powerful online tool for running Jupyter[^1] Notebooks online. It's a great fit for bigger projects and cloud usage of Jupyter[^1].
 # Python Installation
 Even though there are good online tools, running python on your own machine still has it's benefits. To install python, go to the [official website](https://www.python.org/downloads/), download, execute and follow the instructions. Please don't forget to click the checkbox "Add to PATH[^2]" at the very start of the installation.
 

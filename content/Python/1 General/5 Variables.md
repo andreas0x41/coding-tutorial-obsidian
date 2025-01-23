@@ -15,8 +15,4 @@ tags:
 
 
 
-# Scope
 
-# Naming
-
-# Type Hinting

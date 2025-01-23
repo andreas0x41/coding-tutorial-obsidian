@@ -22,7 +22,7 @@ Python has one primary function for console input called `input()`. It will wait
 input()
 ```
 
-You can save the value returned by `input` in a [[6 Variables|variable]] to use it later/multiple time.
+You can save the value returned by `input` in a [[5 Variables|variable]] to use it later/multiple time.
 
 ```python
 x = input()
