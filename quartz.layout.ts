@@ -22,8 +22,8 @@ export const sharedPageComponents: SharedLayout = {
   ],
   footer: Component.Footer({
     links: {
-      "Andreas Patuzzi": "linktr.ee/andrea0x41",
-      "AIAT College": "linktr.ee/aiat.general",
+      "Andreas Patuzzi": "https://linktr.ee/andrea0x41",
+      "AIAT College": "https://linktr.ee/aiat.general",
       Quartz: "https://github.com/jackyzha0/quartz",
     },
   }),
