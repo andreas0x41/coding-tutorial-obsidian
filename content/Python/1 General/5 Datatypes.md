@@ -146,11 +146,41 @@ Python strings support many special characters. To use a special character first
 | `\x**`       | Character with a hex value (2 digits).                                                       | `"\x48"` → `H`                              |
 | `\u****`     | Unicode character with a 4-digit hex code.                                                   | `"\u2764"` → `❤`                            |
 | `\U********` | Unicode character with an 8-digit hex code.                                                  | `"\U0001F600"` → 😀                         |
-
 If you want to prevent special characters from being interpreted you can use raw strings `r"string"`. For example if you do `r"line1\nstill line1"` there will not be any newline.
 ### Formatted String
+Formatted strings in python provide an easy way to insert values into a string. To make a formatted string put an `f` in front of the the starting string quotes. Inside a formatted string, all the values within curly brackets `{value}` will be inserted into the string. The datatype will automatically be converted and there is also support for operators, functions and special formatting. If you want to print a curly bracket within a f-string, you have to put a double curly bracket `{{`.
 
-### Tripple Quotes String
+```python
+b = 5
+pi = 3.14159
+name = "Andreas"
+print(f"My name is {name} and I am {19} years old.") # -> My name is Andreas and I am 19 years old.
+print(f"The sum of {a} and {b} is {a+b}")            # -> The sum of 1 and 5 is 6
+print(f"The user inputted: {input()}")               # -> The user inputted: {?}
+print(f"Pi with two decimal places: {pi:.2f}")       # -> Pi with two decimal places: 3.14
+print(f"Documenting operations: {1 + 3 * 2 = }")      # -> Documenting operations: 1 + 3 * 2 = 7
+```
+
+### Multiple Line String
+Instead of using single `'` or double `"` quotes at start end end of a string, you can also use them three times (`'''` or `"""`) to create a multiline string. So within tripple quotes you can have multiple lines of text and it will keep the format, linebreaks and spacing. You can also combine this with [[#Formatted String]].
+
+```python
+print("""This is a
+multiline string
+    indentation is also
+		as in the code""")
+print(f"""Below you can see an operation
+      {1 + 1 = }""")
+```
+
+```output
+This is a
+multiline string
+    indentation is also
+        as in the code
+Below you can see an operation
+      1 + 1 = 2
+```
 
 ## List
 

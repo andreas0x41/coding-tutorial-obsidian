@@ -1,15 +1,13 @@
 ---
-title: Python Basics
+title: Python Cheatsheet
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-description:
-aliases:
+description: 
+aliases: 
 tags:
   - Python
   - Cheatsheet
-  - PythonBasics
-  - PythonCheatsheet
 ---
 
 https://docs.python.org/3/
