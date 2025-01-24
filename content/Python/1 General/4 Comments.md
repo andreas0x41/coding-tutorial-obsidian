@@ -28,8 +28,8 @@ Hello
 1
 ```
 
-# Multiline Comments
-If you want to have a bigger commented documentation and don't want to put a `#` in front of every single line, you can use a multiline comment. Everything between three double quotes `"""` is interpreted as a comment, even if it is over multiple lines.
+# Docstrings/Multiline Comments
+If you want to have a bigger commented documentation and don't want to put a `#` in front of every single line, you can use a docstring. Everything between three double quotes `"""` is interpreted as a docstring, so basically a multiline comment.
 
 ```python
 print(1)
@@ -44,8 +44,8 @@ print(3)
 3
 ```
 
-## Function/Method Docstring
-Multiline comments are often used to document the definition of a function, method or class. You can put an explanation of what the class is doing, what arguments it can take, ... directly under the define/class keyword. Most IDEs will even display this explanation to the programmer when using the function/method/class.
+## Documenting Functions/Methods
+Docstrings are often used to document the definition of a function, method or class. You can put an explanation of what the class is doing, what arguments it can take, ... directly under the define/class keyword. Most IDEs will even display this explanation to the programmer when using the function/method/class.
 
 ```python
 def hello(name):
@@ -54,11 +54,13 @@ def hello(name):
 
     Args:
         name (str): The name to include in the greeting.
+    Returns: 
+        None
     """
     print(f"Hello {name}")
 
 hello("Andreas")
 ```
 
-[[FunctionDocstringExample.jpeg|Open: FunctionDocstringExample.png]]
-![[FunctionDocstringExample.jpeg]]
+[[FunctionDocstringExample.jpg|Open: FunctionDocstringExample.jpg]]
+![[FunctionDocstringExample.jpg]]

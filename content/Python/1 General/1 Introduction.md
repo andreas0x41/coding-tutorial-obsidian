@@ -26,7 +26,7 @@ Python is a popular, high-level programming language created by **Guido van Ross
 # Drawbacks of Python
 
 - **Speed**: Python is slower and less efficient compared to languages like C++ because it’s interpreted.
-- **Runtime Errors**: Python is dynamically typed, leading to potential runtime errors.
+- **Runtime Errors**: Python is dynamically typed, leading to potential runtime errors. Because of this, it can be hard to find/prevent errors properly in advance, especially in large projects. 
 
 # Compiled Vs Interpreted Languages
 
@@ -72,22 +72,28 @@ The are websites that easily allow you to run python code online. If you want to
 Below you can find a few websites that overall do a good job. It can be very helpful to have one of them open on the side while reading this tutorial, so that you can always copy, paste, run, edit, ... code from the notes to understand it better.
 ## Code Chef
 <https://www.codechef.com/blogs/how-to-use-code-visualizer>
+
 This website has the advantage of also including a visualizer. this enables you to run code line by line, see variables and control flow and understand it much easier. 
+
 [Code Chef Visualizer Tutorial](https://www.codechef.com/blogs/how-to-use-code-visualizer)
+
 The drawback of this is that it will run the code on a separate machine so you have to provide all input values before running
 ## Online GDB
 <https://www.onlinegdb.com/online_python_compiler>
+
 This website has the advantage of being very similar to a real command line execution. Inputs are in real time and just like in the command line. There is also Debugger available in case you want/have to use it.
+
 [Online GDB Debugger Tutorial](https://www.codechef.com/blogs/how-to-use-code-visualizer)
 
 ## Google Colab
 <https://colab.research.google.com/>
-Google Colab is a powerful online tool for running Jupyter Notebooks[^1] online. It's a great fit for bigger projects and cloud usage of Jupyter.
+
+Google Colab is a powerful online tool for running Jupyter Notebooks[^1] online. It's a great fit for bigger projects and cloud usage of Jupyter. It also supports collaboration and GPUs for use cases like machine learning.
 # Python Installation
-Even though there are good online tools, running python on your own machine still has it's benefits. To install python, go to the [official website](https://www.python.org/downloads/), download, execute and follow the instructions. Please don't forget to click the checkbox "Add to PATH[^2]" at the very start of the installation.
+Even though there are good online tools, running python on your own machine still has many benefits. To install python, go to the [official website](https://www.python.org/downloads/), download, execute and follow the instructions. Please don't forget to click the checkbox "Add to PATH[^2]" at the very start of the installation.
 
 # Visual Studio Code Installation
-In theory you can use any text editor to write your code. In practice, it is much easier and better to use a specialized Code Editor usually called IDE (Integrated Development Environment). The have a lot of additional features like syntax highlighting, auto suggestions and completions, documentations, debugging, combining multiple parts of the coding workflow, search and replace, keyboard combinations, version management, ... There are a lot of options, also depending on coding language and application. In my opinion the best and most versatile option is Visual Studio code.
+In theory you can use any text editor to write your code. In practice, it is much easier and better to use a specialized Code Editor usually called IDE (Integrated Development Environment). They have a lot of additional features like syntax highlighting, auto suggestions and completions, documentations, debugging, combining multiple parts of the coding workflow, search and replace, keyboard combinations, version management, ... There are a lot of options, also depending on coding language and application. In my opinion the best and most versatile option is Visual Studio code.
 
 To install it just go to the [official website](https://code.visualstudio.com/download), download, execute and follow the instructions. To understand VSCode you can read the [documentation](https://code.visualstudio.com/docs) or watch one of the many videos like [this one](https://www.youtube.com/watch?v=KMxo3T_MTvY) or [this one](https://www.youtube.com/watch?v=6i3e-j3wSf0). To properly use python you will need to install the "Python" Extensions, which you can do in the VSCode Extensions tab.
 

@@ -87,7 +87,7 @@ print("Hello", "World", "Python") # -> Hello World Python
 
 The print function can not only take the values you want to print, you can also give some other arguments for special output.
 
-## Print Seperator
+## Print Separator
 
 You can tell the print function which value to put between the values you are printing using the `sep` parameter. You can give it any string to put between multiple values within the print, the default is a space.
 
@@ -102,7 +102,8 @@ You can tell the print function which value to put after all of the printed valu
 
 ```python
 print("This doesn't end with a newline", end=" ---> ")
-print("This continues on the same line.") # ->
+print("This continues", end=" ")
+print("on the same line.")
 ```
 
 ```output
