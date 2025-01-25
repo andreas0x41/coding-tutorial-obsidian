@@ -14,3 +14,8 @@ tags:
 
 
 
+
+
+global & nonlocal
+
+
