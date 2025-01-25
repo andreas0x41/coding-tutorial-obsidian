@@ -76,6 +76,8 @@ Bellow you see the exact output of these print statements.
 ```
 
 # Print Multiple Values
+> [!todo]- less exam relevant
+> Less exam relevant, but still good/helpful to know.
 
 The print function can take any number of comma separated values and print all of them. In the output, the values will be separated with spaces.
 
@@ -84,6 +86,9 @@ print("Hello", "World", "Python") # -> Hello World Python
 ```
 
 # Additional Arguments for Print
+
+> [!todo]- less exam relevant
+> Less exam relevant, but still good/helpful to know.
 
 The print function can not only take the values you want to print, you can also give some other arguments for special output.
 

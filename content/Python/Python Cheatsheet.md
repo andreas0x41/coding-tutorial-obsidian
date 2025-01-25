@@ -2,7 +2,7 @@
 title: Python Cheatsheet
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
-draft: false
+draft: true
 description: 
 aliases: 
 tags:

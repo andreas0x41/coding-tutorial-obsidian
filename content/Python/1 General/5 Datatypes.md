@@ -31,7 +31,8 @@ For almost every datatype in python, there is a function with the same (or simil
 | [[5 Datatypes#Range\|Range]]           | range()    | range(8), range(2, 99, 3)  | range of numbers                                                          |
 | [[5 Datatypes#Generator\|Generator]]   |            |                            | iterator over a dataset, created by the programmer                        |
 
-
+> [!todo]- not exam relevant
+> These functions/methods are mostly not exam relevant.
 
 There are a few built in functions/methods to check if something is a specific type of data. These are helpful to check input, potentially before converting it. 
 - **String Methods:** `.isdigit()`, `.isalpha()`, `.isalnum()`, `.isdecimal()`, `.isnumeric()`, `.isspace()`.
@@ -53,6 +54,9 @@ The datatype Float can hold any rational/floating point number including negativ
 ```
 
 ### Scientific Number Notation
+> [!todo]- not exam relevant
+> This topic is not exam relevant.
+
 Python supports the scientific notation of writing numbers as a power of 10 for integers and floats. To do this you can give numbers in the format "`number`e`power`". So for example `1e3 == 1 * 10**3 == 1000` or `-1.5e-2 == -1.5 * 10**-2 == -0.015`.
 ## Boolean
 The datatype Boolean can hold a truth value. There are only two possible options for this value True or False (can also be thought of as 1/0 Yes/No On/Off). This datatype is very important for Control Flow like Conditions, because it is usually based on many "Yes/No Questions", which are answered with a Boolean value. You can use the function `bool()` to convert a value to a Boolean, or create one with value `False` if no argument is given.
@@ -96,6 +100,8 @@ print(listName) # print the whole list -> [-1, 1, 7, 4, 5, 2]
 ```
 
 ### Slicing
+> [!todo]- partly exam relevant
+> Basics are relevant, more advanced usage is not necessary.
 
 Slicing is used to select a subsequence/portion of a sequence, instead of only on element. You can specifying a start, stop, and step.
 
@@ -108,7 +114,7 @@ I you leave one of these blank, it will have a default value
 - `stop`: The ending index (**exclusive**). Defaults to `-1` (last element) if omitted. Negative values work the same way as with indexing.
 - `step`: The interval between elements. Defaults to `1` (every element without skipping). Negative values reverse the order of the sequence.
 
-If you get elements of a sequence using slicing, it will create a shallow copy[^1] of the sequence and give it to you. 
+If you get elements of a sequence using slicing, it will create a shallow copy of the sequence and give it to you. 
 
 ```python
 listName = [3, 1, 7, 4, 5, 2, 9]  # create list and save in variable listName
@@ -124,6 +130,8 @@ print(listName[6:1:-2])           # every second element from the 7th to the 2nd
 ```
 
 You can also set multiple values at the same time using slicing. If you don't give the correct numbers of values to set/replace, you might get an error.
+> [!todo]- not exam relevant
+> Not exam relevant, rarely used, but sometimes really helpful.
 
 ```python
 listName = [3, 1, 7, 4, 5, 2, 9]  # create list and save in variable listName
@@ -144,6 +152,10 @@ The datatype String can hold any text including numbers and [[#Special Character
 You might think of string as a base datatype, but it actually behaves very similar to a [[#List|list]] (or more precisely a [[#Tuple|tuple]]) of individual characters. So especially in low level languages you will find `character` as a base datatype and the string is just a collection of characters. 
 
 ### Special Characters
+> [!todo]- partly exam relevant
+> Basics are relevant, more advanced usage is not necessary. First 5 rows of the table are relevant, the others not.
+
+
 Python strings support many special characters. To use a special character first write a backslash `\` to escape the string and tell python that the next thing is a special character. After the backslash you can put one of the supported special characters. 
 
 | Character    | Description                                                                                  | Example                                     |
@@ -175,6 +187,9 @@ print(f"Documenting operations: {1 + 3 * 2 = }")      # -> Documenting operation
 ```
 
 ### Multiple Line String
+> [!todo]- less exam relevant
+> Less exam relevant, but still good/helpful to know.
+
 Instead of using single or double quotes at start end end of a string, you can also use them three times (`'''` or `"""`) to create a multiline string. So within tripple quotes you can have multiple lines of text and it will keep the format, linebreaks and spacing. You can also combine this with [[#Formatted String]].
 
 ```python
@@ -210,6 +225,9 @@ You can think of a tuple like a [[#List]] where it is impossible to add, change 
 ```
 
 ## Set
+> [!todo]- not exam relevant
+> This topic is not exam relevant, but it is still good to know that this datatype exist and its ideas/behaviour.
+
 A set is similar to a [[#List]] but the elements are stored in a specific ordered. Because of this, [[#Indexing]] is not possible. [[#Iterable|Iterating]] is possible, but there is no order defined for the elements. All set elements have to be within curly brackets `{}`and separated by commas `,`. You can use the function `set()` to convert an [[#Iterable]] value to a set or create an empty set if no argument are given. You only create an empty set using the function, because [[#Dictionary]] does also use curly brackets. You can add or remove elements, because it is [[#Mutable|mutable]]. A set can only store not [[#Mutable|mutable]] elements. A set does not allow for any duplicate elements, if you have duplicates only one of them will be stored. Only a few of the list operators, functions and methods will work, but there are also some special ones for sets.
 
 ```python
@@ -249,6 +267,9 @@ The datatype None represents the absence of a value or a "null" value. It is oft
 For example, if you try to get a variable value or list element that does not exist, you will get a error message. But storing/printing the value returned from a function that returns nothing is not an error, it just has the value `None`.
 
 ## Complex
+> [!todo]- less exam relevant
+> Less exam relevant, rarely used.
+
 The datatype Complex represents a complex numbers. It has a real and an imaginary part, represented as `a + bj`, where `a` is the real part and `b` is the imaginary part. If you have a number with an imaginary part in python, it will treat/save it as a complex number. You can use the function `complex()` to convert a value to a Complex, or create one with value `0j` if no argument is given. This function takes two numbers, the real part `a` and the complex part `b`, as arguments `complex(a, b)`.
 
 ```python
@@ -264,15 +285,24 @@ print(z.imag)  # -> 4.0
 ```
 
 ## Range
+> [!todo]- partly exam relevant
+> Only understand that this is different from list, because it does not store all elements in memory and instead generates them on demand. More advanced usage is not necessary.
+
 The datatype Range is created with the range function and generates a sequence of numbers. It might seem very similar to a list, but the key difference is that not all elements are saved in memory, instead they are generated only when they are actually used. It is commonly used in loops and is a memory-efficient [[#Iterable]]. Interestingly you can even [[#Indexing|index]] and [[#Slicing|slice]] range objects and will either a number or a new slice as a result. You can not add, remove or change elements of a range, because it is not [[#Mutable||mutable]].
 
 ## Generator
+> [!todo]- not exam relevant
+> This topic is not exam relevant. It is a bit advanced and rarely used.
+
 The datatype Generator is very similar to [[#Range]] in supporting memory efficient one by one [[#Iterable|iterating]] of elements. The key difference is that it supports all datatypes and you can define your own sequence generators. But they do not support [[#Indexing|indexing]] or [[#Slicing|slicing]] and it is not [[#Mutable||mutable]].
 
 ## Bytes
 
 
 ## Object Oriented Programming
+> [!todo]- only SDML and AECD
+> This topic is an advanced topic that is only relevant for the SDM and AECD department. There will be a note only for this at the end.
+
 You can basically define and use your very own datatypes using OOP or import special datatypes created by others. First you have to define it with all its values and behaviour in a class, then you can create objects based on this class.
 
 # Datatypes Internal Details
@@ -342,5 +372,3 @@ You can basically define and use your very own datatypes using OOP or import spe
 - [ ] 12. Explain Generator in your own words.
 	- [ ] What is a Generator in Python?
 	- [ ] How does a Generator differ from a List in terms of memory usage?
-
-[^1]: test
