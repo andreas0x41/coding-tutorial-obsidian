@@ -11,11 +11,30 @@ tags:
   - GEES
   - General
 ---
-Variables are used to store data. You can think of them like a container. The shape of the container is defined by the [[5 Datatypes|Datatype]] and then you can put any fitting value inside the container. 
+Variables are used to store data. You can think of them like a container. The shape of the container is defined by the [[5 Datatypes|Datatype]] and then you can put any fitting value inside the container. Python variables are labels for objects. They point to memory locations storing values.
+
+# Summary
+- **Definition:** Variables are labels for objects in memory used to store data.
+- **Usage:**
+	- Create using `=`. Python infers the datatype automatically.
+	- Reassign variables to new or different types of values anytime.
+	- Use `del` to delete variables.
+- **Naming:**
+	- Start with a letter/underscore; contain letters, numbers, and underscores only.
+	- Avoid reserved keywords or shadowing built-ins.
+	- Use descriptive names, preferably in `snake_case` or `camelCase`.
+- **Scope:**
+	- **Global:** Accessible throughout the program.
+	- **Local:** Limited to within functions.
+- **Type Hinting:** Optional annotations (e.g., `x: int = 5`) clarify variable types.
 
 # Definition and Usage
 ## Creating/Accessing
-Use the assignment operator `=` to create and assign values to a variable. To do this you have to use the Syntax `variable_name = value`. Variables in Python are not explicitly declared with a datatype. Instead, Python (the interpreter) automatically picks a fitting type based on the assigned value. You can reassign a variable to a new value with the same syntax as creating one. You can change it to any value, even values of a different datatype.
+Use the assignment operator `=` to create and assign values to a variable. To do this you have to use the Syntax `variable_name = value`. 
+
+Variables in Python are not explicitly declared with a datatype. Instead, Python automatically picks a fitting type based on the assigned value at runtime. This also means/has the drawback that datatype errors/incompatibilities happen at runtime and can't easily be detected beforehand.
+
+You can reassign a variable to a new value with the same syntax as creating one. You can change it to any value, even values of a different datatype.
 
 ```python
 number = 10       # name: number; value 10; type: Integer
@@ -28,7 +47,7 @@ print(number)     # -> test
 ```
 
 ## Accessing
-Use the variable name to access the value of a variable. Python will get the variable value from memory and put it place of the name.
+Use the variable name to access the value of a variable. Python will get the variable value from memory and put it place of the name. Tying to access a variable that does not exist will result in an error.
 
 ```python
 print(number)  # -> 10
@@ -36,7 +55,7 @@ print(message) # -> Hello
 ```
 
 ## Deleting
-You can use the [[8 Keywords|keyword]] `del` to delete variables. This will free up the space in storage. After deleting the variable does no longer exist.
+You can use the [[8 Keywords|keyword]] `del` to delete a variable/the object reference it stores.
 
 ```python
 x = 10 # creating x with value 10
@@ -46,7 +65,7 @@ del x  # deleting x
 # Naming Rules
 There are a few rules that all variable names must follow.
 1. **Start with a letter or an underscore**: A variable name must begin with a letter (a-z, A-Z) or an underscore `_`.
-2. **Can contain letters, numbers, and underscores**: A variable name can contain any numer of letters, numbers and underscores, but no special characters or spaces.
+2. **Can contain letters, numbers, and underscores**: A variable name can contain any ammount of letters, numbers and underscores, but no special characters or spaces.
 3. **Cannot be a reserved [[8 Keywords|keyword]]**: Avoid Python’s built-in keywords like `if`, `for`, `class`, ... 
 
 Example of correct variable names: `x`,`_valid_name`, `variable123`, `_123_`, ...
@@ -63,7 +82,7 @@ class = "Error"        # Uses a reserved keyword
 ## Naming Conventions
 Naming conventions are not mandatory, but it is good to follow them. Good naming will create much easier to read, more consistent and better formatted code. 
 
-Variable names should be descriptive. So just by reading you should have a basic understanding of what value it will hold and what it is used for. So you should use descriptive words inside a variable name, without making it to long. Avoid shadowing built-in names (e.g., don’t name your variable `float` or `list`). Avoid using single-character names except in specific contexts (e.g., `i` in loops). If there are multiple words in a variable name, you should consistently write it in snake_case of camelCase.
+Variable names should be descriptive. So just by reading you should have a basic understanding of what value it will hold and what it is used for. So you should use descriptive words inside a variable name, without making it too long. Avoid shadowing built-in names (e.g., don’t name your variable `float` or `list`). Avoid using single-character names except in specific contexts (e.g., `i` in loops). If there are multiple words in a variable name, you should consistently write it in snake_case of camelCase.
 - in **snake case** words are separate by underscores `_` like this `this_variable_is_snake`
 - in **camel case** words are separate by capitalizing them like this `thisVariableIsCamel`
 
@@ -95,4 +114,12 @@ This simple type hinting works with most datatypes. With many collection datatyp
 | **Dictionary**                        | `dict[<key_type>, <value_type>]` | `person: dict[str, int] = {"age": 30}`                                    |
 | **Multidimensional List**             | `list[list[<type>]]`             | `matrix: list[list[int]] = [[1, 2], [3, 4]]`                              |
 | **List of Tuples (String and Range)** | `list[tuple[str, range]]`        | `data: list[tuple[str, range]] = [("A", range(3)), ("B", range(1,99,3))]` |
-|                                       |                                  |                                                                           |
+
+# Questions
+- [ ] Explain variables and their usage in your own words.
+- [ ] Show and explain the creating, accessing, updating and deleting of variables.
+- [ ] Do you have to tell python which datatype a variable has?
+- [ ] What are the rules for naming variables in python?
+- [ ] How can you make good variable names and why is this important?
+- [ ] Explain variable scope in your own words.
+- [ ] Explain type hinting in your own words.

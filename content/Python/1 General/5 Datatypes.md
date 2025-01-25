@@ -15,7 +15,6 @@ A datatype defines how different types of information/data are stored and behave
 
 For almost every datatype in python, there is a function with the same (or similar) name that is used to create an object of that datatype or convert something from a different datatype.
 
-
 | Name                                   | Function   | Syntax Example             | Explanation                                                               |
 | -------------------------------------- | ---------- | -------------------------- | ------------------------------------------------------------------------- |
 | [[5 Datatypes#Integer\|Integer]]       | int()      | 0, 13, -3                  | whole number                                                              |
