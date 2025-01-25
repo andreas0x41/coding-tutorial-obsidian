@@ -305,17 +305,21 @@ The datatype Generator is very similar to [[#Range]] in supporting memory effici
 
 You can basically define and use your very own datatypes using OOP or import special datatypes created by others. First you have to define it with all its values and behaviour in a class, then you can create objects based on this class.
 
-# Datatypes Internal Details
 
-## Truthy and Falsy
 
-## Converting between Datatypes
-
-## Storage Size and Value Range
-
-## Binary
-
-## Building Datatypes from Binary
+> [!quote]- Additional no exam relevant topics for later
+> Contents
+> # Datatypes Internal Details
+> 
+> ## Truthy and Falsy
+> 
+> ## Converting between Datatypes
+> 
+> ## Storage Size and Value Range
+> 
+> ## Binary
+> 
+> ## Building Datatypes from Binary
 
 
 # Questions
@@ -367,8 +371,7 @@ You can basically define and use your very own datatypes using OOP or import spe
 	- [ ] How can you get the real and imaginary part individually?
 
 - [ ] 11. Explain Range in your own words.
-	- [ ] How do you define and use a Range in Python?
+	- [ ] How does a Range differ from a List?
 
 - [ ] 12. Explain Generator in your own words.
-	- [ ] What is a Generator in Python?
-	- [ ] How does a Generator differ from a List in terms of memory usage?
+	- [ ] How does a Generator differ from a List?

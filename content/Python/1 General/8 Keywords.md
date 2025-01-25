@@ -2,7 +2,7 @@
 title: 8 Keywords
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
-draft: false
+draft: true
 aliases: 
 tags:
   - Python

@@ -69,3 +69,11 @@ hello("Andreas")
 
 [[FunctionDocstringExample.jpg|Open: FunctionDocstringExample.jpg]]
 ![[FunctionDocstringExample.jpg]]
+
+
+# Questions
+- [ ] What are comments?
+- [ ] What is the purpose of comments?
+- [ ] When should you write a comment?
+- [ ] Explain single line comments.
+- [ ] Explain docstrings/multiline comments.

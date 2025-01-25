@@ -99,5 +99,15 @@ To install it just go to the [official website](https://code.visualstudio.com/do
 
 Understanding and using your IDE well can make your life easier, enable new potential and make you much faster when writing code.
 
+
+# Questions
+- [ ] What is programming language?
+- [ ] What is python?
+- [ ] What are the benefits of Python?
+- [ ] What are the drawbacks of Python?
+- [ ] Explain compiled vs interpreted languages in your own words. What type is Python?
+- [ ] What are the use cases of Python?
+- [ ] What are general principals of the python syntax.
+
 [^1]: Project Jupyter is a combination of Python code and formatted Text for Documentation, it's great for explaining code, visualizations, ...
 [^2]: PATH is basically a system internal variable that stores all things that can be accessed by default when running code from the command line. If you don't add python to PATH you might not be able to run it properly or always have to tell exactly where your python installation is.
