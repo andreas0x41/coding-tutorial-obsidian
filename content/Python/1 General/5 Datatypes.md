@@ -348,7 +348,7 @@ You can basically define and use your very own datatypes using OOP or import spe
 > ## Storage Size and Value Range
 > 
 > ## Binary
->
+> 
 > ## Building Datatypes from Binary
 
 # Questions
@@ -372,8 +372,9 @@ You can basically define and use your very own datatypes using OOP or import spe
 - [ ] 5 Explain List in your own words.
 	- [ ] What is the difference between a List and a Tuple in Python?
 	- [ ] Can Lists store different data types in Python?
+	- [ ] Explain Mutable in your own words.
+	- [ ] Explain Iterable in your own words.	
 	- [ ] Explain Indexing and Slicing in your own words.
-	- [ ] Explain Iterable in your own words.
 	- [ ] Give an example of list inside a list and how you can index the inner list.
 
 - [ ] 6 Explain Tuple in your own words.
@@ -384,23 +385,22 @@ You can basically define and use your very own datatypes using OOP or import spe
 - [ ] 7 Explain Set in your own words.
 	- [ ] What are the main characteristics of a Set in Python?
 	- [ ] How does a Set differ from a List or Tuple?
-	- [ ] Can you store duplicate values in a Set?
+	- [ ] What values can you store in s set and what is special about this?
 
 - [ ] 8 Explain Dictionary in your own words.
-	- [ ] What is the structure of a Dictionary in Python?
 	- [ ] How can you access values in a Dictionary?
 	- [ ] What datatypes can you use a Dictionary key?
+	- [ ] What datatypes can you use a Dictionary value?
 
 - [ ] 9 Explain None in your own words.
-	- [ ] What does `None` represent in Python?
 	- [ ] Give examples where you will get or use a None value.
 
 - [ ] 10 Explain Complex in your own words.
-	- [ ] What is a Complex number in Python?
+	- [ ] What is a Complex number in Mathematics and Python?
 	- [ ] How can you get the real and imaginary part individually?
 
 - [ ] 11 Explain Range in your own words.
-	- [ ] How does a Range differ from a List?
+	- [ ] How does a Range differ from other types like a List?
 
 - [ ] 12 Explain Generator in your own words.
-	- [ ] How does a Generator differ from a List?
+	- [ ] How does a Generator differ from other types like a List?

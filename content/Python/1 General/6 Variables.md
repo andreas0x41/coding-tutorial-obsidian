@@ -16,19 +16,22 @@ Variables are used to store data. You can think of them like a container. The sh
 
 # Summary
 
-- **Definition:** Variables are labels for objects in memory used to store data.
+- **Definition:** Variables store references to objects in memory and are used to label and access these objects.
 - **Usage:**
-	- Create using `=`. Python infers the datatype automatically.
-	- Reassign variables to new or different types of values anytime.
-	- Use `del` to delete variables.
-- **Naming:**
-	- Start with a letter/underscore; contain letters, numbers, and underscores only.
-	- Avoid reserved keywords or shadowing built-ins.
-	- Use descriptive names, preferably in `snake_case` or `camelCase`.
+	- Create using `=`; Python automatically determines the datatype.
+	- Reassign variables to new or different types of values.
+	- Use `del` to remove variables, freeing memory when unused.
+- **Naming Rules:**
+	- Must start with a letter or underscore and contain only letters, numbers, or underscores.
+	- Avoid reserved keywords and descriptive naming is recommended.
+	- Use `snake_case` or `camelCase` for readability.
+- **Mutability:**
+	- Immutable objects (e.g., `int`, `str`) create new memory references on reassignment.
+	- Mutable objects (e.g., `list`, `dict`) allow in-place modification, affecting all references.
 - **Scope:**
-	- **Global:** Accessible throughout the program.
-	- **Local:** Limited to within functions.
-- **Type Hinting:** Optional annotations (e.g., `x: int = 5`) clarify variable types.
+	- **Global:** Accessible program-wide.
+	- **Local:** Restricted to within functions.
+- **Type Hinting:** Use optional annotations (e.g., `x: int = 5`) for better clarity and debugging.
 
 # Objects
 
@@ -189,9 +192,14 @@ This simple type hinting works with most datatypes. With many collection datatyp
 
 # Questions
 - [ ] Explain variables and their usage in your own words.
+- [ ] Explain Objects in python.
+- [ ] What is the meaning/difference of variable, value, reference, object, and (data-)type in python
 - [ ] Show and explain the creating, accessing, updating and deleting of variables.
 - [ ] Do you have to tell Python which datatype a variable has?
 - [ ] What are the rules for naming variables in Python?
 - [ ] How can you make good variable names and why is this important?
+- [ ] How does Python handle variable reassignment with mutable vs. immutable objects?
+- [ ] How do you check whether two variables point to the same object in memory?
 - [ ] Explain variable scope in your own words.
+- [ ] What happens if you try to access a variable that hasn’t been defined?
 - [ ] Explain type hinting in your own words.
