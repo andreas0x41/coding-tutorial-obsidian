@@ -11,7 +11,7 @@ tags:
   - GEES
   - General
 ---
-Variables are used to store data. You can think of them like a container. The shape of the container is defined by the [[5 Datatypes|Datatype]] and then you can put any fitting value inside the container. Python variables are labels for objects. They point to memory locations storing values.
+Variables are used to store data. You can think of them like a container. The shape of the container is defined by the [[5 Datatypes|Datatype]] and then you can put any fitting value inside the container. Python variables are labels that point to an objects in memory that stores a value.
 
 # Summary
 - **Definition:** Variables are labels for objects in memory used to store data.
@@ -28,8 +28,7 @@ Variables are used to store data. You can think of them like a container. The sh
 	- **Local:** Limited to within functions.
 - **Type Hinting:** Optional annotations (e.g., `x: int = 5`) clarify variable types.
 
-# Definition and Usage
-## Creating/Accessing
+# Creating/Accessing
 Use the assignment operator `=` to create and assign values to a variable. To do this you have to use the Syntax `variable_name = value`. 
 
 Variables in Python are not explicitly declared with a datatype. Instead, Python automatically picks a fitting type based on the assigned value at runtime. This also means/has the drawback that datatype errors/incompatibilities happen at runtime and can't easily be detected beforehand.
@@ -46,7 +45,7 @@ number = "test"   # reassign variable number with value "test" of type String
 print(number)     # -> test
 ```
 
-## Accessing
+# Accessing
 Use the variable name to access the value of a variable. Python will get the variable value from memory and put it place of the name. Tying to access a variable that does not exist will result in an error.
 
 ```python
@@ -54,7 +53,7 @@ print(number)  # -> 10
 print(message) # -> Hello
 ```
 
-## Deleting
+# Deleting
 You can use the [[8 Keywords|keyword]] `del` to delete a variable/the object reference it stores.
 
 ```python
@@ -62,6 +61,10 @@ x = 10 # creating x with value 10
 del x  # deleting x 
 ```
 
+> [!todo]- not exam relevant
+> This is good to know, but not really exam relevant. To actually understand this it is good to first read [[#Objects Value vs. Reference]].
+
+If the reference count (how many times it is referenced for example by variables) of an object in memory gets down to zero it is no longer needed. Then pythons automatic garbage collector will free up the storage, so that it can be used for a different purpose again. So using `del` will delete the reference and if there are no more references anywhere the object in memory will be deleted.
 # Naming Rules
 There are a few rules that all variable names must follow.
 1. **Start with a letter or an underscore**: A variable name must begin with a letter (a-z, A-Z) or an underscore `_`.
@@ -90,8 +93,28 @@ Variable names are usually lowercase, except for potentially capitalizing all bu
 
 # Scope
 Variable scope means when/where variables are defined and can be accessed. In python you are not directly accessing locations in memory, instead you are using context dependent variables.
-**Global Scope** variables are outside of functions and can be accessed everywhere (after their declaration). 
-**Local Scope** variables are created inside a function and because of that only exist inside that function.
+**Global Scope** variables are outside of functions and can be accessed everywhere (after their creation). 
+**Local Scope** variables are created inside a function and because of that only exist inside that function. So after running the function is finished, all the references will be deleted again.
+
+# Objects: Value vs. Reference
+> [!todo]- partly exam relevant
+> This topic might seem complicated and like unnecessary detailed description. Working with memory references is extremely significant for low level languages, but also in Python you can not ignore it. Because if you are not aware of it you will regularly make hard to find mistakes and struggle. 
+
+In Python, variables do **not** directly store the values themselves. Instead, they store references to the objects in memory. A **reference** points to a location/address in computer memory where a object is stored. 
+
+The main characteristics of an object in python are.
+- A unique **identifier** (memory address) that distinguishes it from other objects. This is returned by the `id()` function.
+- The [[5 Datatypes|(data-)type]] of the object that defines what kind of object it is (e.g., `int`, `str`, `list`). This is returned by the `type()` function.
+- The **value** which is the actual data contained in the object (e.g., `42`, `"Hello"`, `[1, 2, 3]`). This is returned by default when just putting the name of the variable
+Additionally, depending on the type of object, they can have Attributes and Methods.
+
+```python
+x = 5          # creating a variable with the name x
+print(id(x))   # print the object identifier/location in memory -> 140735731917896
+print(type(x)) # print the type of the object -> <class 'int'>
+print(x)       # print the value of the object -> 5
+```
+
 # Type Hinting
 > [!todo]- not exam relevant
 > This topic not exam relevant.

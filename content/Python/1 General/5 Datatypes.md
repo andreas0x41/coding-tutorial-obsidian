@@ -74,7 +74,7 @@ Bellow you find a table of some key properties of the collection datatypes avail
 | [[5 Datatypes#Range\|Range]]           | No      | Yes                         | Yes      | Yes     | Generating sequences of numbers            |
 | [[5 Datatypes#Generator\|Generator]]   | No      | Yes                         | No       | No      | Efficient iteration over large datasets    |
 ### Mutable
-A mutable object can be modified after it is created. This means you can change, add, or remove parts or all of its content without creating a new object. For example, you can change the value of the second item in a list, but you can not change the value of the second item in a tuple or string.
+A mutable object can be modified after it is created. This means you can change, add, or remove parts or all of its content without creating a new object. For example, you can change the value of the second item in a list, but you can not change the value of the second item in a tuple or string. All basic datatypes are actually immutable, so every time it seems like their value is changed, actually a completely new object with the new value is created.
 
 ### Iterable
 An iterable is any object that can return its elements one at a time, allowing it to be used in a loop (e.g., `for` loops). 
@@ -110,13 +110,14 @@ sequence[start:stop:step]
 
 I you leave one of these blank, it will have a default value
 - `start`: The starting index (**inclusive**). Defaults to `0` (first element) if omitted. Negative values work the same way as with indexing.
-- `stop`: The ending index (**exclusive**). Defaults to `-1` (last element) if omitted. Negative values work the same way as with indexing.
+- `stop`: The ending index (**exclusive**). Because it is exclusive, the element with this index is not included, to include the last element you have to use one more then its index or -1. Defaults to `-1` (last element) if omitted. Negative values work the same way as with indexing.
 - `step`: The interval between elements. Defaults to `1` (every element without skipping). Negative values reverse the order of the sequence.
 
 If you get elements of a sequence using slicing, it will create a shallow copy of the sequence and give it to you. 
 
 ```python
 listName = [3, 1, 7, 4, 5, 2, 9]  # create list and save in variable listName
+# Index     0  1  2  3  4  5  6
 print(listName[1:3])              # elements from the 2nd (inclusive) to the 4th (exclusive) -> [1, 7]
 print(listName[:4])               # elements from the 1st to the 5th -> [3, 1, 7, 4]
 print(listName[2:])               # elements from the 3rd to the last (inclusive) -> [7, 4, 5, 2, 9]

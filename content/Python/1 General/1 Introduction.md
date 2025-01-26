@@ -73,7 +73,7 @@ Below you can find a few websites that overall do a good job. It can be very hel
 ## Code Chef
 <https://www.codechef.com/blogs/how-to-use-code-visualizer>
 
-This website has the advantage of also including a visualizer. this enables you to run code line by line, see variables and control flow and understand it much easier. 
+This website has the advantage of also including a visualizer. This enables you to run code line by line, see variables and control flow and understand it much easier. 
 
 [Code Chef Visualizer Tutorial](https://www.codechef.com/blogs/how-to-use-code-visualizer)
 
