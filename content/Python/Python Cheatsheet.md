@@ -3,8 +3,8 @@ title: Python Cheatsheet
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: true
-description: 
-aliases: 
+description:
+aliases:
 tags:
   - Python
   - Cheatsheet
@@ -21,15 +21,15 @@ https://pythonbasics.org/
 https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#python
 
 ```cmd
-python --version   # get python version
+python --version   # getPython version
 ```
 
 ```python
 print("Hello World")
 ```
 
-
 [^1] dsfasd fasd s
+
 # In- and Output
 
 ```python
@@ -44,12 +44,12 @@ print(strOut1, strOutn, end=strAtEnd, sep=strArgSeperator)
 print("Welcome " + input("Please enter your name: "))
 ```
 
-
 # Comments
+
 ```python
 # Single line comments start with a number symbol.
 
-""" 
+"""
 Multiline strings and comments can be written
 using 3 ", and are often used as documentation.
 """
@@ -69,10 +69,14 @@ using 3 ", and are often used as documentation.
 | Set        | {1, 2, 3}               | set()      |
 | Dictionary | {"a": 1, {b}: "5"}      | dict()     |
 
-# Variables 
+# Variables
+
 Dynamically-typed, assignment operator "=", global or local scope depending on definition position, when accessing current scope is searched first, nested scope can not be accessing from outside.
+
 ## Type Hinting
+
 Optional type hinting, not strictly enforced by the interpreter, "typing" module can be useful for more complex type hinting
+
 ```python
 name: str = "John"
 age: int = 25
@@ -83,25 +87,26 @@ def output(a: str, b: int) -> bool:
 ```
 
 # Operators
+
 Assignment with =, can be combined with arithmetic and bitwise operators e.g. x<<:=1.
 Walrus operator :=, additionally returns the assigned value, but can't be combined with operators.
 
 ## Arithmetic Operators
 
-| OPERATOR | DESCRIPTION    | SYNTAX | FUNCTION       | MAGIC METHOD                |
-| -------- | -------------- | ------ | -------------- | --------------------------- |
-| +        | Addition       | a + b  | add(a, b)      | `__add__(self, other)`      |
-| -        | Subtraction    | a - b  | sub(a, b)      | `__sub__(self, other)`      |
-| *        | Multiplication | a * b  | mul(a, b)      | `__mul__(self, other)`      |
-| /        | True Division  | a / b  | truediv(a, b)  | `__truediv__(self, other)`  |
-| //       | Floor Division | a // b | floordiv(a, b) | `__floordiv__(self, other)` |
-| %        | Modulo         | a % b  | mod(a, b)      | `__mod__(self, other)`      |
-| **       | Power          | a ** b | pow(a, b)      | `__pow__(self, other)`      |
+| OPERATOR | DESCRIPTION    | SYNTAX   | FUNCTION       | MAGIC METHOD                |
+| -------- | -------------- | -------- | -------------- | --------------------------- |
+| +        | Addition       | a + b    | add(a, b)      | `__add__(self, other)`      |
+| -        | Subtraction    | a - b    | sub(a, b)      | `__sub__(self, other)`      |
+| \*       | Multiplication | a \* b   | mul(a, b)      | `__mul__(self, other)`      |
+| /        | True Division  | a / b    | truediv(a, b)  | `__truediv__(self, other)`  |
+| //       | Floor Division | a // b   | floordiv(a, b) | `__floordiv__(self, other)` |
+| %        | Modulo         | a % b    | mod(a, b)      | `__mod__(self, other)`      |
+| \*\*     | Power          | a \*\* b | pow(a, b)      | `__pow__(self, other)`      |
 
 ## Relational Operators
 
 | Operator | Description      | Syntax | Function | Magic Method          |
-|----------|------------------|--------|----------|-----------------------|
+| -------- | ---------------- | ------ | -------- | --------------------- |
 | >        | Greater than     | a > b  | gt(a, b) | `__gt__(self, other)` |
 | >=       | Greater or equal | a >= b | ge(a, b) | `__ge__(self, other)` |
 | <        | Less than        | a < b  | lt(a, b) | `__lt__(self, other)` |
@@ -109,41 +114,42 @@ Walrus operator :=, additionally returns the assigned value, but can't be combin
 | ==       | Equal to         | a == b | eq(a, b) | `__eq__(self, other)` |
 | !=       | Not equal to     | a != b | ne(a, b) | `__ne__(self, other)` |
 
-
 ## Logical Operators
+
 AND as well as OR don't just return a bool, but instead one of the operands.
 
-| OPERATOR | DESCRIPTION                 |
-|----------|-----------------------------|
-| not      | Negate a boolean            |
-| and      | Truthy if both are truthy    |
-| or       | Truthy if at least one truthy|
+| OPERATOR | DESCRIPTION                   |
+| -------- | ----------------------------- |
+| not      | Negate a boolean              |
+| and      | Truthy if both are truthy     |
+| or       | Truthy if at least one truthy |
 
 ## Bitwise Operators
 
-|OPERATOR|DESCRIPTION|SYNTAX|FUNCTION|MAGIC METHOD|
-|---|---|---|---|---|
-|&|Bitwise AND|a & b|and_(a, b)|`__and__(self, other)`|
-|\||Bitwise OR|a \| b|or_(a, b)|`__or__(self, other)`|
-|^|Bitwise XOR|a ^ b|xor(a, b)|`__xor__(self, other)`|
-|~|Bitwise NOT|~a|invert(a)|`__invert__(self)`|
-|>>|Bitwise R shift|a >> b|rshift(a, b)|`__irshift__(self, other)`|
-|<<|Bitwise L shift|a << b|lshift(a, b)|`__lshift__(self, other)`|
+| OPERATOR | DESCRIPTION     | SYNTAX | FUNCTION     | MAGIC METHOD               |
+| -------- | --------------- | ------ | ------------ | -------------------------- |
+| &        | Bitwise AND     | a & b  | and\_(a, b)  | `__and__(self, other)`     |
+| \|       | Bitwise OR      | a \| b | or\_(a, b)   | `__or__(self, other)`      |
+| ^        | Bitwise XOR     | a ^ b  | xor(a, b)    | `__xor__(self, other)`     |
+| ~        | Bitwise NOT     | ~a     | invert(a)    | `__invert__(self)`         |
+| >>       | Bitwise R shift | a >> b | rshift(a, b) | `__irshift__(self, other)` |
+| <<       | Bitwise L shift | a << b | lshift(a, b) | `__lshift__(self, other)`  |
 
 ## Precedence
 
-|Operators|Description|
-|---|---|
-|\*\*|Exponentiation|
-|+x, -x, ~x|Unary Operators|
-|\*, /, //, %|Arithmetic Operators|
-|+, -|Addition/Subtraction|
-|<<, >>|Bitwise Shift Operators|
-|&, ^, \||Bitwise Operators|
-|\==, !=, >, >=, <, <=, is, is not, in, not in|Comparison Operators|
-|not, and, or|Logical Operators|
+| Operators                                     | Description             |
+| --------------------------------------------- | ----------------------- |
+| \*\*                                          | Exponentiation          |
+| +x, -x, ~x                                    | Unary Operators         |
+| \*, /, //, %                                  | Arithmetic Operators    |
+| +, -                                          | Addition/Subtraction    |
+| <<, >>                                        | Bitwise Shift Operators |
+| &, ^, \|                                      | Bitwise Operators       |
+| \==, !=, >, >=, <, <=, is, is not, in, not in | Comparison Operators    |
+| not, and, or                                  | Logical Operators       |
 
 # Lists, Tuples, Sets, Dictionaries
+
 ## Indexing
 
 ```python
@@ -161,6 +167,7 @@ dictionary[index] = value         # Adding a new key-value pair to the dictionar
 ```
 
 ## Operators
+
 ```python
 [1, 2] + [3, 4]                   # Concatenate lists => [1, 2, 3, 4]
 3 * [1, 2, 3]                     # Repeat list 3 times => [1, 2, 3, 1, 2, 3, 1, 2, 3]
@@ -169,6 +176,7 @@ item in list                      # Check if item is in a list, tuple, set, or d
 ```
 
 ## Methods
+
 ```python
 list.get(key, ?default)           # Dictionary method: Retrieves the value at the specified key, or returns the default value if the key is not found
 list.append(value)                # List method: Appends the value to the end of the list
@@ -186,7 +194,9 @@ dictionary.keys()                 # Dictionary method: Returns a view object of 
 dictionary.values()               # Dictionary method: Returns a view object of the values in the dictionary
 dictionary.items()                # Dictionary method: Returns a view object of the (key, value) pairs in the dictionary
 ```
+
 ## Functions
+
 ```python
 zip(*iterables)                   # Built-in function: Creates an iterator of tuples by pairing elements from multiple iterables
 filter(function, iterable)        # Built-in function: Creates an iterator containing elements for which the function returns True
@@ -205,25 +215,32 @@ all(iterable)                     # Built-in function: Returns True if all eleme
 ^ce54bd
 
 ## Set comparison
+
 ```python
 set1 == set2                      # Equality - Checks if two sets contain the same elements
 set1 != set2                      # Inequality - Checks if two sets do not contain the same elements
 set1 < set2                       # Subset - Check if set1 is a subset of set2 (including equal with <=)
 set1 > set2                       # Superset - Check if set1 is a superset of set2 (including equal with >=)
 ```
+
 ## Range
+
 ```python
 range_(start, stop, step)         # Generates an iterable from start to stop (exclusive) with the given step
 list(range(10, -2, -3))           # list from range => [10, 7, 4, 1]
 ```
+
 ## Comprehension
+
 ```python
 list = [x for x in iterable if condition]
 tuple = tuple(x for x in iterable if condition)
 set = {x for x in iterable if condition}
 dict = {key: value for key, value in iterable if condition}
 ```
+
 ## Unpacking
+
 ```python
 a, *b, c = 1, 2, 3, 4             # Unpacking a tuple into variables: a = 1, b = [2, 3], c = 4
 a, b = b, a                       # Swapping values of a and b
@@ -232,6 +249,7 @@ a, b = b, a                       # Swapping values of a and b
 ```
 
 # Strings
+
 [W3School String Methods](https://www.w3schools.com/python/python_ref_string.asp)
 [W3School .format()](https://www.w3schools.com/python/ref_string_format.asp)
 [RealPython string formatting](https://realpython.com/python-f-strings/#f-strings-a-new-and-improved-way-to-format-strings-in-python)
@@ -249,12 +267,14 @@ print("My name is {0}, I'm {1}".format(name, age))
 print("My name is {fname}, I'm {age}".format(fname = name, age = age))
 
 print(f"My name is {name}, I'm {age}")
-print(f"""My name is {name}, 
+print(f"""My name is {name},
 I'm {age}""")
 print(f"\"{{{70 + 4 = }}}\"")
 print(f"{name} starts with {name[0]} and is {len(name)} chars long.")
 ```
+
 Indexing, Methods and functions partly like lists, additionally
+
 ```python
 seperator.join(iterable)          # => Concate iterable elements separated into single string
 string.strip(chars)               # => remove leading and tailing chars, default=" "
@@ -263,26 +283,33 @@ string.splitlines(keepends)       # => split string into a list of lines, defaul
 ```
 
 # Conditions
+
 ## if - else if - else
+
 ```python
 if condition1:
     # code block 1, condition1 True
 elif condition2:
     # code block 2, condition1 False and condition2 True
-else: 
+else:
     # code block 3, condition1 and condition2 False
 ```
+
 ## Ternary Operator
+
 ```python
 value_if_true if condition else value_if_false
 ```
+
 ## match case
+
 https://www.geeksforgeeks.org/python-match-case-statement/
 https://learnpython.com/blog/python-match-case-statement/
+
 ```python
-match parameter:   
+match parameter:
     case first:
-	    # case first   
+	    # case first
     case second:
 	     # case second
     case n :
@@ -312,14 +339,18 @@ match dictionary:
 ```
 
 # Loops
-## while 
+
+## while
+
 ```python
 while condition:
 	# code block executed while condition True
 else:
 	# code block executed when for finished without break
 ```
+
 ## for
+
 ```python
 for item in iterator
 	# code block executed for each item in iterator
@@ -328,21 +359,27 @@ else:
 
 for key, value in dictionary.items() # example iterate over dictionary
 ```
+
 ## Control Statements
+
 ```python
 break                             # jump out of (inner) loop
 continue                          # jump to next repetition of (inner) loop
 ```
 
 # File Handling
+
 ## Standard File Handling
+
 ```python
 file = open(path, mode, encoding) # open file at path with mode and encoding e.g. utf-8
 content = file.read()             # read content from file as string
 file.write(content)               # write string to file
 file.close()                      # close file
 ```
+
 ## Open Modes
+
 ```python
 "r"      reading, error if it doesn't exist
 "w"      writing, new file if it doesn't exist
@@ -355,13 +392,16 @@ file.close()                      # close file
 ```
 
 ## Context Manager
+
 ensure proper automatic `___enter___` (open) and `___exit___` (close) even in case of an exception
+
 ```python
 with open(path, mode) as file:
 	file.read(), file.write(content), ...
 ```
 
 # Exception Handling
+
 ```python
 try:
 	# code block
@@ -379,7 +419,9 @@ finally:
 ```
 
 # Functions
+
 ## Standard Functions
+
 ```python
 def funcName(par1, par2=default, *args, **kwargs): # function with par1, par2
 	# *args takes all remaining unnamed arguments as tuple
@@ -390,22 +432,29 @@ def funcName(par1, par2=default, *args, **kwargs): # function with par1, par2
 	# code block
 	return returnValues
 ```
+
 ## Iterator Generator
+
 ```python
 def custom_iterator():
-    while True: 
+    while True:
         # Generate the next value
         yield value # yield value but stay in function
 
 for item in custom_iterator():
     # Process each item one by one, you can get net item with next(iterator)
 ```
+
 ## lambda
+
 ```python
 lambda arguments: expression # inline function, e.g. lambda x, y: x + y
 ```
+
 ## Decorators
+
 decorate/wrap a function
+
 ```python
 def decorator(func):
     def wrapper():
@@ -420,35 +469,48 @@ def function():
 ```
 
 # Packages and Import
+
 ## Install Packages with pip
+
 https://docs.python.org/3/installing/index.html
 https://pip.pypa.io/en/stable/
+
 ```cmd
 python -m pip --version   # get pip version
 ```
+
 ```cmd
 python -m pip install SomePackage   # install SomePackage
 ```
+
 ```cmd
 python -m pip install -r requirements.txt   # install Packages listed in requirements.txt
 ```
+
 ```cmd
 python -m pip install SomePackage==1.0.4    # install SomePackage with specific version
 ```
+
 ```cmd
 python -m pip install "SomePackage>=1.0.4"  # install SomePackage with minimum version
 ```
+
 ```cmd
 python -m pip install --upgrade SomePackage   # upgrade SomePackage
 ```
+
 ```cmd
 python -m pip uninstall SomePackage   # uninstall SomePackage
 ```
+
 ```cmd
 python -m pip list   # get list of installed Packages
 ```
+
 ## import
-you can import installed packages as well as your own python files
+
+you can import installed packages as well as your ownPython files
+
 ```python
 import module_name
 from module_name import object_name
@@ -459,9 +521,13 @@ import package_name.module_name
 ```
 
 ## Common Modules
+
 https://pypi.org/
+
 # OOP
+
 ## Standard Class
+
 ```python
 class className:
 	classAttribute = 0            # classAttribute shared among instances
@@ -469,27 +535,27 @@ class className:
         # Constructor - Initializes the object
         self.publicVar = par1
         self._protectedVar = par2 # primarely hinting
-        self.__privateVar = par3  # no strict privacy in python	
-	
+        self.__privateVar = par3  # no strict privacy inPython
+
     def methodName(self, par):    # methods like functions, self as instance reference
         return returnValues
-	
+
     @classmethod
     def methodName(cls, par):     # cls as class reference, shared among instances
         return returnValues
-    
+
     @staticmethod
     def methodName(par):          # method without class or instance reference
         return returnValues
-	
+
     @property
     def attributeName(self):      # getter, defines get for attributeName
         return self.attributeName
-	
+
     @attributeName.setter
     def attributeName(self, val): # defines set for attributeName
         self.attributeName = val
-	
+
     @attributeName.deleter
     def attributeName(self):      # defines del for attributeName
         del self.attributeName
@@ -497,10 +563,13 @@ class className:
 objName = className(a, b, c)      # calls __init__ and returns the object
 objName.publicVar      objName._protectedVar      objName._className__privateVar
 objName.methodName(par)
-objName.methodName     objName.methodName=0       del objName.methodName  
+objName.methodName     objName.methodName=0       del objName.methodName
 ```
+
 ## Magic Methods
+
 Provide additional functionality with built in operators, methods, ...
+
 ```python
 __repr__(self)                    # return string representation of object
 __len__(self)                     # called when using len()
@@ -512,22 +581,24 @@ __next__(self)                    # invoked by iterator to get next element, use
 __enter__(self)                   # setup and entry for context manger
 __exit__(self, ...)               # release and exit for context manager
 ```
+
 ## Inheritance
+
 ```python
 class baseClass:
-    def __init__(self, par):      # base class initialization logic        
-	
+    def __init__(self, par):      # base class initialization logic
+
     def baseMethod1(self, par):   # base class method1
-    
+
     def baseMethod2(self, par):   # base class method1
 
 class derivedClass(baseClass):
     def __init__(self, par):      # if not defined base __init__ is used
-        super().__init__(par)     # call base class __init__	
+        super().__init__(par)     # call base class __init__
         # derivedClass initialization logic
-	
-    def baseMethod1(self, par):   # override base class method        
-	
+
+    def baseMethod1(self, par):   # override base class method
+
     def derivedMethod(self, par): # derived class method
 ```
 
