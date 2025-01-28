@@ -106,6 +106,7 @@ Arithmetic operators are basically the operators you already know from mathemati
 | Floor Division              | `//`     | `a // b` | `7 // 2 = 3`                                   |
 | Modulus/Remainder           | `%`      | `a % b`  | `7 % 2 = 1`                                    |
 | Exponentiation (Power)      | `**`     | `a ** b` | `3 ** 2 = 9`                                   |
+
 Exponentiation also works with floats, and fractional exponents can be used to calculate roots.
 ## Division Operators
 Python actually has three different operators related to division. The true division `/` will give you an accurate division result as a float number. The floor division `//` will return the result of doing the division and then **rounding down** to the next lowest whole number. The modulo `%` will return the **remainder** when doing a whole number division. 

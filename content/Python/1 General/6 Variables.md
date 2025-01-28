@@ -33,7 +33,7 @@ Variables are used to store data. You can think of them like a container. The sh
 	- **Local:** Restricted to within functions.
 - **Type Hinting:** Use optional annotations (e.g., `x: int = 5`) for better clarity and debugging.
 
-# Objects
+# Memory Objects
 
 > [!todo]- partly exam relevant
 > This topic might seem complicated and like an unnecessarily detailed description. However, working with memory references is extremely significant for low level languages, also in Python you can not ignore it. Because if you are not aware of it you, you can not properly understand Python, will regularly make hard to find mistakes and struggle. The details of how this works/behaves are also different between languages. Please try to understand the basics, even if the details seem hard.
@@ -82,11 +82,17 @@ print(message) # -> Hello
 ```
 
 # Deleting
-You can use the [[8 Keywords|keyword]] `del` to delete a variable/the object reference it stores.
+You can use the [[8 Keywords|keyword]] `del` to delete a variable/the object reference it stores. If you are working with a [[5 Datatypes#Mutable|mutable]] collection of type list or dictionary you can also use indexing and slicing to remove individual items.
 
 ```python
-x = 10 # creating x with value 10
-del x  # deleting x
+x = 10             # creating x with value 10
+del x              # deleting x
+
+my_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+del my_list[0]     # delete the first element
+print(my_list)     # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+del my_list[1:7:2] # delete every secound item from the 2nd to the 8th
+print(my_list)     # Output: [1, 3, 5, 7, 8, 9]
 ```
 
 > [!todo]- not exam relevant

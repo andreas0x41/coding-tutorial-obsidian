@@ -10,6 +10,11 @@ tags:
   - AECD
   - GEES
 ---
+[[#Result Data Types of Arithmetic Operators]]
+
+
+[[Working Draft 1#Result Data Types of Arithmetic Operators|Test 2]] 
+
 # Python Operators Tutorial
 
 ## Introduction
@@ -76,39 +81,37 @@ Arithmetic operators are used for basic mathematical operations.
 ### Advanced Use Case: `*` and `+` with Sequences
 
 - `*` can be used to repeat sequences:
-    
-    ```python
+
+	```python
     lst = [1, 2, 3]
     print(lst * 3)  # [1, 2, 3, 1, 2, 3, 1, 2, 3]
     ```
-    
+
 - `+` concatenates sequences:
-    
-    ```python
+
+	```python
     print([1, 2] + [3, 4])  # [1, 2, 3, 4]
     ```
-    
 
 ### Non-Standard Datatypes
 
 - Strings:
-    
-    ```python
+
+	```python
     s1 = "Hello"
     s2 = "World"
     print(s1 + " " + s2)  # "Hello World"
     print(s1 * 3)  # "HelloHelloHello"
     ```
-    
+
 - Tuples:
-    
-    ```python
+
+	```python
     t1 = (1, 2)
     t2 = (3, 4)
     print(t1 + t2)  # (1, 2, 3, 4)
     print(t1 * 2)  # (1, 2, 1, 2)
     ```
-    
 
 ---
 
@@ -128,12 +131,11 @@ These operators compare two values and return a boolean result.
 ### Non-Standard Datatypes
 
 - Strings (Lexicographical comparison):
-    
-    ```python
+
+	```python
     print("abc" > "abd")  # False
     print("abc" < "abd")  # True
     ```
-    
 
 ---
 
@@ -159,19 +161,18 @@ if x > 3 and y < 15:
 ### Non-Standard Datatypes
 
 - Strings:
-    
-    ```python
+
+	```python
     print("" and "Hello")  # ""
     print("Hi" or "Bye")  # "Hi"
     ```
-    
+
 - Lists:
-    
-    ```python
+
+	```python
     print([] or [1, 2])  # [1, 2]
     print([0] and [3, 4])  # [3, 4]
     ```
-    
 
 ---
 
@@ -218,12 +219,11 @@ print(4 not in lst)  # True
 ### Non-Standard Datatypes
 
 - Strings:
-    
-    ```python
+
+	```python
     print("a" in "abc")  # True
     print("x" not in "xyz")  # False
     ```
-    
 
 ---
 
@@ -249,19 +249,18 @@ print(a is c)  # False
 ### Non-Standard Datatypes
 
 - Strings:
-    
-    ```python
+
+	```python
     s1 = "hello"
     s2 = "hello"
     print(s1 is s2)  # True (string interning)
     ```
-    
 
 ---
 
 ## Special Uses of Operators
 
-### `*` for Argument Unpacking
+### `*` For Argument Unpacking
 
 ```python
 def add(a, b, c):
@@ -270,7 +269,7 @@ args = (1, 2, 3)
 print(add(*args))  # Output: 6
 ```
 
-### `**` for Keyword Argument Unpacking
+### `**` For Keyword Argument Unpacking
 
 ```python
 def greet(name, age):
@@ -361,7 +360,7 @@ x = 3 + 5 * 2  # Multiplication is evaluated first, result: 13
 x = (3 + 5) * 2  # Parentheses change precedence, result: 16
 ```
 
-# Result Datatypes 
+# Result Datatypes
 
 
 ## Result Data Types of Arithmetic Operators
