@@ -138,8 +138,6 @@ print(id(x), id(y)) # printing the memory address of x and y -> 140735731917608 
 print(x is y)       # checking if x and y point to the same object -> True
 print(x, y)         # printing the values of x and y -> 1 1
 y = y + 1           # creating a new object with the value of x + 1 and assigning it to y
-y = y - 1           # creating a new object with the value of y - 1 and assigning it to y
-                    # now, x and y have the same value, but they point to different objects
 print(id(x), id(y)) # printing the memory address of x and y -> 140735731917608 140735731917640
 print(x is y)       # checking if x and y point to the same object -> False
 print(x, y)         # printing the values of x and y -> 1 1

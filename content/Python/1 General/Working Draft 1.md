@@ -10,231 +10,419 @@ tags:
   - AECD
   - GEES
 ---
-
-
-# `nonlocal` Keyword in Python
+# Python Operators Tutorial
 
 ## Introduction
-The `nonlocal` keyword in Python is used to declare a variable in an **enclosing non-global scope**. It allows you to modify variables that are defined in the nearest enclosing function scope, excluding the global scope.
+
+Operators in Python are special symbols or keywords used to perform operations on variables and values. Python supports a variety of operators categorized by their functionality. This guide covers **everything** about Python operators, including basic and advanced usage.
 
 ---
 
-## Why Do We Need `nonlocal`?
-In Python, variables in nested functions have their own local scope by default. If you want to modify a variable from the enclosing function scope within a nested function, you need to use the `nonlocal` keyword. Without it, Python treats the variable as a new local variable in the nested function.
+## Categories of Operators
+
+1. [Assignment Operators](#assignment-operators)
+2. [Arithmetic Operators](#arithmetic-operators)
+3. [Relational (Comparison) Operators](#relational-comparison-operators)
+4. [Logical Operators](#logical-operators)
+5. [Bitwise Operators](#bitwise-operators)
+6. [Membership Operators](#membership-operators)
+7. [Identity Operators](#identity-operators)
+8. [Special Uses of Operators](#special-uses-of-operators)
+9. [Operator Precedence](#operator-precedence)
+10. [Multiple Value Assignment](#multiple-value-assignment)
+11. [Walrus Operator](#walrus-operator)
 
 ---
 
-## How `nonlocal` Works
+## Assignment Operators
 
-### 1. Enclosing Scope
-The `nonlocal` keyword is used when:
-- A function is nested inside another function.
-- You want to modify a variable in the outer (enclosing) function scope.
+Assignment operators are used to assign values to variables.
 
-### 2. `nonlocal` Vs `global`
-- `nonlocal` modifies a variable in the nearest enclosing function scope.
-- `global` modifies a variable in the global (module-level) scope.
-
----
-
-## Syntax
-
-```python
-def outer_function():
-    variable = "Outer"
-
-    def inner_function():
-        nonlocal variable
-        variable = "Modified by inner"
-    
-    inner_function()
-    print(variable)
-```
-
-### Output:
-
-```
-
-Modified by inner
-
-```
-
----
-
-## Example Breakdown
-
-### Example 1: Without `nonlocal`
-
-If you try modifying a variable in the enclosing scope without `nonlocal`, Python treats it as a new local variable and throws an error if you try to use it before assignment.
-
-```python
-def outer_function():
-    variable = "Outer"
-    
-    def inner_function():
-        variable = "Inner"  # This creates a new local variable in inner_function
-    
-    inner_function()
-    print(variable)  # Output: Outer
-```
-
-In this case, the `variable` in the inner function does not affect the `variable` in the outer function.
-
----
-
-### Example 2: With `nonlocal`
-
-Using `nonlocal` ensures that the `variable` in the inner function refers to the one in the enclosing scope.
-
-```python
-def outer_function():
-    variable = "Outer"
-    
-    def inner_function():
-        nonlocal variable
-        variable = "Modified by inner"
-    
-    inner_function()
-    print(variable)
-
-outer_function()
-```
-
-### Output:
-
-```
-Modified by inner
-```
-
----
-
-### Example 3: Modifying Multiple Variables
-
-You can use `nonlocal` to modify multiple variables in the enclosing scope.
-
-```python
-def outer_function():
-    a = 5
-    b = 10
-
-    def inner_function():
-        nonlocal a, b
-        a += 1
-        b *= 2
-
-    inner_function()
-    print(a, b)
-
-outer_function()
-```
-
-### Output:
-
-```
-6 20
-```
-
----
-
-## Limitations of `nonlocal`
-
-1. **Only Works in Nested Functions**: The `nonlocal` keyword works only when the variable is in the nearest enclosing function. If no such variable exists, Python raises a `SyntaxError`.
-
-	```python
-    def inner_function():
-        nonlocal x  # SyntaxError: no binding for 'x' found in the enclosing function
-    ```
-
-2. **Cannot Modify Global Variables**: Use `global` for global variables instead of `nonlocal`.
-	
-
----
-
-## Common Use Cases
-
-1. **Counters in Nested Functions**
-
-	```python
-    def counter():
-        count = 0
-    
-        def increment():
-            nonlocal count
-            count += 1
-            return count
-    
-        return increment
-    
-    c = counter()
-    print(c())  # Output: 1
-    print(c())  # Output: 2
-    ```
-
-2. **State Maintenance in Closures**
-
-	```python
-    def multiplier(factor):
-        result = factor
-    
-        def multiply_by(x):
-            nonlocal result
-            result *= x
-            return result
-    
-        return multiply_by
-    
-    double = multiplier(2)
-    print(double(3))  # Output: 6
-    print(double(4))  # Output: 24
-    ```
-
----
-
-## Summary
-
-- The `nonlocal` keyword allows you to modify variables in the nearest enclosing function scope.
-- It is used in nested functions when you need to retain and modify the state of variables from the enclosing function.
-- If no variable exists in the enclosing scope, Python raises a `SyntaxError`.
-
----
-
-## Comparison Table: `local`, `nonlocal`, `global`
-
-|**Keyword**|**Scope Modified**|**Example Usage**|
+|Operator|Example|Explanation|
 |---|---|---|
-|`local`|Inside the current function|Defined by default without any keyword.|
-|`nonlocal`|Nearest enclosing function|Used in nested functions.|
-|`global`|Module-level scope|Used to modify global variables.|
+|`=`|`a = 10`|Assigns 10 to `a`.|
+|`+=`|`a += 5`|Adds 5 to `a` (a = a + 5).|
+|`-=`|`a -= 5`|Subtracts 5 from `a`.|
+|`*=`|`a *= 3`|Multiplies `a` by 3.|
+|`/=`|`a /= 2`|Divides `a` by 2.|
+|`//=`|`a //= 2`|Floor-divides `a` by 2.|
+|`%=`|`a %= 3`|Modulus operation on `a`.|
+|`**=`|`a **= 2`|Raises `a` to the power of 2.|
+
+### Example
 
 ```python
-# Example of all three
-x = 10  # Global
-
-def outer_function():
-    x = 20  # Enclosing scope
-
-    def inner_function():
-        nonlocal x
-        x += 1
-        print("Inner x:", x)
-
-    inner_function()
-    print("Outer x:", x)
-
-outer_function()
-print("Global x:", x)
-```
-
-Output:
-
-```
-Inner x: 21
-Outer x: 21
-Global x: 10
+x = 10
+x += 3  # x = x + 3, x becomes 13
+x //= 2  # x = x // 2, x becomes 6
 ```
 
 ---
 
+## Arithmetic Operators
+
+Arithmetic operators are used for basic mathematical operations.
+
+|Operator|Example|Explanation|
+|---|---|---|
+|`+`|`a + b`|Addition|
+|`-`|`a - b`|Subtraction|
+|`*`|`a * b`|Multiplication|
+|`/`|`a / b`|Division|
+|`//`|`a // b`|Floor Division|
+|`%`|`a % b`|Modulus|
+|`**`|`a ** b`|Exponentiation (Power)|
+
+### Advanced Use Case: `*` and `+` with Sequences
+
+- `*` can be used to repeat sequences:
+    
+    ```python
+    lst = [1, 2, 3]
+    print(lst * 3)  # [1, 2, 3, 1, 2, 3, 1, 2, 3]
+    ```
+    
+- `+` concatenates sequences:
+    
+    ```python
+    print([1, 2] + [3, 4])  # [1, 2, 3, 4]
+    ```
+    
+
+### Non-Standard Datatypes
+
+- Strings:
+    
+    ```python
+    s1 = "Hello"
+    s2 = "World"
+    print(s1 + " " + s2)  # "Hello World"
+    print(s1 * 3)  # "HelloHelloHello"
+    ```
+    
+- Tuples:
+    
+    ```python
+    t1 = (1, 2)
+    t2 = (3, 4)
+    print(t1 + t2)  # (1, 2, 3, 4)
+    print(t1 * 2)  # (1, 2, 1, 2)
+    ```
+    
+
+---
+
+## Relational (Comparison) Operators
+
+These operators compare two values and return a boolean result.
+
+| Operator | Example  | Explanation                      |
+| -------- | -------- | -------------------------------- |
+| `==`     | `a == b` | True if `a` equals `b`.          |
+| `!=`     | `a != b` | True if `a` does not equal `b`.  |
+| `>`      | `a > b`  | True if `a` is greater than `b`. |
+| `<`      | `a < b`  | True if `a` is less than `b`.    |
+| `>=`     | `a >= b` | True if `a` >= `b`.              |
+| `<=`     | `a <= b` | True if `a` <= `b`.              |
+
+### Non-Standard Datatypes
+
+- Strings (Lexicographical comparison):
+    
+    ```python
+    print("abc" > "abd")  # False
+    print("abc" < "abd")  # True
+    ```
+    
+
+---
+
+## Logical Operators
+
+Logical operators are used to combine conditional statements.
+
+|Operator|Example|Explanation|
+|---|---|---|
+|`and`|`a and b`|True if both `a` and `b` are true.|
+|`or`|`a or b`|True if either `a` or `b` is true.|
+|`not`|`not a`|True if `a` is false (logical negation).|
+
+### Example
+
+```python
+x = 5
+y = 10
+if x > 3 and y < 15:
+    print("Both conditions are True")
+```
+
+### Non-Standard Datatypes
+
+- Strings:
+    
+    ```python
+    print("" and "Hello")  # ""
+    print("Hi" or "Bye")  # "Hi"
+    ```
+    
+- Lists:
+    
+    ```python
+    print([] or [1, 2])  # [1, 2]
+    print([0] and [3, 4])  # [3, 4]
+    ```
+    
+
+---
+
+## Bitwise Operators
+
+Bitwise operators work with binary representations of numbers.
+
+|Operator|Example|Explanation|
+|---|---|---|
+|`&`|`a & b`|Bitwise AND|
+|`|`|`a|
+|`^`|`a ^ b`|Bitwise XOR|
+|`~`|`~a`|Bitwise NOT (inverts all bits).|
+|`<<`|`a << 2`|Left shift (shifts bits left by 2 places).|
+|`>>`|`a >> 2`|Right shift (shifts bits right by 2 places).|
+
+### Example
+
+```python
+x = 5  # Binary: 0101
+y = 3  # Binary: 0011
+print(x & y)  # Output: 1 (Binary: 0001)
+```
+
+---
+
+## Membership Operators
+
+Membership operators check for membership in sequences such as lists, strings, or tuples.
+
+|Operator|Example|Explanation|
+|---|---|---|
+|`in`|`x in y`|True if `x` is a member of `y`.|
+|`not in`|`x not in y`|True if `x` is not a member of `y`.|
+
+### Example
+
+```python
+lst = [1, 2, 3]
+print(2 in lst)  # True
+print(4 not in lst)  # True
+```
+
+### Non-Standard Datatypes
+
+- Strings:
+    
+    ```python
+    print("a" in "abc")  # True
+    print("x" not in "xyz")  # False
+    ```
+    
+
+---
+
+## Identity Operators
+
+Identity operators compare the memory locations of two objects.
+
+|Operator|Example|Explanation|
+|---|---|---|
+|`is`|`x is y`|True if `x` and `y` refer to the same object.|
+|`is not`|`x is not y`|True if `x` and `y` do not refer to the same object.|
+
+### Example
+
+```python
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+print(a is b)  # True
+print(a is c)  # False
+```
+
+### Non-Standard Datatypes
+
+- Strings:
+    
+    ```python
+    s1 = "hello"
+    s2 = "hello"
+    print(s1 is s2)  # True (string interning)
+    ```
+    
+
+---
+
+## Special Uses of Operators
+
+### `*` for Argument Unpacking
+
+```python
+def add(a, b, c):
+    return a + b + c
+args = (1, 2, 3)
+print(add(*args))  # Output: 6
+```
+
+### `**` for Keyword Argument Unpacking
+
+```python
+def greet(name, age):
+    print(f"Hello {name}, you are {age} years old!")
+data = {"name": "Alice", "age": 25}
+greet(**data)  # Hello Alice, you are 25 years old!
+```
+
+---
+
+## Multiple Value Assignment
+
+Python allows assigning multiple values to multiple variables in one line.
+
+### Example
+
+```python
+a, b, c = 1, 2, 3
+print(a, b, c)  # Output: 1 2 3
+
+# Swapping variables without a temporary variable
+a, b = b, a
+print(a, b)  # Values of a and b are swapped
+```
+
+### Use Case with Unpacking
+
+```python
+lst = [1, 2, 3]
+x, y, z = lst
+print(x, y, z)  # Output: 1 2 3
+```
+
+---
+
+## Walrus Operator
+
+The **walrus operator (`:=`)** allows assignment within expressions. Introduced in Python 3.8, it is useful for reducing code duplication.
+
+### Example
+
+```python
+# Without Walrus Operator
+value = input("Enter 'exit' to stop the loop: ")
+while value != "exit":
+	print("Inside while loop")
+    value = input("Enter 'exit' to stop the loop: ")
+
+# With Walrus Operator
+while (value = input("Enter 'exit' to stop the loop: ")) != "exit":
+	print("Inside while loop")
+```
+
+### Use Case in Loops
+
+```python
+# Reading lines from a file
+while (line := file.readline().strip()):
+    print(line)
+```
+
+---
+
+## Operator Precedence
+
+Operator precedence determines the order of evaluation in expressions.
+
+### Precedence Table (Highest to Lowest)
+
+1. `()` - Parentheses
+2. `**` - Exponentiation
+3. `+x, -x, ~x` - Unary plus, minus, and bitwise NOT
+4. `*, /, //, %` - Multiplication, division, floor division, modulus
+5. `+, -` - Addition, subtraction
+6. `<<, >>` - Bitwise shifts
+7. `&` - Bitwise AND
+8. `^` - Bitwise XOR
+9. `|` - Bitwise OR
+10. `==, !=, >, <, >=, <=` - Comparisons
+11. `not` - Logical NOT
+12. `and` - Logical AND
+13. `or` - Logical OR
+
+### Example
+
+```python
+x = 3 + 5 * 2  # Multiplication is evaluated first, result: 13
+x = (3 + 5) * 2  # Parentheses change precedence, result: 16
+```
+
+# Result Datatypes 
 
 
+## Result Data Types of Arithmetic Operators
 
+### 1. **Addition (`+`)**
+- `int + int`: `int`
+- `int + float`, `float + int`: `float`
+- `int + complex`, `complex + int`: `complex`
+- `float + float`: `float`
+- `float + complex`, `complex + float`: `complex`
+- `complex + complex`: `complex`
+
+### 2. **Subtraction (`-`)**
+- `int - int`: `int`
+- `int - float`, `float - int`: `float`
+- `int - complex`, `complex - int`: `complex`
+- `float - float`: `float`
+- `float - complex`, `complex - float`: `complex`
+- `complex - complex`: `complex`
+
+### 3. **Multiplication (`*`)**
+- `int * int`: `int`
+- `int * float`, `float * int`: `float`
+- `int * complex`, `complex * int`: `complex`
+- `float * float`: `float`
+- `float * complex`, `complex * float`: `complex`
+- `complex * complex`: `complex`
+
+### 4. **Division (`/`)**
+- `int / int`: `float`
+- `int / float`, `float / int`: `float`
+- `int / complex`, `complex / int`: `complex`
+- `float / float`: `float`
+- `float / complex`, `complex / float`: `complex`
+- `complex / complex`: `complex`
+
+### 5. **Floor Division (`//`)**
+- `int // int`: `int`
+- `int // float`, `float // int`: `float`
+- `int // complex`, `complex // int`: `complex`
+- `float // float`: `float`
+- `float // complex`, `complex // float`: `complex`
+- `complex // complex`: `complex`
+
+### 6. **Modulus (`%`)**
+- `int % int`: `int`
+- `int % float`, `float % int`: `float`
+- `int % complex`, `complex % int`: `complex`
+- `float % float`: `float`
+- `float % complex`, `complex % float`: `complex`
+- `complex % complex`: `complex`
+
+### 7. **Exponentiation (`**`)**
+- `int ** int`: `int`
+- `int ** float`, `float ** int`: `float`
+- `int ** complex`, `complex ** int`: `complex`
+- `float ** float`: `float`
+- `float ** complex`, `complex ** float`: `complex`
+- `complex ** complex`: `complex`
+---
+
+# Summary
+
+This tutorial covers all aspects of Python operators, including their syntax, usage, and advanced cases. Understanding these operators will allow you to write more efficient and readable Python code.

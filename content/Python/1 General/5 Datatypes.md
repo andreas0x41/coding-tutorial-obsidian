@@ -336,7 +336,7 @@ The datatype Generator is very similar to [[#Range]] in supporting memory effici
 
 You can basically define and use your very own datatypes using OOP or import special datatypes created by others. First you have to define it with all its values and behaviour in a class, then you can create objects based on this class.
 
-> [!quote]- Additional no exam relevant topics for later
+> [!quote]- Additional not exam relevant topics for later
 > Contents
 > 
 > # Datatypes Internal Details
@@ -352,55 +352,43 @@ You can basically define and use your very own datatypes using OOP or import spe
 > ## Building Datatypes from Binary
 
 # Questions
-- [ ] 0 What is a datatype and what is its purpose?
-
-- [ ] 1 Explain Integer in your own words.
+- [ ] What is a datatype and what is its purpose?
+- [ ] Explain Integer in your own words.
 	- [ ] How do you define an Integer in Python?
-
-- [ ] 2 Explain Float in your own words.
+- [ ] Explain Float in your own words.
 	- [ ] What is the difference between an Integer and a Float?
 	- [ ] Explain the scientific notation in python.
-
 - [ ] 3 Explain Boolean in your own words.
 	- [ ] What is the Boolean type in Python used for?
-
-- [ ] 4 Explain String in your own words.
+- [ ] Explain String in your own words.
 	- [ ] Explain special characters in your own words.
 	- [ ] Explain Formatted String in your own words.
 	- [ ] Explain Multiline String in your own words.
-
-- [ ] 5 Explain List in your own words.
+- [ ] Explain List in your own words.
 	- [ ] What is the difference between a List and a Tuple in Python?
 	- [ ] Can Lists store different data types in Python?
 	- [ ] Explain Mutable in your own words.
 	- [ ] Explain Iterable in your own words.	
 	- [ ] Explain Indexing and Slicing in your own words.
 	- [ ] Give an example of list inside a list and how you can index the inner list.
-
-- [ ] 6 Explain Tuple in your own words.
+- [ ] Explain Tuple in your own words.
 	- [ ] What makes a Tuple different from a List in Python?
 	- [ ] Can you modify the items in a Tuple?
 	- [ ] What are some use cases where you would prefer a Tuple over a List?
-
-- [ ] 7 Explain Set in your own words.
+- [ ] Explain Set in your own words.
 	- [ ] What are the main characteristics of a Set in Python?
 	- [ ] How does a Set differ from a List or Tuple?
 	- [ ] What values can you store in s set and what is special about this?
-
-- [ ] 8 Explain Dictionary in your own words.
+- [ ] Explain Dictionary in your own words.
 	- [ ] How can you access values in a Dictionary?
 	- [ ] What datatypes can you use a Dictionary key?
 	- [ ] What datatypes can you use a Dictionary value?
-
-- [ ] 9 Explain None in your own words.
+- [ ] Explain None in your own words.
 	- [ ] Give examples where you will get or use a None value.
-
-- [ ] 10 Explain Complex in your own words.
+- [ ] Explain Complex in your own words.
 	- [ ] What is a Complex number in Mathematics and Python?
 	- [ ] How can you get the real and imaginary part individually?
-
-- [ ] 11 Explain Range in your own words.
+- [ ] Explain Range in your own words.
 	- [ ] How does a Range differ from other types like a List?
-
-- [ ] 12 Explain Generator in your own words.
+- [ ] Explain Generator in your own words.
 	- [ ] How does a Generator differ from other types like a List?
