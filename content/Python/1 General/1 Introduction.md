@@ -49,9 +49,9 @@ Python's syntax is minimal and highly readable. Here are key points to remember:
 
 - **`print()`** is used for [[2 Output|output]], **`input()`** for [[3 Input|input]], and **`#`** for line [[4 Comments|comments]]
 - Python supports all basic (mathematical) **[[7 Operators|Operators]]** and many more
-- **[[6 Variables|Variables]]**: Variables will automatically get a [[5 Datatypes|datatype]] that can change however you like
+- [[6 Variables|Variables]] automatically get a [[5 Datatypes|datatype]] that can change however you like
 - Python is **case sensitive**, this means that if only upper/lower case of characters is different, it is a completely different thing, for example `test` is not the same as `Test`
-- **Indentation**: Python relies on indentation to define code blocks, unlike many other languages that use braces `{}`. Proper indentation is required, or the code will throw an error. A colon : is used to indicate the start of an indented block, such as in if statements and loops.
+- **Indentation**: Python relies on indentation to define code blocks, unlike many other languages that use braces `{}`. Proper indentation is required, or the code will throw an error. A colon `:` is used to indicate the start of a new block, e.g. if statements, loops, functions, ...
 
 ```python
 # A simple comment
@@ -120,5 +120,4 @@ Understanding and using your IDE well can make your life easier, enable new pote
 - [ ] What are general principals of the Python syntax.
 
 [^1]: Project Jupyter is a combination of Python code and formatted Text for Documentation, it's great for explaining code, visualizations, ...
-
 [^2]: PATH is basically a system internal variable that stores all things that can be accessed by default when running code from the command line. If you don't add Python to PATH you might not be able to run it properly or always have to tell exactly where your Python installation is.

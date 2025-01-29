@@ -11,7 +11,9 @@ tags:
   - GEES
   - General
 ---
-Comments are for the Programmers and are completely ignored by the computer. They are usually used to document and explain code. But writing one none relevant comment per line as as bad no documentation/comments at all, so you have to find a balance. Explain important logical steps, code blocks and decisions. Do not only write comments if you need them right now, also write comments if someone else needs them to understand you code, or you need them when looking at code a year later.
+Comments are for the Programmers and are completely ignored by the computer. They are usually used to document and explain code. 
+
+However, writing one irrelevant comment per line is as bad as having no documentation/comments at all, so you have to find a balance. Explain important logical steps, code blocks and decisions. Do not only write comments if you need them right now, also write comments if someone else needs them, or you need them when looking at code a year later.
 
 # Singleline Comments
 Everything in a line after a hash `#` is part of the single line comment and will be ignored by the program.
@@ -72,7 +74,7 @@ hello("Andreas")
 
 
 # Questions
-- [ ] What are comments?
+- [ ] Explain comments in your own words?
 - [ ] What is the purpose of comments?
 - [ ] When should you write a comment?
 - [ ] Explain single line comments.

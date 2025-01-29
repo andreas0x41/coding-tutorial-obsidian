@@ -166,7 +166,7 @@ print((1,2,3) * 2) # -> (1, 2, 3, 1, 2, 3)
 ```
 
 # Relational/Comparison Operators
-Relational Operators always compare two values and return a **[[5 Datatypes#Boolean|boolean]]**.
+Relational Operators always compare two values and return a [[5 Datatypes#Boolean|boolean]].
 
 |Name|Operator|Example|Explanation|
 |---|---|---|---|
@@ -267,6 +267,60 @@ print(1 and 2 and 3)                # -> 3
 print((5 or 0) and ("" or "World")) # -> World
 ```
 
+# Collection Operators
+[[5 Datatypes#Indexing|Indexing]] and [[5 Datatypes#Slicing|Slicing]] are explained in detail on the datatypes page.
+
+## Membership Checking
+The operator `in` is used to check if a value/element exists in a collection. It always returns a [[5 Datatypes#Boolean|boolean]] and uses the syntax `value in collection`. So basically it checks if any of the elements in the collection is [[#(In-)Equality|equal]] to the value.
+
+```python
+print(1 in [0, 1, 2])                  # -> True
+print(3 in (0, 1, 2))                  # -> False
+print("good" in {"bad", "ok", "good"}) # -> True
+print(0.0+0j in [0, 1, 2, 3])          # -> True
+print((1, 2) in (1, 2, 3 , 4))         # False
+print(3 in [(1,2), (3,4), (5,6)])      # -> False
+print([3,4] in [(1,2), (3,4), (5,6)])  # -> False
+print((3,4) in [(1,2), (3,4), (5,6)])  # -> True
+```
+
+When this operator with a [[5 Datatypes#Dictionary|dictionary]] it will check if the one of the **keys** is equal to the value. If you want to check if a value exist in a dictionary you have to use the built-in method `.values()`.
+
+```python
+data = {"name": "Alice", "age": 25, "city": "New York", 1: "test"}
+print("name" in data)           # -> True
+print(1 in data)                # -> True
+print("Alice" in data)          # -> False
+print("Alice" in data.values()) # -> True
+```
+
+When using this operator with a [[5 Datatypes#String|string]] it checks if the value is a substring of the whole string.
+
+```python
+print("d" in "andreas")                 # -> True
+print("word" in "check for whole word") # -> True
+print("ork" in "This works also")       # -> True
+print("IT" in "capitalization matters") # -> False
+print("IT" in "CAPITALIZATION MATTERS") # -> True
+```
+
+You can also check if a value is not in a collection using the syntax `not (value in collection)` or `value not in collection`.
+
+
+> [!quote]- Additional not exam relevant topics for later
+> Contents
+> ## Set Operators 
+> 
+> ## Dictionary Operators 
+> 
+> ## Collection Unpacking
+> 
+> # Bitwise Operators
+
+
+
+
+
 # Precedence
 Operator precedence determines the order in which operators are evaluated. If two have the same precedence python works from left to right. This is similar to mathematical operations where you also have to keep the correct PEMDAS (Parentheses, Exponents, Multiplication and Division, Addition and Subtraction) order
 
@@ -289,13 +343,7 @@ Operator precedence determines the order in which operators are evaluated. If tw
 | `=` , `+=`, `-=`, etc.           | Assignment and augmented assignment operators     |
 | `lambda`                         | Lambda function declaration                       |
 
-> [!quote]- Additional not exam relevant topics for later
-> Contents
-> # Bitwise Operators
-> 
-> # Set Operators
-> 
-> # Iterable Unpacking
+
 
 
 
@@ -314,6 +362,8 @@ Operator precedence determines the order in which operators are evaluated. If tw
 	- [ ] Explain greaten than and less then in detail.
 	- [ ] Explain chained comparisons in you own words.
 - [ ] Explain logical operators in you own words.
-	- [ ] Explain logical operators with operands that are not boolean in detail?
+	- [ ] Explain logical operators with operands that are not boolean in detail 
+- [ ] The membership operator `in` in you own words.
+	- [ ] What is special when using it with a `string`?
 - [ ] Explain operator precedence in detail in you own words.
 	- [ ] Show operator precedence by creating and explaining practical examples.

@@ -262,7 +262,7 @@ print({1, 2, 1, 1, 3, 2, 3, 4, 5}) # duplicates removed, no specific order -> {3
 
 ## Dictionary
 
-The datatype Dictionary creates a mapping between keys and a values. A value can be any datatype. A key has to be unique (every key only exists) and not [[#Mutable|mutable]]. All list elements have to be within curly brackets `{}`and separated by commas `,`. One element is a combination of a key and a value separated by a colon `:` like this `key:value`.
+The datatype Dictionary creates a mapping between keys and a values. A value can be any datatype. A key has to be unique (every key only exists) and not [[#Mutable|mutable]]. All dictionary elements have to be within curly brackets `{}`and separated by commas `,`. One element is a combination of a key and a value separated by a colon `:` like this `key:value`.
 
 ```python
 {"a": 1, "c": "5"} {} {1: (1,2,3), "a": 1, (1,2): 1}
@@ -276,7 +276,7 @@ print(dict([('name', 'Tom'), ('age', 25), ('city', 'Linz')])) # dictionary from 
 print(dict(name='John', age=30, country='USA'))               # dictionary from keyword arguments -> {'name': 'John', 'age': 30, 'country': 'USA'}
 ```
 
-You can get the value of a key the same way you would use normal [[#Indexing|indexing]]. You can add, change or remove elements, because it is [[#Mutable|mutable]]. If you want to add a value you can use assignment with the new key like this `dictName[newKey] = newValue`, if the key already exists it will change the value of the existing key.
+You can get the value of a key the same way you would use normal [[#Indexing|indexing]]. You can add, change or remove elements, because it is [[#Mutable|mutable]]. If you want to add a value you can use assignment with the new key with the syntax `dictName[newKey] = newValue`, if the key already exists it will change the value of the existing key.
 
 ```python
 person = {'name': 'Tom', 'age': 25, 'city': 'Linz'}

@@ -169,6 +169,7 @@ This might seem like a small difference and not intuitive at first, but is actua
 Variable scope means when/where variables are defined and can be accessed. In Python you are not directly accessing locations in memory, instead you are using context dependent variables.
 **Global Scope** variables are outside of functions and can be accessed everywhere (after their creation).
 **Local Scope** variables are created inside a function and because of that only exist inside that function. So after running the function is finished, all the references will be deleted again.
+You can find detailed example and usage of the `global` and `nonlocal` [[8 Keywords|keywords]] on the page about functions.
 
 # Type Hinting
 

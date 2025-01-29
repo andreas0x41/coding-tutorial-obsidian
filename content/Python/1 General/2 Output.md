@@ -36,13 +36,13 @@ print("Hello World") # -> Hello World
 You can also print any other values of any [[5 Datatypes|datatype]] using this function.
 
 ```python
-print(12) # -> 12
-print(2.5) # -> 2.5
-print(True) # -> True
+print(12)               # -> 12
+print(2.5)              # -> 2.5
+print(True)             # -> True
 print("Some more text") # -> Some more text
 ```
 
-By default, after every printed value, there will be a Line break, so the next value will be in a new line. The code above will output the following text to the console. You can see that each output is in its own line.
+By default, after every printed value, there will be a [[5 Datatypes#Special Characters|line break]], so the next value will be in a new line. The code above will output the following text to the console. You can see that each output is in its own line.
 
 ```output
 12
@@ -53,7 +53,7 @@ Some more text
 
 ## Print without Any Arguments
 
-If you don't give any value to the print function, it will not print anything, but still make a new line.
+If call the print function without any arguments, it will not print anything, but still make a new line.
 
 ```python
 print(1) # -> 1
@@ -117,7 +117,7 @@ This doesn't end with a newline ---> This continues on the same line.
 
 # Questions
 
-- [ ] Can the `print()` function handle multiple datatypes in one call? If yes, how are they separated in the output by default?
+- [ ] Explain `print()` in your own words.
 - [ ] What will be the output of the following code?
 
 ```python
