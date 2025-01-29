@@ -308,14 +308,10 @@ You can also check if a value is not in a collection using the syntax `not (valu
 
 
 > [!quote]- Additional not exam relevant topics for later
-> Contents
-> ## Set Operators 
-> 
-> ## Dictionary Operators 
-> 
-> ## Collection Unpacking
-> 
-> # Bitwise Operators
+> Set Operators, 
+> Dictionary Operators, 
+> Collection Unpacking,
+> Bitwise Operators
 
 
 

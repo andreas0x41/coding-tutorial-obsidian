@@ -88,7 +88,9 @@ export default (() => {
     }
 
     const title =
-      (fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) +
+      (fileData.frontmatter?.HTML_title ??
+        fileData.frontmatter?.title ??
+        i18n(cfg.locale).propertyDefaults.title) +
       pageTitleSuffix +
       chapterTitleSuffix
     let description = ""
