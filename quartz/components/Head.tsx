@@ -75,9 +75,22 @@ export default (() => {
     // Get file description (priority: frontmatter > fileData > default)
     const fdDescription =
       fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description
-    const titleSuffix = cfg.pageTitleSuffix ?? ""
+
+    const pageTitleSuffix = cfg.pageTitleSuffix ?? ""
+
+    // custom or folder page title suffix
+    let chapterTitleSuffix = ""
+    const chapterTitleSuffixConfig = cfg.chapterTitleSuffix as { [key: string]: string } | undefined
+    for (const key in chapterTitleSuffixConfig) {
+      if (slug?.startsWith(key)) {
+        chapterTitleSuffix = chapterTitleSuffixConfig[key]
+      }
+    }
+
     const title =
-      (fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) + titleSuffix
+      (fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) +
+      pageTitleSuffix +
+      chapterTitleSuffix
     let description = ""
     if (fdDescription) {
       description = unescapeHTML(fdDescription)

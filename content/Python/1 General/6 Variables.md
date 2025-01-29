@@ -1,9 +1,9 @@
 ---
-title: 6 Variables
+title: 1.6 Variables
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases:
+aliases: 
 tags:
   - Python
   - General

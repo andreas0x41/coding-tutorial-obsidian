@@ -1,9 +1,9 @@
 ---
-title: 5 Datatypes
+title: 1.5 Datatypes
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases:
+aliases: 
 tags:
   - Python
   - General
@@ -16,20 +16,20 @@ A datatype defines how different types of information/data are stored and behave
 
 For almost every datatype in Python, there is a function with the same (or similar) name that is used to create an object of that datatype or convert something from a different datatype.
 
-| Name                                   | Function   | Syntax Example             | Explanation                                                               |
-| -------------------------------------- | ---------- | -------------------------- | ------------------------------------------------------------------------- |
-| [[5 Datatypes#Integer\|Integer]]       | int()      | 0, 13, -3                  | whole number                                                              |
-| [[5 Datatypes#Float\|Float]]           | float()    | 1.5, 1e-4                  | rational/floating point number                                            |
-| [[5 Datatypes#Boolean\|Boolean]]       | bool()     | True, False                | truth value, can only be True(1) or False(0)                              |
-| [[5 Datatypes#String\|String]]         | str()      | 'abc', "abc", """abc"""    | text, can include, numbers, special characters, ...                       |
-| [[5 Datatypes#List\|List]]             | list()     | [1, 1, 2, 3]               | mutable collection of any datatype                                        |
-| [[5 Datatypes#Tuple\|Tuple]]           | tuple()    | (1, 1, 2, 3)               | unmutable collection of any datatype                                      |
-| [[5 Datatypes#Set\|Set]]               | set()      | {2, 1, 3}                  | mutable collection of any datatype without order, indexing or duplicates  |
-| [[5 Datatypes#Dictionary\|Dictionary]] | dict()     | {"a": 1, "c": "5"}         | mutable mapping of key and value pairs of any datatype                    |
-| [[5 Datatypes#None\|None]]             |            | None                       | None means that there is no value                                         |
-| [[5 Datatypes#Complex\|Complex]]       | complex()  | 1j, 2+0.5j                 | complex number with real and imaginary part                               |
-| [[5 Datatypes#Range\|Range]]           | range()    | range(8), range(2, 99, 3)  | range of numbers                                                          |
-| [[5 Datatypes#Generator\|Generator]]   |            |                            | iterator over a dataset, created by the programmer                        |
+| Name                                   | Function   | Example                       | Explanation                                                               |
+| -------------------------------------- | ---------- | ----------------------------- | ------------------------------------------------------------------------- |
+| [[5 Datatypes#Integer\|Integer]]       | int()      | `0`, `11`, `-3`               | whole number                                                              |
+| [[5 Datatypes#Float\|Float]]           | float()    | `1.5`, `1e-4`                 | rational/floating point number                                            |
+| [[5 Datatypes#Boolean\|Boolean]]       | bool()     | `True`, `False`               | truth value, can only be True(1) or False(0)                              |
+| [[5 Datatypes#String\|String]]         | str()      | `'abc'`, `f"x:\n{x}"`         | text, can include, numbers, special characters, ...                       |
+| [[5 Datatypes#List\|List]]             | list()     | `[1, 1, 2, 3]`                | mutable collection of any datatype                                        |
+| [[5 Datatypes#Tuple\|Tuple]]           | tuple()    | `(1, 1, 2, 3`)                | unmutable collection of any datatype                                      |
+| [[5 Datatypes#Set\|Set]]               | set()      | `{2, 1, 3}`                   | mutable collection of any datatype without order, indexing or duplicates  |
+| [[5 Datatypes#Dictionary\|Dictionary]] | dict()     | `{"a": 1, "c": "5"}`          | mutable mapping of key and value pairs of any datatype                    |
+| [[5 Datatypes#None\|None]]             |            | `None`                        | None means that there is no value                                         |
+| [[5 Datatypes#Complex\|Complex]]       | complex()  | `1j`, `1.2-0.5j`              | complex number with real and imaginary part                               |
+| [[5 Datatypes#Range\|Range]]           | range()    | `range(8)`, `range(2, 99, 3)` | range of numbers                                                          |
+| [[5 Datatypes#Generator\|Generator]]   |            |                               | iterator over a dataset, created by the programmer                        |
 
 > [!todo]- not exam relevant
 > These functions/methods are mostly not exam relevant.

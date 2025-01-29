@@ -1,5 +1,5 @@
 ---
-title: 7 Operators
+title: 1.7 Operators
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false

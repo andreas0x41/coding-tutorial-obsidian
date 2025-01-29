@@ -9,7 +9,8 @@ import * as Plugin from "./quartz/plugins"
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "Coding Notes",
-    pageTitleSuffix: "",
+    pageTitleSuffix: " - AIAT",
+    chapterTitleSuffix: { "content/Python": " Python" },
     enableSPA: true,
     enablePopovers: true,
     analytics: {
