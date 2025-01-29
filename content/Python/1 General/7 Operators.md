@@ -6,10 +6,10 @@ draft: false
 aliases: 
 tags:
   - Python
+  - General
   - SDML
   - AECD
   - GEES
-  - General
 ---
 Operators in Python are special symbols or keywords used to perform operations on variables and values. An Operator will usually take one or more variables/values called operands, preform an operation and return the result. Python supports a variety of operators categorized by their functionality. 
 # Summary

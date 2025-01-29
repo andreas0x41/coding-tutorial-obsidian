@@ -6,10 +6,10 @@ draft: false
 aliases:
 tags:
   - Python
+  - General
   - SDML
   - AECD
   - GEES
-  - General
 ---
 
 # Summary

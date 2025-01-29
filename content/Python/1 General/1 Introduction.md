@@ -5,12 +5,13 @@ company: Auroville Institute of Applied Technology
 draft: false
 aliases:
 tags:
+  - ReadFirst
+  - Overview
   - Python
+  - General
   - SDML
   - AECD
   - GEES
-  - General
-  - ReadFirst
 ---
 
 # What is Python?

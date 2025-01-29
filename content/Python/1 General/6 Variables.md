@@ -6,10 +6,10 @@ draft: false
 aliases:
 tags:
   - Python
+  - General
   - SDML
   - AECD
   - GEES
-  - General
 ---
 
 Variables are used to store data. You can think of them like a container. The shape of the container is defined by the [[5 Datatypes|Datatype]] and then you can put any fitting value inside the container. Python variables are labels that point to an objects in memory that stores a value.

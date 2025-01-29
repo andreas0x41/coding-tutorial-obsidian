@@ -6,6 +6,10 @@ draft: false
 aliases:
 tags:
   - ReadFirst
+  - Overview
+  - SDML
+  - AECD
+  - GEES
 ---
 
 Welcome to the Auroville Institute of Applied Technology Coding Notes. These were written by Andreas Patuzzi, with the primary focus of enabling first year colleague students to learn Python.

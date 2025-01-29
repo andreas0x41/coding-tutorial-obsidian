@@ -6,10 +6,10 @@ draft: false
 aliases:
 tags:
   - Python
+  - General
   - SDML
   - AECD
   - GEES
-  - General
 ---
 
 A datatype defines how different types of information/data are stored and behave. More details regarding the behaviour can be found on the pages [[7 Operators|Operators]], built in methods and functions, ...

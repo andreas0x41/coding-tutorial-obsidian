@@ -6,10 +6,10 @@ draft: false
 aliases: 
 tags:
   - Python
+  - General
   - SDML
   - AECD
   - GEES
-  - General
 ---
 Comments are for the Programmers and are completely ignored by the computer. They are usually used to document and explain code. 
 
