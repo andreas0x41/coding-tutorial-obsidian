@@ -342,7 +342,7 @@ Operator precedence determines the order in which operators are evaluated. If tw
 | `<<`, `>>`                       | Bitwise left shift, Bitwise right shift           |
 | `&`                              | Bitwise AND                                       |
 | `^`                              | Bitwise XOR                                       |
-| \|| Bitwise OR                                     |
+| \|                               | Bitwise OR                                        |
 | `==`, `!=`, `>`, `<`, `>=`, `<=` | Comparison operators                              |
 | `is`, `is not`, `in`, `not in`   | Identity and membership tests                     |
 | `not`                            | Logical NOT                                       |
@@ -351,7 +351,25 @@ Operator precedence determines the order in which operators are evaluated. If tw
 | `=` , `+=`, `-=`, etc.           | Assignment and augmented assignment operators     |
 | `lambda`                         | Lambda function declaration                       |
 
-
+| Operator                         | Description                                           |
+| -------------------------------- | ----------------------------------------------------- |
+| `()`                             | Parentheses (used to group expressions)               |
+| `**`                             | Exponentiation                                        |
+| `+x`, `-x`, `~x`                 | Unary plus, Unary minus, Bitwise NOT                  |
+| `*`, `/`, `//`, `%`              | Multiplication, Division, Floor division, Modulus     |
+| `+`, `-`                         | Addition, Subtraction                                 |
+| `<<`, `>>`                       | Bitwise left shift, Bitwise right shift               |
+| `&`                              | Bitwise AND                                           |
+| `^`                              | Bitwise XOR                                           |
+| \|                               | Bitwise OR                                            |
+| `==`, `!=`, `>`, `<`, `>=`, `<=` | Comparison operators                                  |
+| `is`, `is not`, `in`, `not in`   | Identity and membership tests                         |
+| `not`                            | Logical NOT                                           |
+| `and`                            | Logical AND                                           |
+| `or`                             | Logical OR                                            |
+| `if` ... `else`                  | [[2 Conditionals#Ternary Operator\|Ternary Operator]] |
+| `=` , `+=`, `-=`, etc.           | Assignment and augmented assignment operators         |
+| `lambda`                         | Lambda function declaration                           |
 
 
 
