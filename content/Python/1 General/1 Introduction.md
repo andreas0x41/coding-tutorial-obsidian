@@ -46,7 +46,7 @@ Python is used in a wide range of applications:
 
 # Syntax
 
-Python's syntax is minimal and highly readable. In general Python code will run line by line from top to bottom, more complex behaviour is possible using [[content/Python/2 Control Flow/1 Introduction|Control Flow]]. 
+Python's syntax is minimal and highly readable. In general Python code will run line by line from top to bottom, more complex behaviour is possible using [[1 Control Flow|Control Flow]]. 
 
 - **`print()`** is used for [[2 Output|output]], **`input()`** for [[3 Input|input]], and **`#`** for line [[4 Comment|comments]]
 - Python supports all basic (mathematical) **[[7 Operator|Operators]]** and many more

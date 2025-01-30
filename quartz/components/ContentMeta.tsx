@@ -12,11 +12,15 @@ interface ContentMetaOptions {
    */
   showReadingTime: boolean
   showComma: boolean
+  showAuthor: boolean
+  showCompany: boolean
 }
 
 const defaultOptions: ContentMetaOptions = {
   showReadingTime: true,
   showComma: true,
+  showAuthor: true,
+  showCompany: true,
 }
 
 export default ((opts?: Partial<ContentMetaOptions>) => {
@@ -40,6 +44,18 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
           minutes: Math.ceil(minutes),
         })
         segments.push(<span>{displayedTime}</span>)
+      }
+
+      // custom show autor and company
+      const author = fileData.frontmatter?.author
+      if (options.showAuthor && author) {
+        segments.push(<span>{author}</span>)
+      }
+
+      // custom show company
+      const company = fileData.frontmatter?.company
+      if (options.showCompany && company) {
+        segments.push(<span>{company}</span>)
       }
 
       return (
