@@ -21,7 +21,7 @@ tags:
 
 # Simple Print
 
-Python has one primary function for console output called `print()`. In general you can give the print function any value of any [[5 Datatypes|datatype]] and it will print it to the console.
+Python has one primary function for console output called `print()`. In general you can give the print function any value of any [[5 Datatype|datatype]] and it will print it to the console.
 
 ## Print Hello World
 
@@ -33,7 +33,7 @@ print("Hello World") # -> Hello World
 
 ## Printing Multiple Datatypes
 
-You can also print any other values of any [[5 Datatypes|datatype]] using this function.
+You can also print any other values of any [[5 Datatype|datatype]] using this function.
 
 ```python
 print(12)               # -> 12
@@ -42,7 +42,7 @@ print(True)             # -> True
 print("Some more text") # -> Some more text
 ```
 
-By default, after every printed value, there will be a [[5 Datatypes#Special Characters|line break]], so the next value will be in a new line. The code above will output the following text to the console. You can see that each output is in its own line.
+By default, after every printed value, there will be a [[5 Datatype#Special Characters|line break]], so the next value will be in a new line. The code above will output the following text to the console. You can see that each output is in its own line.
 
 ```output
 12

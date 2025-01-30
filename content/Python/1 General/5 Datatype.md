@@ -12,24 +12,24 @@ tags:
   - GEES
 ---
 
-A datatype defines how different types of information/data are stored and behave. More details regarding the behaviour can be found on the pages [[7 Operators|Operators]], built in methods and functions, ...
+A datatype defines how different types of information/data are stored and behave. More details regarding the behaviour can be found on the pages [[7 Operator|Operators]], built in methods and functions, ...
 
 For almost every datatype in Python, there is a function with the same (or similar) name that is used to create an object of that datatype or convert something from a different datatype.
 
 | Name                                   | Function   | Example                       | Explanation                                                               |
 | -------------------------------------- | ---------- | ----------------------------- | ------------------------------------------------------------------------- |
-| [[5 Datatypes#Integer\|Integer]]       | int()      | `0`, `11`, `-3`               | whole number                                                              |
-| [[5 Datatypes#Float\|Float]]           | float()    | `1.5`, `1e-4`                 | rational/floating point number                                            |
-| [[5 Datatypes#Boolean\|Boolean]]       | bool()     | `True`, `False`               | truth value, can only be True(1) or False(0)                              |
-| [[5 Datatypes#String\|String]]         | str()      | `'abc'`, `f"x:\n{x}"`         | text, can include, numbers, special characters, ...                       |
-| [[5 Datatypes#List\|List]]             | list()     | `[1, 1, 2, 3]`                | mutable collection of any datatype                                        |
-| [[5 Datatypes#Tuple\|Tuple]]           | tuple()    | `(1, 1, 2, 3`)                | unmutable collection of any datatype                                      |
-| [[5 Datatypes#Set\|Set]]               | set()      | `{2, 1, 3}`                   | mutable collection of any datatype without order, indexing or duplicates  |
-| [[5 Datatypes#Dictionary\|Dictionary]] | dict()     | `{"a": 1, "c": "5"}`          | mutable mapping of key and value pairs of any datatype                    |
-| [[5 Datatypes#None\|None]]             |            | `None`                        | None means that there is no value                                         |
-| [[5 Datatypes#Complex\|Complex]]       | complex()  | `1j`, `1.2-0.5j`              | complex number with real and imaginary part                               |
-| [[5 Datatypes#Range\|Range]]           | range()    | `range(8)`, `range(2, 99, 3)` | range of numbers                                                          |
-| [[5 Datatypes#Generator\|Generator]]   |            |                               | iterator over a dataset, created by the programmer                        |
+| [[5 Datatype#Integer\|Integer]]       | int()      | `0`, `11`, `-3`               | whole number                                                              |
+| [[5 Datatype#Float\|Float]]           | float()    | `1.5`, `1e-4`                 | rational/floating point number                                            |
+| [[5 Datatype#Boolean\|Boolean]]       | bool()     | `True`, `False`               | truth value, can only be True(1) or False(0)                              |
+| [[5 Datatype#String\|String]]         | str()      | `'abc'`, `f"x:\n{x}"`         | text, can include, numbers, special characters, ...                       |
+| [[5 Datatype#List\|List]]             | list()     | `[1, 1, 2, 3]`                | mutable collection of any datatype                                        |
+| [[5 Datatype#Tuple\|Tuple]]           | tuple()    | `(1, 1, 2, 3`)                | unmutable collection of any datatype                                      |
+| [[5 Datatype#Set\|Set]]               | set()      | `{2, 1, 3}`                   | mutable collection of any datatype without order, indexing or duplicates  |
+| [[5 Datatype#Dictionary\|Dictionary]] | dict()     | `{"a": 1, "c": "5"}`          | mutable mapping of key and value pairs of any datatype                    |
+| [[5 Datatype#None\|None]]             |            | `None`                        | None means that there is no value                                         |
+| [[5 Datatype#Complex\|Complex]]       | complex()  | `1j`, `1.2-0.5j`              | complex number with real and imaginary part                               |
+| [[5 Datatype#Range\|Range]]           | range()    | `range(8)`, `range(2, 99, 3)` | range of numbers                                                          |
+| [[5 Datatype#Generator\|Generator]]   |            |                               | iterator over a dataset, created by the programmer                        |
 
 > [!todo]- not exam relevant
 > These functions/methods are mostly not exam relevant.
@@ -77,17 +77,17 @@ Bellow you find a table of some key properties of the collection datatypes avail
 
 | Name                                   | Mutable | Iterable                    | Indexing | Slicing | Common Use Case                            |
 | -------------------------------------- | ------- | --------------------------- | -------- | ------- | ------------------------------------------ |
-| [[5 Datatypes#String\|String]]         | No      | Yes                         | Yes      | Yes     | Text processing and manipulation           |
-| [[5 Datatypes#List\|List]]             | Yes     | Yes                         | Yes      | Yes     | Storing and manipulating mutable sequences |
-| [[5 Datatypes#Tuple\|Tuple]]           | No      | Yes                         | Yes      | Yes     | Fixed-size collections of items            |
-| [[5 Datatypes#Set\|Set]]               | Yes     | Yes (but no order)          | No       | No      | Ensuring unique elements in a collection   |
-| [[5 Datatypes#Dictionary\|Dictionary]] | Yes     | Yes (keys, values, or both) | Keys     | No      | Key-value pair storage and lookups         |
-| [[5 Datatypes#Range\|Range]]           | No      | Yes                         | Yes      | Yes     | Generating sequences of numbers            |
-| [[5 Datatypes#Generator\|Generator]]   | No      | Yes                         | No       | No      | Efficient iteration over large datasets    |
+| [[5 Datatype#String\|String]]         | No      | Yes                         | Yes      | Yes     | Text processing and manipulation           |
+| [[5 Datatype#List\|List]]             | Yes     | Yes                         | Yes      | Yes     | Storing and manipulating mutable sequences |
+| [[5 Datatype#Tuple\|Tuple]]           | No      | Yes                         | Yes      | Yes     | Fixed-size collections of items            |
+| [[5 Datatype#Set\|Set]]               | Yes     | Yes (but no order)          | No       | No      | Ensuring unique elements in a collection   |
+| [[5 Datatype#Dictionary\|Dictionary]] | Yes     | Yes (keys, values, or both) | Keys     | No      | Key-value pair storage and lookups         |
+| [[5 Datatype#Range\|Range]]           | No      | Yes                         | Yes      | Yes     | Generating sequences of numbers            |
+| [[5 Datatype#Generator\|Generator]]   | No      | Yes                         | No       | No      | Efficient iteration over large datasets    |
 
 ### Mutable
 
-A mutable object can be modified after it is created. This means you can change, add, or remove parts or all of its content without creating a new object. For example, you can change the value of the second item in a list, but you can not change the value of the second item in a tuple or string. All basic datatypes are actually immutable. You can find the difference in behaviour between a mutable and immutable variable [[6 Variables#Mutability Behaviour|here]].
+A mutable object can be modified after it is created. This means you can change, add, or remove parts or all of its content without creating a new object. For example, you can change the value of the second item in a list, but you can not change the value of the second item in a tuple or string. All basic datatypes are actually immutable. You can find the difference in behaviour between a mutable and immutable variable [[6 Variable#Mutability Behaviour|here]].
 
 ### Iterable
 
@@ -96,7 +96,7 @@ An iterable is any object that can return its elements one at a time, allowing i
 ### Indexing
 
 Indexing refers to accessing individual elements of a sequence using their position (index). Python uses zero-based indexing, meaning the first element has an index of `0`, second one has an index of `1`... You can also start indexing from the end of the sequence using negative numbers starting from -1, so the last element has an index of `-1`, the second last has an index of `-2`...
-A [[5 Datatypes#Dictionary|dictionary]] does not have classic ordered indexing with numbers. Instead, each element is a combination of key and value, and you use the key instead of an index
+A [[5 Datatype#Dictionary|dictionary]] does not have classic ordered indexing with numbers. Instead, each element is a combination of key and value, and you use the key instead of an index
 
 ```python
 [3, 1, 7, 4, 5, 2] # list of values

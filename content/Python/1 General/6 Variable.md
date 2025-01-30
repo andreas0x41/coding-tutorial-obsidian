@@ -12,7 +12,7 @@ tags:
   - GEES
 ---
 
-Variables are used to store data. You can think of them like a container. The shape of the container is defined by the [[5 Datatypes|Datatype]] and then you can put any fitting value inside the container. Python variables are labels that point to an objects in memory that stores a value.
+Variables are used to store data. You can think of them like a container. The shape of the container is defined by the [[5 Datatype|Datatype]] and then you can put any fitting value inside the container. Python variables are labels that point to an objects in memory that stores a value.
 
 # Summary
 
@@ -43,7 +43,7 @@ In Python, variables do **not** directly store the values themselves. Instead, t
 The main characteristics of an object in Python are.
 
 - A unique **identifier** (memory address) that distinguishes it from other objects. This is returned by the `id()` function.
-- The [[5 Datatypes|(data-)type]] of the object that defines what kind of object it is (e.g., `int`, `str`, `list`). This is returned by the `type()` function.
+- The [[5 Datatype|(data-)type]] of the object that defines what kind of object it is (e.g., `int`, `str`, `list`). This is returned by the `type()` function.
 - The **value** which is the actual data contained in the object (e.g., `42`, `"Hello"`, `[1, 2, 3]`). This is returned by default when just putting the name of the variable
   Additionally, depending on the type of object, they can have Attributes and Methods.
 
@@ -82,7 +82,7 @@ print(message) # -> Hello
 ```
 
 # Deleting
-You can use the [[8 Keywords|keyword]] `del` to delete a variable/the object reference it stores. If you are working with a [[5 Datatypes#Mutable|mutable]] collection of type list or dictionary you can also use indexing and slicing to remove individual items.
+You can use the [[8 Keyword|keyword]] `del` to delete a variable/the object reference it stores. If you are working with a [[5 Datatype#Mutable|mutable]] collection of type list or dictionary you can also use indexing and slicing to remove individual items.
 
 ```python
 x = 10             # creating x with value 10
@@ -106,7 +106,7 @@ There are a few rules that all variable names must follow.
 
 1. **Start with a letter or an underscore**: A variable name must begin with a letter (a-z, A-Z) or an underscore `_`.
 2. **Can contain letters, numbers, and underscores**: A variable name can contain any ammount of letters, numbers and underscores, but no special characters or spaces.
-3. **Cannot be a reserved [[8 Keywords|keyword]]**: Avoid Python’s built-in keywords like `if`, `for`, `class`, ...
+3. **Cannot be a reserved [[8 Keyword|keyword]]**: Avoid Python’s built-in keywords like `if`, `for`, `class`, ...
 
 Example of correct variable names: `x`,`_valid_name`, `variable123`, `_123_`, ...
 
@@ -133,9 +133,9 @@ Variable names are usually lowercase, except for potentially capitalizing all bu
 > [!todo]- partly exam relevant
 > This topic might seem complicated and like an unnecessarily detailed description. However, working with memory references is extremely significant for low level languages, also in Python you can not ignore it. Because if you are not aware of it you, you can not properly understand Python, will regularly make hard to find mistakes and struggle. The details of how this works/behaves are also different between languages. Please try to understand the basics, even if the details seem hard.
 
-Depending on whether a variable is storing a [[5 Datatypes#Mutable|mutable]] or immutable object the behaviour can be significantly different. When assigning one variable to another `var2 = var1`, initially both of them will point to the exactly **same** location and therefore object in memory. So they do not only have the same value, they are actually the same thing. If you just want to copy the value while creating a new object you have to explicitly use methods like `.copy()`.
+Depending on whether a variable is storing a [[5 Datatype#Mutable|mutable]] or immutable object the behaviour can be significantly different. When assigning one variable to another `var2 = var1`, initially both of them will point to the exactly **same** location and therefore object in memory. So they do not only have the same value, they are actually the same thing. If you just want to copy the value while creating a new object you have to explicitly use methods like `.copy()`.
 
-The interesting part starts when you change one of the variables. If the object is not [[5 Datatypes#Mutable|mutable]], it is impossible to change its value in place. Instead a new object storing the the changed value will be created and assigned to the changed variable. So at the end both of the variables will point at different objects with different values.
+The interesting part starts when you change one of the variables. If the object is not [[5 Datatype#Mutable|mutable]], it is impossible to change its value in place. Instead a new object storing the the changed value will be created and assigned to the changed variable. So at the end both of the variables will point at different objects with different values.
 
 ```python
 x = 1               # creating a variable x and assigning it the value 1
@@ -149,7 +149,7 @@ print(x is y)       # checking if x and y point to the same object -> False
 print(x, y)         # printing the values of x and y -> 1 1
 ```
 
-If you do a similar thing with an object that is [[5 Datatypes#Mutable|mutable]], you can directly change its value in place. This means that the actual value of the object is changed. Since both of the variables are pointing to the same object, both of their values will change!
+If you do a similar thing with an object that is [[5 Datatype#Mutable|mutable]], you can directly change its value in place. This means that the actual value of the object is changed. Since both of the variables are pointing to the same object, both of their values will change!
 
 ```python
 x = [1, 2, 3]       # creating a variable x and assigning it the value [1, 2, 3]
@@ -169,7 +169,7 @@ This might seem like a small difference and not intuitive at first, but is actua
 Variable scope means when/where variables are defined and can be accessed. In Python you are not directly accessing locations in memory, instead you are using context dependent variables.
 **Global Scope** variables are outside of functions and can be accessed everywhere (after their creation).
 **Local Scope** variables are created inside a function and because of that only exist inside that function. So after running the function is finished, all the references will be deleted again.
-You can find detailed example and usage of the `global` and `nonlocal` [[8 Keywords|keywords]] on the page about functions.
+You can find detailed example and usage of the `global` and `nonlocal` [[8 Keyword|keywords]] on the page about functions.
 
 # Type Hinting
 

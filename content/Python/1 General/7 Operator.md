@@ -26,7 +26,7 @@ Operators in Python are special symbols or keywords used to perform operations o
 - Operators are evaluated based on precedence, e.g. `()`, `**`, `*` `/`, `+` `-`, comparison, logical, assignment
 
 # Assignment Operator
-The assignment operator `=` is used to [[6 Variables#Creating/Assigning|assign]] a value to a [[6 Variables|variable]] .
+The assignment operator `=` is used to [[6 Variable#Creating/Assigning|assign]] a value to a [[6 Variable|variable]] .
 
 ```python
 x = 5 # assign the value 5 to the variable x
@@ -48,7 +48,7 @@ x //= 3    # same as 'x=x//3', result 2
 ```
 
 ## Multiple Value Assignment
-Python allows you to assignment multiple values at once using the syntax `var1, var2, var3 = val1, val2, val3`. You can also use this with [[5 Datatypes#Iterable|iterable]] values like this `var1, var2, var3 = (val1, val2, val3)`. If there are more values than variables, you have to tell python which variable should take a list of multiple values by marking it with an asterisk`*` like this `var1, *others = (val1, val2, val3, val4)`.
+Python allows you to assignment multiple values at once using the syntax `var1, var2, var3 = val1, val2, val3`. You can also use this with [[5 Datatype#Iterable|iterable]] values like this `var1, var2, var3 = (val1, val2, val3)`. If there are more values than variables, you have to tell python which variable should take a list of multiple values by marking it with an asterisk`*` like this `var1, *others = (val1, val2, val3, val4)`.
 
 ```python
 a, b, c = 1, True, "test"      # multiple value assignment 
@@ -117,19 +117,25 @@ print(f"This means that 5 fully fits into 12 {13//5} times")          # This mea
 print(f"When fitting 5 into 13, there will be a remainder of {13%5}") # When fitting 5 into 13, there will be a remainder of 3
 ```
 
-So mathematically this is always correct: `a % b = a - b*(a//b)`. You can also think of the modulo in terms of a circle. For example when working with mode 360`0° = 360° = 720°`...
+> [!todo]- less exam relevant
+> Less exam relevant, but still good/helpful to know.
+
+So mathematically speaking: `a % b = a - b*(a//b)`. One common use case for the Modulus is to check divisibility by checking if the remainder is 0. It can also be used to separate parts of a number. You can also think of the modulo in terms of a circle. For example when working with mode 360`0° = 360° = 720°`...
 
 ```python
-print(10%360, 370%360, 730%360)               # -> 10 10 10
+print(0%2, 1%2, 2%2, 3%2, 4%2, 5%2, 6%2, 7%2) # -> 0 1 0 1 0 1 0 1
+print(12%7, 73%7, 49%7, 111%7, 14%7, 71414%7) # -> 5 3 0 6 0 0
 print(3%10, 16%10, 211%10, 9873%10, 1357%100) # -> 3 6 1 3 57
+print((1357//100)%10, (123456789//1000)%1000) # -> 3 456
+print(10%360, 370%360, 730%360, 3610%360)     # -> 10 10 10 10
 ```
 
 ## Result Datatype
-The [[5 Datatypes|datatype]] of the result of an operation only depends on the datatypes or the two operands. 
+The [[5 Datatype|datatype]] of the result of an operation only depends on the datatypes or the two operands. 
 
-Addition `+`, Subtraction `-`, Multiplication `*`, Floor Division `//`, Modulus `%` and Exponentiation `**` will return an integer if both of the operands are [[5 Datatypes#Integer|integers]]. If one of them is [[5 Datatypes#Complex|complex]] the result is complex. Otherwise, if one of them is a [[5 Datatypes#Float|float]], the result will be float. 
+Addition `+`, Subtraction `-`, Multiplication `*`, Floor Division `//`, Modulus `%` and Exponentiation `**` will return an integer if both of the operands are [[5 Datatype#Integer|integers]]. If one of them is [[5 Datatype#Complex|complex]] the result is complex. Otherwise, if one of them is a [[5 Datatype#Float|float]], the result will be float. 
 
-The true Division `/` will always return a [[5 Datatypes#Float|float]]. If one of the operands is [[5 Datatypes#Complex|complex]], it will return complex. 
+The true Division `/` will always return a [[5 Datatype#Float|float]]. If one of the operands is [[5 Datatype#Complex|complex]], it will return complex. 
 
 ```python
 a = 3
@@ -144,7 +150,7 @@ print(2 * b // 1) # -> 3.0
 
 When using operators with collections the result datatype is the same as the datatype of the collection you use.
 ## Collection Usage
-The operators `+` and `*` can also be used with [[5 Datatypes#Collection Datatypes|sequence datatypes]]. The `+` operator is used to concatenate/combine two strings, lists or tuples of the **same** datatype.
+The operators `+` and `*` can also be used with [[5 Datatype#Collection Datatypes|sequence datatypes]]. The `+` operator is used to concatenate/combine two strings, lists or tuples of the **same** datatype.
 
 ```python
 x = "Hello"
@@ -166,7 +172,7 @@ print((1,2,3) * 2) # -> (1, 2, 3, 1, 2, 3)
 ```
 
 # Relational/Comparison Operators
-Relational Operators always compare two values and return a [[5 Datatypes#Boolean|boolean]].
+Relational Operators always compare two values and return a [[5 Datatype#Boolean|boolean]].
 
 |Name|Operator|Example|Explanation|
 |---|---|---|---|
@@ -206,7 +212,7 @@ print(1 <= 1.0)  # -> True
 > [!todo]- not exam relevant
 > Not exam relevant, rarely used, but sometimes really helpful.
 
-These operators can also be used with the [[5 Datatypes#Collection Datatypes|sequence datatypes]] string, list and tuple. Both operands must be of the same datatype. This will check the operation for all pairs of elements one by one. So as soon as there is a pair of elements that do not have the same value it will result in a total result of either`True` or `False`. If they have different lengths but the element pairs are all equal, the shorter sequence is considered smaller.
+These operators can also be used with the [[5 Datatype#Collection Datatypes|sequence datatypes]] string, list and tuple. Both operands must be of the same datatype. This will check the operation for all pairs of elements one by one. So as soon as there is a pair of elements that do not have the same value it will result in a total result of either`True` or `False`. If they have different lengths but the element pairs are all equal, the shorter sequence is considered smaller.
 
 ```python
 print([1] < [2])                  # because 1<2 -> True
@@ -268,10 +274,10 @@ print((5 or 0) and ("" or "World")) # -> World
 ```
 
 # Collection Operators
-[[5 Datatypes#Indexing|Indexing]] and [[5 Datatypes#Slicing|Slicing]] are explained in detail on the datatypes page.
+[[5 Datatype#Indexing|Indexing]] and [[5 Datatype#Slicing|Slicing]] are explained in detail on the datatypes page.
 
 ## Membership Checking
-The operator `in` is used to check if a value/element exists in a collection. It always returns a [[5 Datatypes#Boolean|boolean]] and uses the syntax `value in collection`. So basically it checks if any of the elements in the collection is [[#(In-)Equality|equal]] to the value.
+The operator `in` is used to check if a value/element exists in a collection. It always returns a [[5 Datatype#Boolean|boolean]] and uses the syntax `value in collection`. So basically it checks if any of the elements in the collection is [[#(In-)Equality|equal]] to the value.
 
 ```python
 print(1 in [0, 1, 2])                  # -> True
@@ -284,7 +290,7 @@ print([3,4] in [(1,2), (3,4), (5,6)])  # -> False
 print((3,4) in [(1,2), (3,4), (5,6)])  # -> True
 ```
 
-When this operator with a [[5 Datatypes#Dictionary|dictionary]] it will check if the one of the **keys** is equal to the value. If you want to check if a value exist in a dictionary you have to use the built-in method `.values()`.
+When this operator with a [[5 Datatype#Dictionary|dictionary]] it will check if the one of the **keys** is equal to the value. If you want to check if a value exist in a dictionary you have to use the built-in method `.values()`.
 
 ```python
 data = {"name": "Alice", "age": 25, "city": "New York", 1: "test"}
@@ -294,7 +300,7 @@ print("Alice" in data)          # -> False
 print("Alice" in data.values()) # -> True
 ```
 
-When using this operator with a [[5 Datatypes#String|string]] it checks if the value is a substring of the whole string.
+When using this operator with a [[5 Datatype#String|string]] it checks if the value is a substring of the whole string.
 
 ```python
 print("d" in "andreas")                 # -> True

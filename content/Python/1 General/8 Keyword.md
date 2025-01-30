@@ -22,17 +22,17 @@ Most keywords are explained an a different page, so the "Context" column will li
 
 | Context                                       | Keyword    | Description                                                                                                                               |
 | --------------------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| [[5 Datatypes#Boolean\|Datatype]]             | `False`    | Boolean value representing Falue.                                                                                                         |
-| [[5 Datatypes#Boolean\|Datatype]]             | `True`     | Boolean value representing True.                                                                                                          |
-| [[5 Datatypes#None\|Datatype]]                | `None`     | Represents the absence of a value or a null value.                                                                                        |
-| [[7 Operators#Logical Operators\|Operator]]   | `and`      | Logical AND operator. True if all operands are True.                                                                                      |
-| [[7 Operators#Logical Operators\|Operator]]   | `or`       | Logical OR operator. True if at least one operand is True.                                                                                |
-| [[7 Operators#Logical Operators\|Operator]]   | `not`      | Logical NOT operator. Negates a boolean value.                                                                                            |
-| [[7 Operators#Membership Checking\|Operator]] | `in`       | Checks if an element exists in a sequence or collection.                                                                                  |
-| [[6 Variables#Memory Objects\|Variable]]      | `is`       | Check if two objects have the same identity (=location in memory).                                                                        |
-| [[6 Variables#Deleting\|Variable]]            | `del`      | Delete a object, variable, or an items from a collection.                                                                                 |
-| [[6 Variables#Scope\|Variable]]               | `global`   | Declares a variable as global, accessible outside the current scope.                                                                      |
-| [[6 Variables#Scope\|Variable]]               | `nonlocal` | Refers to a variable in the nearest enclosing scope (not global).                                                                         |
+| [[5 Datatype#Boolean\|Datatype]]             | `False`    | Boolean value representing Falue.                                                                                                         |
+| [[5 Datatype#Boolean\|Datatype]]             | `True`     | Boolean value representing True.                                                                                                          |
+| [[5 Datatype#None\|Datatype]]                | `None`     | Represents the absence of a value or a null value.                                                                                        |
+| [[7 Operator#Logical Operators\|Operator]]   | `and`      | Logical AND operator. True if all operands are True.                                                                                      |
+| [[7 Operator#Logical Operators\|Operator]]   | `or`       | Logical OR operator. True if at least one operand is True.                                                                                |
+| [[7 Operator#Logical Operators\|Operator]]   | `not`      | Logical NOT operator. Negates a boolean value.                                                                                            |
+| [[7 Operator#Membership Checking\|Operator]] | `in`       | Checks if an element exists in a sequence or collection. Also used to iterate a variable in a for loop.                                   |
+| [[6 Variable#Memory Objects\|Variable]]      | `is`       | Check if two objects have the same identity (=location in memory).                                                                        |
+| [[6 Variable#Deleting\|Variable]]            | `del`      | Delete a object, variable, or an items from a collection.                                                                                 |
+| Variable                                      | `global`   | Declares a variable as global, accessible outside the current scope.                                                                      |
+| Variable                                      | `nonlocal` | Refers to a variable in the nearest enclosing scope (not global).                                                                         |
 | Flow Control                                  | `if`       | Defines a conditional statement.                                                                                                          |
 | Flow Control                                  | `elif`     | Conditional branching; short for "else if".                                                                                               |
 | Flow Control                                  | `else`     | Defines the block of code to execute if the `if` condition is False. Also has a special use-case in the context of while, for and except. |
@@ -60,3 +60,5 @@ Most keywords are explained an a different page, so the "Context" column will li
 | Import / Exception                            | `as`       | Used for creating aliases/alternative names.                                                                                              |
 | Asynchronous                                  | `async`    | Used to define asynchronous functions (coroutines).                                                                                       |
 | Asynchronous                                  | `await`    | Used to pause execution in asynchronous functions until a result is available.                                                            |
+# Questions
+- [ ] What is a keyword? Explain in your own words.
