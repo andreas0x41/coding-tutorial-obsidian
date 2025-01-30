@@ -2,7 +2,7 @@
 title: 2.2 Condition
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
-draft: true
+draft: false
 aliases: 
 tags:
   - Python
