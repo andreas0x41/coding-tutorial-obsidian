@@ -20,8 +20,8 @@ Operators in Python are special symbols or keywords used to perform operations o
 	- Modulo `%` Returns remainder after division.
 - Relational Operators are used for comparisons, returning boolean results: `==`, `!=`, `>`, `<`, `>=`, `<=`.
 - **Logical Operators** chain conditions together	
-	- - **`and`**: Truthy if both conditions are Truthy.
-	-  **`or`**: Truthy if at least one condition is Truthy.
+	- - **`and`**: [[5 Datatype#Truthy and Falsy|Truthy]] if both conditions are Truthy.
+	-  **`or`**: [[5 Datatype#Truthy and Falsy|Truthy]] if at least one condition is Truthy.
 	- **`not`**: Inverts the boolean value.
 - Operators are evaluated based on precedence, e.g. `()`, `**`, `*` `/`, `+` `-`, comparison, logical, assignment
 
@@ -264,7 +264,7 @@ print(2 == 1 or 2 == 2 or 2 == 3) # -> True
 > [!todo]- not exam relevant
 > Not exam relevant, rarely used, but sometimes really helpful.
 
-As long the operands are boolean, the result will also be boolean. However in Python logical operators also work with operands that are not boolean. They will keep their general behavior and `not` will always return a boolean. The `and` operator stops as soon as it encounters a Falsy value and returns it. If all values are Truthy, it returns the last operand. The `or` operator stops as soon as it encounters a Truthy value and returns it. If all values are Falsy, it returns the last operand.
+As long the operands are boolean, the result will also be boolean. However in Python logical operators also work with operands that are not boolean. They will keep their general behavior and `not` will always return a boolean. The `and` operator stops as soon as it encounters a [[5 Datatype#Truthy and Falsy|Falsy]] value and returns it. If all values are [[5 Datatype#Truthy and Falsy|Truthy]], it returns the last operand. The `or` operator stops as soon as it encounters a Truthy value and returns it. If all values are Falsy, it returns the last operand.
 
 ```python
 print(0.0 and 1)                    # -> 0.0
@@ -314,9 +314,13 @@ You can also check if a value is not in a collection using the syntax `not (valu
 
 
 > [!quote]- Additional not exam relevant topics for later
-> Set Operators, 
-> Dictionary Operators, 
-> Collection Unpacking,
+> 
+> Set Operators 
+> 
+> Dictionary Operators 
+> 
+> Collection Unpacking 
+> 
 > Bitwise Operators
 
 

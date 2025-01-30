@@ -336,20 +336,34 @@ The datatype Generator is very similar to [[#Range]] in supporting memory effici
 
 You can basically define and use your very own datatypes using OOP or import special datatypes created by others. First you have to define it with all its values and behaviour in a class, then you can create objects based on this class.
 
+# Internal Details
+
+## Truthy and Falsy
+In python any value can be evaluated (e.g. in a [[7 Operator#Logical Operators|logical operator]], [[2 Conditionals|condition]], ...) like a boolean. Python will treat it as truthy (`True`) or falsy (`False`) based on its type and value.
+- **Falsy Values**: `False`, `0`, `0.0`, `0j`, `""`, `[]`, `()`, `set()`, `{}`, `None`, `range(0)`
+- **Truthy Values**: Everything else so not empty collections and not zero numeric values
+
+```python
+print(bool(0-1j))     # True
+print(bool([]))       # False
+print(bool(range(0))) # False
+print(bool(0.000001)) # True
+print(bool(""))       # False
+print(bool(" "))      # True
+```
+
 > [!quote]- Additional not exam relevant topics for later
 > Contents
 > 
-> # Datatypes Internal Details
+> Converting between Datatypes
 > 
-> ## Truthy and Falsy
+> Storage Size and Value Range
 > 
-> ## Converting between Datatypes
+> Binary
 > 
-> ## Storage Size and Value Range
-> 
-> ## Binary
-> 
-> ## Building Datatypes from Binary
+> Building Datatypes from Binary
+
+
 
 # Questions
 - [ ] What is a datatype and what is its purpose?
@@ -392,3 +406,4 @@ You can basically define and use your very own datatypes using OOP or import spe
 	- [ ] How does a Range differ from other types like a List?
 - [ ] Explain Generator in your own words.
 	- [ ] How does a Generator differ from other types like a List?
+- [ ] Explain truthy and falsy in your own words.
