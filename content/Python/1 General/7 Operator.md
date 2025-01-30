@@ -174,14 +174,16 @@ print((1,2,3) * 2) # -> (1, 2, 3, 1, 2, 3)
 # Relational/Comparison Operators
 Relational Operators always compare two values and return a [[5 Datatype#Boolean|boolean]].
 
-|Name|Operator|Example|Explanation|
-|---|---|---|---|
-|Equal|`==`|`a == b`|True if `a` and `b` have the same value.|
-|Not Equal|`!=`|`a != b`|True if `a` and `b` do not have the same value.|
-|Greater Than|`>`|`a > b`|True if `a` is greater than `b`.|
-|Less Than|`<`|`a < b`|True if `a` is less than `b`.|
-|Greater or Equal|`>=`|`a >= b`|True if `a` is greater than or equal to `b`.|
-|Less or Equal|`<=`|`a <= b`|True if `a` is less than or equal to `b`.|
+| Name             | Operator | Example  | Explanation                                     | Opposite |
+| ---------------- | -------- | -------- | ----------------------------------------------- | -------- |
+| Equal            | `==`     | `a == b` | True if `a` and `b` have the same value.        | `!=`     |
+| Not Equal        | `!=`     | `a != b` | True if `a` and `b` do not have the same value. | `==`     |
+| Greater Than     | `>`      | `a > b`  | True if `a` is greater than `b`.                | `<=`     |
+| Less Than        | `<`      | `a < b`  | True if `a` is less than `b`.                   | `>=`     |
+| Greater or Equal | `>=`     | `a >= b` | True if `a` is greater than or equal to `b`.    | `<`      |
+| Less or Equal    | `<=`     | `a <= b` | True if `a` is less than or equal to `b`.       | `>`      |
+If you look at the logic, you can see that some of them are exact opposites (`not` operator).
+
 ## (In-)Equality
 Equality `==` and Inequality `!=` are exact opposites and work with all datatypes. The Equal operator checks if two values are the same. Comparing two numbers will ignore datatype differences and implicitly converted. When comparing a boolean to a number `True == 1` and `False == 0`.
 
@@ -198,7 +200,7 @@ print("test" != "Test") # -> True
 ```
 
 ## Greater/Less Than
-Check if one value is greater than `>` or smaller than `>` a different one. Primarily used to compare integer or float numbers, which are compatible with each other. If an `=` is included (`>=` or `<=`), having to equal values will also return `True`.
+Check if one value is greater than `>` or smaller than `>` a different one. Primarily used to compare integer or float numbers, which are compatible with each other. If an `=` is included (`>=` or `<=`), having to equal values will also return `True`. 
 
 ```python
 print(1 > 1)     # -> False
