@@ -19,9 +19,9 @@ Control Flow refers to the order in which individual statements, instructions, f
 Control Flow determines the execution order of code in a program.
 - **Line by Line**: Code executes sequentially, top to bottom.
 - **Selection**: [[2 Conditionals|Conditional statements]] like`if-else` allow decisions based on conditions.
-- **Iteration**: Loops like `while`/`for` repeat code while a condition is true or for a number of iterations.
+- **Iteration**: Loops like [[3 While Loop|while]] or [[4 For Loop|for]] repeat code while a condition is true or for a number of iterations.
 - **Jumps**: `break` exits loops; `continue` skips to the next iteration,`goto` jumps to a specific line/block.
-- **Subroutines**: Functions encapsulate reusable code, called with arguments and returning values.
+- **Subroutines**: [[5 Function|Functions]] encapsulate reusable code, called with arguments and returning values.
 - **Errors & Exceptions**: Interrupt the normal execution; Exceptions can be recovered using `try-except`.
 
 # Line By Line
@@ -57,7 +57,7 @@ End of the example
 ```
 
 # Iteration (Loops)
-Iteration allows you to repeat a block of code multiple times. This is usually done **[[3 While Loop|while]]** a [[5 Datatype#Boolean|boolean]] condition is true or **for** a fixed number of iterations. 
+Iteration allows you to repeat a block of code multiple times. This is usually done **[[3 While Loop|while]]** a [[5 Datatype#Boolean|boolean]] condition is true or **[[4 For Loop|for]]** a fixed number of iterations. 
 
 ```python
 x = 0
@@ -72,7 +72,7 @@ for i in range(10):
 ```
 
 # Jumps
-Jumps allow the program to exit the normal flow of execution and either skip over parts of code or go to a completely different position. Python allows you to exit a loop using `break` or go to the next iteration of a loop using `continue`.
+Jumps allow the program to exit the normal flow of execution and either skip over parts of code or go to a completely different position. Python allows you to exit a loop using [[3 While Loop#Break|break]] or go to the next iteration of a loop using [[3 While Loop#Continue|continue]].
 
 ```python
 for i in range(99):
@@ -104,7 +104,7 @@ Errors and Exceptions are ways in which Control Flow is interrupted when somethi
 
 **(Syntax-)Errors** are usually unrecoverable issues disrupting the program's flow, leading to failure. These are caused by the programmer not writing code in correct python syntax.
 
-If something has correct syntax, but causes an error when executing it, it is called an **Exception**. These are recoverable issues that allow for controlled interruption, where the program can recover or provide feedback to the user. These can be caused both by the programmer (e.g. incorrect [[6 Variable|variable]]/function/... name; incorrect [[5 Datatype|datatype]]; incorrect import; ...) and the user (incorrect input of any kind; file not found; internet connection error; ...). In Python you can prevent exceptions or use `try-except` blocks to handle them and prevent crashes.
+If something has correct syntax, but causes an error when executing it, it is called an **Exception**. These are recoverable issues that allow for controlled interruption, where the program can recover or provide feedback to the user. These can be caused both by the programmer (e.g. incorrect [[6 Variable|variable]]/[[5 Function|function]]/... name; incorrect [[5 Datatype|datatype]]; incorrect import; ...) and the user (incorrect input of any kind; file not found; internet connection error; ...). In Python you can prevent exceptions or use `try-except` blocks to handle them and prevent crashes.
 
 ```python
 # Error because of incorrect function name and string never closed
