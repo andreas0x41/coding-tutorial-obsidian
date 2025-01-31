@@ -1,5 +1,5 @@
 ---
-title: 2.2 Condition
+title: 2.2 Conditionals
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
@@ -14,7 +14,6 @@ tags:
 Conditionals allow code to make decisions. Each individual decision is based on one [[5 Datatype#Boolean|boolean]] so the only two options are "run some code" or "don't run the code". The boolean is usually created using a series of [[7 Operator#Relational/Comparison Operators|comparison]] and [[7 Operator#Logical Operators|logical]] operators. 
 
 # Summary
-Conditionals allow code to make decisions based on boolean expressions.
 - **If**: Executes a block if the condition is [[5 Datatype#Truthy and Falsy|truthy]].
 - **Else**: Follows an `if` or `elif`, executing only if all prior conditions are [[5 Datatype#Truthy and Falsy|falsy]].
 - **Elif**: Allows multiple conditions without nesting. The first [[5 Datatype#Truthy and Falsy|truthy]] condition is executed, and the rest are skipped.
@@ -54,7 +53,7 @@ end of second if
 ```
 
 # Else
-The `else` statement is always immediately after the end of an `if` or `elif` statement and does not need it's own condition. It executes only when all the `if` or `elif` statements before evaluate to `False`. The `else` statement has to be on the same indentation level as its `if`/`elif` statement.
+The `else` statement is always immediately after the end of an `if` or `elif` statement and does not need it's own condition. It executes only when all the `if` or `elif` conditions before evaluate to `False`. The `else` statement has to be on the same indentation level as its `if`/`elif` statement.
 
 ```python
 x = 12
@@ -129,7 +128,7 @@ x is divisible by 3
 ```
 
 # Combined Usage
-A valid conditional statement consists of exactly one `if` then 0 - infinite `elif` and then 0 - 1 `else`. When executing the code the conditions (of the `if` and `elif`) are checked one by one. As soon as one of them evaluates to `True`, the code inside is executed. Afterwards the program will jump to after the conditional statement. If all of them evaluate to `False` the code inside `else` is executed. 
+A valid conditional statement consists of exactly one `if` then 0 - infinite `elif` and then 0 - 1 `else`. When executing the code the conditions (of the `if` and `elif`) are checked one by one. As soon as one of them evaluates to `True`, the code inside is executed, and afterwards the program will jump to after the conditional statement. If all of them evaluate to `False` the code inside `else` is executed. 
 
 ```python
 score = 75

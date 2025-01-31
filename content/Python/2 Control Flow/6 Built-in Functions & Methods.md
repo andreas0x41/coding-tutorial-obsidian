@@ -1,5 +1,5 @@
 ---
-title: 2.4 For Loop
+title: 2.6 Built-in Functions & Methods
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: true
@@ -11,19 +11,3 @@ tags:
   - AECD
   - GEES
 ---
-
-
-
-# Else
-> [!todo]- not exam relevant
-> Not exam relevant, rarely used, but sometimes really helpful.
-
-
-
-# Examples
-
-
-
-
-# Questions
-
