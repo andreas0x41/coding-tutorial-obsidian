@@ -13,13 +13,13 @@ tags:
 ---
 A `while` loop is used to repeat a block of code as long as a specified condition is `True`.
 # Summary
-- **Basic Usage**: Similar to an `if` statement but runs repeatedly. The condition must eventually change to avoid infinite loops.
+- **Basic Usage**: Similar to an [[2 Conditionals|if statement]] but runs repeatedly. The condition must eventually change to avoid infinite loops.
 - **Break**: Exits the loop immediately, regardless of the condition.
 - **Continue**: Skips the rest of the current iteration and moves to the next.
 - **Else**: Runs only if the loop ends normally (not via `break`).
 
 # Basic
-A `while` loop is similar to a [[2 Conditionals|if condition]] and also has a [[5 Datatype#Boolean|boolean]] condition. But instead of executing the code block inside once, it is executed repeatedly as long as the condition is `True`.
+A `while` loop is similar to a [[2 Conditionals|if statement]] and also has a [[5 Datatype#Boolean|boolean]] condition. But instead of executing the code block inside once, it is executed repeatedly as long as the condition is `True`.
 
 ```python
 while condition:
