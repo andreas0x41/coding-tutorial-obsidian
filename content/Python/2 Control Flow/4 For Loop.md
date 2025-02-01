@@ -2,7 +2,7 @@
 title: 2.4 For Loop
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
-draft: true
+draft: false
 aliases: 
 tags:
   - Python
