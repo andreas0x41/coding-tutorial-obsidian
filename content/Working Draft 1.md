@@ -12,229 +12,241 @@ tags:
 ---
 
 
-# While Loop in Python
+A `for` loop is used to iterate over a sequence (like a list, tuple, or string) or a range of numbers.  
+# Summary
+- **Basic Usage**: Iterates over elements in a sequence or range automatically.
+- **Break**: Exits the loop immediately.
+- **Continue**: Skips the rest of the current iteration and moves to the next.
+- **Else**: Runs only if the loop completes normally (not via `break`).
 
-A `while` loop in Python is used to repeatedly execute a block of code as long as a specified condition is `True`. It is a fundamental control flow structure that allows you to automate repetitive tasks.
-
-## Basic Syntax
-
-The basic syntax of a `while` loop is as follows:
-
-```python
-while condition:
-    # Code to execute while the condition is True
-```
-
-- **Condition:** A boolean expression that is evaluated before each iteration. If the condition is `True`, the loop continues; if `False`, the loop terminates.
-- **Code Block:** The indented block of code that is executed repeatedly as long as the condition remains `True`.
-
-### Example: Basic While Loop
+# Basic
+A `for` loop is useful when you need to iterate over a sequence of items or perform an action a set number of times.
 
 ```python
-count = 0
-while count < 5:
-    print(f"Count is {count}")
-    count += 1
+for item in sequence:
+    # Code to execute for each item
 ```
 
-**Output:**
-```
-Count is 0
-Count is 1
-Count is 2
-Count is 3
-Count is 4
-```
+Unlike a `while` loop, a `for` loop doesn't require manual control of the condition; it iterates automatically through the sequence.
 
-## Advanced Usage
-
-### Infinite Loop
-
-An infinite loop occurs when the condition in the `while` loop always evaluates to `True`. This can be useful in certain scenarios, such as running a server or a game loop, but it should be used with caution to avoid crashing your program.
+Example with a list:
 
 ```python
-while True:
-    print("This is an infinite loop!")
-    # Use break or some other condition to exit the loop
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(f"I like {fruit}")
 ```
 
-### Nested While Loops
+```output
+I like apple
+I like banana
+I like cherry
+```
 
-You can nest `while` loops inside other `while` loops to handle more complex scenarios.
+Example using `range()`:
 
 ```python
-outer_count = 0
-while outer_count < 3:
-    inner_count = 0
-    while inner_count < 2:
-        print(f"Outer: {outer_count}, Inner: {inner_count}")
-        inner_count += 1
-    outer_count += 1
+for num in range(5):
+    print(f"Number: {num}")
 ```
 
-**Output:**
-```
-Outer: 0, Inner: 0
-Outer: 0, Inner: 1
-Outer: 1, Inner: 0
-Outer: 1, Inner: 1
-Outer: 2, Inner: 0
-Outer: 2, Inner: 1
+```output
+Number: 0
+Number: 1
+Number: 2
+Number: 3
+Number: 4
 ```
 
-## Control Statements
+Here, `range(5)` generates numbers from `0` to `4`, and the loop iterates over them.
 
-### `break` Statement
+# Break
 
-The `break` statement is used to exit the loop prematurely, regardless of the condition. It is often used to stop the loop when a specific condition is met.
+The [[8 Keyword|keyword]] `break` is used to immediately exit the loop, stopping further iterations.
 
 ```python
-count = 0
-while count < 10:
-    if count == 5:
+for num in range(10):
+    if num == 5:
         break
-    print(f"Count is {count}")
-    count += 1
+    print(num)
 ```
 
-**Output:**
-```
-Count is 0
-Count is 1
-Count is 2
-Count is 3
-Count is 4
+```output
+0
+1
+2
+3
+4
 ```
 
-### `continue` Statement
+Once `num` reaches `5`, the `break` statement exits the loop.
 
-The `continue` statement skips the rest of the code inside the loop for the current iteration and moves to the next iteration.
+# Continue
+
+The [[8 Keyword|keyword]] `continue` is used to skip the rest of the current iteration and move to the next one.
 
 ```python
-count = 0
-while count < 5:
-    count += 1
-    if count == 3:
+for num in range(5):
+    if num == 2:
         continue
-    print(f"Count is {count}")
+    print(num)
 ```
 
-**Output:**
-```
-Count is 1
-Count is 2
-Count is 4
-Count is 5
+```output
+0
+1
+3
+4
 ```
 
-### `else` Clause
+The number `2` is skipped because `continue` jumps to the next iteration.
 
-The `else` clause in a `while` loop is executed when the loop condition becomes `False`. However, if the loop is terminated by a `break` statement, the `else` block is not executed.
+# Else
+
+> [!todo]- not exam relevant  
+> Not exam relevant, very rarely used.
+
+A `for` loop can have an `else` block, which runs only if the loop finishes normally (without `break`).
 
 ```python
-count = 0
-while count < 5:
-    print(f"Count is {count}")
-    count += 1
-else:
-    print("Loop finished without a break.")
-```
-
-**Output:**
-```
-Count is 0
-Count is 1
-Count is 2
-Loop finished without a break.
-```
-
-If the loop is terminated by a `break` statement:
-
-```python
-count = 0
-while count < 5:
-    if count == 2:
-        break
-    print(f"Count is {count}")
-    count += 1
-else:
-    print("Loop finished without a break.")
-```
-
-**Output:**
-```
-Count is 0
-```
-
-## Practical Examples
-
-### Example 1: User Input Validation
-
-```python
-while True:
-    user_input = input("Enter 'quit' to exit: ")
-    if user_input.lower() == 'quit':
-        break
-    print(f"You entered: {user_input}")
-```
-
-### Example 2: Sum of Numbers
-
-```python
-total = 0
-number = 1
-while number <= 10:
-    total += number
-    number += 1
-print(f"The sum of numbers from 1 to 10 is {total}")
-```
-
-**Output:**
-```
-The sum of numbers from 1 to 10 is 55
-```
-
-### Example 3: Password Retry
-
-```python
-max_attempts = 3
-attempts = 0
-password = "secret"
-
-while attempts < max_attempts:
-    user_input = input("Enter the password: ")
-    if user_input == password:
-        print("Access granted!")
-        break
+for num in range(2, 10):
+    for i in range(2, num):
+        if num % i == 0:
+            print(f"{num} is not a prime number")
+            break
     else:
-        print("Incorrect password.")
-        attempts += 1
-else:
-    print("Maximum attempts reached. Access denied.")
+        print(f"{num} is a prime number")
 ```
 
-## Common Pitfalls
+```output
+2 is a prime number
+3 is a prime number
+4 is not a prime number
+5 is a prime number
+6 is not a prime number
+7 is a prime number
+8 is not a prime number
+9 is not a prime number
+```
 
-- **Infinite Loops:** Ensure that the loop condition will eventually become `False` to avoid infinite loops.
-- **Off-by-One Errors:** Be careful with the loop condition to avoid running the loop one too many or one too few times.
-- **Unintended `continue` or `break`:** Misusing `continue` or `break` can lead to unexpected behavior.
+# Examples
 
-## Summary
+## Iterating Over a Dictionary
 
-| Concept          | Description                                                                 |
-|------------------|-----------------------------------------------------------------------------|
-| Basic Syntax     | `while condition:` followed by an indented block of code.                   |
-| Infinite Loop    | A loop that runs indefinitely until manually stopped or a `break` is used.  |
-| Nested Loops     | A `while` loop inside another `while` loop.                                 |
-| `break`          | Exits the loop immediately.                                                 |
-| `continue`       | Skips the rest of the current iteration and moves to the next one.          |
-| `else` Clause    | Executes when the loop condition becomes `False` (not when `break` is used).|
+You can loop through dictionary keys, values, or both.
 
-## Questions
+```python
+person = {"name": "Alice", "age": 30, "city": "New York"}
 
-- [ ] What is the basic syntax of a `while` loop?
-- [ ] How do you create an infinite loop using `while`?
-- [ ] What is the purpose of the `break` statement in a `while` loop?
-- [ ] How does the `continue` statement affect the flow of a `while` loop?
-- [ ] When is the `else` clause in a `while` loop executed?
-- [ ] What are some common pitfalls when using `while` loops?
+# Loop through keys
+for key in person:
+    print(f"Key: {key}, Value: {person[key]}")
+
+# Loop through key-value pairs
+for key, value in person.items():
+    print(f"{key}: {value}")
+```
+
+```output
+Key: name, Value: Alice
+Key: age, Value: 30
+Key: city, Value: New York
+name: Alice
+age: 30
+city: New York
+```
+
+## Iterating Over Multiple Lists with `zip()`
+
+If you need to iterate through multiple lists at once, use `zip()`.
+
+```python
+names = ["Alice", "Bob", "Charlie"]
+ages = [30, 25, 35]
+
+for name, age in zip(names, ages):
+    print(f"{name} is {age} years old")
+```
+
+```output
+Alice is 30 years old
+Bob is 25 years old
+Charlie is 35 years old
+```
+
+## Using `enumerate()` for Indexing
+
+To keep track of the index while looping through a list, use `enumerate()`.
+
+```python
+colors = ["red", "green", "blue"]
+
+for index, color in enumerate(colors):
+    print(f"Color {index}: {color}")
+```
+
+```output
+Color 0: red
+Color 1: green
+Color 2: blue
+```
+
+## Iterating Over a String
+
+A string is also an iterable, so you can loop through its characters.
+
+```python
+word = "Python"
+for letter in word:
+    print(letter)
+```
+
+```output
+P
+y
+t
+h
+o
+n
+```
+
+## Nested Loops
+
+A `for` loop inside another `for` loop is useful for working with 2D structures.
+
+```python
+for i in range(3):
+    for j in range(2):
+        print(f"i={i}, j={j}")
+```
+
+```output
+i=0, j=0
+i=0, j=1
+i=1, j=0
+i=1, j=1
+i=2, j=0
+i=2, j=1
+```
+
+# Questions
+
+- [ ]  Explain `for` in your own words.
+- [ ]  What are the differences and similarities between `for` and `while` loops?
+- [ ]  Explain `break` in your own words.
+- [ ]  Explain `continue` in your own words.
+- [ ]  What happens if a `for` loop runs on an empty sequence?
+- [ ]  Explain the following code and its output:
+
+```python
+for i in range(3):
+    print(i)
+```
+
+- [ ]  Explain `else` in combination with a `for` loop in your own words.
+- [ ]  How can a `for` loop be used to sum all even numbers from 1 to 100? Explain and write the code.
+
+```
+
+This should match the style of your `while` loop notes while including useful examples. Let me know if you need any refinements! 🚀
+```

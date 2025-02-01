@@ -19,14 +19,15 @@ tags:
 
 
 
-## Global and Nonlocal in Python
+# Global and Nonlocal in Python
 
 In Python, the `global` and `nonlocal` keywords are used to modify the scope of variables within functions, affecting how variables are referenced or modified outside the function's local scope.
 
-### Global Keyword
+## Global Keyword
 The `global` keyword is used to declare a variable as global, meaning it refers to a variable defined at the top-level of the program or module, outside any function. When you use `global` inside a function, it allows you to modify the value of the global variable rather than creating a new local variable with the same name.
 
-#### Example:
+### Example:
+
 ```python
 x = 10  # Global variable
 
@@ -69,17 +70,17 @@ In this example:
 - The variable `x` is defined in the `outer_function`'s scope.
 - The `nonlocal` keyword allows the `inner_function` to modify `x` in the outer function's scope, rather than creating a new local variable.
 
-### Key Differences:
+## Key Differences:
 
 - **Global:** Refers to the top-level scope, i.e., the module-level scope. The `global` keyword modifies variables that are accessible throughout the entire program.
 - **Nonlocal:** Refers to the nearest enclosing scope that is not global. The `nonlocal` keyword allows you to modify variables from enclosing functions, useful in nested function contexts.
 
-### Use Cases:
+## Use Cases:
 
 - **Global:** Use when you need to modify or access variables across multiple functions in a program.
 - **Nonlocal:** Use in nested functions when you want to modify a variable from the outer function’s scope without affecting global variables.
 
-### Summary
+## Summary
 
 - `global` modifies variables in the global scope.
 - `nonlocal` modifies variables in the nearest enclosing function scope.
