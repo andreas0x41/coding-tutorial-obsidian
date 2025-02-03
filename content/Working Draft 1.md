@@ -10,243 +10,297 @@ tags:
   - AECD
   - GEES
 ---
-
-
-A `for` loop is used to iterate over a sequence (like a list, tuple, or string) or a range of numbers.  
+ 
+A `function` is a reusable block of code that performs a specific task. It helps organize code, avoid repetition, and improve readability.  
 # Summary
-- **Basic Usage**: Iterates over elements in a sequence or range automatically.
-- **Break**: Exits the loop immediately.
-- **Continue**: Skips the rest of the current iteration and moves to the next.
-- **Else**: Runs only if the loop completes normally (not via `break`).
+- **Basic Usage**: Defined using `def` and called by its name.
+- **Parameters**: Functions can accept input values.
+- **Return**: Functions can return values.
+- **Default Arguments**: Parameters can have default values.
+- ***args / **kwargs**: Allow variable-length arguments.
+- **Scope**: Variables inside a function are local unless specified otherwise.
 
 # Basic
-A `for` loop is useful when you need to iterate over a sequence of items or perform an action a set number of times.
+A function is defined using `def` followed by a name and parentheses. It can take parameters and return a result.
 
 ```python
-for item in sequence:
-    # Code to execute for each item
-```
+def greet():
+    print("Hello, world!")
+``` 
 
-Unlike a `while` loop, a `for` loop doesn't require manual control of the condition; it iterates automatically through the sequence.
-
-Example with a list:
+Calling the function executes its code:
 
 ```python
-fruits = ["apple", "banana", "cherry"]
-for fruit in fruits:
-    print(f"I like {fruit}")
+greet()
 ```
 
 ```output
-I like apple
-I like banana
-I like cherry
+Hello, world!
 ```
 
-Example using `range()`:
+# Parameters
+
+Functions can accept parameters (input values) to work with.
 
 ```python
-for num in range(5):
-    print(f"Number: {num}")
+def greet(name):
+    print(f"Hello, {name}!")
+```
+
+```python
+greet("Alice")
 ```
 
 ```output
-Number: 0
-Number: 1
-Number: 2
-Number: 3
-Number: 4
+Hello, Alice!
 ```
 
-Here, `range(5)` generates numbers from `0` to `4`, and the loop iterates over them.
+# Return
 
-# Break
-
-The [[8 Keyword|keyword]] `break` is used to immediately exit the loop, stopping further iterations.
+A function can return a value using the `return` keyword.
 
 ```python
-for num in range(10):
-    if num == 5:
-        break
-    print(num)
+def add(a, b):
+    return a + b
+```
+
+```python
+result = add(3, 5)
+print(result)
 ```
 
 ```output
-0
-1
-2
-3
-4
+8
 ```
 
-Once `num` reaches `5`, the `break` statement exits the loop.
+If a function does not return anything, it returns `None` by default.
 
-# Continue
+# Default Arguments
 
-The [[8 Keyword|keyword]] `continue` is used to skip the rest of the current iteration and move to the next one.
+You can provide default values for parameters.
 
 ```python
-for num in range(5):
-    if num == 2:
-        continue
-    print(num)
+def greet(name="Guest"):
+    print(f"Hello, {name}!")
+```
+
+```python
+greet()  # Uses default value
+greet("Bob")  # Uses provided value
 ```
 
 ```output
-0
-1
-3
-4
+Hello, Guest!
+Hello, Bob!
 ```
 
-The number `2` is skipped because `continue` jumps to the next iteration.
+# *args And **kwargs
 
-# Else
-
-> [!todo]- not exam relevant  
-> Not exam relevant, very rarely used.
-
-A `for` loop can have an `else` block, which runs only if the loop finishes normally (without `break`).
+`*args` allows passing a variable number of positional arguments.
 
 ```python
-for num in range(2, 10):
-    for i in range(2, num):
-        if num % i == 0:
-            print(f"{num} is not a prime number")
-            break
-    else:
-        print(f"{num} is a prime number")
+def add_numbers(*args):
+    return sum(args)
+```
+
+```python
+print(add_numbers(1, 2, 3, 4))
 ```
 
 ```output
-2 is a prime number
-3 is a prime number
-4 is not a prime number
-5 is a prime number
-6 is not a prime number
-7 is a prime number
-8 is not a prime number
-9 is not a prime number
+10
 ```
 
-# Examples
-
-## Iterating Over a Dictionary
-
-You can loop through dictionary keys, values, or both.
+`**kwargs` allows passing keyword arguments as a dictionary.
 
 ```python
-person = {"name": "Alice", "age": 30, "city": "New York"}
+def show_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+```
 
-# Loop through keys
-for key in person:
-    print(f"Key: {key}, Value: {person[key]}")
-
-# Loop through key-value pairs
-for key, value in person.items():
-    print(f"{key}: {value}")
+```python
+show_info(name="Alice", age=30, city="NY")
 ```
 
 ```output
-Key: name, Value: Alice
-Key: age, Value: 30
-Key: city, Value: New York
 name: Alice
 age: 30
-city: New York
+city: NY
 ```
 
-## Iterating Over Multiple Lists with `zip()`
+# Scope
 
-If you need to iterate through multiple lists at once, use `zip()`.
+Variables inside a function are local unless declared global.
 
 ```python
-names = ["Alice", "Bob", "Charlie"]
-ages = [30, 25, 35]
+x = 10
 
-for name, age in zip(names, ages):
-    print(f"{name} is {age} years old")
+def modify():
+    global x
+    x += 5
+
+modify()
+print(x)
 ```
 
 ```output
-Alice is 30 years old
-Bob is 25 years old
-Charlie is 35 years old
+15
 ```
 
-## Using `enumerate()` for Indexing
+# Global and Nonlocal in Python
 
-To keep track of the index while looping through a list, use `enumerate()`.
+In Python, the `global` and `nonlocal` keywords are used to modify the scope of variables within functions, affecting how variables are referenced or modified outside the function's local scope.
+
+## Global Keyword
+The `global` keyword is used to declare a variable as global, meaning it refers to a variable defined at the top-level of the program or module, outside any function. When you use `global` inside a function, it allows you to modify the value of the global variable rather than creating a new local variable with the same name.
+
+### Example:
 
 ```python
-colors = ["red", "green", "blue"]
+x = 10  # Global variable
 
-for index, color in enumerate(colors):
-    print(f"Color {index}: {color}")
+def update_global():
+    global x
+    x = 20  # Modifies the global variable 'x'
+
+update_global()
+print(x)  # Output: 20
+
+
+In the example above:
+
+- The global variable `x` is modified inside the `update_global()` function using the `global` keyword.
+
+Without the `global` keyword, the assignment to `x` would create a new local variable `x`, leaving the global variable unchanged.
+
+### Nonlocal Keyword
+
+The `nonlocal` keyword is used to work with variables in the nearest enclosing scope (i.e., the scope that is not global but also not the current function). This is particularly useful when dealing with nested functions, where you want to modify a variable in the outer function's scope.
+
+#### Example:
+
+```python
+def outer_function():
+    x = 10  # Variable in the outer function
+
+    def inner_function():
+        nonlocal x
+        x = 20  # Modifies 'x' in the outer function's scope
+
+    inner_function()
+    print(x)  # Output: 20
+
+outer_function()
+```
+
+In this example:
+
+- The variable `x` is defined in the `outer_function`'s scope.
+- The `nonlocal` keyword allows the `inner_function` to modify `x` in the outer function's scope, rather than creating a new local variable.
+
+## Key Differences:
+
+- **Global:** Refers to the top-level scope, i.e., the module-level scope. The `global` keyword modifies variables that are accessible throughout the entire program.
+- **Nonlocal:** Refers to the nearest enclosing scope that is not global. The `nonlocal` keyword allows you to modify variables from enclosing functions, useful in nested function contexts.
+
+## Use Cases:
+
+- **Global:** Use when you need to modify or access variables across multiple functions in a program.
+- **Nonlocal:** Use in nested functions when you want to modify a variable from the outer function’s scope without affecting global variables.
+
+## Summary
+
+- `global` modifies variables in the global scope.
+- `nonlocal` modifies variables in the nearest enclosing function scope.
+# Examples
+
+## Function with Multiple Parameters
+
+```python
+def multiply(a, b=2):
+    return a * b
+
+print(multiply(4))   # Uses default value of b
+print(multiply(4, 3))  # Uses provided values
 ```
 
 ```output
-Color 0: red
-Color 1: green
-Color 2: blue
+8
+12
 ```
 
-## Iterating Over a String
-
-A string is also an iterable, so you can loop through its characters.
+## Using Functions in a Loop
 
 ```python
-word = "Python"
-for letter in word:
-    print(letter)
+def square(n):
+    return n * n
+
+numbers = [1, 2, 3, 4, 5]
+for num in numbers:
+    print(square(num))
 ```
 
 ```output
-P
-y
-t
-h
-o
-n
+1
+4
+9
+16
+25
 ```
 
-## Nested Loops
-
-A `for` loop inside another `for` loop is useful for working with 2D structures.
+## Function Returning Multiple Values
 
 ```python
-for i in range(3):
-    for j in range(2):
-        print(f"i={i}, j={j}")
+def min_max(numbers):
+    return min(numbers), max(numbers)
+
+small, large = min_max([3, 1, 4, 1, 5])
+print(f"Min: {small}, Max: {large}")
 ```
 
 ```output
-i=0, j=0
-i=0, j=1
-i=1, j=0
-i=1, j=1
-i=2, j=0
-i=2, j=1
+Min: 1, Max: 5
+```
+
+## Recursive Function
+
+A function can call itself (recursion), useful for problems like factorials.
+
+```python
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(5))
+```
+
+```output
+120
 ```
 
 # Questions
 
-- [ ]  Explain `for` in your own words.
-- [ ]  What are the differences and similarities between `for` and `while` loops?
-- [ ]  Explain `break` in your own words.
-- [ ]  Explain `continue` in your own words.
-- [ ]  What happens if a `for` loop runs on an empty sequence?
+- [ ]  Explain `function` in your own words.
+- [ ]  Why are functions useful?
+- [ ]  What is the difference between `return` and `print` inside a function?
+- [ ]  What happens if a function doesn't have a `return` statement?
 - [ ]  Explain the following code and its output:
 
 ```python
-for i in range(3):
-    print(i)
+def add(a, b=10):
+    return a + b
+
+print(add(5))
+print(add(5, 2))
 ```
 
-- [ ]  Explain `else` in combination with a `for` loop in your own words.
-- [ ]  How can a `for` loop be used to sum all even numbers from 1 to 100? Explain and write the code.
+- [ ]  What are `*args` and `**kwargs`? Provide an example.
+- [ ]  Write a function that takes a list of numbers and returns their average.
+- [ ]  Write a recursive function to calculate the sum of all numbers from 1 to `n`.
 
 ```
 
-This should match the style of your `while` loop notes while including useful examples. Let me know if you need any refinements! 🚀
+This should fit well with your other notes. Let me know if you want any changes! 🚀
 ```

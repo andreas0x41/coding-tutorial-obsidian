@@ -237,7 +237,7 @@ i=2, j=1
 
 # Questions
 - [ ] Explain `for` in your own words.
-- [ ] What are the differences and similarities between `for` and `while` loops?
+- [ ] What are the differences and similarities between `for` and `while` loops? When should you use which kind?
 - [ ] Explain `break` and `continue` in your own words.
 - [ ] Are `break` and `continue` potentially more or less useful with in a `for` loop than in a `while` loop? Why? Give reasons and examples.
 - [ ]  What happens if a `for` loop runs on an empty collection?

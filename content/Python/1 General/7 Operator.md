@@ -326,9 +326,6 @@ You can also check if a value is not in a collection using the syntax `not (valu
 > Bitwise Operators
 
 
-
-
-
 # Precedence
 Operator precedence determines the order in which operators are evaluated. If two have the same precedence python works from left to right. This is similar to mathematical operations where you also have to keep the correct PEMDAS (Parentheses, Exponents, Multiplication and Division, Addition and Subtraction) order
 

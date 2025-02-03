@@ -1,5 +1,5 @@
 ---
-title: <% tp.file.title %>
+title: 3.2 Files
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: true

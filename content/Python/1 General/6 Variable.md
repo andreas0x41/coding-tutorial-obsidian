@@ -166,10 +166,10 @@ print(x, y)         # printing the values of x and y -> [10, 2, 3] [10, 2, 3
 
 This might seem like a small difference and not intuitive at first, but is actually a very significant detail.
 # Scope
-Variable scope means when/where variables are defined and can be accessed. In Python you are not directly accessing locations in memory, instead you are using context dependent variables.
+Variable scope means when/where variables are defined and can be accessed. In Python you are not directly accessing locations in memory, instead you are using context dependent variables. You can have different variables with the same names, as long as they are in different scopes.
 **Global Scope** variables are outside of functions and can be accessed everywhere (after their creation).
 **Local Scope** variables are created inside a function and because of that only exist inside that function. So after running the function is finished, all the references will be deleted again.
-You can find detailed example and usage of the `global` and `nonlocal` [[8 Keyword|keywords]] on the page about functions.
+You can find detailed example and usage of the `global` and `nonlocal` [[8 Keyword|keywords]] on the page about [[5 Function#Variable Scope|functions]].
 
 # Type Hinting
 
