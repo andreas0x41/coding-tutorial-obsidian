@@ -11,3 +11,4 @@ tags:
   - AECD
   - GEES
 ---
+`open()`, `.read()`, `.readline()`, `.readlines()`, `.write()`, `.writelines()`, `.close()`

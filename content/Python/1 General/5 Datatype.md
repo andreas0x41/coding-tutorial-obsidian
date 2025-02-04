@@ -124,8 +124,6 @@ Slicing is used to select a subsequence/portion of a sequence, instead of only o
 sequence[start:stop:step]
 ```
 
-I you leave one of these blank, it will have a default value
-
 - `start`: The starting index (**inclusive**). Defaults to `0` (first element) if omitted. Negative values work the same way as with indexing.
 - `stop`: The ending index (**exclusive**). Because it is exclusive, the element with this index is not included, to include the last element you have to use one more then its index or -1. Defaults to `-1` (last element) if omitted. Negative values work the same way as with indexing.
 - `step`: The interval between elements. Defaults to `1` (every element without skipping). Negative values reverse the order of the sequence.
@@ -319,6 +317,18 @@ print(z.imag)  # -> 4.0
 > Only understand that this is different from list, because it does not store all elements in memory and instead generates them on demand. More advanced usage is not necessary.
 
 The datatype Range is created with the range function and generates a sequence of numbers. It might seem very similar to a list, but the key difference is that not all elements are saved in memory, instead they are generated only when they are actually used. It is commonly used in loops and is a memory-efficient [[#Iterable]]. Interestingly you can even [[#Indexing|index]] and [[#Slicing|slice]] range objects and will either a number or a new slice as a result. You can not add, remove or change elements of a range, because it is not [[#Mutable||mutable]].
+
+The `range()` function generates a range of number. The arguments are similar to slicing and you can use `range(stop)`, `range(start, stop)`, or `range(start, stop, step)`
+- `start`: The starting number (**inclusive**). Defaults to `0` if omitted.
+- `stop`: The ending value (**exclusive**). Because it is exclusive, this value is not included, to include the last value you have to use one more then it. 
+- `step`: The interval between elements. Defaults to `1` (every number without skipping). Negative values are also possible, but then `start > stop`.
+
+```python
+print(list(range(5)))          # -> [0, 1, 2, 3, 4]
+print(list(range(1, 10)))      # -> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(list(range(-10, 10, 2))) # -> [-10, -8, -6, -4, -2, 0, 2, 4, 6, 8]
+print(list(range(100, 0, -9))) # -> [100, 91, 82, 73, 64, 55, 46, 37, 28, 19, 10, 1]
+```
 
 ## Generator
 

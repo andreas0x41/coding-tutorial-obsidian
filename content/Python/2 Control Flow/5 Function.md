@@ -218,6 +218,20 @@ outer_function()
 4: 20 140714660586888
 ```
 
+# Methods
+A method is a function that belongs to a object/class. Because of this it can directly access and change the value of the object/class. You can find details about creating your own classes, objects and methods under [[3 Object Oriented Programming|Object Oriented Programming]].
+
+```python
+l1 = [2, 1, 5, 3, 2, 7, 0]
+returnValue = sorted(l1) # sorting with function, give list as argument, get new sorted list returned
+print(returnValue, l1)   # -> [0, 1, 2, 2, 3, 5, 7] [2, 1, 5, 3, 2, 7, 0]
+l1 = returnValue 
+
+l2 = [2, 1, 5, 3, 2, 7, 0]
+returnValue = l2.sort()  # sorting with method, method belongs to the list, no retrun value, changes directly applied
+print(returnValue, l2) # -> None [0, 1, 2, 2, 3, 5, 7]
+```
+
 > [!quote]- Additional not exam relevant topics for later
 > Type Hinting
 > Default Arguments
@@ -229,10 +243,11 @@ outer_function()
 
 # Questions
 
-- [ ]  Explain in your own words what a function is, and why it is useful.
+- [ ] Explain in your own words what a function is, and why it is useful.
 - [ ] Explain function definition and function call in your own words.
 - [ ] Explain parameters in your own words.
 - [ ] Explain `return` in your own words.
-- [ ]  What is the difference between `return` and `print` inside a function?
-- [ ]  What exactly happens if a function doesn't have a `return` statement?
-- [ ]  Write a function that takes a list of numbers and returns their average.
+- [ ] What is the difference between `return` and `print` inside a function?
+- [ ] What exactly happens if a function doesn't have a `return` statement?
+- [ ] Write a function that takes a list of numbers and returns their average.
+- [ ] Explain method in your own words.
