@@ -37,6 +37,7 @@
       display: none;
     }
     height: auto;
+    max-height: 25%;
     @media all and not ($desktop) {
       height: 250px;
     }
