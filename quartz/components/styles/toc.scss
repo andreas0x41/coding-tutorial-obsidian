@@ -3,10 +3,12 @@
 .toc {
   display: flex;
   flex-direction: column;
+  max-height: 67%;
 
-  &.desktop-only {
-    max-height: 67%; // default is 40%
-  }
+  // default
+  // &.desktop-only {
+  //   max-height: 40%; // default is 40%
+  // }
 }
 
 @media all and not ($mobile) {

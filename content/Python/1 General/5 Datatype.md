@@ -125,7 +125,7 @@ sequence[start:stop:step]
 ```
 
 - `start`: The starting index (**inclusive**). Defaults to `0` (first element) if omitted. Negative values work the same way as with indexing.
-- `stop`: The ending index (**exclusive**). Because it is exclusive, the element with this index is not included, to include the last element you have to use one more then its index or -1. Defaults to `-1` (last element) if omitted. Negative values work the same way as with indexing.
+- `stop`: The ending index (**exclusive**). Because it is exclusive, the element with this index is not included, to include the last element you have to use one more then its index. Defaults to the last element if omitted. Negative values work the same way as with indexing.
 - `step`: The interval between elements. Defaults to `1` (every element without skipping). Negative values reverse the order of the sequence.
 
 If you get elements of a sequence using slicing, it will create a shallow copy of the sequence and give it to you.
