@@ -18,7 +18,7 @@ tags:
 # Simple Input
 Python has one primary function for console input called `input()`. It will wait for the user to input something on the console. As soon as the user presses `Enter` the function will return the value entered by the user and continue with the program. 
 
-Input will **always** return the value as as [[5 Datatype#String|string]] . So if you want the input to be a different [[5 Datatype|datatype]], you have to explicitly convert it, but you have to be careful. Taking input of some kind that has an unexpected datatype or value is one of the most common error cases. If you take input you should tell the user what you expect, check if the entered value is valid, and include exception handling.
+Input will **always** return the value as [[5 Datatype#String|string]] . So if you want the input to be a different [[5 Datatype|datatype]], you have to explicitly convert it, but you have to be careful. Taking input of some kind that has an unexpected datatype or value is one of the most common error cases. If you take input you should tell the user what you expect, check if the entered value is valid, and include exception handling.
 
 ```python
 input()

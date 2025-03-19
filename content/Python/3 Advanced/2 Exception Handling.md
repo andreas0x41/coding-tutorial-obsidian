@@ -1,5 +1,5 @@
 ---
-title: 3.2 Files
+title: 3.2 Exception Handling
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: true
@@ -11,4 +11,3 @@ tags:
   - AECD
   - GEES
 ---
-`open()`, `.read()`, `.readline()`, `.readlines()`, `.write()`, `.writelines()`, `.close()`

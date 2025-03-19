@@ -12,6 +12,9 @@ tags:
   - GEES
 ---
 Python has many built-in [[5 Function|functions]] and methods. Below or online you can find a overview of these functions and methods. The relevant ones are either already explained in other chapters, or after the table.
+
+> [!todo]- partly exam relevant
+> Only some of these Functions and Methods ae actually exam relevant.
 # Overview
 
 | Category                    | Function/Method                                                                                                                                                                            |
@@ -51,16 +54,17 @@ print(round(123456, -3))  # -> 123000
 
 ## `sum(iterable, start=0)`
 
-Returns the sum of `iterable`, starting from `start` (default: 0).
+Returns the sum of `iterable`, plus a `start` value (default: 0).
 
 ```python
-print(sum([1, 2, 3]))                # -> 6
-print(sum({2, -2, 3, -4}, start=2))  # -> 1
+print(sum([1, 2, 3]))                # -> 6
+print(sum((), start=5))              # -> 5
+print(sum({2, -2, 3, -4}, start=2))  # -> 1
 ```
 
 ## `min/max(iterable, *, key=None, default=None)`
 
-Returns the smallest/largest item in `iterable` or the `default` if empty. The `key` can take a [[5 Function|function]] that will be executed for each element to determine its size.
+Returns the smallest/largest item in `iterable` or the `default` if empty. The `key` can take a [[5 Function|function]] that will be executed for each element to determine its value.
 
 ```python
 print(min([3, 1, 4]))                       # -> 1
@@ -84,7 +88,7 @@ print(len("some text")) # -> 9
 
 ## `sorted(iterable, *, key=None, reverse=False)`
 
-Returns a new sorted list from `iterable`. Default is ascending (smallest to largest), but you can `reverse` it. The `key` can take a [[5 Function|function]] that will be executed for each element pair to determine their order. The `key` can take a [[5 Function|function]] that will be executed for each element to determine the value that will be used for sorting. You can also sort a existing list in place with the method `.sort()`.
+Returns a new sorted list from `iterable`. Default is ascending (smallest to largest), but you can `reverse` it. The `key` can take a [[5 Function|function]] that will be executed for each element to determine the value that will be used for sorting. You can also sort a existing list in place with the method `.sort()`.
 
 ```python
 print(sorted([3, 1, 2]))  # -> [1, 2, 3]
@@ -94,7 +98,7 @@ print(sorted(people, key=lambda x: x["size"])) # -> [{'name': 'Tom', 'size': 168
 
 ## `reversed(iterable)`
 
-Returns an iterator reversing `iterable`. You can also reverse a existing list in place with the method `.reverse()`.
+Returns an iterator thats the reversed order of the initial `iterable`. You can also reverse a existing list in place with the method `.reverse()`.
 
 ```python
 print(list(reversed([1, 2, 3])))  # -> [3, 2, 1]
@@ -102,7 +106,7 @@ print(list(reversed([1, 2, 3])))  # -> [3, 2, 1]
 
 ## `enumerate(iterable, start=0)`
 
-Yields `(index, value)` pairs from `iterable`.
+Returns an iterator with `(index, value)` pairs from `iterable`. You can set a `start` value for indexing (default: 0)
 
 ```python
 print(list(enumerate([33, 66, 99], start=1)))  # -> [(0, 33), (1, 66), (2, 99)]
@@ -123,7 +127,7 @@ print(list(zip([1,2,3], (1j,2j,3j,4j), "abcdef")))  # -> [(1, 1j, 'a'), (2, 2j,
 Filters elements for which `function` returns `True`.
 
 ```python
-print(list(filter(lambda x: x > 0, [-1, 2, -3, 4])))  # -> [2, 4]
+print(list(filter(lambda x: x>0, [-1, 2, -3, 4])))  # -> [2, 4]
 ```
 
 ## `map(function, iterable)`
@@ -131,40 +135,45 @@ print(list(filter(lambda x: x > 0, [-1, 2, -3, 4])))  # -> [2, 4]
 Applies `function` to each item.
 
 ```python
-print(list(map(str, [1, 2, 3])))  # -> ['1', '2', '3']
+print(list(map(lambda x: 10*x, [1, 2, 3])))  # -> [10, 20, '30]
+print(list(map(str, [1, 2, 3])))             # -> ['1', '2', '3']
 ```
 
 # String Methods
 
 ## `.lower()` / `.upper()`
 
-Converts string to all lower-/uppercase.
+Returns string in all lower-/uppercase characters.
 
 ```python
-print('Hello'.lower())  # -> 'hello'
-print('Hello'.upper())  # -> 'HELLO'
+print("Hello".lower())  # -> "hello"
+print("Hello".upper())  # -> "HELLO"
 ```
 
-## `.strip()`
+## `.strip(character="")`
 
-Removes all whitespace from both ends.
+Returns a string without all `characters` at the start end end of the initial string. By default removes all whitespace type characters. Everything between the two outer most characters that are not in the `characters` to remove will be kept. You can use `.lstrip()`/`.rstrip()` to only remove from the start/end.
 
 ```python
-print('\n hello \n'.strip())  # -> 'hello'
+print("\n test message \n".strip())                      # -> "test message"
+print("\n test message \n".lstrip())                     # -> "test message \n"
+print("\n test message \n".rstrip())                     # -> "\n test message"
+print("\n, ,,;; test, message,, ,;; \n".strip(" \n,;"))  # -> 'test message'
 ```
 
 ## `.split(sep=" ", maxsplit=-1)`
 
-Splits a string into a list whenever `sep` occurs. `maxsplit` is the maximum number of splits, or -1 for unlimited.
+Splits a string into a list whenever `sep` occurs. `maxsplit` is the maximum number of splits, or -1 for unlimited. 
 
 ```python
-print("hello world text".split())           # -> ['hello', 'world', 'text']
-print("some|random|string".split(sep="|"))  # -> ['some', 'random', 'string']
+print("hello world text".split())                      # -> ['hello', 'world', 'text']
+print("some|random|string".split(sep="|"))             # -> ['some', 'random', 'string']
+print("some long hello world text".split(maxsplit=2))  # -> ['some', 'long', 'hello world text']
 ```
 
 ## `.join(iterable)`
 
-Joins elements with the string as separator.
+Joins string elements from an iterable with the string as separator.
 
 ```python
 print('-'.join(['a', 'b', 'c']))  # -> 'a-b-c'
@@ -172,13 +181,14 @@ print('-'.join(['a', 'b', 'c']))  # -> 'a-b-c'
 
 ## `.replace(old, new, count=-1)`
 
-Replaces `old` with `new`, up to `count` times.
+Replaces the `old` string with a `new` string. It will replace a maximum of `count` times, or -1 for unlimited.
 
 ```python
-print('hello'.replace('l', 'x'))  # -> 'hexxo'
+print("hello".replace("l", "x"))         # -> 'hexxo'
+print("hellllllo".replace("l", "x", 2))  # -> 'hexxllllo'
 ```
 
-## `.startswith(prefix)` / `.endswith(suffix)`
+## `.startswith(string)` / `.endswith(string)`
 
 Checks if a string starts or ends with a substring.
 
@@ -190,7 +200,7 @@ print('hello'.endswith('lo'))    # -> True
 
 ## `.find(sub, start=0, end=None)`
 
-Returns the index of `sub`, or `-1` if not found. 
+Returns the index of the first occurance of `sub`, or `-1` if not found. You can use `start` and `end` to only search in a slice of the string
 
 ```python
 print('hello'.find('l'))  # -> 2
@@ -198,7 +208,7 @@ print('hello'.find('l'))  # -> 2
 
 ## `.count(sub, start=0, end=None)`
 
-Counts how often `sub` occurs.
+Counts how often `sub` occurs. You can use `start` and `end` to only search in a slice of the string
 
 ```python
 print('banana'.count('a'))  # -> 3
@@ -220,20 +230,33 @@ l.insert(1, 5)
 print(l)            # -> [1, 5, 2, 3, 4, 2]
 ```
 
-## `.remove(x)`, `.pop(i=-1)`, `.clear()`
+## `.remove(x)`, `.pop(index=-1)`, `.clear()`
 
 `.remove()` first element with specific value, `.pop()` (remove and return) element at index, or `.clear()` the whole list.
 
 ```python
-l.remove(2)
-print(l)       # -> [1, 5, 3, 4, 2]
-print(l.pop()) # -> 2
-print(l)       # -> [1, 5, 3, 4]
+l = [1, 5, 2, 3, 4, 2]
+print(l.remove(2)) # -> None
+print(l)           # -> [1, 5, 3, 4, 2]
+print(l.pop())     # -> 2
+print(l)           # -> [1, 5, 3, 4]
+print(l.clear())   # -> None
+print(l)           # -> [1, 5, 3, 4]
 ```
 
 ## `.copy()`
 
 Returns a shallow copy.
+
+# Object & Class Handling
+
+## `isinstance(obj, classinfo)`, `issubclass(cls, classinfo)`
+
+Check instance or subclass relations.
+
+## `getattr(obj, name, default)`, `setattr(obj, name, value)`, `hasattr(obj, name)`, `delattr(obj, name)`
+
+Get, set, check, or delete attributes dynamically.
 
 # System & Debugging
 
@@ -264,18 +287,3 @@ Executes Python code.
 ## `globals()`, `locals()`
 
 Returns the global or local namespace.
-# Object & Class Handling
-
-## `isinstance(obj, classinfo)`, `issubclass(cls, classinfo)`
-
-Check instance or subclass relations.
-
-## `getattr(obj, name, default)`, `setattr(obj, name, value)`, `hasattr(obj, name)`, `delattr(obj, name)`
-
-Get, set, check, or delete attributes dynamically.
-
-# System & Debugging
-
-## `exit()`, `help(obj)`, `repr(obj)`, `callable(obj)`, `exec(code)`, `eval(expr)`, `globals()`, `locals()`
-
-Various system utilities.

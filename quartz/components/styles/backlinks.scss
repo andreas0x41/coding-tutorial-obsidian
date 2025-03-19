@@ -24,6 +24,7 @@
     list-style: none;
     padding: 0;
     margin: 0.5rem 0;
+    scrollbar-width: thin;
 
     & > li {
       & > a {
@@ -37,9 +38,9 @@
       display: none;
     }
     height: auto;
-    max-height: 25%;
-    @media all and not ($desktop) {
-      height: 250px;
-    }
+    // max-height: 200px;
+    // @media all and not ($desktop) {
+    //   height: 250px;
+    // }
   }
 }
