@@ -45,6 +45,7 @@ There are 3 additional modifiers that can be combined with the basic modes.
 | `t`      | Text mode (default) (e.g., `rt`, `wt`).                                                                                                         |
 | `b`      | Binary mode (e.g., `rb`, `wb`).                                                                                                                 |
 | `+`      | Read and write mode (e.g., `r+`, `w+`, `a+`,`rb+`). The behavior for checking/handling file file existence is the same as with the basic modes. |
+
 You can use the methods `readable()` and `writable()` to check if you can read/write to a file object.
 
 ```python
