@@ -28,21 +28,21 @@ You can save the value returned by `input` in a [[6 Variable|variable]] to use i
 
 ```python
 x = input()
-print("The user entered the value:", x) # -> The user has entered the value {?}
+print("The user entered the value:", x) # -> 'The user has entered the value {?}'
 ```
 
 You can also use the value returned by `input()` directly.
 
 ```python
-print("The user entered the value:", input()) # -> The user has entered the value {?}
+print("The user entered the value:", input()) # -> 'The user has entered the value {?}'
 ```
 
 # Input with Prompt
 If you want, you can give the `input` function one argument. It will output this value directly before taking input. This is usually used to ask and inform the user what input is expected
 
 ```python
-x = input("Please input a number: ")     # -> Please input a number: 
-print("The user entered the number:", x) # -> The user has entered the number {?}
+x = input("Please input a number: ")     # -> 'Please input a number: '
+print("The user entered the number:", x) # -> 'The user has entered the number {?}'
 ```
 
 # Questions

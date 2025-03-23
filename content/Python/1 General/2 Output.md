@@ -14,24 +14,23 @@ tags:
 
 # Summary
 
-- **`print()`:** Outputs values of any datatype to the console.
-- **Defaults:** Adds a line break; blank lines if no arguments are given.
+- **`print()`:** Outputs values of any [[5 Datatype|datatype]] to the console.
+- **End (`end`)** for what follows the output. Default is a [[5 Datatype#Special Characters|newline]] (`\n`).
 - **Separator (`sep`)** for value separation.
-- **End (`end`)** for what follows the output.
 
 # Simple Print
 
-Python has one primary function for console output called `print()`. In general you can give the print function any value of any [[5 Datatype|datatype]] and it will print it to the console.
+You can output to the console with the [[5 Function|function]] `print()`. You can give `print()` any values of any [[5 Datatype|datatype]] as [[5 Function#Parameters|arguments]] and it will print it to the console.
 
-## Print Hello World
+## Hello World
 
-This for example will print the message "Hello World" to the console.
+In this example we give the `print()` function the [[5 Datatype#String|string]] "Hello World". This text will be outputted to the console.
 
 ```python
 print("Hello World") # -> Hello World
 ```
 
-## Printing Multiple Datatypes
+## Multiple Datatypes
 
 You can also print any other values of any [[5 Datatype|datatype]] using this function.
 
@@ -39,10 +38,10 @@ You can also print any other values of any [[5 Datatype|datatype]] using this fu
 print(12)               # -> 12
 print(2.5)              # -> 2.5
 print(True)             # -> True
-print("Some more text") # -> Some more text
+print("Some more text") # -> 'Some more text'
 ```
 
-By default, after every printed value, there will be a [[5 Datatype#Special Characters|line break]], so the next value will be in a new line. The code above will output the following text to the console. You can see that each output is in its own line.
+By default, after every printed value, there will be a [[5 Datatype#Special Characters|line break]]. So the next value will be at the start of a new line. The code above will output the following text to the console. You can see that each output is in its own line.
 
 ```output
 12
@@ -51,16 +50,16 @@ True
 Some more text
 ```
 
-## Print without Any Arguments
+## Without Any Arguments
 
-If call the print function without any arguments, it will not print anything, but still make a new line.
+If call the print function without any arguments, it will only output the [[5 Datatype#Special Characters|newline]].
 
 ```python
 print(1) # -> 1
-print()
+print()  # -> '\n'
 print(2) # -> 2
-print()
-print()
+print()  # -> '\n'
+print()  # -> '\n'
 print(3) # -> 3
 ```
 
@@ -75,35 +74,26 @@ Bellow you see the exact output of these print statements.
 3
 ```
 
-# Print Multiple Values
+# Multiple Values
 > [!todo]- less exam relevant
 > Less exam relevant, but still good/helpful to know.
 
-The print function can take any number of comma separated values and print all of them. In the output, the values will be separated with spaces.
+The `print()` function can multiple comma separated [[5 Function#Parameters|arguments]] and output them. By default, these values will be separated with spaces.
 
 ```python
-print("Hello", "World", "Python") # -> Hello World Python
+print("Hello", "World", "Python") # -> 'Hello World Python'
 ```
 
-# Additional Arguments for Print
+# Additional Parameter
 
 > [!todo]- less exam relevant
 > Less exam relevant, but still good/helpful to know.
 
 The print function can not only take the values you want to print, you can also give some other arguments for special output.
 
-## Print Separator
+## End
 
-You can tell the print function which value to put between the values you are printing using the `sep` parameter. You can give it any string to put between multiple values within the print, the default is a space.
-
-```python
-print("Hello", "World", "Python", sep=" | ") # -> Hello | World | Python
-print("Shopping List: Apple", "Banana", "Bread", "Milk", sep=", ")  # -> Shopping List: Apple, Banana, Bread, Milk
-```
-
-## Print End
-
-You can tell the print function which value to put after all of the printed values using the `end` parameter. You can give any string, default is a new line ('\n').
+You can tell the print function which value to put after all of the printed values using the `end` parameter. You can give any string, default is a new line ("\n").
 
 ```python
 print("This doesn't end with a newline", end=" ---> ")
@@ -113,6 +103,15 @@ print("on the same line.")
 
 ```output
 This doesn't end with a newline ---> This continues on the same line.
+```
+
+## Separator
+
+You can tell the print function which value to put between the values you are printing using the `sep` parameter. You can give it any string to put between multiple values within the print, the default is a space.
+
+```python
+print("Hello", "World", "Python", sep=" | ") # -> 'Hello | World | Python'
+print("Shopping List: Apple", "Banana", "Bread", "Milk", sep=", ")  # -> 'Shopping List: Apple, Banana, Bread, Milk'
 ```
 
 # Questions

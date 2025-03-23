@@ -198,11 +198,11 @@ Formatted strings in Python provide an easy way to insert values into a string. 
 b = 5
 pi = 3.14159
 name = "Andreas"
-print(f"My name is {name} and I am {19} years old.") # -> My name is Andreas and I am 19 years old.
-print(f"The sum of {a} and {b} is {a+b}")            # -> The sum of 1 and 5 is 6
-print(f"The user inputted: {input()}")               # -> The user inputted: {?}
-print(f"Pi with two decimal places: {pi:.2f}")       # -> Pi with two decimal places: 3.14
-print(f"Documenting operations: {1 + 3 * 2 = }")      # -> Documenting operations: 1 + 3 * 2 = 7
+print(f"My name is {name} and I am {19} years old.") # -> 'My name is Andreas and I am 19 years old.'
+print(f"The sum of {a} and {b} is {a+b}")            # -> 'The sum of 1 and 5 is 6'
+print(f"The user inputted: {input()}")               # -> 'The user inputted: {?}'
+print(f"Pi with two decimal places: {pi:.2f}")       # -> 'Pi with two decimal places: 3.14'
+print(f"Documenting operations: {1 + 3 * 2 = }")      # -> 'Documenting operations: 1 + 3 * 2 = 7'
 ```
 
 ### Multiple Line String
@@ -254,7 +254,7 @@ You can think of a tuple like a [[#List]] where it is impossible to add, change 
 A set is similar to a [[#List]] but the elements are stored in a specific ordered. Because of this, [[#Indexing]] is not possible. [[#Iterable|Iterating]] is possible, but there is no order defined for the elements. All set elements have to be within curly brackets `{}`and separated by commas `,`. You can use the function `set()` to convert an [[#Iterable]] value to a set or create an empty set if no argument are given. You only create an empty set using the function, because [[#Dictionary]] does also use curly brackets. You can add or remove elements, because it is [[#Mutable|mutable]]. A set can only store not [[#Mutable|mutable]] elements. A set does not allow for any duplicate elements, if you have duplicates only one of them will be stored. Only a few of the list operators, functions and methods will work, but there are also some special ones for sets.
 
 ```python
-{1, 2, 3} set() {1, 3.14, 'hello'} {'hello', True, 2, 3.14}
+{1, 2, 3} set() {1, 3.14, "hello"} {"hello", True, 2, 3.14}
 print({1, 2, 1, 1, 3, 2, 3, 4, 5}) # duplicates removed, no specific order -> {3, 5, 1, 4, 2}
 ```
 
@@ -270,14 +270,14 @@ You can use the function `dict()` to convert values to a dictionary, or create a
 
 ```python
 print(dict())                                                 # empty dictionary -> {}
-print(dict([('name', 'Tom'), ('age', 25), ('city', 'Linz')])) # dictionary from pairs -> {'name': 'Tom', 'age': 25, 'city': 'Linz'}
-print(dict(name='John', age=30, country='USA'))               # dictionary from keyword arguments -> {'name': 'John', 'age': 30, 'country': 'USA'}
+print(dict([("name", "Tom"), ("age", 25), ("city", "Linz")])) # dictionary from pairs -> {'name': 'Tom', 'age': 25, 'city': 'Linz'}
+print(dict(name="John", age=30, country="USA"))               # dictionary from keyword arguments -> {'name': 'John', 'age': 30, 'country': 'USA'}
 ```
 
 You can get the value of a key the same way you would use normal [[#Indexing|indexing]]. You can add, change or remove elements, because it is [[#Mutable|mutable]]. If you want to add a value you can use assignment with the new key with the syntax `dictName[newKey] = newValue`, if the key already exists it will change the value of the existing key.
 
 ```python
-person = {'name': 'Tom', 'age': 25, 'city': 'Linz'}
+person = {"name": "Tom", "age": 25, "city": "Linz"}
 print(person["age"]) # print age of person -> 25
 person["country"] = "Austria" # add new element with key "country" and value "Austria"
 person["age"] = 19 # change the value of age to 19

@@ -69,7 +69,7 @@ is_ready = True   # name: is_ready; value: True; type: Boolean
 
 print(number)     # -> 10
 number = "test"   # reassign variable number with value "test" of type String
-print(number)     # -> test
+print(number)     # -> 'test'
 ```
 
 # Accessing
@@ -77,8 +77,8 @@ print(number)     # -> test
 Use the variable name to access the value of a variable. Python will get the variable value from memory and put it place of the name. Tying to access a variable that does not exist will result in an error.
 
 ```python
-print(number)  # -> 10
-print(message) # -> Hello
+print(message) # -> 'Hello'
+print(is_ready)  # -> True
 ```
 
 # Deleting

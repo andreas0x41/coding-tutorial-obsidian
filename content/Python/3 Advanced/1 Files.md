@@ -104,20 +104,20 @@ We can read all the data at once.
 
 ```python
 with open("example.txt", "r") as file:
-    print(file.read()) # -> "This is a simple text file.\nThis demonstrates.....6 7 8 9"
+    print(file.read()) # -> 'This is a simple text file.\nThis demonstrates.....6 7 8 9'
 with open("example.txt", "r") as file:
-    print(file.readlines()) # -> ["This is a simple text file.\n", ....., "6 7 8 9"]
+    print(file.readlines()) # -> ['This is a simple text file.\n', ....., '6 7 8 9']
 ```
 
 Or individual parts of it.
 
 ```python
 with open("testFile.txt", "r") as file:
-    print(file.read(5))      # -> "This "
-    print(file.read(5))      # -> "is a "
-    print(file.readline())   # -> "simple text file.\n"
-    print(file.readline())   # -> "This demonstrates file reading.\n"
-    print(file.read(2))      # -> "0\n"
+    print(file.read(5))      # -> 'This '
+    print(file.read(5))      # -> 'is a '
+    print(file.readline())   # -> 'simple text file.\n'
+    print(file.readline())   # -> 'This demonstrates file reading.\n'
+    print(file.read(2))      # -> '0\n'
     print(file.readlines())  # -> ['1 2\n', '3 4 5\n', '6 7 8 9']
 ```
 

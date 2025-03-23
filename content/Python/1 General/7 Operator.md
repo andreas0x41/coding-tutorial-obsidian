@@ -35,16 +35,16 @@ x = 5 # assign the value 5 to the variable x
 > [!todo]- partly exam relevant
 > The following 3 subchapters show advanced usage. It is good to know about this, but not strictly exam relevant.
 ## Augmented Assignment
-You can combine the assignment operator with an arithmetic or bitwise. This will apply the operation to the current value of a variable and then assign the resulting value to the variable again. To do this you have to put the other operator between the variable name and the assignment. 
+You can combine the assignment operator with an arithmetic or bitwise operator. This will apply the operation to the current value of a variable and then assign the resulting value to the variable again. To do this you have to put the other operator between the variable name and the assignment. 
 
 ```python
 x = 1      # assign the value 1 to the variable x
-x += 1     # same as 'x=x+1', add one to the value of x, result: 2
-x *= 3     # same as 'x=x*3', multiply the value of x with 3, result: 6
-x -= 2 * 4 # same as 'x=x-2*4', result -2, because of precedence
-x **= 2    # same as 'x=x**2', result 4
-x <<= 1    # same as 'x=x<<2', result 8
-x //= 3    # same as 'x=x//3', result 2
+x += 1     # same as "x=x+1", add one to the value of x, result: 2
+x *= 3     # same as "x=x*3", multiply the value of x with 3, result: 6
+x -= 2 * 4 # same as "x=x-2*4", result -2, because of precedence
+x **= 2    # same as "x=x**2", result 4
+x <<= 1    # same as "x=x<<2", result 8
+x //= 3    # same as "x=x//3", result 2
 ```
 
 ## Multiple Value Assignment
@@ -52,7 +52,7 @@ Python allows you to assignment multiple values at once using the syntax `var1, 
 
 ```python
 a, b, c = 1, True, "test"      # multiple value assignment 
-print(a, b, c)                 # -> 1 True test
+print(a, b, c)                 # -> 1 True 'test'
 
 a, b = b, a                    # swap the values of two variables
 print(a, b)                    # -> 2 1
@@ -67,9 +67,9 @@ print(b)                       # -> 1
 print(c)                       # -> 2
 
 a, *b, c = "This is some text" # a takes the first, c takes the last, b takes all in the middle as a list
-print(a)                       # -> T
+print(a)                       # -> 'T'
 print(b)                       # -> ['h', 'i', 's', ' ', 'i', 's', ' ', 's', 'o', 'm', 'e', ' ', 't', 'e', 'x']
-print(c)                       # -> t
+print(c)                       # -> 't'
 ```
 
 ## Walrus Operator
@@ -80,14 +80,14 @@ The walrus operator `:=` combines assignment and returning the value for further
 
 ```python
 # Without Walrus Operator
-value = input("Enter 'exit' to stop the loop: ")
-while value != "exit":
+value = input("Enter x to stop the loop: ")
+while value != "x":
     print("Inside while loop with input:", value)
-    value = input("Enter 'exit' to stop the loop: ")
+    value = input("Enter x to stop the loop: ")
 print("loop finished")
 
 # With Walrus Operator
-while (value := input("Enter 'exit' to stop the loop: ")) != "exit":
+while (value := input("Enter x to stop the loop: ")) != "x":
 # this will take input, assing it to the variable value, and also return it to also be used in for value != "exit"
     print("Inside while loop with input:", value)
 print("loop finished")
@@ -154,7 +154,7 @@ The operators `+` and `*` can also be used with [[5 Datatype#Collection Datatype
 
 ```python
 x = "Hello"
-print(x + " " + "World")            # -> Hello World
+print(x + " " + "World")            # -> 'Hello World'
 print([1, 2] + [3, 4])              # -> [1, 2, 3, 4]
 print((1, 2) + (3, (True, "Test"))) # -> (1, 2, 3, (True, 'Test'))
 print(x + [1, 2]) # ERROR because they have different datatypes
@@ -166,7 +166,7 @@ print(x + [1, 2]) # ERROR because they have different datatypes
 The `*` operator is used to repeat a string, list or tuple multiple times. For that you have to give the number of time you want to repeat as a positive integer and the sequence you want to repeat. The result datatype is the same as you start with.
 
 ```python
-print(3 * "Hello") # -> HelloHelloHello
+print(3 * "Hello") # -> 'HelloHelloHello'
 print([0] * 10)    # -> [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 print((1,2,3) * 2) # -> (1, 2, 3, 1, 2, 3)
 ```
@@ -224,7 +224,7 @@ print([1, 2, 3] < [1, 2, 3])      # because equal -> False
 print([1, 2, 3] <= [1, 2, 3])     # because equal -> True
 print([1, 2, 3] < [1, 2, 3, -99]) # because list 1 is shorter and the common elements are same-> True
 print("a" < "b")                  # -> True
-print("computer" < "comparison")  # because "u"<"a" -> False
+print("computer" < "compare")  # because "...u..."<"...a..." -> False
 ```
 
 ## Chained Comparison
@@ -270,9 +270,9 @@ As long the operands are boolean, the result will also be boolean. However in Py
 
 ```python
 print(0.0 and 1)                    # -> 0.0
-print(0 or 0.0 or "" or "Default")  # -> Default
+print(0 or 0.0 or "" or "Default")  # -> 'Default'
 print(1 and 2 and 3)                # -> 3
-print((5 or 0) and ("" or "World")) # -> World
+print((5 or 0) and ("" or "World")) # -> 'World'
 ```
 
 # Collection Operators
@@ -286,7 +286,7 @@ print(1 in [0, 1, 2])                  # -> True
 print(3 in (0, 1, 2))                  # -> False
 print("good" in {"bad", "ok", "good"}) # -> True
 print(0.0+0j in [0, 1, 2, 3])          # -> True
-print((1, 2) in (1, 2, 3 , 4))         # False
+print((1, 2) in (1, 2, 3 , 4))         # -> False
 print(3 in [(1,2), (3,4), (5,6)])      # -> False
 print([3,4] in [(1,2), (3,4), (5,6)])  # -> False
 print((3,4) in [(1,2), (3,4), (5,6)])  # -> True

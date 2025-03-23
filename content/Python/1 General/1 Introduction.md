@@ -16,18 +16,18 @@ tags:
 
 # What is Python?
 
-Python is a popular, high-level programming language created by **Guido van Rossum** and first released in **1991**. It emphasizes **readability** and uses an **indentation-based structure** to make code clean and easy to follow. Today, Python is widely used for a large variety of applications.
+Python is a popular, high-level programming language created by Guido van Rossum and first released in 1991. It emphasizes readability and uses an indentation-based structure to make code clean and easy to follow. Today, Python is widely used for a large variety of applications.
 
 # Benefits of Python
 
-- **Easy to Learn**: Its syntax almost resembles plain English.
+- **Easy to Learn**: Its syntax almost can be almost like plain English. Because it's high level you rarely have to worry about details like manual memory management.
 - **Versatile**: Works for console, web development, data analysis, automation, AI, and more.
 - **Large Community**: Extensive libraries and frameworks are available for almost any task.
 - **Cross-Platform**: Python works on Windows, macOS, Linux, and more.
 
 # Drawbacks of Python
 
-- **Speed**: Python is slower and less efficient compared to languages like C++ because it’s interpreted.
+- **Speed**: Python is slower and less efficient compared to languages like C because it’s high level and interpreted.
 - **Runtime Errors**: Python is dynamically typed, leading to potential runtime errors. Because of this, it can be hard to find/prevent errors properly in advance, especially in large projects.
 
 # Compiled Vs Interpreted Languages
@@ -40,35 +40,37 @@ Python is a popular, high-level programming language created by **Guido van Ross
 Python is used in a wide range of applications:
 
 - **Web Development**: Popular frameworks like Django and Flask make web development faster and easier.
-- **Data Science & Analytics**: Libraries such as pandas, NumPy, and Matplotlib are widely used for data manipulation and visualization.
+- **Data Science & Analytics**: Libraries such as NumPy and Matplotlib are widely used for data manipulation and visualization.
 - **Machine Learning & AI**: Python’s simplicity makes it a go-to language for machine learning and artificial intelligence applications, with libraries like TensorFlow and scikit-learn.
 - **Automation**: Python is commonly used to write scripts for automating repetitive tasks, such as file management and web scraping.
 
 # Syntax
 
-Python's syntax is minimal and highly readable. In general Python code will run line by line from top to bottom, more complex behaviour is possible using [[1 Control Flow|Control Flow]]. 
+Python's syntax is minimal and highly readable. In general Python code will run line by line from top to bottom. More complex behaviour is possible using [[1 Control Flow|Control Flow]]. 
 
 - **`print()`** is used for [[2 Output|output]], **`input()`** for [[3 Input|input]], and **`#`** for line [[4 Comment|comments]]
-- Python supports all basic (mathematical) **[[7 Operator|Operators]]** and many more
-- [[6 Variable|Variables]] automatically get a [[5 Datatype|datatype]] that can change however you like
-- Python is **case sensitive**, this means that if only upper/lower case of characters is different, it is a completely different thing, for example `test` is not the same as `Test`
-- **Indentation**: Python relies on indentation to define code blocks, unlike many other languages that use braces `{}`. Proper indentation is required, or the code will throw an error. A colon `:` is used to indicate the start of a new block, e.g. if statements, loops, functions, ...
+- Python supports all basic (mathematical) [[7 Operator|Operators]]and many more
+- [[6 Variable|Variables]] automatically get a [[5 Datatype|datatype]] that can change at any time
+- Python is **case sensitive**. So it is very significant if a characters is upper or lower case. For example `print()` is not the same as `Print()`
+- **Indentation**: Python uses on indentation to define code blocks, many other languages use curly brackets `{}` instead. Proper indentation is required, otherwise there will be errors. A colon `:` is used to indicate the start of a new block, e.g. [[2 Conditionals|conditionals]], [[3 While Loop|loops]] , [[5 Function|functions]], ...
 
 ```python
 # A simple comment
 print("Hello, World!")  # This prints a message to the console
 
 # Variables don’t need explicit types
-x = 10  # Integer
-y = 3.14  # Float
+x = 10           # Integer
+y = 3.14         # Float
 name = "Python"  # String
 
-# Indentation is used for blocks
+# Colon and Indentation and  is used for blocks
 if x > 5:
     print("x is greater than 5")
 ```
 
 # Run Python Online
+> [!todo]- not exam relevant
+> These websites are not exam relevant, but very helpful to learn, practice and work with code.
 
 The are websites that easily allow you to run Python code online. If you want to run Python online you have to be careful that what you want to do works and behaves similar to actually running the code on your machine. Many online compilers struggle with error messages, debugging, input, imports, multiple files, (web-)applications, ....
 
@@ -88,7 +90,7 @@ The drawback of this is that it will run the code on a separate machine so you h
 
 <https://www.onlinegdb.com/online_python_compiler>
 
-This website has the advantage of being very similar to a real command line execution. Inputs are in real time and just like in the command line. There is also Debugger available in case you want/have to use it.
+This website has the advantage of being similar to a real command line execution. Inputs are in real time and just like in the command line. There is also Debugger available in case you want/have to use it.
 
 [Online GDB Debugger Tutorial](https://www.codechef.com/blogs/how-to-use-code-visualizer)
 
@@ -96,7 +98,7 @@ This website has the advantage of being very similar to a real command line exec
 
 <https://colab.research.google.com/>
 
-Google Colab is a powerful online tool for running Jupyter Notebooks[^1] online. It's a great fit for bigger projects and cloud usage of Jupyter. It also supports collaboration and GPUs for use cases like machine learning.
+Google Colab is a powerful online tool for running Python and Jupyter Notebooks[^1] online. It's a great fit for bigger projects and cloud usage of Jupyter. It also supports collaboration and GPUs for use cases like machine learning.
 
 # Python Installation
 
@@ -104,15 +106,18 @@ Even though there are good online tools, running Python on your own machine stil
 
 # Visual Studio Code Installation
 
-In theory you can use any text editor to write your code. In practice, it is much easier and better to use a specialized Code Editor usually called IDE (Integrated Development Environment). They have a lot of additional features like syntax highlighting, auto suggestions and completions, documentations, debugging, combining multiple parts of the coding workflow, search and replace, keyboard combinations, version management, ... There are a lot of options, also depending on coding language and application. In my opinion the best and most versatile option is Visual Studio code.
+> [!todo]- not exam relevant
+> This is not exam relevant, but very helpful to learn, practice and work with code.
 
-To install it just go to the [official website](https://code.visualstudio.com/download), download, execute and follow the instructions. To understand VSCode you can read the [documentation](https://code.visualstudio.com/docs) or watch one of the many videos like [this one](https://www.youtube.com/watch?v=KMxo3T_MTvY) or [this one](https://www.youtube.com/watch?v=6i3e-j3wSf0). To properly use Python you will need to install the "Python" Extensions, which you can do in the VSCode Extensions tab.
+In theory you can use any text editor to write your code. In practice, it is much easier and better to use a specialized Code Editor usually called IDE (Integrated Development Environment). They have a lot of additional features like syntax highlighting, auto suggestions and completions, documentations, debugging, combining multiple parts of the coding workflow, search and replace, keyboard shortcuts, version management, ... There are a lot of options, also depending on coding language and application. One of the best and most versatile option is Visual Studio Code.
 
-Understanding and using your IDE well can make your life easier, enable new potential and make you much faster when writing code.
+To install it just go to the [official website](https://code.visualstudio.com/download), download, execute and follow the instructions. To understand VSCode you can read the [documentation](https://code.visualstudio.com/docs) or watch one of the many videos (e.g. [Video 1](https://www.youtube.com/watch?v=KMxo3T_MTvY), [Video 2](https://www.youtube.com/watch?v=6i3e-j3wSf0)). To properly use Python you will need to install the "Python" Extensions, which you can do in the VSCode Extensions tab.
+
+Understanding and using your IDE well can make your life easier and make you much faster and wore efficient when writing code. There are also a lot of Extensions that extend the features of VSCode.
 
 # Questions
 
-- [ ] What is programming language?
+- [ ] What is a programming language?
 - [ ] What is Python?
 - [ ] What are the benefits of Python?
 - [ ] What are the drawbacks of Python?
@@ -120,5 +125,5 @@ Understanding and using your IDE well can make your life easier, enable new pote
 - [ ] What are the use cases of Python?
 - [ ] What are general principals of the Python syntax.
 
-[^1]: Project Jupyter is a combination of Python code and formatted Text for Documentation, it's great for explaining code, visualizations, ...
-[^2]: PATH is basically a system internal variable that stores all things that can be accessed by default when running code from the command line. If you don't add Python to PATH you might not be able to run it properly or always have to tell exactly where your Python installation is.
+[^1]: Project Jupyter is a combination of Python code and Markdown (formatted Text) for Documentation, it's great for code with explanations, visualizations, individual blocks, ...
+[^2]: PATH is basically a system internal variable that stores all things that can be accessed by default when running code from the command line. If you don't add Python to PATH you might not be able to run it properly or always have to tell exactly where your Python installation is on your computer.

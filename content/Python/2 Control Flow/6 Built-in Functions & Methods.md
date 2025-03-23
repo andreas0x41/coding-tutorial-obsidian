@@ -69,8 +69,8 @@ Returns the smallest/largest item in `iterable` or the `default` if empty. The `
 ```python
 print(min([3, 1, 4]))                       # -> 1
 print(max([3, 1, 4]))                       # -> 4
-print(min(['apple', 'banana'], key=len))    # -> 'apple'
-print(max(['apple', 'banana'], key=len))    # -> 'banana'
+print(min(["apple", "banana"], key=len))    # -> 'apple'
+print(max(["apple", "banana"], key=len))    # -> 'banana'
 people = [{"name": "Andreas", "size": 181}, {"name": "Tom", "size": 168}]
 print(min(people, key=lambda x: x["size"])) # -> {'name': 'Tom', 'size': 168}
 print(max(people, key=lambda x: x["size"])) # -> {'name': 'Andreas', 'size': 181}
@@ -118,7 +118,7 @@ print(list(enumerate("abc", start=10)))  # -> [(10, 'a'), (11, 'b'), (12, 'c')]
 Combines iterables element-wise. The number of combined objects will be the same as the number of objects in the smallest iterable. If `strict`, then raise a `ValueError` if not all iterables have the same length.
 
 ```python
-print(list(zip([1, 2], ['a', 'b'])))  # -> [(1, 'a'), (2, 'b')]
+print(list(zip([1, 2], ["a", "b"])))  # -> [(1, 'a'), (2, 'b')]
 print(list(zip([1,2,3], (1j,2j,3j,4j), "abcdef")))  # -> [(1, 1j, 'a'), (2, 2j, 'b'), (3, 3j, 'c')]
 ```
 
@@ -135,7 +135,7 @@ print(list(filter(lambda x: x>0, [-1, 2, -3, 4])))  # -> [2, 4]
 Applies `function` to each item.
 
 ```python
-print(list(map(lambda x: 10*x, [1, 2, 3])))  # -> [10, 20, '30]
+print(list(map(lambda x: 10*x, [1, 2, 3])))  # -> [10, 20, 30]
 print(list(map(str, [1, 2, 3])))             # -> ['1', '2', '3']
 ```
 
@@ -146,8 +146,8 @@ print(list(map(str, [1, 2, 3])))             # -> ['1', '2', '3']
 Returns string in all lower-/uppercase characters.
 
 ```python
-print("Hello".lower())  # -> "hello"
-print("Hello".upper())  # -> "HELLO"
+print("Hello".lower())  # -> 'hello'
+print("Hello".upper())  # -> 'HELLO'
 ```
 
 ## `.strip(character="")`
@@ -155,10 +155,10 @@ print("Hello".upper())  # -> "HELLO"
 Returns a string without all `characters` at the start end end of the initial string. By default removes all whitespace type characters. Everything between the two outer most characters that are not in the `characters` to remove will be kept. You can use `.lstrip()`/`.rstrip()` to only remove from the start/end.
 
 ```python
-print("\n test message \n".strip())                      # -> "test message"
-print("\n test message \n".lstrip())                     # -> "test message \n"
-print("\n test message \n".rstrip())                     # -> "\n test message"
-print("\n, ,,;; test, message,, ,;; \n".strip(" \n,;"))  # -> 'test message'
+print("  \n test message \n".strip())                      # -> 'test message'
+print("  \n test message \n".lstrip())                     # -> 'test message \n'
+print("  \n test message \n".rstrip())                     # -> '  \n test message'
+print("  \n, ,,;; test, message,, ,;; \n".strip(" \n,;"))  # -> 'test message'
 ```
 
 ## `.split(sep=" ", maxsplit=-1)`
@@ -176,7 +176,7 @@ print("some long hello world text".split(maxsplit=2))  # -> ['some', 'long', 'h
 Joins string elements from an iterable with the string as separator.
 
 ```python
-print('-'.join(['a', 'b', 'c']))  # -> 'a-b-c'
+print("-".join(["a", "b", "c"]))  # -> 'a-b-c'
 ```
 
 ## `.replace(old, new, count=-1)`
@@ -193,9 +193,9 @@ print("hellllllo".replace("l", "x", 2))  # -> 'hexxllllo'
 Checks if a string starts or ends with a substring.
 
 ```python
-print('hello'.startswith('he'))  # -> True
-print('hello'.startswith('lo'))  # -> False
-print('hello'.endswith('lo'))    # -> True
+print("hello".startswith("he"))  # -> True
+print("hello".startswith("lo"))  # -> False
+print("hello".endswith("lo"))    # -> True
 ```
 
 ## `.find(sub, start=0, end=None)`
@@ -203,7 +203,7 @@ print('hello'.endswith('lo'))    # -> True
 Returns the index of the first occurance of `sub`, or `-1` if not found. You can use `start` and `end` to only search in a slice of the string
 
 ```python
-print('hello'.find('l'))  # -> 2
+print("hello".find("l"))  # -> 2
 ```
 
 ## `.count(sub, start=0, end=None)`
@@ -211,7 +211,7 @@ print('hello'.find('l'))  # -> 2
 Counts how often `sub` occurs. You can use `start` and `end` to only search in a slice of the string
 
 ```python
-print('banana'.count('a'))  # -> 3
+print("banana".count("a"))  # -> 3
 ```
 
 # List Methods
