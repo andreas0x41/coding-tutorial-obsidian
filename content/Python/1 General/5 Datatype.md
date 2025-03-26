@@ -12,14 +12,14 @@ tags:
   - GEES
 ---
 
-A datatype defines how different types of information/data are stored and behave. Examples of the behaviour can be found on the pages [[7 Operator|Operators]], [[6 Built-in Functions & Methods|Built-in Functions & Methods]], ...
+A datatype defines how different types of information/data are stored and behave. Examples of the behavior can be found on the pages [[7 Operator|Operators]], [[6 Built-in Functions & Methods|Built-in Functions & Methods]], ...
 
 For almost every datatype in Python, there is a function with the same (or similar) name that is used to create an object of that datatype or convert something from a different datatype.
 
 | Name                                  | Function  | Example                       | Explanation                                                                                      |
 | ------------------------------------- | --------- | ----------------------------- | ------------------------------------------------------------------------------------------------ |
 | [[5 Datatype#Integer\|Integer]]       | int()     | `0`, `11`, `-3`               | whole number                                                                                     |
-| [[5 Datatype#Float\|Float]]           | float()   | `1.5`, `1e-4`                 | rational/floating point number                                                                   |
+| [[5 Datatype#Float\|Float]]           | float()   | `1.5`, `1e-4`                 | rational/floating-point number                                                                   |
 | [[5 Datatype#Boolean\|Boolean]]       | bool()    | `True`, `False`               | truth value, can only be True or False                                                           |
 | [[5 Datatype#String\|String]]         | str()     | `'abc'`, `f"x:\n{x}"`         | text, can include, numbers, special characters, ...                                              |
 | [[5 Datatype#List\|List]]             | list()    | `[1, 1, 2, 3]`                | [[#Mutable\|mutable]] collection of any datatype                                                 |
@@ -33,7 +33,7 @@ For almost every datatype in Python, there is a function with the same (or simil
 > [!todo]- not exam relevant
 > These functions/methods are mostly not exam relevant.
 
-There are a few built in functions/methods to check if something is a specific type of data. These are helpful to check input, potentially before converting it.
+There are a few built-in functions/methods to check if something is a specific type of data. These are helpful to check input, potentially before converting it.
 
 - **String Methods:** `.isdigit()`, `.isalpha()`, `.isalnum()`, `.isdecimal()`, `.isnumeric()`, `.isspace()`.
 - **Type Checking:** `isinstance(obj, type)`, `type(obj)`, `callable(obj)`.
@@ -43,7 +43,7 @@ There are a few built in functions/methods to check if something is a specific t
 
 ## Integer
 
-The datatype Integer can hold any whole number including negatives and zero. You can use the function `int()` to convert a value to an Integer, or create one with value `0` if no argument is given.
+The datatype Integer can hold any whole number including negatives and zero. You can use the function `int()` to convert a value to an Integer, or create one with the value `0` if no argument is given.
 
 ```python
 1 4 -2 0 -4 962 -123456789 int("2")
@@ -51,7 +51,7 @@ The datatype Integer can hold any whole number including negatives and zero. You
 
 ## Float
 
-The datatype Float can hold any rational/floating point number including negatives and zero. You can use the function `float()` to convert a value to a Float, or create one with value `0.0` if no argument is given.
+The datatype Float can hold any rational/floating-point number including negatives and zero. You can use the function `float()` to convert a value to a Float or create one with the value `0.0` if no argument is given.
 
 ```python
 1.5 -0.5 0.0 3.3333 1e-4 2.5e3 -5e6 float("1.3")
@@ -66,7 +66,7 @@ Python supports the scientific notation of writing numbers as a power of 10 for 
 
 ## Boolean
 
-The datatype Boolean can hold a truth value. There are only two possible options for this value True or False (can also be thought of as 1/0 Yes/No On/Off). This datatype is very important for Control Flow like [[2 Conditionals|Conditionals]], because it is usually based on many "Yes/No Questions", which are answered with a Boolean value. You can use the function `bool()` to convert a value to a Boolean, or create one with value `False` if no argument is given.
+The datatype Boolean can hold a truth value. There are only two possible options for this value True or False (can also be thought of as 1/0 Yes/No On/Off). This datatype is very important for Control Flow like [[2 Conditionals|Conditionals]] because it is usually based on many "Yes/No Questions", which are answered with a Boolean value. You can use the function `bool()` to convert a value to a Boolean, or create one with value `False` if no argument is given.
 
 ```python
 True False bool(1)
@@ -76,7 +76,7 @@ True False bool(1)
 Collection datatypes are a combination of multiple basic datatypes.
 ## General
 
-Bellow are some key properties of the collection datatypes available in Python.
+Below are some key properties of the collection datatypes available in Python.
 
 | Name                                  | Mutable | Iterable               | Indexing | Slicing | Common Use Case                                     |
 | ------------------------------------- | ------- | ---------------------- | -------- | ------- | --------------------------------------------------- |
@@ -90,7 +90,7 @@ Bellow are some key properties of the collection datatypes available in Python.
 
 ### Mutable
 
-A mutable object can be modified after it is created. This means you can change, add, or remove parts or all of its content without creating a new [[6 Variable#Memory Objects|object]]. For example, you can change the value of the second item in a list, but you can not change the value of the second item in a tuple or string. All basic datatypes are actually immutable. You can find the difference in behaviour between a mutable and immutable variables [[6 Variable#Mutability Behaviour|here]].
+A mutable object can be modified after it is created. This means you can change, add, or remove parts or all of its content without creating a new [[6 Variable#Memory Objects|object]]. For example, you can change the value of the second item in a list, but you can not change the value of the second item in a tuple or string. All basic datatypes are immutable. So when it seems like the value changes, it is actually a completely new [[6 Variable#Memory Objects|object]]. You can find the difference in behavior between mutable and immutable variables [[6 Variable#Mutability Behaviour|here]].
 
 ### Iterable
 
@@ -98,7 +98,7 @@ An iterable is an object that can return its elements one at a time, allowing it
 
 ### Indexing
 
-Indexing refers to accessing individual elements of a sequence using their position (index). Python uses zero-based indexing, meaning the first element has an index of `0`, second one has an index of `1`... You can also start indexing from the end of the sequence using negative numbers starting from -1, so the last element has an index of `-1`, the second last has an index of `-2`...
+Indexing refers to accessing individual elements of a sequence using their position (index). Python uses zero-based indexing, meaning the first element has an index of `0`, the second one has an index of `1`... You can also start indexing from the end of the sequence using negative numbers starting from -1, so the last element has an index of `-1`, the second last has an index of `-2`...
 
 ```python
 [3, 1, 7, 4, 5, 2] # list of values
@@ -106,12 +106,12 @@ Indexing refers to accessing individual elements of a sequence using their posit
 -6 -5 -4 -3 -2 -1  # negative indexes
 ```
 
-Indexing can be used to get the value of a element or also to set/change it. To use it you first put the sequence and then the index inside square brackets `sequence[index]`.
+Indexing can be used to get the value of an element or also to set/change it. To use it you first put the sequence and then the index inside square brackets `sequence[index]`.
 
 ```python
-listName = [3, 1, 7, 4, 5, 2] # create list and save in variable listName
+listName = [3, 1, 7, 4, 5, 2] # Create list and save in variable listName
 print(listName[2]) # get and print the third element of the list -> 7
-listName[0] = -1 # set the first element of the list to -1
+listName[0] = -1 # Set the first element of the list to -1
 print(listName) # print the whole list -> [-1, 1, 7, 4, 5, 2]
 ```
 
@@ -121,20 +121,20 @@ A [[5 Datatype#Dictionary|dictionary]] does not have classic ordered indexing wi
 > [!todo]- partly exam relevant
 > Basics are relevant, advanced usage is not necessary.
 
-Slicing is used to select a subsequence/portion of a sequence, instead of only on element. You can specifying a start, stop, and step.
+Slicing is used to select a subsequence/portion of a sequence, instead of only one element. You can specify a start, stop, and step.
 
 ```python
 sequence[start:stop:step]
 ```
 
 - `start`: The starting index (**inclusive**). Defaults to `0` (first element) if omitted. Negative values work the same way as with indexing.
-- `stop`: The ending index (**exclusive**). Because it is exclusive, the element with this index is not included, to include the last element you have to use one more then its index. Defaults to the last element if omitted. Negative values work the same way as with indexing.
+- `stop`: The ending index (**exclusive**). Because it is exclusive, the element with this index is not included, to include the last element you have to use one more than its index. Defaults to the last element if omitted. Negative values work the same way as with indexing.
 - `step`: The interval between elements. Defaults to `1` (every element without skipping). Negative values reverse the order of the sequence.
 
 If you get elements of a sequence using slicing, it will create a shallow copy of the sequence and give it to you.
 
 ```python
-listName = [3, 1, 7, 4, 5, 2, 9]  # create list and save in variable listName
+listName = [3, 1, 7, 4, 5, 2, 9]  # Create a list and save it in variable listName
 # Index     0  1  2  3  4  5  6
 print(listName[1:3])              # elements from the 2nd (inclusive) to the 4th (exclusive) -> [1, 7]
 print(listName[:4])               # elements from the 1st to the 5th -> [3, 1, 7, 4]
@@ -148,35 +148,35 @@ print(listName[6:1:-2])           # every second element from the 7th to the 2nd
 ```
 
 > [!todo]- not exam relevant
-> Not exam relevant, rarely used, but sometimes really helpful.
+> Not exam relevant, rarely used, but sometimes helpful.
 
 You can also set multiple values at the same time using slicing. If you don't give the correct numbers of values to set/replace, you might get an error.
 
 ```python
-listName = [3, 1, 7, 4, 5, 2, 9]  # create list and save in variable listName
+listName = [3, 1, 7, 4, 5, 2, 9]  # Create a list and save it in variable listName
 listName[1:4] = [10, 20, 30]  # replace elements from the 2nd to the 5th -> [3, 10, 20, 30, 5, 2, 9]
 listName[-2:] = [400, 500]  # replace elements from the 2nd last to the last -> [3, 10, 20, 30, 5, 400, 500]
-listName[::2] = [1, 2, 3, 4]  # replace every secound element -> [1, 10, 2, 30, 3, 400, 4]
+listName[::2] = [1, 2, 3, 4]  # replace every second element -> [1, 10, 2, 30, 3, 400, 4]
 listName[:0] = [-1, -2]  # insert two new elements at the start of the sequence -> [-1, -2, 1, 10, 2, 30, 3, 400, 4]
 listName[2:5] = []  # remove the elements from the 3rd to the 6th -> [-1, -2, 30, 3, 400, 4]
 ```
 
 ## String
 
-The datatype String can hold any text including numbers and [[#Special Characters|special characters]]. In Python, all strings have to be within quotes single `'string'` or double `"string"` quotes, using [[#Tripple Quotes String|tripple quotes]] has a special behaviour. You can use the function `str()` to convert a value to a String, or create one with value `""` if no argument is given. Strings also supports [[#Indexing|indexing]], [[#Slicing|slicing]] and some list functions/methods. But it is impossible to change individual elements/characters of a string, because it is not [[#Mutable|mutable]].
+The datatype String can hold any text including numbers and [[#Special Characters|special characters]]. In Python, all strings have to be within quotes single `'string'` or double `"string"` quotes, using [[#Multiple Line String|triple quotes]] has a special behavior. You can use the function `str()` to convert a value to a String or create one with the value `""` if no argument is given. Strings also supports [[#Indexing|indexing]], [[#Slicing|slicing]] and some list functions/methods. But it is impossible to change individual elements/characters of a string because it is not [[#Mutable|mutable]].
 
 ```python
-"text" 'string' "some long message" "line 1\nline 2" """tripple quotes string"""
+"text" 'string' "some long message" "line 1\nline 2" """triple quotes string"""
 ```
 
-You might think of string as a base datatype, but it actually behaves very similar to a [[#List|list]] (or more precisely a [[#Tuple|tuple]]) of individual characters. So especially in low level languages you will find `character` as a base datatype and the string is just a collection of characters.
+You might think of a string as a base datatype, but it actually behaves very similar to a [[#Tuple|tuple]] of individual characters. So especially in low-level languages you will find `character` as a base datatype and the string is just a collection of characters.
 
 ### Special Characters
 
 > [!todo]- partly exam relevant
-> Basics are relevant, more advanced usage is not necessary. First 5 rows of the table are relevant, the others not.
+> Basics are relevant, more advanced usage is not necessary. The first 5 rows of the table are relevant, the others are not.
 
-Python strings support many special characters. To use a special character first write a backslash `\` to escape the string and inform Python that what follows is a special character. After the backslash you can put one of the supported special characters.
+Python strings support many special characters. To use a special character first write a backslash `\` to escape the string and inform Python that what follows is a special character. After the backslash, you can put one of the supported special characters.
 
 | Character    | Description                                                                               | Example                                     |
 | ------------ | ----------------------------------------------------------------------------------------- | ------------------------------------------- |
@@ -191,14 +191,14 @@ Python strings support many special characters. To use a special character first
 | `\u****`     | Unicode character with a 4-digit hex code.                                                | `"\u2764"` → `❤`                            |
 | `\U********` | Unicode character with an 8-digit hex code.                                               | `"\U0001F600"` → 😀                         |
 
-If you want to prevent special characters from being interpreted you can use raw strings `r"string"`. For example if you do `r"line1\nstill line1"` there will be no newline.
+If you want to prevent special characters from being interpreted you can use raw strings `r"string"`. For example, if you do `r"line1\nstill line1"` there will be no newline.
 
 ### Formatted String
 
 > [!todo]- partly exam relevant
 > Basics are relevant, more advanced usage is not necessary.
 
-Formatted strings in Python provide an easy way to insert values into a string. To make a formatted string put an `f` in front of the the starting string quotes. Inside a formatted string, all the values within curly brackets `{value}` will be inserted into the string. The datatype will automatically be converted and there is also support for operators, functions and special formatting. If you want to print a curly bracket within a f-string, you have to put a double curly bracket `{{`.
+Formatted strings in Python provide an easy way to insert values into a string. To make a formatted string put an `f` in front of the the starting string quotes. Inside a formatted string, all the values within curly brackets `{value}` will be inserted into the string. The datatype will automatically be converted and there is also support for operators, functions, and special formatting. If you want to print a curly bracket within an f-string, you have to put a double curly bracket `{{`.
 
 ```python
 b = 5
@@ -216,7 +216,7 @@ print(f"Documenting operations: {1 + 3 * 2 = }")      # -> Documenting operation
 > [!todo]- less exam relevant
 > Less exam relevant, but still good/helpful to know.
 
-Instead of using single or double quotes at start end end of a string, you can also use them three times (`'''` or `"""`) to create a multiline string. So within tripple quotes you can have multiple lines of text and it will keep the format, linebreaks and spacing. You can also combine this with [[#Formatted String]].
+Instead of using single or double quotes at the start and end of a string, you can also use them three times (`'''` or `"""`) to create a multiline string. So within triple quotes, you can have multiple lines of text and it will keep the format, linebreaks, and spacing. You can also combine this with [[#Formatted String]].
 
 ```python
 print("""This is a
@@ -238,7 +238,7 @@ Below you can see an operation
 
 ## List
 
-The datatype List can hold a sequence of any datatypes. It is also possible to put collection datatypes inside a list. All list elements are within square brackets `[]`and separated by commas `,`. You can use the function `list()` to convert an [[#Iterable]] value to a list, or create an empty list `[]` if no argument are given. Lists also supports [[#Indexing|indexing]], [[#Slicing|slicing]] and many built in functions/methods. You can add, change or remove elements, because it is [[#Mutable|mutable]].
+The datatype List can hold a sequence of any datatypes. It is also possible to put collection datatypes inside a list. All list elements are within square brackets `[]` and separated by commas `,`. You can use the function `list()` to convert an [[#Iterable]] value to a list or create an empty list `[]` if no arguments are given. Lists also support [[#Indexing|indexing]], [[#Slicing|slicing]], and many built-in functions/methods. You can add, change or remove elements, because it is [[#Mutable|mutable]].
 
 ```python
 [1, 1, 2, 3] [] [1, "hello", 3.14, True] [[1,2,3], (-1,-2,-3), {10,20}, {"a": 1, "c": "5"}]
@@ -246,7 +246,7 @@ The datatype List can hold a sequence of any datatypes. It is also possible to p
 
 ## Tuple
 
-You can think of a tuple like a [[#List]] where it is impossible to add, change or remove elements. The reason for this is, that a tuple is not [[#Mutable||mutable]]. The tuple elements have are within parentheses/round brackets `()`and separated by commas `,`. You can use the function `tuple()` to convert an [[#Iterable]] value to a tuple, or create an empty tuple `()` if no argument are given.
+You can think of a tuple like a [[#List]] where it is impossible to add, change or remove elements. The reason for this is, that a tuple is not [[#Mutable||mutable]]. The tuple elements are within parentheses/round brackets `()` and separated by commas `,`. You can use the function `tuple()` to convert an [[#Iterable]] value to a tuple or create an empty tuple `()` if no arguments are given.
 
 ```python
 (1, 1, 2, 3) () (1, "hello", 3.14, True) ([1,2,3], (-1,-2,-3), {10,20}, {"a": 1, "c": "5"})
@@ -255,9 +255,9 @@ You can think of a tuple like a [[#List]] where it is impossible to add, change 
 ## Set
 
 > [!todo]- not exam relevant
-> This topic is not exam relevant, but it is still good to know that this datatype exist and its ideas/behaviour.
+> This topic is not exam relevant, but it is still good to know that this datatype exists and its general behavior.
 
-A set is similar to a [[#List]] but the elements are not stored in any specific order. Because of this, [[#Indexing]] and [[#Slicing]] is not possible. [[#Iterable|Iterating]] is possible, but there is no order defined for the elements. The set elements are within curly brackets `{}`and separated by commas `,`. You can use the function `set()` to convert an [[#Iterable]] value to a set or create an empty set if no argument are given. You can only create an empty set using the `set()` function, because a [[#Dictionary]] also uses curly brackets. You can add or remove elements, because it is [[#Mutable|mutable]]. A set can only store not [[#Mutable|mutable]] elements. A set does not allow for any duplicate elements, if you have duplicates only one of them will be stored. A few list operators, functions and methods will work and there are multiple special ones for sets.
+A set is similar to a [[#List]] but the elements are not stored in any specific order. Because of this, [[#Indexing]] and [[#Slicing]] is not possible. [[#Iterable|Iterating]] is possible, but there is no order defined for the elements. The set elements are within curly brackets `{}` and separated by commas `,`. You can use the function `set()` to convert an [[#Iterable]] value to a set or create an empty set if no arguments are given. You can only create an empty set using the `set()` function because a [[#Dictionary]] also uses curly brackets. You can add or remove elements, because it is [[#Mutable|mutable]]. A set can only store not [[#Mutable|mutable]] elements. A set does not allow for any duplicate elements, if you have duplicates only one of them will be stored. A few list operators, functions, and methods will work and there are multiple special ones for sets.
 
 ```python
 {1, 2, 3} set() {1, 3.14, "hello"} {"hello", True, 2, 3.14}
@@ -266,13 +266,13 @@ print({1, 2, 1, 1, 3, 2, 3, 4, 5}) # duplicates removed, no specific order -> {3
 
 ## Dictionary
 
-The datatype Dictionary creates a 1 to 1 mapping between keys and a values. So instead of using and index, the values are uniquely identified by their key. A value can be any datatype. A key has to be unique (every key can only exist once) and not [[#Mutable|mutable]]. The dictionary elements are within curly brackets `{}`and separated by commas `,`. One element is a combination of a key and a value separated by a colon `:` like this `key:value`.
+The datatype Dictionary creates a 1 to 1 mapping between keys and values. So instead of using an index, the values are uniquely identified by their key. A value can be any datatype. A key has to be unique (every key can only exist once) and not [[#Mutable|mutable]]. The dictionary elements are within curly brackets `{}` and separated by commas `,`. One element is a combination of a key and a value separated by a colon `:` like this `key:value`.
 
 ```python
 {"a": 1, "c": "5"} {} {1: "test", "1": 123, "a": 1, (1,2): 1}
 ```
 
-You can use the function `dict()` to convert values to a dictionary, or create an empty dictionary `{}` if no argument are given. You can use `dict()` with no [[5 Function#Parameters|arguments]], an [[#Iterable]] of key and value pairs or keyword arguments.
+You can use the function `dict()` to convert values to a dictionary or create an empty dictionary `{}` if no arguments are given. You can use `dict()` with no [[5 Function#Parameters|arguments]], an [[#Iterable]] of key and value pairs, or keyword arguments.
 
 ```python
 print(dict())                                                 # empty dictionary -> {}
@@ -280,12 +280,12 @@ print(dict([("name", "Tom"), ("age", 25), ("city", "Linz")])) # dictionary from 
 print(dict(name="John", age=30, country="USA"))               # dictionary from keyword arguments -> {'name': 'John', 'age': 30, 'country': 'USA'}
 ```
 
-You can get and set the value of a key the same way you would use normal [[#Indexing|indexing]]. You can add, change or remove elements, because it is [[#Mutable|mutable]]. If you want to add a value you can use assignment with the new key with the syntax `dictName[newKey] = newValue`. If the key already exists it will change the value of the existing key.
+You can get and set the value of a key the same way you would use normal [[#Indexing|indexing]]. You can add, change or remove elements, because it is [[#Mutable|mutable]]. If you want to add a value you can use assignment to the new key with the syntax `dictName[newKey] = newValue`. If the key already exists it will change the value of the existing key.
 
 ```python
 person = {"name": "Tom", "age": 25, "city": "Linz"}
 print(person["age"]) # print age of person -> 25
-person["country"] = "Austria" # add new element with key "country" and value "Austria"
+person["country"] = "Austria" # add a new element with key "country" and value "Austria"
 person["age"] = 19 # change the value of age to 19
 print(person) # -> {'name': 'Tom', 'age': 19, 'city': 'Linz', 'country': 'Austria'}
 ```
@@ -296,7 +296,7 @@ print(person) # -> {'name': 'Tom', 'age': 19, 'city': 'Linz', 'country': 'Austri
 
 The datatype None represents the absence of a value or a "null" value. It is often used to indicate that a variable or function does not have any value. None can be used as a placeholder, for example when defining a variable before its actual value is known. Having `None` is not an error it is just saying that there is no value/the value is nothing.
 
-For example, if you try to get a variable value or list element that does not exist, you will get a error message. But storing/printing the value returned from a function that returns nothing is not an error, it just has the value `None`.
+For example, if you try to get a variable value or list element that does not exist, you will get an error message. But storing/printing the value returned from a function that returns nothing is not an error, it just has the value `None`.
 
 ```python
 x = print() # The print function does not return anything
@@ -308,7 +308,7 @@ print(x)    # -> None
 > [!todo]- less exam relevant
 > Less exam relevant, rarely used.
 
-The datatype Complex represents a complex numbers. It has a real and an imaginary part, represented as `a + bj`, where `a` is the real part and `b` is the imaginary part. If you have a number with an imaginary part in Python, it will treat/save it as a complex number. You can use the function `complex()` to convert a value to a Complex, or create one with value `0j` if no argument is given. This function can take two numbers, the real part `a` and the complex part `b`, as arguments `complex(a, b)`.
+The datatype Complex represents a complex number. It has a real and an imaginary part, represented as `a + bj`, where `a` is the real part and `b` is the imaginary part. If you have a number with an imaginary part in Python, it will treat/save it as a complex number. You can use the function `complex()` to convert a value to a Complex, or create one with value `0j` if no argument is given. This function can take two numbers, the real part `a` and the complex part `b`, as arguments `complex(a, b)`.
 
 ```python
 1+3j 1j -3+1j 0.1-1.5j 1-20000j 1-2e4j -0.001-1j -1e-3-1j
@@ -325,13 +325,13 @@ print(z.imag)  # -> 4.0
 ## Range
 
 > [!todo]- partly exam relevant
-> Basic usage for looping and creating number sequences is nesseary. It is good to understand that this is different from list, because it does not store all elements in memory and instead generates them on demand. Advanced and Explanation usage is not necessary.
+> Basic usage for looping and creating number sequences is necessary. It is good to understand that this is different from list because it does not store all elements in memory and instead generates them on demand. Advanced usage and explanation are not necessary.
 
-The datatype Range is created with the `range()` function and generates a sequence of numbers. It might seem very similar to a list, but the key difference is that not all elements are saved in memory. Instead they are generated only when they are actually used. It is commonly used in loops and is a memory-efficient [[#Iterable]]. You can not add, remove or change elements of a range, because it is not [[#Mutable||mutable]].
+The datatype Range is created with the `range()` function and generates a sequence of numbers. It might seem very similar to a list, but the key difference is that not all elements are saved in memory. Instead, they are generated only when they are actually used. It is commonly used in loops and is a memory-efficient [[#Iterable]]. You can not add, remove, or change elements of a range because it is not [[#Mutable||mutable]].
 
-The `range()` function generates a range of number. The arguments are similar to slicing and you can use `range(stop)`, `range(start, stop)`, or `range(start, stop, step)`
-- `start`: The starting number (**inclusive**), defaults is `0`.
-- `stop`: The ending value (**exclusive**). Because it is exclusive, this value is not included, to include the last value you have to use one more then it. 
+The `range()` function generates a range of numbers. The arguments are similar to slicing and you can use `range(stop)`, `range(start, stop)`, or `range(start, stop, step)`
+- `start`: The starting number (**inclusive**), default is `0`.
+- `stop`: The ending value (**exclusive**). Because it is exclusive, this value is not included, to include the last value you have to use one more than it. 
 - `step`: The interval between elements. Defaults is `1` (every number without skipping). Negative values are also possible, but then `start` should be bigger than `stop`.
 
 ```python
@@ -342,7 +342,7 @@ print(list(range(100, 0, -9))) # -> [100, 91, 82, 73, 64, 55, 46, 37, 28, 19, 10
 ```
 
 > [!todo]- not exam relevant
-> This topic is not exam relevant. It is a bit advanced and rarely used.
+> This is rarely used and not exam relevant.
 
  [[#Indexing|Indexing]] is possible and returns a number. [[#Slicing|Slicing]] is possible and returns a new range.
 
@@ -365,14 +365,14 @@ The datatype Generator is very similar to [[#Range]] in supporting memory effici
 ## Object Oriented Programming
 
 > [!todo]- only SDML and AECD
-> This topic is an advanced topic that is only relevant for the SDM and AECD department. There will be a note only for this at the end.
+> This topic is an advanced topic that is only relevant for the SDM and AECD departments. There will be a note only for this at the end.
 
-You can basically define and use your very own datatypes using OOP or import special datatypes created by others. First you have to define it with all its values and behaviour in a class, then you can create objects based on this class.
+You can basically define and use your very own datatypes using OOP or import special datatypes created by others. First, you have to define all the attributes (=values) and behavior in a class. Then you can create objects based on this class.
 
 # Internal Details
 
 ## Truthy and Falsy
-In python any value can be evaluated (e.g. in a [[7 Operator#Logical Operators|logical operator]], [[2 Conditionals|condition]], ...) like a boolean. Python will treat it as truthy (`True`) or falsy (`False`) based on its type and value.
+In Python, any value can be evaluated (e.g. in a [[7 Operator#Logical Operators|logical operator]], [[2 Conditionals|condition]], ...) like a boolean. Python will treat it as truthy (`True`) or falsy (`False`) based on its type and value.
 - **Falsy Values**: `False`, `0`, `0.0`, `0j`, `""`, `[]`, `()`, `set()`, `{}`, `None`, `range(0)`
 - **Truthy Values**: Everything else so not empty collections and not zero numeric values
 
@@ -403,7 +403,7 @@ print(bool(" "))      # True
 - [ ] Explain Integer in your own words.
 	- [ ] What is the difference between an Integer and a Float?
 - [ ] Explain Float in your own words.
-	- [ ] Explain the scientific notation in python.
+	- [ ] Explain the scientific notation in Python.
 - [ ] 3 Explain Boolean in your own words.
 	- [ ] What is the Boolean type in Python used for?
 - [ ] Explain String in your own words.
@@ -414,12 +414,10 @@ print(bool(" "))      # True
 	- [ ] Explain Mutable in your own words with examples.
 	- [ ] Explain Iterable in your own words with examples.	
 	- [ ] Explain Indexing and Slicing in your own words with examples.
-	- [ ] What is the difference between a List and a Tuple in Python?
 	- [ ] Can Lists store different data types in Python?
 	- [ ] Give a practical example of list inside a list and how you can index the inner list.
 - [ ] Explain Tuple in your own words.
-	- [ ] What makes a Tuple different from a List in Python?
-	- [ ] Can you modify the items in a Tuple?
+	- [ ] What makes a Tuple different from a List?
 	- [ ] What are some use cases where you would prefer a Tuple compared to a List?
 - [ ] Explain Set in your own words.
 	- [ ] What are the main characteristics of a Set in Python?
@@ -433,9 +431,8 @@ print(bool(" "))      # True
 	- [ ] Give examples where you will get or use a None value.
 - [ ] Explain Complex in your own words.
 	- [ ] What is a Complex number in Mathematics and Python?
-	- [ ] How can you get the real and imaginary part individually?
+	- [ ] How can you get the real and imaginary parts individually?
 - [ ] Explain Range in your own words.
 	- [ ] How does a Range differ from other types like a List?
 - [ ] Explain Generator in your own words.
-	- [ ] How does a Generator differ from other types like a List?
 - [ ] Explain truthy and falsy in your own words.

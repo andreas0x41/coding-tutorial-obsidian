@@ -17,7 +17,7 @@ tags:
 # Standard Usage
 Python uses the [[5 Function|function]] `input()` to get console input from the user. It will wait for the user to input something on the console. As soon as the user presses `Enter` the function will [[5 Function#Return|return]] the value entered by the user and continue with the program. 
 
-Input will **always** return the value as [[5 Datatype#String|string]] . If you need input of a different [[5 Datatype|datatype]], you have to explicitly convert it. But you have to be careful, because taking input that has an unexpected datatype or [[5 Datatype|datatype]] is one of the most common error cases. If you take input you should tell the user what you expect, check if the entered value is valid, and include exception handling.
+Input will **always** return the value as [[5 Datatype#String|string]]. If you need the input to be a different [[5 Datatype|datatype]], you have to explicitly convert it. But you have to be careful, because taking input that has an unexpected datatype or [[5 Datatype|datatype]] is one of the most common error cases. If you take input you should tell the user what you expect, check if the entered value is valid, and include exception handling.
 
 ```python
 input()
@@ -35,7 +35,7 @@ print("2 The user entered the value:", x) # -> 2 The user has entered the value 
 ```
 
 # Prompt
-The `input()` function can take one argument that will outputted directly before taking input. This is usually used to ask and inform the user what input is expected
+The `input()` function can take one argument that will outputted directly before taking input. This is usually used to ask and inform the user what input is expected.
 
 ```python
 x = input("Please input a number: ")     # -> Please input a number: 

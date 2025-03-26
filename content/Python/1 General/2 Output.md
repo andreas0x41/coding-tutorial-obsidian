@@ -24,7 +24,7 @@ You can output to the console with the [[5 Function|function]] `print()`. You ca
 
 ## Hello World
 
-In this example we give the `print()` function the [[5 Datatype#String|string]] "Hello World". This text will be outputted to the console.
+In this example, we give the `print()` function the [[5 Datatype#String|string]] "Hello World". This text will be outputted to the console.
 
 ```python
 print("Hello World") # -> Hello World
@@ -63,7 +63,7 @@ print()
 print(3)
 ```
 
-Bellow you see the exact output of these print statements.
+Below you see the exact output of these print statements.
 
 ```output
 1
@@ -78,7 +78,7 @@ Bellow you see the exact output of these print statements.
 > [!todo]- less exam relevant
 > Less exam relevant, but still good/helpful to know.
 
-The `print()` function can take multiple comma separated [[5 Function#Parameters|arguments]] and output them. By default, these values will be separated with spaces.
+The `print()` function can take multiple comma-separated [[5 Function#Parameters|arguments]] and output them. By default, these values will be separated with spaces.
 
 ```python
 print("Hello", "World", "Python") # -> Hello World Python
@@ -104,7 +104,7 @@ This doesn't end with a newline ---> This continues on the same line.
 > [!todo]- less exam relevant
 > Less exam relevant, but still good/helpful to know.
 
-The parameter `sep` defines how multiple printed values are should be separated. You can use any [[5 Datatype#string|string]], default is a space.
+The parameter `sep` defines how multiple printed values should be separated. You can use any [[5 Datatype#string|string]], default is a space.
 
 ```python
 print("Hello", "World", "Python", sep=" | ") # -> Hello | World | Python
