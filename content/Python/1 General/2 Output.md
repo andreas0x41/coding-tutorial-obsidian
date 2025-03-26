@@ -38,7 +38,7 @@ You can also print any other values of any [[5 Datatype|datatype]] using this fu
 print(12)               # -> 12
 print(2.5)              # -> 2.5
 print(True)             # -> True
-print("Some more text") # -> 'Some more text'
+print("Some more text") # -> Some more text
 ```
 
 By default, after every printed value, there will be a [[5 Datatype#Special Characters|line break]]. So the next value will be at the start of a new line. The code above will output the following text to the console. You can see that each output is in its own line.
@@ -55,12 +55,12 @@ Some more text
 If call the print function without any arguments, it will only output the [[5 Datatype#Special Characters|newline]].
 
 ```python
-print(1) # -> 1
-print()  # -> '\n'
-print(2) # -> 2
-print()  # -> '\n'
-print()  # -> '\n'
-print(3) # -> 3
+print(1)
+print()
+print(2)
+print()
+print()
+print(3)
 ```
 
 Bellow you see the exact output of these print statements.
@@ -81,7 +81,7 @@ Bellow you see the exact output of these print statements.
 The `print()` function can take multiple comma separated [[5 Function#Parameters|arguments]] and output them. By default, these values will be separated with spaces.
 
 ```python
-print("Hello", "World", "Python") # -> 'Hello World Python'
+print("Hello", "World", "Python") # -> Hello World Python
 ```
 
 # End Parameter
@@ -107,8 +107,8 @@ This doesn't end with a newline ---> This continues on the same line.
 The parameter `sep` defines how multiple printed values are should be separated. You can use any [[5 Datatype#string|string]], default is a space.
 
 ```python
-print("Hello", "World", "Python", sep=" | ") # -> 'Hello | World | Python'
-print("Shopping List: Apple", "Banana", "Bread", "Milk", sep=", ")  # -> 'Shopping List: Apple, Banana, Bread, Milk'
+print("Hello", "World", "Python", sep=" | ") # -> Hello | World | Python
+print("Shopping List: Apple", "Banana", "Bread", "Milk", sep=", ")  # -> Shopping List: Apple, Banana, Bread, Milk
 ```
 
 # Questions

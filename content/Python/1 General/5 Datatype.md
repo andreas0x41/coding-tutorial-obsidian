@@ -204,11 +204,11 @@ Formatted strings in Python provide an easy way to insert values into a string. 
 b = 5
 pi = 3.14159
 name = "Andreas"
-print(f"My name is {name} and I am {19} years old.") # -> 'My name is Andreas and I am 19 years old.'
-print(f"The sum of {a} and {b} is {a+b}")            # -> 'The sum of 1 and 5 is 6'
-print(f"The user inputted: {input()}")               # -> 'The user inputted: {?}'
-print(f"Pi with two decimal places: {pi:.2f}")       # -> 'Pi with two decimal places: 3.14'
-print(f"Documenting operations: {1 + 3 * 2 = }")      # -> 'Documenting operations: 1 + 3 * 2 = 7'
+print(f"My name is {name} and I am {19} years old.") # -> My name is Andreas and I am 19 years old.
+print(f"The sum of {a} and {b} is {a+b}")            # -> The sum of 1 and 5 is 6
+print(f"The user inputted: {input()}")               # -> The user inputted: {?}
+print(f"Pi with two decimal places: {pi:.2f}")       # -> Pi with two decimal places: 3.14
+print(f"Documenting operations: {1 + 3 * 2 = }")      # -> Documenting operations: 1 + 3 * 2 = 7
 ```
 
 ### Multiple Line String

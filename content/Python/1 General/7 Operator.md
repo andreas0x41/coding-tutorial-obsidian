@@ -67,9 +67,9 @@ print(b)                       # -> 1
 print(c)                       # -> 2
 
 a, *b, c = "This is some text" # a takes the first, c takes the last, b takes all in the middle as a list
-print(a)                       # -> 'T'
+print(a)                       # -> T
 print(b)                       # -> ['h', 'i', 's', ' ', 'i', 's', ' ', 's', 'o', 'm', 'e', ' ', 't', 'e', 'x']
-print(c)                       # -> 't'
+print(c)                       # -> t
 ```
 
 ## Walrus Operator
@@ -154,7 +154,7 @@ The operators `+` and `*` can also be used with [[5 Datatype#Collection Datatype
 
 ```python
 x = "Hello"
-print(x + " " + "World")            # -> 'Hello World'
+print(x + " " + "World")            # -> Hello World
 print([1, 2] + [3, 4])              # -> [1, 2, 3, 4]
 print((1, 2) + (3, (True, "Test"))) # -> (1, 2, 3, (True, 'Test'))
 print(x + [1, 2]) # ERROR because they have different datatypes
@@ -166,7 +166,7 @@ print(x + [1, 2]) # ERROR because they have different datatypes
 The `*` operator is used to repeat a string, list or tuple multiple times. For that you have to give the number of time you want to repeat as a positive integer and the sequence you want to repeat. The result datatype is the same as you start with.
 
 ```python
-print(3 * "Hello") # -> 'HelloHelloHello'
+print(3 * "Hello") # -> HelloHelloHello
 print([0] * 10)    # -> [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 print((1,2,3) * 2) # -> (1, 2, 3, 1, 2, 3)
 ```
@@ -270,9 +270,9 @@ As long the operands are boolean, the result will also be boolean. However in Py
 
 ```python
 print(0.0 and 1)                    # -> 0.0
-print(0 or 0.0 or "" or "Default")  # -> 'Default'
+print(0 or 0.0 or "" or "Default")  # -> Default
 print(1 and 2 and 3)                # -> 3
-print((5 or 0) and ("" or "World")) # -> 'World'
+print((5 or 0) and ("" or "World")) # -> World
 ```
 
 # Collection Operators

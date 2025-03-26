@@ -69,8 +69,8 @@ Returns the smallest/largest item in `iterable` or the `default` if empty. The `
 ```python
 print(min([3, 1, 4]))                       # -> 1
 print(max([3, 1, 4]))                       # -> 4
-print(min(["apple", "banana"], key=len))    # -> 'apple'
-print(max(["apple", "banana"], key=len))    # -> 'banana'
+print(min(["apple", "banana"], key=len))    # -> apple
+print(max(["apple", "banana"], key=len))    # -> banana
 people = [{"name": "Andreas", "size": 181}, {"name": "Tom", "size": 168}]
 print(min(people, key=lambda x: x["size"])) # -> {'name': 'Tom', 'size': 168}
 print(max(people, key=lambda x: x["size"])) # -> {'name': 'Andreas', 'size': 181}
@@ -146,8 +146,8 @@ print(list(map(str, [1, 2, 3])))             # -> ['1', '2', '3']
 Returns string in all lower-/uppercase characters.
 
 ```python
-print("Hello".lower())  # -> 'hello'
-print("Hello".upper())  # -> 'HELLO'
+print("Hello".lower())  # -> hello
+print("Hello".upper())  # -> HELLO
 ```
 
 ## `.strip(character="")`
@@ -155,10 +155,10 @@ print("Hello".upper())  # -> 'HELLO'
 Returns a string without all `characters` at the start end end of the initial string. By default removes all whitespace type characters. Everything between the two outer most characters that are not in the `characters` to remove will be kept. You can use `.lstrip()`/`.rstrip()` to only remove from the start/end.
 
 ```python
-print("  \n test message \n".strip())                      # -> 'test message'
-print("  \n test message \n".lstrip())                     # -> 'test message \n'
-print("  \n test message \n".rstrip())                     # -> '  \n test message'
-print("  \n, ,,;; test, message,, ,;; \n".strip(" \n,;"))  # -> 'test message'
+print("  \n test message \n".strip())                      # -> test message
+print("  \n test message \n".lstrip())                     # -> test message \n
+print("  \n test message \n".rstrip())                     # ->   \n test message
+print("  \n, ,,;; test, message,, ,;; \n".strip(" \n,;"))  # -> test message
 ```
 
 ## `.split(sep=" ", maxsplit=-1)`
@@ -176,7 +176,7 @@ print("some long hello world text".split(maxsplit=2))  # -> ['some', 'long', 'h
 Joins string elements from an iterable with the string as separator.
 
 ```python
-print("-".join(["a", "b", "c"]))  # -> 'a-b-c'
+print("-".join(["a", "b", "c"]))  # -> a-b-c
 ```
 
 ## `.replace(old, new, count=-1)`
@@ -184,8 +184,8 @@ print("-".join(["a", "b", "c"]))  # -> 'a-b-c'
 Replaces the `old` string with a `new` string. It will replace a maximum of `count` times, or -1 for unlimited.
 
 ```python
-print("hello".replace("l", "x"))         # -> 'hexxo'
-print("hellllllo".replace("l", "x", 2))  # -> 'hexxllllo'
+print("hello".replace("l", "x"))         # -> hexxo
+print("hellllllo".replace("l", "x", 2))  # -> hexxllllo
 ```
 
 ## `.startswith(string)` / `.endswith(string)`

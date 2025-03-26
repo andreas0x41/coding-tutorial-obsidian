@@ -155,7 +155,7 @@ def example():
 values = example()
 print(values)                         # -> (1, 'a', 0.4)
 a, b, c = example()
-print(f"[0]: {a}, [1]: {b}, [2]: {c}") # -> '[0]: 1, [1]: a, [2]: 0.4'
+print(f"[0]: {a}, [1]: {b}, [2]: {c}") # -> [0]: 1, [1]: a, [2]: 0.4
 ```
 
 # Scope
