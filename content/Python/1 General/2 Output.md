@@ -78,22 +78,17 @@ Bellow you see the exact output of these print statements.
 > [!todo]- less exam relevant
 > Less exam relevant, but still good/helpful to know.
 
-The `print()` function can multiple comma separated [[5 Function#Parameters|arguments]] and output them. By default, these values will be separated with spaces.
+The `print()` function can take multiple comma separated [[5 Function#Parameters|arguments]] and output them. By default, these values will be separated with spaces.
 
 ```python
 print("Hello", "World", "Python") # -> 'Hello World Python'
 ```
 
-# Additional Parameter
-
+# End Parameter
 > [!todo]- less exam relevant
 > Less exam relevant, but still good/helpful to know.
 
-The print function can not only take the values you want to print, you can also give some other arguments for special output.
-
-## End
-
-You can tell the print function which value to put after all of the printed values using the `end` parameter. You can give any string, default is a new line ("\n").
+The parameter `end` defines what will be outputted after all of the printed values. You can use any [[5 Datatype#string|string]], default is a [[5 Datatype#Special Characters|newline]].
 
 ```python
 print("This doesn't end with a newline", end=" ---> ")
@@ -101,13 +96,15 @@ print("This continues", end=" ")
 print("on the same line.")
 ```
 
-```output
+```text
 This doesn't end with a newline ---> This continues on the same line.
 ```
 
-## Separator
+# Sep Parameter
+> [!todo]- less exam relevant
+> Less exam relevant, but still good/helpful to know.
 
-You can tell the print function which value to put between the values you are printing using the `sep` parameter. You can give it any string to put between multiple values within the print, the default is a space.
+The parameter `sep` defines how multiple printed values are should be separated. You can use any [[5 Datatype#string|string]], default is a space.
 
 ```python
 print("Hello", "World", "Python", sep=" | ") # -> 'Hello | World | Python'
@@ -117,13 +114,12 @@ print("Shopping List: Apple", "Banana", "Bread", "Milk", sep=", ")  # -> 'Shoppi
 # Questions
 
 - [ ] Explain `print()` in your own words.
+- [ ] If the `print()` function is called without any arguments, what will happen? Give and explain an example with multiple `print()` functions.
+- [ ] Explain the parameter `end` in your own words including an example.
+- [ ] Explain the parameter `sep` in your own words including an example.
 - [ ] What will be the output of the following code?
 
 ```python
-  print("Python", "is", "fun", sep="-", end="!")
+  print("Python", "is", "fun", sep="-", end="! ")
   print("Let's code.")
 ```
-
-- [ ] What does the `sep` parameter do in the `print()` function? Provide an example.
-- [ ] If the `print()` function is called without any arguments, what will be its behavior? Provide an example output.
-- [ ] How can you ensure the output of two `print()` statements appears on the same line?
