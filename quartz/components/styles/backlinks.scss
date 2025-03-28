@@ -34,7 +34,7 @@
   }
 
   .desktop-only {
-    display: initial !important;
+    display: initial;
     @media all and ($mobile) {
       display: none !important;
     }
