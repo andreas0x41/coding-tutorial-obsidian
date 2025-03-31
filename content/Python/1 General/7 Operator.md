@@ -350,7 +350,7 @@ Operator precedence determines the order in which operators are evaluated. If tw
 | `not`                            | Logical NOT                                           |
 | `and`                            | Logical AND                                           |
 | `or`                             | Logical OR                                            |
-| `if` ... `else`                  | [[2 Conditionals#Ternary Operator\|Ternary Operator]] |
+| `if` ... `else`                  | [[2 Conditions#Ternary Operator\|Ternary Operator]] |
 | `=` , `+=`, `-=`, etc.           | Assignment and augmented assignment operators         |
 | `lambda`                         | Lambda function declaration                           |
 

@@ -117,7 +117,7 @@ print(add("1", "a", "23"))
 1a23
 ```
 
-The function execution ends as soon as it hits a `return` keyword, everything after that will not be executed. You can see in the following code, that the [[2 Conditionals#Else|else]] keywords are not necessary because the execution well only continue if the condition before was `False`.
+The function execution ends as soon as it hits a `return` keyword, everything after that will not be executed. You can see in the following code, that the [[2 Conditions#Else|else]] keywords are not necessary because the execution well only continue if the condition before was `False`.
 
 ```python
 def greater_number(a, b):

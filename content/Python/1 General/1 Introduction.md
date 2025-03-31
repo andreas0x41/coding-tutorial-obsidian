@@ -52,7 +52,7 @@ Python's syntax is minimal and highly readable. In general Python code will run 
 - Python supports all basic (mathematical) [[7 Operator|Operators]] and many more
 - [[6 Variable|Variables]] automatically get a [[5 Datatype|datatype]] that can change at any time
 - Python is **case sensitive**. So it is very significant if a character is upper or lower case. For example `print()` is not the same as `Print()`
-- **Indentation**: Python uses indentation to define code blocks, many other languages use curly brackets `{}` instead. Proper indentation is required, otherwise there will be errors. A colon `:` is used to indicate the start of a new block, e.g. [[2 Conditionals|conditionals]], [[3 While Loop|loops]], [[5 Function|functions]], ...
+- **Indentation**: Python uses indentation to define code blocks, many other languages use curly brackets `{}` instead. Proper indentation is required, otherwise there will be errors. A colon `:` is used to indicate the start of a new block, e.g. [[2 Conditions|conditionals]], [[3 While Loop|loops]], [[5 Function|functions]], ...
 
 ```python
 # A simple comment

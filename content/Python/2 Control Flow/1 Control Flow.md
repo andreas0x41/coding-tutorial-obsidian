@@ -18,9 +18,9 @@ Control Flow refers to the order in which individual statements, instructions, f
 # Summary
 Control Flow determines the execution order of code in a program.
 - **Line by Line**: Code executes sequentially, top to bottom.
-- **Selection**: [[2 Conditionals|Conditional statements]] like`if-else` allow decisions based on conditions.
+- **Selection**: [[2 Conditions|Conditional statements]] like`if-else` allow decisions based on conditions.
 - **Iteration**: Loops like [[3 While Loop|while]] or [[4 For Loop|for]] repeat code while a condition is true or for a number of iterations.
-- **Jumps**: `break` exits loops; `continue` skips to the next iteration,`goto` jumps to a specific line/block.
+- **Jumps**: `break` exits loops, `continue` skips to the next iteration,`goto` jumps to a specific line/block.
 - **Subroutines**: [[5 Function|Functions]] encapsulate reusable code, called with arguments and returning values.
 - **Errors & Exceptions**: Interrupt the normal execution; Exceptions can be recovered using `try-except`.
 
@@ -40,7 +40,7 @@ print(1+2)
 ```
 
 # Selection (Conditional Statements)
-Selection allows the program to make decisions. The program chooses what code to execute next based on a condition. The basis for the decisions is **[[2 Conditionals|if]]** a [[5 Datatype#Boolean|boolean]] is `True`, or whether a pattern matches.
+Selection allows the program to make decisions. The program chooses what code to execute next based on a condition. The basis for the decisions is **[[2 Conditions|if]]** a [[5 Datatype#Boolean|boolean]] is `True`, or whether a pattern matches.
 
 ```python
 x = 6

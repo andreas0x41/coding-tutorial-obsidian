@@ -11,7 +11,7 @@ tags:
   - AECD
   - GEES
 ---
-Conditionals allow code to make decisions. Each individual decision is based on one [[5 Datatype#Boolean|boolean]] so the only two options are "run some code" or "don't run the code". The boolean is usually created using a series of [[7 Operator#Relational/Comparison Operators|comparison]] and [[7 Operator#Logical Operators|logical]] operators. 
+Conditions allow code to make decisions. Each individual decision is based on one [[5 Datatype#Boolean|boolean]] so the only two options are "run some code" or "don't run the code". The boolean is usually created using a series of [[7 Operator#Relational/Comparison Operators|comparison]] and [[7 Operator#Logical Operators|logical]] operators. 
 
 # Summary
 - **If**: Executes a block if the condition is [[5 Datatype#Truthy and Falsy|truthy]].
@@ -95,7 +95,7 @@ x is greater than y
 ```
 
 # Elif
-The `elif` is a short alternative to nesting an `if` inside the `else` block. Therefore an `elif` condition is only checked if all previous `if` and `elif` statements were `False`. You can have as many `elif` statements as you want, which allows you to easily check multiple conditions in sequence. The following two conditionals are exactly the same, but the version using `elif` is much easier to write and read.
+The `elif` is a short alternative to nesting an `if` inside the `else` block. Therefore an `elif` condition is only checked if all previous `if` and `elif` statements were `False`. You can have as many `elif` statements as you want, which allows you to easily check multiple conditions in sequence. The following two Conditions are exactly the same, but the version using `elif` is much easier to write and read.
 
 ```python
 x = 15
@@ -207,7 +207,7 @@ your discount is: student
 ```
 
 # Questions
-- [ ] What is the purpose of conditionals in programming?
+- [ ] What is the purpose of Conditions in programming?
 - [ ] Explain `if` in your own words.
 - [ ] Explain `else` in your own words.
 - [ ] Explain `elif` in your own words.
