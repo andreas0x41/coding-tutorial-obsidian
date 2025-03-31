@@ -1,5 +1,5 @@
 ---
-title: 2.2 Conditionals
+title: 2.2 Conditions
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false

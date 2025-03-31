@@ -66,7 +66,7 @@ Python supports the scientific notation of writing numbers as a power of 10 for 
 
 ## Boolean
 
-The datatype Boolean can hold a truth value. There are only two possible options for this value True or False (can also be thought of as 1/0 Yes/No On/Off). This datatype is very important for Control Flow like [[2 Conditions|Conditionals]] because it is usually based on many "Yes/No Questions", which are answered with a Boolean value. You can use the function `bool()` to convert a value to a Boolean, or create one with value `False` if no argument is given.
+The datatype Boolean can hold a truth value. There are only two possible options for this value True or False (can also be thought of as 1/0 Yes/No On/Off). This datatype is very important for Control Flow like [[2 Conditions|Conditions]] because it is usually based on many "Yes/No Questions", which are answered with a Boolean value. You can use the function `bool()` to convert a value to a Boolean, or create one with value `False` if no argument is given.
 
 ```python
 True False bool(1)
