@@ -374,8 +374,6 @@ print(list(range(20)[:5:-3])) # -> [19, 16, 13, 10, 7]
 
 The datatype Generator is very similar to [[#Range]] in supporting memory efficient one by one [[#Iterable|iterating]] of elements. The key difference is that it supports all datatypes and you can define your own sequence generators. But they do not support [[#Indexing|indexing]] or [[#Slicing|slicing]] and it is not [[#Mutable||mutable]].
 
-## Bytes
-
 ## Object Oriented Programming
 
 > [!todo]- only SDML and AECD
@@ -403,6 +401,8 @@ print(bool(" "))      # True
 > Contents
 > 
 > Converting between Datatypes
+> 
+> Implicite Conversions
 > 
 > Storage Size and Value Range
 > 

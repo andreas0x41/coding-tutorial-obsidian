@@ -159,7 +159,7 @@ print(f"[0]: {a}, [1]: {b}, [2]: {c}") # -> [0]: 1, [1]: a, [2]: 0.4
 ```
 
 # Scope
-The general principle of scope is explained on the [[6 Variable#Scope|variables]] page. You can refer to a global variable into a function using the `global`[[8 Keyword|keyword]].
+The general principle of scope is explained on the [[6 Variable#Scope|variables]] page. You can refer to a global variable from inside a function using the `global`[[8 Keyword|keyword]].
 
 ```python
 x = 5

@@ -49,7 +49,7 @@ Python is used in a wide range of applications:
 Python's syntax is minimal and highly readable. In general Python code will run line by line from top to bottom. More complex behavior is possible using [[1 Control Flow|Control Flow]]. 
 
 - **`print()`** is used for [[2 Output|output]], **`input()`** for [[3 Input|input]], and **`#`** for line [[4 Comment|comments]]
-- Python supports all basic (mathematical) [[7 Operator|Operators]]and many more
+- Python supports all basic (mathematical) [[7 Operator|Operators]] and many more
 - [[6 Variable|Variables]] automatically get a [[5 Datatype|datatype]] that can change at any time
 - Python is **case sensitive**. So it is very significant if a character is upper or lower case. For example `print()` is not the same as `Print()`
 - **Indentation**: Python uses indentation to define code blocks, many other languages use curly brackets `{}` instead. Proper indentation is required, otherwise there will be errors. A colon `:` is used to indicate the start of a new block, e.g. [[2 Conditionals|conditionals]], [[3 While Loop|loops]], [[5 Function|functions]], ...
