@@ -11,17 +11,16 @@ tags:
   - AECD
   - GEES
 ---
-A `function` is a reusable block of code that performs a specific task. It helps organize code, avoid repetition, and improve readability.  
+A `function` is a reusable block of code that performs a specific task. It splits code into independent logical blocks and helps to organize it, avoid repetition, and improve readability.  
 # Summary
-- **Basic Usage**: Defined using `def` and called by its name.
-- **Parameters**: Functions can accept input values.
-- **Return**: Functions can return values.
+- **Basic Usage**: Defined using `def` and called by its name with brackets.
+- **Parameters and Return**: Functions can accept input values and return values.
 - **Default Arguments**: Parameters can have default values.
-- **\*args/\*\*kwargs**: Allow variable-length arguments.
+- **\*args/\*\*kwargs**: Allow a flexible number of arguments.
 - **Scope**: Variables inside a function are local unless specified otherwise.
 
 # Basic
-A function is defined using `def` followed by the function name and in the following code block the function body. After defining it, you can call the function `functionName()` whenever and as often as you want. Python will go up to the function definition, run the code inside the function body, and then go back to the position of the function call.
+A function is defined using `def` followed by the function name and in the following code block the function body. After defining it, you can call the function using `functionName()` whenever and as often as you want. Python will go to the function definition, run the code inside the function body, and then go back to the position of the function call.
 
 ```python
 def functionName():
@@ -39,16 +38,16 @@ greet()
 greet()
 ``` 
 
-So in this example the following lines will be executed for the output.
+So in this example, the following lines will be executed for the output.
 
 ```output
-                  # read definition: 1, 2
-Hello, world!     # first function call: 4, 1, 2, after 4
-Hello, world!     # second function call: 5, 1, 2, after 5
+                  # read and store the definition: 1, 2
+Hello, world!     # first function call: 4, 1, 2, return to after 4
+Hello, world!     # second function call: 5, 1, 2, return to after 5
 ```
 
 # Parameters
-Functions can accept, which special [[6 Variable#Scope|local variables]], parameters to work with. A parameter is a variable listed in a function's definition, an argument is the actual value passed to that parameter when the function is called. You have to list all the parameter names in the function definition. When calling a function you have to give the same amount of arguments, as there are parameters. 
+Functions can accept parameters to work with, which are special [[6 Variable#Scope|local variables]]. A parameter is a variable listed in a function's definition, an argument is the actual value passed to that parameter when the function is called. You have to list all the parameter names in the function definition. When calling a function you have to give the same amount of arguments, as there are parameters. 
 
 ```python
 def functionName(parName1, parName2, parName3):
@@ -66,7 +65,7 @@ def greet(name):
 greet("Alice")
 greet("Andreas")
 greet("")
-# greet() or greet("1", "2") would throw an error because the number of parameters and arguments is not the same.
+# greet() or greet("A", "B") would throw an error because the number of parameters and arguments is not the same.
 ```
 
  ```output
@@ -76,14 +75,14 @@ Hello, !
 ```
 
 ## Parameter Mutability
-Using a variable as an argument will create a new pointer to the same [[6 Variable#Memory Objects|memory object]]. So you have to be careful regarding the [[6 Variable#Mutability Behaviour|mutability behaviour]] apply.
+Using a variable as an argument will create a new pointer to the same [[6 Variable#Memory Objects|memory object]]. So you have to be careful with the [[6 Variable#Mutability Behaviour|mutability behavior]]. 
 
 ```python
-def mutabilityExample(nonmutable, mutable):
-	print(id(nonmutable), id(mutable))
-	nonmutable += 2
+def mutabilityExample(immutable, mutable):
+	print(id(immutable), id(mutable))
+	immutable += 2
 	mutable[1] = 20
-	print(id(nonmutable), id(mutable))
+	print(id(immutable), id(mutable))
 a = 1
 b = [1, 2, 3, 4]
 print(a, b)
@@ -98,16 +97,17 @@ print(a, b)
 1 [1, 20, 3, 4]
 ```
 
+You can see that changing the value of [[6 Variable#Mutability Behaviour|mutable variables]] applies to the [[6 Variable#Memory Objects|memory object]] itself and therefore also outside the function.
 # Return
-A function can return a value using the `return` keyword. The return value will be put exactly where the function call happend. 
+A function can return a value using the `return` keyword. The return value will be put exactly where the function call happened. 
 
 ```python
 def add(a, b, c):
     return a + b + c
 
-result = add(3, 5, -1) # so result stores the return value of add
-print(result)
-print(add(1, 2, 8))
+result = add(3, 5, -1) # we store the return value of add in the variable result
+print(result)          
+print(add(1, 2, 8))    # we use the return value directly
 print(add("1", "a", "23"))
 ```
 
@@ -117,7 +117,7 @@ print(add("1", "a", "23"))
 1a23
 ```
 
-The function execution ends as soon as it hits a `return` keyword, everything after that will not be executed. You can see in the following code, that the [[2 Conditions#Else|else]] keywords are not necessary because the execution well only continue if the condition before was `False`.
+The function execution ends as soon as it hits a `return`, everything after that will not be executed. You can see in the following code example, that the [[2 Conditions#Else|else]] keywords are not necessary here, because the execution will only continue if the condition before was `False`.
 
 ```python
 def greater_number(a, b):
@@ -147,13 +147,13 @@ print(print())   # print the return value of print -> None
 ```
 
 ## Return Multiple Values
-You can return multiple coma separated values, which will be interpreted like a [[5 Datatype#Tuple|tuple]]. You can extract the individual values using [[5 Datatype#Indexing|indexing]] or [[7 Operator#Multiple Value Assignment|multiple value assignment]].
+You can return multiple comma-separated values, which will be interpreted like a [[5 Datatype#Tuple|tuple]]. You can extract the individual values using [[5 Datatype#Indexing|indexing]] or [[7 Operator#Multiple Value Assignment|multiple value assignment]].
 
 ```python
 def example():
 	return 1, "a", 0.4
 values = example()
-print(values)                         # -> (1, 'a', 0.4)
+print(values)                          # -> (1, 'a', 0.4)
 a, b, c = example()
 print(f"[0]: {a}, [1]: {b}, [2]: {c}") # -> [0]: 1, [1]: a, [2]: 0.4
 ```
@@ -219,7 +219,7 @@ outer_function()
 ```
 
 # Methods
-A method is a function that belongs to a object/class. Because of this it can directly access and change the value of the object/class. You can find details about creating your own classes, objects and methods under [[3 Object Oriented Programming|Object Oriented Programming]].
+A method is a function that belongs to an object/class. Because of this it can directly access and change the value of the object/class. You can find details about creating your own classes, objects, and methods under [[3 Object Oriented Programming|Object Oriented Programming]].
 
 ```python
 l1 = [2, 1, 5, 3, 2, 7, 0]

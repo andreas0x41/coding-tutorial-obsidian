@@ -12,23 +12,23 @@ tags:
   - GEES
 ---
 
-A `for` loop is used to iterate over a sequence (like a list, tuple, or string) or a range of numbers.  
+A `for` loop is used to iterate over a [[5 Datatype#Collection Datatypes|collection of elements]] or a [[5 Datatype#Range|range]] of numbers.  
 
 # Summary
-- **Basic Usage**: Iterates over elements in a sequence or range automatically.
-- **Break**: Exits the loop immediately, regardless of the amount.
-- **Continue**: Skips the rest of the current iteration and moves to the next iteration/element.
-- **Else**: Runs only if the loop completes normally (not via `break`).
+- **Basic Usage**: Iterates over all elements in a [[5 Datatype#Collection Datatypes|collection]] or [[5 Datatype#Range|range]] automatically.
+- **Break**: Exits the loop immediately.
+- **Continue**: Skips the rest of the current iteration and moves to the next iteration.
+- **Else**: Runs only if the loop completes normally (not because of `break`).
 
 # Basic
-A `for` loop is useful when you need to iterate over a collection of items or perform an action a set number of times.
+A `for` loop is useful when you need to iterate over a collection of elements or perform an action a set number of times.
 
 ```python
 for element in collection:
     # Code to execute for each element
 ```
 
-With a `for` loop you don't need to manual control a condition. It automatically iterates through the collection using the elements one by one. Below you can see a `for` loop iterating repeating 5 times using `range()` and then iterating though all elements of a [[5 Datatype#List|list]].
+A `for` loop does not use a condition. Instead, it iterates through the collection using the elements one by one. So the first iteration uses, the first element, and the second iteration uses the second element, ... Below you can see a `for` loop iterating repeating 5 times using `range()` and then iterating through all elements of a [[5 Datatype#List|list]].
 
 ```python
 for num in range(5):
@@ -99,7 +99,7 @@ A `for` loop can have an `else` block, which works the same as with a [[3 While 
 for num in range(2, 10):
     for i in range(2, num):
         if num % i == 0:
-            print(f"{num} is not a prime number")
+            print(f"{num} is not a prime number because it is divisible by {i}")
             break
     else:
         print(f"{num} is a prime number")
@@ -108,16 +108,16 @@ for num in range(2, 10):
 ```output
 2 is a prime number
 3 is a prime number
-4 is not a prime number
+4 is not a prime number because it is divisible by 2
 5 is a prime number
-6 is not a prime number
+6 is not a prime number because it is divisible by 2
 7 is a prime number
-8 is not a prime number
-9 is not a prime number
+8 is not a prime number because it is divisible by 2
+9 is not a prime number because it is divisible by 3
 ```
 
 # Examples
-These examples show how you can use a `for` loop in more advanced scenarios. You can find explanations for the used functions and methods online or in the chapter.
+These examples show how you can use a `for` loop in more advanced scenarios. You can find details of the functions/methods used in the other chapters or online.
 ## Dictionary
 
 You can loop through dictionary keys, values, or both.
@@ -189,7 +189,7 @@ Color 2: blue
 
 ## String
 
-A string is also an iterable, so you can loop through its characters.
+A string is also iterable, so you can loop through its characters.
 
 ```python
 word = "Python"
@@ -239,7 +239,7 @@ i=2, j=1
 - [ ] Explain `for` in your own words.
 - [ ] What are the differences and similarities between `for` and `while` loops? When should you use which kind?
 - [ ] Explain `break` and `continue` in your own words.
-- [ ] Are `break` and `continue` potentially more or less useful with in a `for` loop than in a `while` loop? Why? Give reasons and examples.
+- [ ] Are `break` and `continue` potentially more or less useful within a `for` loop than in a `while` loop? Explain why with reasons and examples.
 - [ ]  What happens if a `for` loop runs on an empty collection?
 - [ ] Is it possible that a `for` loop is infinite? Why? Give reasons and examples.
 - [ ] Explain the following code and its output:

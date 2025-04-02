@@ -11,22 +11,22 @@ tags:
   - AECD
   - GEES
 ---
-A `while` loop is used to repeat a block of code as long as a specified condition is `True`.
+A `while` loop is used to repeat a block of code as long as a specified condition is [[5 Datatype#Truthy and Falsy|truthy]].
 # Summary
-- **Basic Usage**: Similar to an [[2 Conditions|if statement]] but runs repeatedly. The condition must eventually change to avoid infinite loops.
+- **Basic Usage**: Similar to an [[2 Conditions|if condition]] but runs repeatedly. The condition value should eventually change to avoid infinite loops.
 - **Break**: Exits the loop immediately, regardless of the condition.
-- **Continue**: Skips the rest of the current iteration and moves to the next.
-- **Else**: Runs only if the loop ends normally (not via `break`).
+- **Continue**: Skips the rest of the current iteration, goes back to the top of the loop, and checks the condition again.
+- **Else**: Runs only if the loop ends normally (not because of `break`).
 
 # Basic
-A `while` loop is similar to a [[2 Conditions|if statement]] and also has a [[5 Datatype#Boolean|boolean]] condition. But instead of executing the code block inside once, it is executed repeatedly as long as the condition is `True`.
+A `while` loop is similar to a [[2 Conditions|if statement]] and also has a [[5 Datatype#Boolean|boolean]] condition. But instead of executing the code block inside once, it is executed repeatedly as long as the condition is [[5 Datatype#Truthy and Falsy|truthy]].
 
 ```python
 while condition:
     # Code to execute while the condition is True
 ```
 
-If the condition is always `True`, and there is no other reason for exiting, the loop will run infinitely. So to control the while loop, the condition has to change over time.
+If the condition stays [[5 Datatype#Truthy and Falsy|truthy]], and there is no other reason for exiting, the loop will run infinitely. So to control the while loop, the condition has to change over time.
 
 ```python
 count = 0
@@ -43,7 +43,7 @@ Count is 3
 Count is 4
 ```
 
-You could explain what is happening similar to this. Create a new variable called "count" of type integer and with the value 0. The condition of the while loop is "count < 5". Run code inside while because "0 < 5" is `True`. Inside the loop we output the current value of count, in this case "Count is 0". Then we increase the value of count by one, in this case to 1. Again we check the condition and go inside the loop, because "1 < 5". We print the message "Count is 1" on a new line and increase count by one. This will be repeated until count has a value of 5. So the last printed message is "Count is 4", then we increase count to 5 and then we stop repeating because `5 < 5` is `False`.
+You could explain what is happening similar to this. Create a new variable called "count" of type integer and with the value 0. The condition of the while loop is "count < 5". Run code inside while because "0 < 5" is `True`. Inside the loop we output the current value of count, in this case "Count is 0". Then we increase the value of count by one, in this case to 1. Again we check the condition and go inside the loop, because "1 < 5". We print the message "Count is 1" on a new line and increase count by one. This will be repeated until count has a value of 5. So the last printed message is "Count is 4", then we increase count to 5. Then we stop repeating, because `5 < 5` is `False`, and go after the loop.
 
 ```python
 total = 0
@@ -81,7 +81,7 @@ while True:
 	count += 1
 ```
 
-This might seem like an infinite loop at first because the condition is always `True`. But actually the break statement will exit the loop as soon as count reaches 5 and because of that, the output will be exactly the same as in the last example.
+This might seem like an infinite loop at first because the condition is always `True`. But actually, the break statement will exit the loop as soon as the count reaches 5 and because of that, the output will be exactly the same as in the example above.
 
 ```output
 Count is 0
@@ -91,9 +91,9 @@ Count is 3
 Count is 4
 ```
 
-It's good not to overuse `break` and instead do the main behaviour with the condition.
+You should usually handle the main behavior of the loop with the condition and not overuse `break`.
 # Continue
-The [[8 Keyword|keyword]] `continue` is used to skip forward to the next iteration of the loop. But the loop condition is always checked, `continue` just skips the rest of the current iteration. If you are inside a nested loop, it will only skip ahead the inner loop.
+The [[8 Keyword|keyword]] `continue` is used to skip forward to the next iteration of the loop. So it immediately goes back to the top and checks the condition again. If you are inside a nested loop, it will only skip ahead the inner loop.
 
 ```python
 count = 1
@@ -109,30 +109,30 @@ while (count < 5) and (i < 10):
 print(f"end with count={count} and i={i}")
 ```
 
-In this example, `continue` will also skip the "count+1". So without the check of "i<10", this would be an infinite loop. Integer variables count=1 and i=1. For each output i listed the lines that will be executed in this iteration. So you can see that as soon as count reaches 3 it goes into the `if` then runs `continue`, and because of that goes back to the top without incrementing `count`.
+In this example, `continue` will also skip the `count+1`. So without the checking if `i<10`, this would be an infinite loop. For each output, you can see the lines that will be executed in this iteration. So you can see that as soon as count reaches 3 it goes into the `if` then runs `continue`, and because of that goes back to the top without incrementing `count`.
 
 ```output
-start while loop               # lines: 1, 2
-processing 1                   # lines: 3, 4, 5, 8, 9
-processing 2                   # lines: 3, 4, 5, 8, 9
-skipping 3                     # lines: 3, 4, 5, 6, 7
-skipping 3                     # lines: 3, 4, 5, 6, 7
-skipping 3                     # lines: 3, 4, 5, 6, 7
-skipping 3                     # lines: 3, 4, 5, 6, 7
-skipping 3                     # lines: 3, 4, 5, 6, 7
-skipping 3                     # lines: 3, 4, 5, 6, 7
-skipping 3                     # lines: 3, 4, 5, 6, 7
-end with count=3 and i=10      # lines: 3, 10
+start while loop               # lines: 1, 2, 3
+processing 1                   # lines: 4, 5, 6, 9, 10
+processing 2                   # lines: 4, 5, 6, 9, 10
+skipping 3                     # lines: 4, 5, 6, 7, 8
+skipping 3                     # lines: 4, 5, 6, 7, 8
+skipping 3                     # lines: 4, 5, 6, 7, 8
+skipping 3                     # lines: 4, 5, 6, 7, 8
+skipping 3                     # lines: 4, 5, 6, 7, 8
+skipping 3                     # lines: 4, 5, 6, 7, 8
+skipping 3                     # lines: 4, 5, 6, 7, 8
+end with count=3 and i=10      # lines: 4, 10
 ```
 
 # Else
 > [!todo]- not exam relevant
 > Not exam relevant, very rarely used.
 
-The [[8 Keyword|keyword]] `else` can be used with a while loop. The code inside will only execute if the loop ends normally after all the iterations. If the loop stops because of a `break`, the code inside `else` will be ignored.. 
+The [[8 Keyword|keyword]] `else` can be used with a while loop. The code inside will only execute if the loop ends normally after all the iterations. If the loop stops because of a `break`, the code inside `else` will be ignored.
 
 ```python
-num = int(input("Plese input a integer number: "))
+num = int(input("Please input a integer number: "))
 i = 2
 
 while i < num:
@@ -146,9 +146,9 @@ else:
 ```
 
 ```output
-input 5: 5 is a prime number
-input 15: 15 is not a prime number because it is divisible by 3
-input 29: 29 is a prime number
+input 5:        5 is a prime number
+input 15:       15 is not a prime number because it is divisible by 3
+input 29:       29 is a prime number
 ```
 
 # Questions
@@ -156,14 +156,14 @@ input 29: 29 is a prime number
 - [ ] What differences and similarities between an `if` statement and a `while` loop?
 - [ ] Explain `break` in your own words.
 - [ ] Explain `continue` in your own words.
-- [ ] What is an infinite loop? What are the potential reasons for something being an infinite loop?
-- [ ] Explain the following code and its output?  
+- [ ] What is an infinite loop? How can an infinite loop happen?
+- [ ] Explain the following code and its output.  
 
 ```python
-count = 0
-while count < 7:
+count = 5
+while count > -3:
     print(count)
-    count += 1
+    count -= 1
 ```
 
 - [ ] Explain `else` in combination with a `while` loop in your own words. 
