@@ -116,6 +116,44 @@ for num in range(2, 10):
 9 is not a prime number because it is divisible by 3
 ```
 
+# List Comprehension
+
+List comprehensions provide a shorter and more readable way to create lists using a `for` loop in a single line. Instead of using a normal `for` loop to build a new list, list comprehension lets you do it directly. The syntax to do this is `[new_element for element in iterable]`, as you can see in the example below. When calculating the new element you can use operators, functions, ...
+
+```python
+# For loop version
+squares1 = []
+for n in range(5):
+    squares.append(n**2)
+print(squares1) # -> [0, 1, 4, 9, 16]
+
+# List comprehension version
+squares2 = [n**2 for n in range(5)]
+print(squares2) # -> [0, 1, 4, 9, 16]
+```
+
+Both ways have the exactly same result, the only difference is that the second one is shorter.
+## Conditional List Comprehension
+
+You can add a condition to include only certain elements with the syntax `[new_element for element in iterable if condition]`. An element will only be added to the list, if the condition is `True`. If the condition is `False`, it will be ignored
+
+```python
+# For loop version
+evens1 = []
+for i in range(10):
+    if i % 2 == 0:
+        evens.append(i)
+print(evens1) # -> [0, 2, 4, 6, 8]
+
+# List comprehension version
+evens2 = [i for i in range(10) if i % 2 == 0]
+print(evens2) # -> [0, 2, 4, 6, 8]
+```
+
+> [!info] add other datatypes later
+> set, dictionary, generator expression, tuple find in Working Draft 2.
+
+
 # Examples
 These examples show how you can use a `for` loop in more advanced scenarios. You can find details of the functions/methods used in the other chapters or online.
 ## Dictionary
