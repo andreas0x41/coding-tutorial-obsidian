@@ -47,7 +47,7 @@ Hello, world!     # second function call: 5, 1, 2, return to after 5
 ```
 
 # Parameters
-Functions can accept parameters to work with, which are special [[6 Variable#Scope|local variables]]. A parameter is a variable listed in a function's definition, an argument is the actual value passed to that parameter when the function is called. You have to list all the parameter names in the function definition. When calling a function you have to give the same amount of arguments, as there are parameters. 
+Functions can accept parameters to work with, which are special [[6 Variable#Scope|local variables]]. A parameter is a variable listed in a function's definition. An argument is the actual value passed to that parameter when the function is called. You have to list all the parameter names in the function definition. When calling a function you have to give the same amount of arguments, as there are parameters. 
 
 ```python
 def functionName(parName1, parName2, parName3):
@@ -219,7 +219,7 @@ outer_function()
 ```
 
 # Methods
-A method is a function that belongs to an object/class. Because of this it can directly access and change the value of the object/class. You can find details about creating your own classes, objects, and methods under [[3 Object Oriented Programming|Object Oriented Programming]].
+A method is a function that belongs to an object/class. Because of this it can directly access and change the value of the object/class. You can find details about creating your own classes, objects, and methods under [[2 OOP|Object Oriented Programming]].
 
 ```python
 l1 = [2, 1, 5, 3, 2, 7, 0]

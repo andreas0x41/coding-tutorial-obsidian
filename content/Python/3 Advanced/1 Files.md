@@ -16,7 +16,7 @@ Python allows you to read data from a file and write data to a file.
 # Summary
 - **Open:** Use `open(filePath, mode)` to open the file at `filePath` with a specific editing `mode`. 
 - **Closing:** Use `close()` to close file and free resources.
-- **Context Manager (`with open(...)`):** Opens file for context and ensures automatic file closing, even in case of exceptions.
+- **Context Manager (`with open(...)`):** Opens a file for context and ensures automatic file closing, even in case of exceptions.
 - **Read:** Use methods to `read(n)` part or all of the file content.
 - **Write:** Use `.write(string)` to write a string to a file.
 - **File Pointer:** Tracks read/write position; use `tell()` to check and `seek(offset, whence)` to move.
@@ -33,7 +33,7 @@ Python provides various modes to open a file. These define how the file is opene
 
 | Mode | Description                                                    |
 | ---- | -------------------------------------------------------------- |
-| `r`  | Read (default). File must exist.                               |
+| `r`  | Read (default). The file must exist.                               |
 | `w`  | Write. Creates a new file or overwrites an existing one.       |
 | `a`  | Append to end of file. Creates a new file if it doesn't exist. |
 | `x`  | Create and Write. Error if the file already exists.            |
@@ -62,7 +62,7 @@ print(file.readable(), file.writable()) # !!! ValueError: I/O operation on close
 ```
 
 # Close
-As soon as you no longer need a file you should close it to free up resources and ensure that changes are saved. This is done using the `close()` method. You can use the attribute `closed` to check if a file object is open or closed
+As soon as you no longer need a file you should close it to free up resources and ensure that changes are saved. This is done using the `close()` method. You can use the attribute `closed` to check if a file object is open or closed.
 
 ```python
 file = open("example.txt")
@@ -76,18 +76,18 @@ The context manager is an alternative way to open and close a file. t automatica
 
 ```python
 with open("example.txt") as file:
-	# you can use the file inside the context manager
+	# You can use the file inside the context manager
     content = file.read()
 # As soon as you exit the context manager (indentation) the file is closed, but the variables still exist
 print(file.closed)   # True
 print(content)  
 ```
 
-The context manager only ensures proper closing and freeing up the resources. To handle Error like `FileNotFoundError` or to do special error handling/closing, you have to write your own exception handling.
+The context manager only ensures proper closing and freeing up the resources. To handle Errors like `FileNotFoundError` or to do special error handling/closing, you have to write your own exception handling.
 
 The context manager works when an object has the magic methods `__enter__` and `__exit__`. So you can also use it with some other resources, database connections, your own classes, ... 
 # Read
-The method `read(n)` returns the first n characters (including [[5 Datatype#Special Characters|special characters]]) from a file. By default it returns all the data until the end of a file as a string. You can also use `readline()` to read till the end of a line or `readlines()` to read all remaining lines as a list of strings. To properly understand reading parts of a file, you have to understand the [[1 Files#File Pointer|file pointer]].
+The method `read(n)` returns the first n characters (including [[5 Datatype#Special Characters|special characters]]) from a file. By default, it returns all the data until the end of a file as a string. You can also use `readline()` to read till the end of a line or `readlines()` to read all remaining lines as a list of strings. To properly understand reading parts of a file, you have to understand the [[1 Files#File Pointer|file pointer]].
 
 Here is an example with the following data inside "example.txt".
 
@@ -123,7 +123,7 @@ with open("testFile.txt", "r") as file:
 
 Expecting specific (types of) data in a file, without checking, creates security and reliability problems. 
 # Write
-You can write a string to a file using the method `.write(string)`. It will return the number of characters written/length of the string. You can also write a list of strings to a file using the method `.writelines()`.
+You can write a string to a file using the method `.write(string)`. It will return the number of characters written/the length of the string. You can also write a list of strings to a file using the method `.writelines()`.
 
 ```python
 with open("output.txt", "x") as file:
@@ -133,7 +133,7 @@ with open("output.txt", "x") as file:
     print(file.writelines(["1 2\n", "3 4 5\n", "6 7 8 9\n"])) # no retrun value -> None
 ```
 
-This python code creates a new file, write the following text to it, and then close it. You can see that the resulting text is the same as used for the read example.
+This Python code creates a new file, writes the following text to it, and then closes it. You can see that the resulting text is the same as that used for the read example.
 
 ```output.txt
 This is a simple text file.
@@ -150,7 +150,7 @@ The file pointer stores your current position in a file. The starting position o
 > [!todo]- not exam relevant
 > This is not exam relevant, but good to know and very helpful for working with specific positions/parts of a file.
 
-The method `tell()` returns the current position of the file pointer with 0 being the start of the file. The method `seek(offset, whence)`goes to a specific position (in bytes) and returns the current absolute position. The `offset` is the number of bytes to move. The argument `whence` sets the origin point where `0` is the default and means start of the file, `1` means the current position, and `2` means the end of the file. Seeking relative to the current or end position only works in binary mode.
+The method `tell()` returns the current position of the file pointer with 0 being the start of the file. The method `seek(offset, whence)`goes to a specific position (in bytes) and returns the current absolute position. The `offset` is the number of bytes to move. The argument `whence` sets the origin point where `0` is the default and means the start of the file, `1` means the current position, and `2` means the end of the file. Seeking relative to the current or end position only works in binary mode.
 
 ```example.txt
 This is a simple text file.
@@ -168,7 +168,7 @@ with open("example.txt", "rb") as file:
     print(file.tell())      # current position -> 0
     print(file.read(5))     # read 5 bytes -> b'This '
     print(file.tell())      # current position after reading -> 5
-    print(file.seek(29, 1)) # go ahead 29 bytes from current positon -> 34
+    print(file.seek(29, 1)) # go ahead 29 bytes from current position -> 34
     print(file.readline())  # read line -> b'demonstrates file reading.\n'
     print(file.tell())      # current position after reading -> 62
     print(file.seek(-5, 2)) # go to 5 bytes before the end of the file -> 79
@@ -186,7 +186,7 @@ with open("example.txt", "rb") as file:
 - [ ] How can you check if a file is currently open or closed? How can you check if you can currently read from/write to a file?
 - [ ] How can you read data from a file? What are the different options and how do they work?
 - [ ] How can you write data to a file? What are the different options and how do they work?
-- [ ] Explain the file pointer and why it is important? 
+- [ ] Explain the file pointer and why it is important. 
 - [ ] Explain the method `tell()` in your own words. 
 - [ ] Explain the method`seek(offset, whence)` in your own words. 
-- [ ] You want to use `seek(offset, 0)` with a file in text mode (so you can only use relative position from the start). You know the total length/size of the file. Using this, how can you read only the last 10 characters of the file. Also, how can you go ahead 5 characters from your current position, no matter where your current position is.
+- [ ] You want to use `seek(offset, 0)` with a file in text mode (so you can only use relative position from the start). You know the total length/size of the file. Using this, how can you read only the last 10 characters of the file? Also, how can you go ahead 5 characters from your current position, no matter where your current position is?

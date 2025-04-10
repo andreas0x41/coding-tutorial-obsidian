@@ -1,5 +1,5 @@
 ---
-title: 3.3 Object Oriented Programming
+title: 3.3 Exception Handling
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: true

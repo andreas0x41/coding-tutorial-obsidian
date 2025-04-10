@@ -149,7 +149,7 @@ except ZeroDivisionError:         # Exception handled using try-except block
 - [ ] Explain `goto` in your own words.
 - [ ] Explain subroutines in your own words.
 - [ ] Explain errors and exceptions in your own words.
-- [ ] What are the differences between a Syntax Error and an Exception? Also, give examples.
+- [ ] What are the differences between a Syntax Error and an Exception? Explain with examples.
 - [ ] Explain in detailed small steps how this code will be executed step by step, what it does, what output it gives, and also the order of operations step by step.
 
 ```python

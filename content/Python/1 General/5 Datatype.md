@@ -14,6 +14,7 @@ tags:
 
 A datatype defines how different types of information/data are stored and behave. Examples of the behavior can be found on the pages [[7 Operator|Operators]], [[6 Built-in Functions & Methods|Built-in Functions & Methods]], ...
 
+
 For almost every datatype in Python, there is a function with the same (or similar) name that is used to create an object of that datatype or convert something from a different datatype.
 
 | Name                                  | Function  | Example                       | Explanation                                                                                      |

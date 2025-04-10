@@ -103,7 +103,7 @@ print(my_list)     # Output: [1, 3, 5, 7, 8, 9]
 If the reference count (how many times it is pointed to by variables) of an object in memory gets down to zero it is no longer needed. Then Pythons automatic garbage collector will free up the storage so that it can be used for a different purpose. So using `del` or exiting the [[#Scope|scope]] of a variable will delete the reference. And as soon as there are no more references anywhere the object in memory will be deleted.
 
 # Naming Rules
-There are a few rules that all variable names must follow.
+There are a few rules that all variable names must follow. The same rules apply to functions, classes, attributes and methods.
 1. **Start with a letter or an underscore**: A variable name must begin with a letter (a-z, A-Z) or an underscore `_`.
 2. **Can contain letters, numbers, and underscores**: A variable name can contain any amount of letters, numbers, and underscores, but no special characters or spaces.
 3. **Cannot be a reserved [[8 Keyword|keyword]]**: Avoid Python’s built-in keywords like `if`, `for`, `class`, `del`, ...
@@ -195,7 +195,7 @@ This simple type hinting works with most datatypes. With many collection datatyp
 
 # Questions
 - [ ] Explain variables and their usage in your own words.
-- [ ] Explain Objects in Python.
+- [ ] Explain Memory Objects in Python.
 - [ ] What is the meaning/difference of variable, value, reference, object, and (data-)type in python
 - [ ] Show and explain the creating, accessing, updating and deleting of variables.
 - [ ] Do you have to tell Python which datatype a variable has?

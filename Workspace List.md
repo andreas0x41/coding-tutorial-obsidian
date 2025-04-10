@@ -18,6 +18,9 @@ table file.link as "Note", text as "Checkbox"
 from "content"
 where contains(file.tasks.text, "[ ]") and contains(file.tasks.header, "Questions")
 ```
+
+test
+
 ```dataviewjs
 // Iterate through all pages in the vault
 for (let page of dv.pages()) {
@@ -35,8 +38,7 @@ for (let page of dv.pages()) {
     }
 }
 ```
-
-
+tet
 ```dataview
 TASK
 FROM "content"
