@@ -74,30 +74,6 @@ Hello, Andreas!
 Hello, !
 ```
 
-## Parameter Mutability
-Using a variable as an argument will create a new pointer to the same [[content/Theory Exam/1 General/6 Variable#Memory Objects|memory object]]. So you have to be careful with the [[content/Theory Exam/1 General/6 Variable#Mutability Behaviour|mutability behavior]]. 
-
-```python
-def mutabilityExample(immutable, mutable):
-	print(id(immutable), id(mutable))
-	immutable += 2
-	mutable[1] = 20
-	print(id(immutable), id(mutable))
-a = 1
-b = [1, 2, 3, 4]
-print(a, b)
-mutabilityExample(a, b)
-print(a, b)
-```
-
-```output
-1 [1, 2, 3, 4]
-140714660586280 2470666856576
-140714660586344 2470666856576
-1 [1, 20, 3, 4]
-```
-
-You can see that changing the value of [[content/Theory Exam/1 General/6 Variable#Mutability Behaviour|mutable variables]] applies to the [[content/Theory Exam/1 General/6 Variable#Memory Objects|memory object]] itself and therefore also outside the function.
 # Return
 A function can return a value using the `return` keyword. The return value will be put exactly where the function call happened. 
 
@@ -146,18 +122,6 @@ If a function does not return anything, it returns [[content/Theory Exam/1 Gener
 print(print())   # print the return value of print -> None
 ```
 
-## Return Multiple Values
-You can return multiple comma-separated values, which will be interpreted like a [[content/Theory Exam/1 General/5 Datatype#Tuple|tuple]]. You can extract the individual values using [[content/Theory Exam/1 General/5 Datatype#Indexing|indexing]] or [[content/Theory Exam/1 General/7 Operator#Multiple Value Assignment|multiple value assignment]].
-
-```python
-def example():
-	return 1, "a", 0.4
-values = example()
-print(values)                          # -> (1, 'a', 0.4)
-a, b, c = example()
-print(f"[0]: {a}, [1]: {b}, [2]: {c}") # -> [0]: 1, [1]: a, [2]: 0.4
-```
-
 # Scope
 The general principle of scope is explained on the [[content/Theory Exam/1 General/6 Variable#Scope|variables]] page. You can refer to a global variable from inside a function using the `global`[[content/Theory Exam/1 General/8 Keyword|keyword]].
 
@@ -187,35 +151,6 @@ variable value inside usingLocal(): 9 10709776
 variable value after usingLocal(): 5 10709616
 variable value inside usingGlobal(): 5 10709616
 variable value after usingGlobal(): 9 10709776
-```
-
-> [!todo]- not exam relevant
-> Nonlocal is rarely used and not exam relevant.
-
-You can refer to a variable one layer outside of the current function using the `nonlocal`[[content/Theory Exam/1 General/8 Keyword|keyword]].
-
-```python
-def outer_function():
-    x = 10 
-	print(f"1: {x} {id(x)}")
-
-    def inner_function():
-        nonlocal x
-        print(f"2: {x} {id(x)}")
-        x = 20
-		print(f"3: {x} {id(x)}")
-
-    inner_function()
-    print(f"4: {x} {id(x)}")
-
-outer_function()
-```
-
-```output
-1: 10 140714660586568
-2: 10 140714660586568
-3: 20 140714660586888
-4: 20 140714660586888
 ```
 
 # Methods

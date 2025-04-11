@@ -18,7 +18,6 @@ Conditions allow code to make decisions. Each individual decision is based on on
 - **Else**: Follows an `if` or `elif`, executing only if all prior conditions are [[content/Theory Exam/1 General/5 Datatype#Truthy and Falsy|falsy]].
 - **Elif**: Allows checking multiple conditions. The first [[content/Theory Exam/1 General/5 Datatype#Truthy and Falsy|truthy]] condition is executed, and the rest are skipped.
 - **Combined Usage**: A conditional starts with `if`, can have multiple `elif`, and at most one `else`. Execution stops at the first [[content/Theory Exam/1 General/5 Datatype#Truthy and Falsy|truthy]] condition.
-- **Ternary Operator**: A short `if-else` expression (`valueIfTrue if condition else valueIfFalse`) used for conditional assignments.
 
 # If
 The `if` statement checks a condition. If the condition is [[content/Theory Exam/1 General/5 Datatype#Truthy and Falsy|truthy]], the code block inside is executed. If the condition is [[content/Theory Exam/1 General/5 Datatype#Truthy and Falsy|falsy]], the code block inside is ignored/skipped. 
@@ -162,59 +161,6 @@ with 75%
 You could explain what is happening similar to this. Create a new variable called "score" of type integer with the value 75. Output the message "Your grade is: ", but without a "\n" after the print. The first if condition is False because 75 is not greater than 88. Next check the first elif condition, which is also False, because 75 is not greater than 76. Check the next elif condition (line 9), which is True, because 75 is greater than 64. Go inside the elif block and output "C", which will be on the same line as the first message. Then output "solid" on a new line. Go after the conditional statement and output the message "with 75%" on a new line.
 
 
-# Ternary Operator
-> [!todo]- not exam relevant
-> Not exam relevant, but can be really helpful.
-
-The ternary operator is a short way to write a `if-else` statement, that returns a value. The syntax for this is `valueIfTrue if condition else valueIfFalse`. This is often used to assign a value to a [[content/Theory Exam/1 General/6 Variable|variable]] based on a condition. The following code shows you how to do this using the classic `if-else` and the ternary operator.
-
-```python
-condition = True
-
-# if-else
-if condition:
-	x = 10
-else:
-	x = 0
-print(x)
-
-#ternary operator
-x = 10 if condition else 0
-print(x)
-```
-
-```output
-10
-10
-```
-
-The ternary operator does not support `elif`, but you can use nesting to achieve the same functionality. 
-
-```python
-age = 21
-student = True
-
-# if-else
-message = "your discount is: "
-if age < 15:
-    message += "child"
-elif age<30 and student:
-    message += "student"
-else:
-    message += "none"
-print(message)
-
-#ternary operator
-message = "your discount is: " + ("child" if age<15 else ("student" if(age<30 and student) else "none"))
-print(message)
-```
-
-```output
-your discount is: student
-your discount is: student
-```
-
-This is very helpful for compact conditional assignments but can get confusing when overdone.
 # Questions
 - [ ] What is the purpose of Conditions in programming?
 - [ ] Explain `if` in your own words.
@@ -236,16 +182,3 @@ This is very helpful for compact conditional assignments but can get confusing w
     ```
 
 - [ ]  Write an `if-elif-else` statement that prints whether a number is positive, negative, or zero.
-- [ ]  Explain the ternary operator in your own words.
-- [ ]  How/When/Why is the ternary operator useful?
-- [ ]  Can the ternary operator handle multiple conditions? How?
-- [ ]  Convert this `if-else` statement into a ternary operator.
-
-	```python
-    if age < 18:
-        discount = True
-        category = "Minor"
-    else:
-        discount = False
-        category = "Adult"
-    ```

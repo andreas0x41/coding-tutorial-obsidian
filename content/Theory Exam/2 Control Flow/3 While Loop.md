@@ -16,7 +16,6 @@ A `while` loop is used to repeat a block of code as long as a specified conditio
 - **Basic Usage**: Similar to an [[content/Theory Exam/2 Control Flow/2 Conditions|if condition]] but runs repeatedly. The condition value should eventually change to avoid infinite loops.
 - **Break**: Exits the loop immediately, regardless of the condition.
 - **Continue**: Skips the rest of the current iteration, goes back to the top of the loop, and checks the condition again.
-- **Else**: Runs only if the loop ends normally (not because of `break`).
 
 # Basic
 A `while` loop is similar to a [[content/Theory Exam/2 Control Flow/2 Conditions|if statement]] and also has a [[content/Theory Exam/1 General/5 Datatype#Boolean|boolean]] condition. But instead of executing the code block inside once, it is executed repeatedly as long as the condition is [[content/Theory Exam/1 General/5 Datatype#Truthy and Falsy|truthy]].
@@ -125,32 +124,6 @@ skipping 3                     # lines: 4, 5, 6, 7, 8
 end with count=3 and i=10      # lines: 4, 10
 ```
 
-# Else
-> [!todo]- not exam relevant
-> Not exam relevant, very rarely used.
-
-The [[content/Theory Exam/1 General/8 Keyword|keyword]] `else` can be used with a while loop. The code inside will only execute if the loop ends normally after all the iterations. If the loop stops because of a `break`, the code inside `else` will be ignored.
-
-```python
-num = int(input("Please input a integer number: "))
-i = 2
-
-while i < num:
-    if num % i == 0:
-        print(f"{num} is not a prime number because it is divisible by {i}")
-        break
-    i += 1
-else:
-    print(f"{num} is a prime number")
-
-```
-
-```output
-input 5:        5 is a prime number
-input 15:       15 is not a prime number because it is divisible by 3
-input 29:       29 is a prime number
-```
-
 # Questions
 - [ ] Explain `while` in your own words.
 - [ ] What differences and similarities between an `if` statement and a `while` loop?
@@ -166,5 +139,4 @@ while count > -3:
     count -= 1
 ```
 
-- [ ] Explain `else` in combination with a `while` loop in your own words. 
 - [ ] How can a `while` loop be used to sum all even numbers from 1 to 100? Explain and write the code.

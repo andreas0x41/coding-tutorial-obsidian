@@ -20,7 +20,7 @@ Control Flow determines the execution order of code in a program.
 - **Line by Line**: Code executes sequentially, top to bottom.
 - **Selection**: [[content/Theory Exam/2 Control Flow/2 Conditions|Conditional statements]] like`if-else` allow decisions based on conditions.
 - **Iteration**: Loops like [[content/Theory Exam/2 Control Flow/3 While Loop|while]] or [[content/Theory Exam/2 Control Flow/4 For Loop|for]] repeat code while a condition is true or for a number of iterations.
-- **Jumps**: `break` exits loops, `continue` skips to the next iteration, and `goto` jumps to a specific line/block.
+- **Jumps**: `break` exits loops, `continue` skips to the next iteration
 - **Subroutines**: [[content/Theory Exam/2 Control Flow/5 Function|Functions]] encapsulate reusable code, called with arguments and return values.
 - **Errors & Exceptions**: Interrupt the normal execution; Exceptions can be recovered using `try-except`.
 
@@ -103,11 +103,6 @@ for i in range(99):
 14
 ```
 
-> [!todo]- not exam relevant
-> This is good to know, but not directly exam relevant.
-
-In many languages, there is some kind of `goto` statement. This allows you to jump to a specific line or block of code and continue the normal execution from there. However, this is not possible in Python and is nowadays usually thought of as a bad coding style. You can do basically everything with other Control Flow methods than a `goto`. Still, it is good to know the general idea, since a few languages heavily use it. You can even think of, or sometimes see an implementation where, `goto` and `conditional goto` are the only Control Flow, or at least the building blocks for all others.
-
 # Subroutines
 A subroutine is a reusable block of code that performs a specific task. The most common type of subroutine is a function. When a function is called, the program jumps to the definition of the function, executes the code inside, and then returns the position where it was called. Additionally, you can give values to a function using arguments and receive values using return.
 
@@ -146,17 +141,6 @@ except ZeroDivisionError:         # Exception handled using try-except block
 - [ ] Explain selection in your own words. 
 - [ ] Explain repetition/iteration in your own words.
 - [ ] Explain `break` and `continue` in your own words.
-- [ ] Explain `goto` in your own words.
 - [ ] Explain subroutines in your own words.
 - [ ] Explain errors and exceptions in your own words.
 - [ ] What are the differences between a Syntax Error and an Exception? Explain with examples.
-- [ ] Explain in detailed small steps how this code will be executed step by step, what it does, what output it gives, and also the order of operations step by step.
-
-```python
-x = 5
-y = x
-print(x+y*x)
-y = 1
-print(x**y)
-print(x > y and x % (2 * y) > y)
-```

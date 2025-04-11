@@ -184,7 +184,7 @@ print(f"New price of {car2.brand} is {car2.price}$.") # -> New price of BMW is 3
 
 # Encapsulation
 
-**Encapsulation** means **hiding internal** details and data and exposing only what’s necessary. For example you can drive a car without knowing how the engine works. When using a credit card you can't set your balance directly. Instead, you have to use the public deposit and withdraw methods. This can help to make make code cleaner, safer, and easier to use.
+**Encapsulation** means **hiding internal** details and data and exposing only what’s necessary. For example you can drive a car without knowing how the engine works. When using a credit card you can't set your balance directly. Instead, you have to use the public deposit and withdraw methods. This can help to make code cleaner, safer, and easier to use.
 - Keeps internal logic hidden and protected
 - Prevents misuse of sensitive data
 - Allows controlled access via methods (getters/setters)
@@ -196,9 +196,10 @@ In general there are the tree access levels public, protected and private.
 | Public    | `name`   | Can be accessed from anywhere                                     |
 | Protected | `_name`  | Should only be used within the class or subclasses (not enforced) |
 | Private   | `__name` | Should only be used inside the class itself (lightly enforced)    |
+
 Python uses naming conventions to suggest access level. Unlike many other languages, Python does not strictly enforce these rules. It is more like warning the programmer and reminding him how something should be used. These access levels and naming conventions are the same for attributes and for methods.
 
-*Python still makes it possible to access private with the syntax `objectName._className__name`. However, you should basically never do this.*
+Python still makes it possible to access private with the syntax `objectName._className__name`. However, you should basically never do this.
 
 ```python
 class Account:

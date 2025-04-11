@@ -13,10 +13,7 @@ tags:
 ---
 
 # Summary
-
 - **`print()`:** Outputs values of any [[content/Theory Exam/1 General/5 Datatype|datatype]] to the console.
-- Use `end` to define what follows the output. Default is a [[content/Theory Exam/1 General/5 Datatype#Special Characters|newline]].
-- Use `sep` to define what separates the values.
 
 # Simple Print
 
@@ -75,51 +72,14 @@ Below you see the exact output of these print statements.
 ```
 
 # Multiple Values
-> [!todo]- less exam relevant
-> Less exam relevant, but still good/helpful to know.
-
 The `print()` function can take multiple comma-separated [[content/Theory Exam/2 Control Flow/5 Function#Parameters|arguments]] and output them. By default, these values will be separated with spaces.
 
 ```python
 print("Hello", "World", "Python") # -> Hello World Python
 ```
 
-# End Parameter
-> [!todo]- less exam relevant
-> Less exam relevant, but still good/helpful to know.
-
-The parameter `end` defines what will be outputted after all of the printed values. You can use any [[content/Theory Exam/1 General/5 Datatype#string|string]], default is a [[content/Theory Exam/1 General/5 Datatype#Special Characters|newline]].
-
-```python
-print("This doesn't end with a newline", end=" ---> ")
-print("This continues", end=" ")
-print("on the same line.")
-```
-
-```text
-This doesn't end with a newline ---> This continues on the same line.
-```
-
-# Sep Parameter
-> [!todo]- less exam relevant
-> Less exam relevant, but still good/helpful to know.
-
-The parameter `sep` defines how multiple printed values should be separated. You can use any [[content/Theory Exam/1 General/5 Datatype#string|string]], default is a space.
-
-```python
-print("Hello", "World", "Python", sep=" | ") # -> Hello | World | Python
-print("Shopping List: Apple", "Banana", "Bread", "Milk", sep=", ")  # -> Shopping List: Apple, Banana, Bread, Milk
-```
-
 # Questions
 
 - [ ] Explain `print()` in your own words.
 - [ ] If the `print()` function is called without any arguments, what will happen? Give and explain an example with multiple `print()` functions.
-- [ ] Explain the parameter `end` in your own words including an example.
-- [ ] Explain the parameter `sep` in your own words including an example.
-- [ ] What will be the output of the following code?
-
-```python
-  print("Python", "is", "fun", sep="-", end="! ")
-  print("Let's code.")
-```
+- [ ] Explain `print()` multiple values.

@@ -92,9 +92,9 @@ del x              # deleting x
 
 my_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 del my_list[0]     # delete the first element
-print(my_list)     # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(my_list)     # -> [1, 2, 3, 4, 5, 6, 7, 8, 9]
 del my_list[1:7:2] # delete every second item from the 2nd to the 8th
-print(my_list)     # Output: [1, 3, 5, 7, 8, 9]
+print(my_list)     # -> [1, 3, 5, 7, 8, 9]
 ```
 
 > [!todo]- not exam relevant

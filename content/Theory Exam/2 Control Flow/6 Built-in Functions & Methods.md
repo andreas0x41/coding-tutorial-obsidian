@@ -13,22 +13,17 @@ tags:
 ---
 Python has many built-in [[content/Theory Exam/2 Control Flow/5 Function|functions]] and methods. Below or online you can find a overview of these functions and methods. The relevant ones are either already explained in other chapters, or after the table.
 
-> [!todo]- partly exam relevant
-> Only some of these Functions and Methods ae actually exam relevant.
 # Overview
 
-| Category                    | Function/Method                                                                                                                                                                            |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Type & Casting**          | `type()`, `int()`, `float()`, `str()`, `bool()`, `list()`, `tuple()`, `dict()`, `set()`, `frozenset()`, `complex()`, `bytes()`, `bytearray()`, `memoryview()`, `ord()`, `chr()`, `ascii()` |
-| **Mathematical**            | `abs()`, `round()`, `pow()`, `divmod()`, `sum()`, `min()`, `max()`                                                                                                                         |
-| **Iterables & Sequences**   | `len()`, `sorted()`, `reversed()`, `enumerate()`, `zip()`, `filter()`, `map()`, `all()`, `any()`                                                                                           |
-| **String Handling**         | `.lower()`, `.upper()`, `.strip()`, `.split()`, `.join()`, `.replace()`, `.startswith()`, `.endswith()`, `.find()`, `.count()`                                                             |
-| **List Methods**            | `.append()`, `.extend()`, `.insert()`, `.remove()`, `.pop()`, `.index()`, `.count()`, `.sort()`, `.reverse()`, `.copy()`, `.clear()`                                                       |
-| **Set Methods**             | `.add()`, `.remove()`, `.discard()`, `.pop()`, `.union()`, `.intersection()`, `.difference()`, `.symmetric_difference()`, `.issubset()`, `.issuperset()`, `.copy()`, `.clear()`            |
-| **Dictionary Methods**      | `.keys()`, `.values()`, `.items()`, `.get()`, `.pop()`, `.update()`, `.copy()`, `.clear()`                                                                                                 |
-| **File Handling**           | `open()`, `.read()`, `.readline()`, `.readlines()`, `.write()`, `.writelines()`, `.close()`                                                                                                |
-| **Object & Class Handling** | `isinstance()`, `issubclass()`, `getattr()`, `setattr()`, `hasattr()`, `delattr()`, `dir()`, `vars()`, `super()`                                                                           |
-| **System & Debugging**      | `print()`, `input()`, `exit()`, `id()`, `hash()`, `help()`, `repr()`, `callable()`, `exec()`, `eval()`, `globals()`, `locals()`                                                            |
+| Category                    | Function/Method                                                                                                                 |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Type & Casting**          | `type()`, `int()`, `float()`, `str()`, `bool()`, `list()`, `tuple()`, `dict()`                                                  |
+| **Mathematical**            | `abs()`, `round()`, `sum()`, `min()`, `max()`                                                                                   |
+| **Iterables & Sequences**   | `len()`, `sorted()`                                                                                                             |
+| **String Handling**         | `.lower()`, `.upper()`, `.split()`, `.join()`, `.replace()`, `.find()`, `.count()`                                              |
+| **List Methods**            | `.append()`, `.extend()`, `.insert()`, `.remove()`, `.index()`                                                                  |
+| **Dictionary Methods**      | `.keys()`, `.values()`, `.items()`                                                                                              |
+
 
 
 # Mathematical Functions
@@ -88,14 +83,6 @@ print(len("a b\n"))     # -> 4
 print(len([1, (2, 3)])) # -> 2
 ```
 
-## `.index(sub, start=0, stop=None)`
-
-Returns the index of the first occurrence of `sub` in the collection. Throws a `Value Error` if `value` is not in the list. You can use `start` and `stop` to only search in a slice of the collection.
-
-```python
-print([4, 2, 7, 3, 1, 3].index(3)) # -> 3
-```
-
 ## `sorted(iterable, *, key=None, reverse=False)`
 
 Returns a new sorted list from `iterable`. Default is ascending (smallest to largest), but you can `reverse` it. The `key` can take a [[content/Theory Exam/2 Control Flow/5 Function|function]] that will be executed for each element to determine the value that will be used for sorting. You can also sort a existing list in place with the method `.sort()`.
@@ -104,49 +91,6 @@ Returns a new sorted list from `iterable`. Default is ascending (smallest to lar
 print(sorted([3, 1, 2]))  # -> [1, 2, 3]
 people = [{"name": "Andreas", "size": 181}, {"name": "Tom", "size": 168}]
 print(sorted(people, key=lambda x: x["size"])) # -> [{'name': 'Tom', 'size': 168}, {'name': 'Andreas', 'size': 181}]
-```
-
-## `reversed(iterable)`
-
-Returns an iterator thats the reversed order of the initial `iterable`. You can also reverse a existing list in place with the method `.reverse()`.
-
-```python
-print(list(reversed([1, 2, 3])))  # -> [3, 2, 1]
-```
-
-## `enumerate(iterable, start=0)`
-
-Returns an iterator with `(index, value)` pairs from `iterable`. You can set a `start` value for indexing (default: 0)
-
-```python
-print(list(enumerate([33, 66, 99])))     # -> [(0, 33), (1, 66), (2, 99)]
-print(list(enumerate("abc", start=10)))  # -> [(10, 'a'), (11, 'b'), (12, 'c')]
-```
-
-## `zip(*iterables, strict=False)`
-
-Combines iterables element-wise. The number of combined objects will be the same as the number of objects in the smallest iterable. If `strict`, then raise a `ValueError` if not all iterables have the same length.
-
-```python
-print(list(zip([1, 2], ["a", "b"])))  # -> [(1, 'a'), (2, 'b')]
-print(list(zip([1,2,3], (1j,2j,3j,4j), "abcdef")))  # -> [(1, 1j, 'a'), (2, 2j, 'b'), (3, 3j, 'c')]
-```
-
-## `filter(function, iterable)`
-
-Filters so that only elements for which`function` returns `True` are remaining.
-
-```python
-print(list(filter(lambda x: x>0, [-1, 2, -3, 4])))  # -> [2, 4]
-```
-
-## `map(function, iterable)`
-
-Applies `function` to each item.
-
-```python
-print(list(map(lambda x: 10*x, [1, 2, 3])))  # -> [10, 20, 30]
-print(list(map(str, [1, 2, 3])))             # -> ['1', '2', '3']
 ```
 
 # String Methods
@@ -158,17 +102,6 @@ Returns string in all lower-/uppercase characters.
 ```python
 print("Hello".lower())  # -> hello
 print("Hello".upper())  # -> HELLO
-```
-
-## `.strip(character="")`
-
-Returns a string without all `characters` at the start end end of the initial string. By default removes all whitespace type characters. Everything between the two outer most characters that are not in the `characters` to remove will be kept. You can use `.lstrip()`/`.rstrip()` to only remove from the start/end.
-
-```python
-print("  \n test message \n".strip())                      # -> test message
-print("  \n test message \n".lstrip())                     # -> test message \n
-print("  \n test message \n".rstrip())                     # ->   \n test message
-print("  \n, ,,;; test, message,, ,;; \n".strip(" \n,;"))  # -> test message
 ```
 
 ## `.split(sep=" ", maxsplit=-1)`

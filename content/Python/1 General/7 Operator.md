@@ -108,8 +108,7 @@ You probably already know most arithmetic operators from mathematics. With numbe
 | Modulus/Remainder           | `%`      | `a % b`  | `7 % 2 = 1`                                    |
 | Exponentiation (Power)      | `**`     | `a ** b` | `3 ** 2 = 9`                                   |
 
-Exponentiation also works with floats, and fractional exponents can be used to calculate roots. So same as in mathematics a square root is
-$\sqrt{a} = a^{\frac{1}{2}}$ or in general $\sqrt[n]{a^m} = a^{\frac{m}{n}}$.
+Exponentiation also works with floats, and fractional exponents can be used to calculate roots. So same as in mathematics a square root is $\sqrt{a} = a^{\frac{1}{2}}$ or in general $\sqrt[n]{a^m} = a^{\frac{m}{n}}$.
 ## Division Operators
 Python actually has three different operators related to division. The true division `/` will give you an accurate division result that is always a float number. The floor division `//` will return the result of doing the division and then **rounding down** to the next lowest whole number. The modulo `%` will return the **remainder** when doing a whole number division. 
 
@@ -320,18 +319,6 @@ print("IT" in "CAPITALIZATION MATTERS") # -> True
 
 You can also check if a value is not in a collection using the syntax `not (value in collection)` or `value not in collection`.
 
-
-> [!quote]- Additional not exam relevant topics for later
-> 
-> Set Operators 
-> 
-> Dictionary Operators 
-> 
-> Collection Unpacking 
-> 
-> Bitwise Operators
-
-
 # Precedence
 Operator precedence determines the order in which operators are evaluated. If two have the same precedence python works from left to right. This is a generalization of the mathematical order of operations PEMDAS (Parentheses, Exponents, Multiplication and Division, Addition and Subtraction).
 
@@ -354,6 +341,18 @@ Operator precedence determines the order in which operators are evaluated. If tw
 | `if` ... `else`                  | [[content/Python/2 Control Flow/2 Conditions#Ternary Operator\|Ternary Operator]] |
 | `=` , `+=`, `-=`, etc.           | Assignment and augmented assignment operators         |
 | `lambda`                         | Lambda function declaration                           |
+
+
+
+> [!quote]- Additional not exam relevant topics for later
+> 
+> Set Operators 
+> 
+> Dictionary Operators 
+> 
+> Collection Unpacking 
+> 
+> Bitwise Operators
 
 
 

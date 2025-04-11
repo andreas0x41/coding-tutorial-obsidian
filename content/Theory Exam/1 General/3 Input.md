@@ -47,9 +47,4 @@ print("The user entered the number:", x) # -> The user has entered the number {?
 - [ ] What does the `input()` function always return, regardless of the type of input?
 - [ ] How can you store the value returned by `input()` for later use?
 - [ ] What argument can you give to `input()`, what does it do, and what is it usually used for? 
-- [ ] Modify the code to ask the user for their name and greet them with a personalized message.
-
-```python
-  x = input()  
-  print("x: ", x)
-```
+- [ ] Write code to ask the user for their name and greet them with a personalized message.

@@ -33,8 +33,6 @@ The assignment operator `=` is used to [[content/Theory Exam/1 General/6 Variabl
 x = 5 # assign the value 5 to the variable x
 ```
 
-> [!todo]- less/not exam relevant
-> The following 3 subchapters show more advanced usage. It can be helpful to know about this, but especially the last two are not exam relevant.
 ## Augmented Assignment
 You can combine the assignment operator with an arithmetic or bitwise operator. This will apply the operation to the current value of the variable and then assign the resulting value to the variable again. This is done by putting the other operator between the variable name and the assignment with the syntax `var_name operator= value`.
 
@@ -46,52 +44,6 @@ x -= 2 * 4 # same as "x=x-2*4", result -2, because of precedence
 x **= 2    # same as "x=x**2", result 4
 x <<= 1    # same as "x=x<<2", result 8
 x //= 3    # same as "x=x//3", result 2
-```
-
-## Multiple Value Assignment
-Python allows you to assign multiple values at once using the syntax `var1, var2, var3 = val1, val2, val3`. You can also use this with an [[content/Theory Exam/1 General/5 Datatype#Iterable|iterable]] with the syntax `var1, var2, var3 = (val1, val2, val3)`. If there are more values than variables, you have to tell Python which variable should take a list of multiple values by marking it with an asterisk`*` like this `var1, *others = (val1, val2, val3, val4)`.
-
-```python
-a, b, c = 1, True, "test"      # multiple value assignment 
-print(a, b, c)                 # -> 1 True 'test'
-
-a, b = b, a                    # swap the values of two variables
-print(a, b)                    # -> True 1
-
-a, *b = (1, 2, 3, 4, 5)        # a takes the first, b takes a list of all others
-print(a)                       # -> 1
-print(b)                       # -> [2, 3, 4, 5]
-
-*a, b, c = 1, 2                # c takes the last, b the second last, a takes all extra, which are in this case no elements at all
-print(a)                       # -> []
-print(b)                       # -> 1
-print(c)                       # -> 2
-
-a, *b, c = "This is some text" # a takes the first, c takes the last, b takes all in the middle as a list
-print(a)                       # -> T
-print(b)                       # -> ['h', 'i', 's', ' ', 'i', 's', ' ', 's', 'o', 'm', 'e', ' ', 't', 'e', 'x']
-print(c)                       # -> t
-```
-
-## Walrus Operator
-> [!todo]- not exam relevant
-> Not exam relevant, rarely used, but sometimes really helpful.
-
-The walrus operator `:=` does the assignment and returns the value for further use. This can be helpful to reduce code duplication, especially with conditions or loops. The walrus operator can also be combined with augmented assignment.
-
-```python
-# Without Walrus Operator
-value = input("Enter x to stop the loop: ")
-while value != "x":
-    print("Inside while loop with input:", value)
-    value = input("Enter x to stop the loop: ")
-print("loop finished")
-
-# With Walrus Operator
-while (value := input("Enter x to stop the loop: ")) != "x":
-# this will take input, assign it to the variable value, and also return it to also be used in for value != "x"
-    print("Inside while loop with input:", value)
-print("loop finished")
 ```
 
 # Arithmetic Operators
@@ -108,8 +60,7 @@ You probably already know most arithmetic operators from mathematics. With numbe
 | Modulus/Remainder           | `%`      | `a % b`  | `7 % 2 = 1`                                    |
 | Exponentiation (Power)      | `**`     | `a ** b` | `3 ** 2 = 9`                                   |
 
-Exponentiation also works with floats, and fractional exponents can be used to calculate roots. So same as in mathematics a square root is
-$\sqrt{a} = a^{\frac{1}{2}}$ or in general $\sqrt[n]{a^m} = a^{\frac{m}{n}}$.
+Exponentiation also works with floats, and fractional exponents can be used to calculate roots. So same as in mathematics a square root is $\sqrt{a} = a^{\frac{1}{2}}$ or in general $\sqrt[n]{a^m} = a^{\frac{m}{n}}$.
 ## Division Operators
 Python actually has three different operators related to division. The true division `/` will give you an accurate division result that is always a float number. The floor division `//` will return the result of doing the division and then **rounding down** to the next lowest whole number. The modulo `%` will return the **remainder** when doing a whole number division. 
 
@@ -154,24 +105,13 @@ print(5.9 // 2)   # -> 2.0
 
 When using operators with collections the result datatype is the same as the datatype of the collection you use.
 ## Collection Usage
-The operators `+` and `*` can also be used with [[content/Theory Exam/1 General/5 Datatype#Collection Datatypes|sequence datatypes]]. The `+` operator is used to concatenate / combine two strings, lists, or tuples of the **same** datatype.
+The `+` operator is used to concatenate / combine two strings, lists, or tuples of the **same** datatype.
 
 ```python
 print("Hello" + " " + "World")      # -> Hello World
 print([1, 2] + [3, 4])              # -> [1, 2, 3, 4]
 print((1, 2) + (3, (True, "Test"))) # -> (1, 2, 3, (True, 'Test'))
 print("Hello" + [1, 2])             # ERROR because they have different datatypes
-```
-
-> [!todo]- not exam relevant
-> Not exam relevant, rarely used, but sometimes really helpful.
-
-The `*` operator is used to repeat a string, list, or tuple multiple times. You have to give the sequence you want to repeat and how often you want to repeat as a positive integer.
-
-```python
-print(3 * "Hello") # -> HelloHelloHello
-print([0] * 10)    # -> [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-print((1,2,3) * 2) # -> (1, 2, 3, 1, 2, 3)
 ```
 
 # Relational/Comparison Operators
@@ -215,35 +155,6 @@ print(1 >= 1.0)  # -> True
 print(1 <= 1.0)  # -> True
 ```
 
-> [!todo]- not exam relevant
-> Not exam relevant, advanced and rarely used.
-
-These operators can also be used with the [[content/Theory Exam/1 General/5 Datatype#Collection Datatypes|sequence datatypes]] string, list, and tuple. Both operands must be of the same datatype. This will check the operation for all pairs of elements one by one. So as soon as there is a pair of elements that do not have the same value it will result in a total result of either `True` or `False`. If they have different lengths but the element pairs are all equal, the shorter sequence is considered smaller.
-
-```python
-print([1] < [2])                  # because 1<2 -> True
-print([1, 3] < [1, 2])            # because 3<2 -> False
-print([1, 0.5, 9] < [1, 1, 0])    # because 0.5<1 -> True
-print([1, 2, 3] < [1, 2, 3])      # because equal -> False
-print([1, 2, 3] <= [1, 2, 3])     # because equal -> True
-print([1, 2, 3] < [1, 2, 3, -99]) # because list 1 is shorter and the common elements are the same -> True
-print("a" < "b")                  # -> True
-print("computer" < "compare")     # because "....u..." < "....a..." -> False
-```
-
-## Chained Comparison
-> [!todo]- not exam relevant
-> Not exam relevant, basic usage is good to know, advanced versions are rarely used.
-
-Python allows you to chain comparisons together. This will behave the same way as having an `and` between the individual operations. For example `a < b == c >= d` is the same as `a<b and b==c and c>=d`. The easiest use case is to check if a number is between two others.
-
-```python
-x = 4
-print(1 < x < 10)        # -> True  
-print(4 < x < 10)        # -> False
-print(0 < x < 10 < x**2) # -> True
-```
-
 # Logical Operators
 Logical operators are used to combine multiple comparisons and Booleans to more complex logical statements.
 
@@ -265,23 +176,8 @@ print(not True)                   # -> False
 print(2 == 1 or 2 == 2 or 2 == 3) # -> True
 ```
 
-## Not Boolean Operands
-> [!todo]- not exam relevant
-> Not exam relevant, rarely used, but sometimes really helpful.
-
-As long the operands are boolean, the result will also be boolean. However in Python logical operators also work with operands that are not boolean. They will keep their general behavior and `not` will always return a boolean. The `and` operator stops as soon as it encounters a [[content/Theory Exam/1 General/5 Datatype#Truthy and Falsy|Falsy]] value and returns it. If all values are [[content/Theory Exam/1 General/5 Datatype#Truthy and Falsy|Truthy]], it returns the last operand. The `or` operator stops as soon as it encounters a Truthy value and returns it. If all values are Falsy, it returns the last operand.
-
-```python
-print(0.0 and 1)                    # -> 0.0
-print(0 or 0.0 or "" or "Default")  # -> Default
-print(input() or "Default")
-print(1 and 2 and 3)                # -> 3
-print((5 or 0) and ("" or "World")) # -> World
-```
-
 # Collection Operators
 [[content/Theory Exam/1 General/5 Datatype#Indexing|Indexing]] and [[content/Theory Exam/1 General/5 Datatype#Slicing|Slicing]] are explained in detail on the datatypes page.
-
 ## Membership Checking
 The operator `in` is used to check if a value/element exists in a collection. It always returns a [[content/Theory Exam/1 General/5 Datatype#Boolean|boolean]] and uses the syntax `value in collection`. So basically it checks if any of the elements in the collection is [[#(In-)Equality|equal]] to the value.
 
@@ -320,41 +216,20 @@ print("IT" in "CAPITALIZATION MATTERS") # -> True
 
 You can also check if a value is not in a collection using the syntax `not (value in collection)` or `value not in collection`.
 
-
-> [!quote]- Additional not exam relevant topics for later
-> 
-> Set Operators 
-> 
-> Dictionary Operators 
-> 
-> Collection Unpacking 
-> 
-> Bitwise Operators
-
-
 # Precedence
 Operator precedence determines the order in which operators are evaluated. If two have the same precedence python works from left to right. This is a generalization of the mathematical order of operations PEMDAS (Parentheses, Exponents, Multiplication and Division, Addition and Subtraction).
 
-| Operator                         | Description                                           |
-| -------------------------------- | ----------------------------------------------------- |
-| `()`                             | Parentheses (used to group expressions)               |
-| `**`                             | Exponentiation                                        |
-| `+x`, `-x`, `~x`                 | Unary plus, Unary minus, Bitwise NOT                  |
-| `*`, `/`, `//`, `%`              | Multiplication, Division, Floor division, Modulus     |
-| `+`, `-`                         | Addition, Subtraction                                 |
-| `<<`, `>>`                       | Bitwise left shift, Bitwise right shift               |
-| `&`                              | Bitwise AND                                           |
-| `^`                              | Bitwise XOR                                           |
-| \|                               | Bitwise OR                                            |
-| `==`, `!=`, `>`, `<`, `>=`, `<=` | Comparison operators                                  |
-| `is`, `is not`, `in`, `not in`   | Identity and membership tests                         |
-| `not`                            | Logical NOT                                           |
-| `and`                            | Logical AND                                           |
-| `or`                             | Logical OR                                            |
-| `if` ... `else`                  | [[content/Theory Exam/2 Control Flow/2 Conditions#Ternary Operator\|Ternary Operator]] |
-| `=` , `+=`, `-=`, etc.           | Assignment and augmented assignment operators         |
-| `lambda`                         | Lambda function declaration                           |
-
+| Operator                         | Description                                                                            |
+| -------------------------------- | -------------------------------------------------------------------------------------- |
+| `()`                             | Parentheses (used to group expressions)                                                |
+| `**`                             | Exponentiation                                                                         |
+| `*`, `/`, `//`, `%`              | Multiplication, Division, Floor division, Modulus                                      |
+| `+`, `-`                         | Addition, Subtraction                                                                  |
+| `==`, `!=`, `>`, `<`, `>=`, `<=` | Comparison operators                                                                   |
+| `is`, `is not`, `in`, `not in`   | Identity and membership tests                                                          |
+| `not`                            | Logical NOT                                                                            |
+| `and`                            | Logical AND                                                                            |
+| `or`                             | Logical OR                                                                             |
 
 
 # Questions

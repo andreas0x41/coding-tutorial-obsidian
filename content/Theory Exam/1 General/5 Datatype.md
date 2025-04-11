@@ -17,29 +17,18 @@ A datatype defines how different types of information/data are stored and behave
 
 For almost every datatype in Python, there is a function with the same (or similar) name that is used to create an object of that datatype or convert something from a different datatype.
 
-| Name                                  | Function  | Example                       | Explanation                                                                                      |
-| ------------------------------------- | --------- | ----------------------------- | ------------------------------------------------------------------------------------------------ |
+| Name                                                                | Function  | Example                       | Explanation                                                                                      |
+| ------------------------------------------------------------------- | --------- | ----------------------------- | ------------------------------------------------------------------------------------------------ |
 | [[content/Theory Exam/1 General/5 Datatype#Integer\|Integer]]       | int()     | `0`, `11`, `-3`               | whole number                                                                                     |
-| [[content/Theory Exam/1 General/5 Datatype#Float\|Float]]           | float()   | `1.5`, `1e-4`                 | rational/floating-point number                                                                   |
+| [[content/Theory Exam/1 General/5 Datatype#Float\|Float]]           | float()   | `1.5`, `-0.321`               | rational/floating-point number                                                                   |
 | [[content/Theory Exam/1 General/5 Datatype#Boolean\|Boolean]]       | bool()    | `True`, `False`               | truth value, can only be True or False                                                           |
 | [[content/Theory Exam/1 General/5 Datatype#String\|String]]         | str()     | `'abc'`, `f"x:\n{x}"`         | text, can include, numbers, special characters, ...                                              |
 | [[content/Theory Exam/1 General/5 Datatype#List\|List]]             | list()    | `[1, 1, 2, 3]`                | [[#Mutable\|mutable]] collection of any datatype                                                 |
 | [[content/Theory Exam/1 General/5 Datatype#Tuple\|Tuple]]           | tuple()   | `(1, 1, 2, 3`)                | [[#Mutable\|unmutable]] collection of any datatype                                               |
-| [[content/Theory Exam/1 General/5 Datatype#Set\|Set]]               | set()     | `{2, 1, 3}`                   | [[#Mutable\|mutable]] collection of any datatype without order, indexing or duplicates           |
 | [[content/Theory Exam/1 General/5 Datatype#Dictionary\|Dictionary]] | dict()    | `{"a": 1, "c": "5"}`          | 1 to 1 mapping of not [[#Mutable\|mutable]] keys to [[#Mutable\|mutable]] values of any datatype |
 | [[content/Theory Exam/1 General/5 Datatype#None\|None]]             |           | `None`                        | None means that there is no value                                                                |
 | [[content/Theory Exam/1 General/5 Datatype#Complex\|Complex]]       | complex() | `1j`, `1.2-0.5j`              | complex number with real and imaginary part                                                      |
 | [[content/Theory Exam/1 General/5 Datatype#Range\|Range]]           | range()   | `range(8)`, `range(2, 99, 3)` | range of numbers                                                                                 |
-
-> [!todo]- not exam relevant
-> These functions/methods are mostly not exam relevant.
-
-There are a few built-in functions/methods to check if something is a specific type of data. These are helpful to check input, potentially before converting it.
-
-- **String Methods:** `.isdigit()`, `.isalpha()`, `.isalnum()`, `.isdecimal()`, `.isnumeric()`, `.isspace()`.
-- **Type Checking:** `isinstance(obj, type)`, `type(obj)`, `callable(obj)`.
-- **Regular Expressions**
-
 # Basic Datatypes
 
 ## Integer
@@ -58,13 +47,6 @@ The datatype Float can hold any rational/floating-point number including negativ
 1.5 -0.5 0.0 3.3333 1e-4 2.5e3 -5e6 float("1.3")
 ```
 
-### Scientific Number Notation
-
-> [!todo]- not exam relevant
-> This topic is not exam relevant.
-
-Python supports the scientific notation of writing numbers as a power of 10 for integers and floats. To do this you can give numbers in the format "`number`e`power`". So for example `1e3 == 1 * 10**3 == 1000` or `-1.5e-2 == -1.5 * 10**-2 == -0.015`.
-
 ## Boolean
 
 The datatype Boolean can hold a truth value. There are only two possible options for this value True or False (can also be thought of as 1/0 Yes/No On/Off). This datatype is very important for Control Flow like [[content/Theory Exam/2 Control Flow/2 Conditions|Conditions]] because it is usually based on many "Yes/No Questions", which are answered with a Boolean value. You can use the function `bool()` to convert a value to a Boolean, or create one with value `False` if no argument is given.
@@ -79,25 +61,21 @@ Collection datatypes are a combination of multiple basic datatypes.
 
 Below are some key properties of the collection datatypes available in Python.
 
-| Name                                  | Mutable | Iterable               | Indexing | Slicing | Common Use Case                                     |
-| ------------------------------------- | ------- | ---------------------- | -------- | ------- | --------------------------------------------------- |
+| Name                                                                | Mutable | Iterable               | Indexing | Slicing | Common Use Case                                     |
+| ------------------------------------------------------------------- | ------- | ---------------------- | -------- | ------- | --------------------------------------------------- |
 | [[content/Theory Exam/1 General/5 Datatype#String\|String]]         | No      | Yes                    | Yes      | Yes     | Text processing and manipulation                    |
 | [[content/Theory Exam/1 General/5 Datatype#List\|List]]             | Yes     | Yes                    | Yes      | Yes     | Storing and manipulating mutable sequences          |
 | [[content/Theory Exam/1 General/5 Datatype#Tuple\|Tuple]]           | No      | Yes                    | Yes      | Yes     | Fixed/Constant collections of items                 |
 | [[content/Theory Exam/1 General/5 Datatype#Set\|Set]]               | Yes     | Yes (but no order)     | No       | No      | Ensuring unique elements in a collection, Set Logic |
 | [[content/Theory Exam/1 General/5 Datatype#Dictionary\|Dictionary]] | Yes     | keys, values, or pairs | Keys     | No      | Key-value pair storage and lookups                  |
 | [[content/Theory Exam/1 General/5 Datatype#Range\|Range]]           | No      | Yes                    | Yes      | Yes     | Generating sequences of numbers                     |
-| [[content/Theory Exam/1 General/5 Datatype#Generator\|Generator]]   | No      | Yes                    | No       | No      | Efficient iteration over large datasets             |
-
 ### Mutable
 A mutable object can be modified after it is created, a immutable object can not. This means you can change, add, or remove parts or all of its content without creating a new [[content/Theory Exam/1 General/6 Variable#Memory Objects|object]]. For example, you can change the value of the second item in a list, but you can not change the value of the second item in a tuple or string. All basic datatypes are immutable. So when it seems like the value changes, it is actually a completely new [[content/Theory Exam/1 General/6 Variable#Memory Objects|object]]. You can find the difference in behavior between mutable and immutable variables [[content/Theory Exam/1 General/6 Variable#Mutability Behaviour|here]].
 
 ### Iterable
-
 An iterable is an object that can return its elements one at a time, allowing it to be used in a loop (e.g., `for` loops).
 
 ### Indexing
-
 Indexing refers to accessing individual elements of a sequence using their position (index). Python uses zero-based indexing, meaning the first element has an index of `0`, the second one has an index of `1`... You can also start indexing from the end of the sequence using negative numbers starting from -1, so the last element has an index of `-1`, the second last has an index of `-2`...
 
 ```python
@@ -117,9 +95,6 @@ print(listName) # print the whole list -> [-1, 1, 7, 4, 5, 2]
 
 A [[content/Theory Exam/1 General/5 Datatype#Dictionary|dictionary]] does not have classic ordered indexing with numbers. Instead, each element is a combination of key and value, and you use the key instead of an index
 ### Slicing
-
-> [!todo]- partly exam relevant
-> Basics are relevant, advanced usage is not necessary.
 
 Slicing is used to select a subsequence/portion of a sequence, instead of only one element. You can specify a start, stop, and step.
 
@@ -147,20 +122,6 @@ print(listName[::-1])             # all elements in reverse order -> [9, 2, 5, 4
 print(listName[6:1:-2])           # every second element from the 7th to the 2nd in reverse order -> [9, 5, 7]
 
 print("abcde"[::-1])              # all elements in reverse order -> edcba
-```
-
-> [!todo]- not exam relevant
-> Not exam relevant, rarely used, but sometimes helpful.
-
-You can also set multiple values at the same time using slicing. If you don't give the correct numbers of values to set/replace, you might get unexpected behaviour or an error.
-
-```python
-listName = [3, 1, 7, 4, 5, 2, 9] # create a list and save it in variable listName
-listName[1:4] = [10, 20, 30]     # replace elements from the 2nd to the 5th -> [3, 10, 20, 30, 5, 2, 9]
-listName[-2:] = [400, 500]       # replace elements from the 2nd last to the last -> [3, 10, 20, 30, 5, 400, 500]
-listName[::2] = [1, 2, 3, 4]     # replace every second element -> [1, 10, 2, 30, 3, 400, 4]
-listName[:0] = [-1, -2]          # insert two new elements at the start of the sequence -> [-1, -2, 1, 10, 2, 30, 3, 400, 4]
-listName[2:5] = []               # remove the elements from the 3rd to the 6th -> [-1, -2, 30, 3, 400, 4]
 ```
 
 ## String
@@ -227,31 +188,6 @@ print(f"Pi with two decimal places: {pi:.2f}")       # -> Pi with two decimal pl
 print(f"Documenting operations: {1 + 3 * 2 = }")     # -> Documenting operations: 1 + 3 * 2 = 7
 ```
 
-### Multiple Line String
-
-> [!todo]- less exam relevant
-> Less exam relevant, but still good/helpful to know.
-
-Instead of using single or double quotes at the start and end of a string, you can also use them three times (`'''` or `"""`) to create a multiline string. So within triple quotes, you can have multiple lines of text and it will keep the format, linebreaks, and spacing. You can also combine this with [[#Formatted String]].
-
-```python
-print("""This is a
-multiline string
-    indentation is also
-		as in the code""")
-print(f"""Below you can see an operation
-      {1 + 1 = }""")
-```
-
-```output
-This is a
-multiline string
-    indentation is also
-        as in the code
-Below you can see an operation
-      1 + 1 = 2
-```
-
 ## List
 
 The datatype List can hold a sequence of any datatypes. It is also possible to put collection datatypes inside a list. All list elements are within square brackets `[]` and separated by commas `,`. You can use the function `list()` to convert an [[#Iterable]] value to a list or create an empty list `[]` if no arguments are given. Lists also support [[#Indexing|indexing]], [[#Slicing|slicing]], and many built-in functions/methods. You can add, change or remove elements, because it is [[#Mutable|mutable]].
@@ -266,18 +202,6 @@ You can think of a tuple like a [[#List]] where it is impossible to add, change 
 
 ```python
 (1, 1, 2, 3) () (1, "hello", 3.14, True) ([1,2,3], (-1,-2,-3), {10,20}, {"a": 1, "c": "5"})
-```
-
-## Set
-
-> [!todo]- not exam relevant
-> This topic is not exam relevant, but it is still good to know that this datatype exists and its general behavior.
-
-A set is similar to a [[#List]] but the elements are not stored in any specific order. Because of this, [[#Indexing]] and [[#Slicing]] is not possible. [[#Iterable|Iterating]] is possible, but there is no order defined for the elements. The set elements are within curly brackets `{}` and separated by commas `,`. You can use the function `set()` to convert an [[#Iterable]] value to a set or create an empty set if no arguments are given. You can only create an empty set using the `set()` function because a [[#Dictionary]] also uses curly brackets. You can add or remove elements, because it is [[#Mutable|mutable]]. A set can only store [[#Mutable|immutable]] elements. A set does not allow for any duplicate elements, if you have duplicates only one of them will be stored. A few list operators, functions, and methods will work and there are multiple special ones for sets.
-
-```python
-{1, 2, 3} set() {1, 3.14, "hello"} {"hello", True, 2, 3.14}
-print({1, 2, 1, 1, 3, 2, 3, 4, 5}) # duplicates removed, no specific order -> {3, 5, 1, 4, 2}
 ```
 
 ## Dictionary
@@ -321,9 +245,6 @@ print(x)    # -> None
 
 ## Complex
 
-> [!todo]- less exam relevant
-> Less exam relevant, rarely used.
-
 The datatype Complex represents a complex number. It has a real and an imaginary part, represented as `a + bj`, where `a` is the real part and `b` is the imaginary part. If you have a number with an imaginary part in Python, it will treat/save it as a complex number. You can use the function `complex()` to convert a value to a Complex, or create one with value `0j` if no argument is given. This function can take two numbers, the real part `a` and the complex part `b`, as arguments `complex(a, b)`.
 
 ```python
@@ -340,10 +261,7 @@ print(z.imag)  # -> 4.0
 
 ## Range
 
-> [!todo]- partly exam relevant
-> Basic usage for looping and creating number sequences is necessary. It is good to understand that this is different from list because it does not store all elements in memory and instead generates them on demand. Advanced usage and explanation are not necessary.
-
-The datatype Range is created with the `range()` function and generates a sequence of numbers. It might seem very similar to a list, but the key difference is that not all elements are saved in memory. Instead, they are generated only when they are actually used. It is commonly used in loops and is a memory-efficient [[#Iterable]]. You can not add, remove, or change elements of a range because it is [[#Mutable||immutable]].
+The datatype Range is created with the `range()` function and generates a sequence of numbers. It does not safe all values in memory. Instead, they are generated only when they are actually used. Instead, they are generated only when they are actually used. It is commonly used in loops and is a memory-efficient [[#Iterable]]. You can not add, remove, or change elements of a range because it is [[#Mutable||immutable]].
 
 The `range()` function generates a range of numbers. The arguments are similar to slicing and you can use `range(stop)`, `range(start, stop)`, or `range(start, stop, step)`
 - `start`: The starting number (**inclusive**), default is `0`.
@@ -357,37 +275,10 @@ print(list(range(-10, 10, 2))) # -> [-10, -8, -6, -4, -2, 0, 2, 4, 6, 8]
 print(list(range(100, 0, -9))) # -> [100, 91, 82, 73, 64, 55, 46, 37, 28, 19, 10, 1]
 ```
 
-> [!todo]- not exam relevant
-> This is rarely used and not exam relevant.
-
- [[#Indexing|Indexing]] is possible and returns a number. [[#Slicing|Slicing]] is possible and returns a new range.
-
-```python
-print(list(range(20)))        # -> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-print(range(20)[-5])          # -> 15
-print(range(20)[2::-3])       # -> range(19, 5, -3)
-print(list(range(20)[:5:-3])) # -> [19, 16, 13, 10, 7]
-```
-
-## Generator
-
-> [!todo]- not exam relevant
-> This topic is not exam relevant. It is a bit advanced and rarely used.
-
-The datatype Generator is very similar to [[#Range]] in supporting memory efficient one by one [[#Iterable|iterating]] of elements. The key difference is that it supports all datatypes and you can define your own sequence generators. But they do not support [[#Indexing|indexing]] or [[#Slicing|slicing]] and it is [[#Mutable||immutable]].
-
 ## OOP
-
-> [!todo]- only SDML and AECD
-> This topic is an advanced topic that is only relevant for the SDM and AECD departments. There will be a note only for this at the end.
-
 You can basically define and use your very own datatypes using Object Oriented Programming. You can also import special datatypes created by others. First, you have to define all the attributes (=data) and methods (=behavior) in a class. Then you can create objects based on the class.
 
 # Internal Details
-
-> [!todo]- less exam relevant
-> Less exam relevant, rarely used.
-
 ## Truthy and Falsy
 In Python, any value can be evaluated (e.g. in a [[content/Theory Exam/1 General/7 Operator#Logical Operators|logical operator]], [[content/Theory Exam/2 Control Flow/2 Conditions|condition]], ...) like a boolean. Python will treat it as truthy (`True`) or falsy (`False`) based on its type and value.
 - **Falsy Values**: `False`, `0`, `0.0`, `0j`, `""`, `[]`, `()`, `set()`, `{}`, `None`, `range(0)`
@@ -401,21 +292,6 @@ print(bool(0.000001)) # True
 print(bool(""))       # False
 print(bool(" "))      # True
 ```
-
-> [!quote]- Additional not exam relevant topics for later
-> Contents
-> 
-> Converting between Datatypes
-> 
-> Implicite Conversions
-> 
-> Storage Size and Value Range
-> 
-> Binary
-> 
-> Building Datatypes from Binary
-
-
 
 # Questions
 - [ ] What is a datatype and what is its purpose?
@@ -438,10 +314,6 @@ print(bool(" "))      # True
 - [ ] Explain Tuple in your own words.
 	- [ ] What makes a Tuple different from a List?
 	- [ ] What are some use cases where you would prefer a Tuple compared to a List?
-- [ ] Explain Set in your own words.
-	- [ ] What are the main characteristics of a Set in Python?
-	- [ ] How does a Set differ from a List or Tuple?
-	- [ ] What values can you store in s set and what is special about this?
 - [ ] Explain Dictionary in your own words.
 	- [ ] How can you access values in a Dictionary?
 	- [ ] What datatypes can you use a Dictionary key?
@@ -453,5 +325,4 @@ print(bool(" "))      # True
 	- [ ] How can you get the real and imaginary parts individually?
 - [ ] Explain Range in your own words.
 	- [ ] How does a Range differ from other types like a List?
-- [ ] Explain Generator in your own words.
 - [ ] Explain truthy and falsy in your own words.
