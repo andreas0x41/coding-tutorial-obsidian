@@ -20,7 +20,7 @@ tags:
 
 # Simple Print
 
-You can output to the console with the [[content/Python/2 Control Flow/5 Function|function]] `print()`. You can give `print()` any values of any [[content/Theory Exam/Temp/1 General/5 Datatype|datatype]] as [[content/Python/2 Control Flow/5 Function#Parameters|arguments]] and it will print it to the console.
+You can output to the console with the [[content/Theory Exam/2 Control Flow/5 Function|function]] `print()`. You can give `print()` any values of any [[content/Theory Exam/Temp/1 General/5 Datatype|datatype]] as [[content/Theory Exam/2 Control Flow/5 Function#Parameters|arguments]] and it will print it to the console.
 
 ## Hello World
 
@@ -75,7 +75,7 @@ Below you see the exact output of these print statements.
 ```
 
 # Multiple Values
-The `print()` function can take multiple comma-separated [[content/Python/2 Control Flow/5 Function#Parameters|arguments]] and output them. By default, these values will be separated with spaces.
+The `print()` function can take multiple comma-separated [[content/Theory Exam/2 Control Flow/5 Function#Parameters|arguments]] and output them. By default, these values will be separated with spaces.
 
 ```python
 print("Hello", "World", "Python") # -> Hello World Python

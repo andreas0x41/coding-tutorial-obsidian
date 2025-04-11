@@ -52,7 +52,7 @@ I like cherry
 
 # Break
 
-The [[content/Theory Exam/1 General/8 Keyword|keyword]] `break` works exactly the same as with a [[content/Theory Exam/Temp/2 Control Flow/3 While Loop#Break|while loop]] and is used to immediately exit the loop.
+The [[content/Theory Exam/1 General/8 Keyword|keyword]] `break` works exactly the same as with a [[content/Theory Exam/2 Control Flow/3 While Loop#Break|while loop]] and is used to immediately exit the loop.
 
 ```python
 for num in range(10):
@@ -71,7 +71,7 @@ for num in range(10):
 
 # Continue
 
-The [[content/Theory Exam/1 General/8 Keyword|keyword]] `continue` works exactly the same as with a [[content/Theory Exam/Temp/2 Control Flow/3 While Loop#Break|while loop]] and is used to skip the rest of the current iteration and move to the next one.
+The [[content/Theory Exam/1 General/8 Keyword|keyword]] `continue` works exactly the same as with a [[content/Theory Exam/2 Control Flow/3 While Loop#Break|while loop]] and is used to skip the rest of the current iteration and move to the next one.
 
 ```python
 for num in range(10):
@@ -93,7 +93,7 @@ for num in range(10):
 > [!todo]- not exam relevant  
 > Not exam relevant, very rarely used.
 
-A `for` loop can have an `else` block, which works the same as with a [[content/Theory Exam/Temp/2 Control Flow/3 While Loop#Break|while loop]]. It runs only if the loop finishes normally (without `break`).
+A `for` loop can have an `else` block, which works the same as with a [[content/Theory Exam/2 Control Flow/3 While Loop#Break|while loop]]. It runs only if the loop finishes normally (without `break`).
 
 ```python
 for num in range(2, 10):

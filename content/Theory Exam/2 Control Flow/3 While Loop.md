@@ -13,13 +13,13 @@ tags:
 ---
 A `while` loop is used to repeat a block of code as long as a specified condition is [[content/Theory Exam/1 General/5 Datatype#Truthy and Falsy|truthy]].
 # Summary
-- **Basic Usage**: Similar to an [[content/Theory Exam/Temp/2 Control Flow/2 Conditions|if condition]] but runs repeatedly. The condition value should eventually change to avoid infinite loops.
+- **Basic Usage**: Similar to an [[content/Theory Exam/2 Control Flow/2 Conditions|if condition]] but runs repeatedly. The condition value should eventually change to avoid infinite loops.
 - **Break**: Exits the loop immediately, regardless of the condition.
 - **Continue**: Skips the rest of the current iteration, goes back to the top of the loop, and checks the condition again.
 - **Else**: Runs only if the loop ends normally (not because of `break`).
 
 # Basic
-A `while` loop is similar to a [[content/Theory Exam/Temp/2 Control Flow/2 Conditions|if statement]] and also has a [[content/Theory Exam/1 General/5 Datatype#Boolean|boolean]] condition. But instead of executing the code block inside once, it is executed repeatedly as long as the condition is [[content/Theory Exam/1 General/5 Datatype#Truthy and Falsy|truthy]].
+A `while` loop is similar to a [[content/Theory Exam/2 Control Flow/2 Conditions|if statement]] and also has a [[content/Theory Exam/1 General/5 Datatype#Boolean|boolean]] condition. But instead of executing the code block inside once, it is executed repeatedly as long as the condition is [[content/Theory Exam/1 General/5 Datatype#Truthy and Falsy|truthy]].
 
 ```python
 while condition:
