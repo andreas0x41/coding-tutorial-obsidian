@@ -376,14 +376,17 @@ print(list(range(20)[:5:-3])) # -> [19, 16, 13, 10, 7]
 
 The datatype Generator is very similar to [[#Range]] in supporting memory efficient one by one [[#Iterable|iterating]] of elements. The key difference is that it supports all datatypes and you can define your own sequence generators. But they do not support [[#Indexing|indexing]] or [[#Slicing|slicing]] and it is not [[#Mutable||mutable]].
 
-## Object Oriented Programming
+## OOP
 
 > [!todo]- only SDML and AECD
 > This topic is an advanced topic that is only relevant for the SDM and AECD departments. There will be a note only for this at the end.
 
-You can basically define and use your very own datatypes using OOP or import special datatypes created by others. First, you have to define all the attributes (=values) and behavior in a class. Then you can create objects based on this class.
+You can basically define and use your very own datatypes using Object Oriented Programming. You can also import special datatypes created by others. First, you have to define all the attributes (=data) and methods (=behavior) in a class. Then you can create objects based on the class.
 
 # Internal Details
+
+> [!todo]- less exam relevant
+> Less exam relevant, rarely used.
 
 ## Truthy and Falsy
 In Python, any value can be evaluated (e.g. in a [[7 Operator#Logical Operators|logical operator]], [[2 Conditions|condition]], ...) like a boolean. Python will treat it as truthy (`True`) or falsy (`False`) based on its type and value.

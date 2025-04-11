@@ -184,34 +184,36 @@ print(f"New price of {car2.brand} is {car2.price}$.") # -> New price of BMW is 3
 
 # Encapsulation
 
-**Encapsulation** means **hiding internal** details and data and exposing only what’s necessary. For example you can drive a car without knowing how the engine works. When using a credit card you can't set your balance directly, you have to use the public deposit and withdraw methods. This can help to make make code cleaner, safer, and easier to use.
+**Encapsulation** means **hiding internal** details and data and exposing only what’s necessary. For example you can drive a car without knowing how the engine works. When using a credit card you can't set your balance directly. Instead, you have to use the public deposit and withdraw methods. This can help to make make code cleaner, safer, and easier to use.
 - Keeps internal logic hidden and protected
 - Prevents misuse of sensitive data
 - Allows controlled access via methods (getters/setters)
 
-In general there are the tree access levels public, protected and private, explained below. Python uses naming conventions to suggest access level. Unlike many other languages, Python does not strictly enforce these rules. It is more like warning the programmer and reminding him how an attribute should be used. These access levels and naming conventions are the same for attributes and for methods.
+In general there are the tree access levels public, protected and private. 
 
-| Type      | Syntax   | Meaning                                                         |
-| --------- | -------- | --------------------------------------------------------------- |
-| Public    | `name`   | Can be accessed from anywhere                                   |
-| Protected | `_name`  | Should only be used within the class or subclass (not enforced) |
-| Private   | `__name` | Should only be used inside the class itself (lightly enforced) |
-Python still makes it possible to access private with the syntax `objectName._className__name`. However, you should basically never do this.
+| Type      | Syntax   | Meaning                                                           |
+| --------- | -------- | ----------------------------------------------------------------- |
+| Public    | `name`   | Can be accessed from anywhere                                     |
+| Protected | `_name`  | Should only be used within the class or subclasses (not enforced) |
+| Private   | `__name` | Should only be used inside the class itself (lightly enforced)    |
+Python uses naming conventions to suggest access level. Unlike many other languages, Python does not strictly enforce these rules. It is more like warning the programmer and reminding him how something should be used. These access levels and naming conventions are the same for attributes and for methods.
+
+*Python still makes it possible to access private with the syntax `objectName._className__name`. However, you should basically never do this.*
 
 ```python
 class Account:
     def __init__(self, owner, accNum, balance):
-        self.owner = owner  # public
+        self.owner = owner            # public
         self._accountNumber = accNum  # protected
-        self.__balance = balance  # private
+        self.__balance = balance      # private
 
     def get_balance(self):
         return self.__balance
 
     def deposit(self, accountNumber, amount):
         if accountNumber == self._accountNumber:  # check account number
-            if amount > 0:  # check deposit amount
-                self.__balance += amount  # change bank account balance
+            if amount > 0:                        # check deposit amount
+                self.__balance += amount          # change bank account balance
                 print("new balance:", self.__balance)
 
 	# private method, only for use inside the class
@@ -333,6 +335,10 @@ car1.info()                        # -> Car from BMW for 40000$.
 ```
 
 ## super()
+
+> [!todo]- less exam relevant
+> Less exam relevant, rarely used.
+
 You can use the special function `super()` inside a class to access its parent class. It makes it easy to call methods or the constructor from the parent. This is especially useful when you want to **extend** behavior, not just replace it. To use it, you can use the syntax `super().methodName()` to call `methodName()` of the parent class. 
 
 Lets use this to extend the behavior of Vehicle `__init__` and `info()` instead of replacing it.
