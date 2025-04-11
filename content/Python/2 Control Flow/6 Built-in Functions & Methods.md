@@ -260,6 +260,18 @@ print(l)           # -> [1, 5, 3, 4]
 
 Returns a shallow copy.
 
+
+# Dictionary Methods
+
+`.keys()` returns a view of all keys in the dictionary. `.values()` returns a view of all values in the dictionary. `.items()` returns a view of (key, value) pairs.
+
+```python
+d = {'a': 1, 'b': 2}
+print(list(d.keys()))  # -> ['a', 'b']
+print(list(d.values()))  # -> [1, 2]
+print(list(d.items()))  # -> [('a', 1), ('b', 2)]
+```
+
 # Object & Class Handling
 
 ## `isinstance(obj, classinfo)`, `issubclass(cls, classinfo)`

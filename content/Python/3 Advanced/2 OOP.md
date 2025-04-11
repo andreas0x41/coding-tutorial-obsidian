@@ -449,19 +449,6 @@ bmw.cool()         # from AirConditioning -> Cooling the air
 ```
 
 # Questions
-
-- [ ] What is a class and what is an object?
-- [ ] What does `self` mean in class methods?
-- [ ] What is the purpose of the `__init__` method?
-- [ ] What is encapsulation and how is it done in Python?
-- [ ] What is the difference between instance and class attributes?
-- [ ] How does inheritance work in Python?
-- [ ] What is method overriding?
-- [ ] Explain polymorphism in your own words.
-- [ ] Create a `Book` class with title, author, and a method `describe()` that prints its info.
-- [ ] Create a `Shape` class and let `Circle` and `Rectangle` inherit from it. Give each a method `area()` that returns the correct area.
-
-
 - [ ] What is Object-Oriented Programming?
 	- [ ] Explain class and object.
 	- [ ] How does a OOP help organize code compared to normal programming?

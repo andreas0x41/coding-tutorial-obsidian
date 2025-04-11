@@ -1,5 +1,5 @@
 ---
-title: 3.2 Object Oriented Programming
+title: 3.1 Object Oriented Programming
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
@@ -156,7 +156,7 @@ print(car1.info)                 # -> Toyota with 180km/h for 20000$.
 ```
 
 ## Methods
-A [[content/Theory Exam/2 Control Flow/5 Function#Methods|method]] is a [[content/Theory Exam/2 Control Flow/5 Function|function]] that belongs to an object/class. Because of this it can directly access and change the attributes of the object/class. You can call a method with the syntax `objectName.methodName(...)`. When defining a method, the first parameter is [[2 OOP#Self|self]]. When calling the method, Python automatically passes the calling object as the first argument. So the calling object will be stored in `self`, which makes it easy to use and manipulate its data. All the other behavior like parameters, return values, ... are similar to normal [[content/Theory Exam/2 Control Flow/5 Function|functions]].
+A [[content/Theory Exam/2 Control Flow/5 Function#Methods|method]] is a [[content/Theory Exam/2 Control Flow/5 Function|function]] that belongs to an object/class. Because of this it can directly access and change the attributes of the object/class. You can call a method with the syntax `objectName.methodName(...)`. When defining a method, the first parameter is [[1 OOP#Self|self]]. When calling the method, Python automatically passes the calling object as the first argument. So the calling object will be stored in `self`, which makes it easy to use and manipulate its data. All the other behavior like parameters, return values, ... are similar to normal [[content/Theory Exam/2 Control Flow/5 Function|functions]].
 
 Lets add a discount method that directly uses and updates the price of a car to be discounted.
 
@@ -335,68 +335,6 @@ car1.info()                        # -> Car from BMW for 40000$.
 
 ```
 
-## super()
-
-> [!todo]- less exam relevant
-> Less exam relevant, rarely used.
-
-You can use the special function `super()` inside a class to access its parent class. It makes it easy to call methods or the constructor from the parent. This is especially useful when you want to **extend** behavior, not just replace it. To use it, you can use the syntax `super().methodName()` to call `methodName()` of the parent class. 
-
-Lets use this to extend the behavior of Vehicle `__init__` and `info()` instead of replacing it.
-
-```python
-class Vehicle:
-    def __init__(self, brand, speed):
-        self.brand = brand
-        self.speed = speed
-        print("New vehicle created.")
-
-    def drive(self):
-        print(f"{self.brand} is driving at {self.speed}km/h")
-
-    def info(self):
-        print(f"Vehicle from {self.brand}.")
-
-
-class Car(Vehicle):
-    # overwrite the __init__ method
-    def __init__(self, brand, speed, price):
-        super().__init__(brand, speed)
-        self.price = price
-        print("New car created.")
-
-    # car.drive is not defined explicitly, so it is inherited from the parent
-
-    # overwrite the info method
-    def info(self):
-        super().info()
-        print(f"Car from {self.brand} for {self.price}$.")
-
-print(1)
-car1 = Car("BMW", 220, 40000)
-print(2)
-car1.drive()
-print(3)
-car1.info()
-print(4)
-print(car1.brand, car1.speed, car1.price)
-```
-
-As you can see in the output, `super().__init__(...)` calls the constructor of Vehicle. This also creates and assigns the attributes brand and speed.
-
-```output
-1
-New vehicle created.     
-New car created.
-2
-BMW is driving at 220km/h
-3
-Vehicle from BMW.        
-Car from BMW for 40000$. 
-4
-BMW 220 40000
-```
-
 ## Multilevel
 If a class is inheriting from a parent that is also inheriting from another class, you have multiple levels of inheritance. Below you can see two levels of inheritance. `Car` is the parent of `ElectricCar` and `Vehicle` is the parent of `Car`.
 
@@ -449,19 +387,6 @@ bmw.cool()         # from AirConditioning -> Cooling the air
 ```
 
 # Questions
-
-- [ ] What is a class and what is an object?
-- [ ] What does `self` mean in class methods?
-- [ ] What is the purpose of the `__init__` method?
-- [ ] What is encapsulation and how is it done in Python?
-- [ ] What is the difference between instance and class attributes?
-- [ ] How does inheritance work in Python?
-- [ ] What is method overriding?
-- [ ] Explain polymorphism in your own words.
-- [ ] Create a `Book` class with title, author, and a method `describe()` that prints its info.
-- [ ] Create a `Shape` class and let `Circle` and `Rectangle` inherit from it. Give each a method `area()` that returns the correct area.
-
-
 - [ ] What is Object-Oriented Programming?
 	- [ ] Explain class and object.
 	- [ ] How does a OOP help organize code compared to normal programming?
@@ -476,6 +401,5 @@ bmw.cool()         # from AirConditioning -> Cooling the air
 - [ ] Explain inheritance and why it is useful.
 	- [ ] Explain the terms parent and child?
 	- [ ] Can a child class use methods that is only defined in its parent class? What happens if both parent and child define a method with the same name?
-	- [ ] Explain `super()` and its usage?
 	- [ ] Explain Multilevel Inheritance
 	- [ ] Explain Multiple Inheritance
