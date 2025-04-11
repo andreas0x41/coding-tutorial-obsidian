@@ -1,5 +1,5 @@
 ---
-title: 3.2 Object Oriented Programming
+title: 3.1 Object Oriented Programming
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
@@ -156,7 +156,7 @@ print(car1.info)                 # -> Toyota with 180km/h for 20000$.
 ```
 
 ## Methods
-A [[content/Python/2 Control Flow/5 Function#Methods|method]] is a [[content/Python/2 Control Flow/5 Function|function]] that belongs to an object/class. Because of this it can directly access and change the attributes of the object/class. You can call a method with the syntax `objectName.methodName(...)`. When defining a method, the first parameter is [[content/Python/3 Advanced/2 OOP#Self|self]]. When calling the method, Python automatically passes the calling object as the first argument. So the calling object will be stored in `self`, which makes it easy to use and manipulate its data. All the other behavior like parameters, return values, ... are similar to normal [[content/Python/2 Control Flow/5 Function|functions]].
+A [[content/Python/2 Control Flow/5 Function#Methods|method]] is a [[content/Python/2 Control Flow/5 Function|function]] that belongs to an object/class. Because of this it can directly access and change the attributes of the object/class. You can call a method with the syntax `objectName.methodName(...)`. When defining a method, the first parameter is [[1 OOP#Self|self]]. When calling the method, Python automatically passes the calling object as the first argument. So the calling object will be stored in `self`, which makes it easy to use and manipulate its data. All the other behavior like parameters, return values, ... are similar to normal [[content/Python/2 Control Flow/5 Function|functions]].
 
 Lets add a discount method that directly uses and updates the price of a car to be discounted.
 

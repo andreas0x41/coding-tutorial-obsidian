@@ -26,4 +26,4 @@ So all topics that are not exam relevant for all departments listed in the hasht
 
 
 # Code Examples
-Most topics include short examples in a code block. You will find the [[2 Output|output]] `print()` functions as a line comment directly after ` -> `. Alternatively, the output can also be in its own code block. If the code involves user [[3 Input|input]] either the input is marked with `{?}` or an example value will be given and used.
+Most topics include short examples in a code block. You will find the [[content/Python/1 General/2 Output|output]] `print()` functions as a line comment directly after ` -> `. Alternatively, the output can also be in its own code block. If the code involves user [[content/Python/1 General/3 Input|input]] either the input is marked with `{?}` or an example value will be given and used.
