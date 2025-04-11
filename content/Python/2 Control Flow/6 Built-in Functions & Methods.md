@@ -47,8 +47,8 @@ print(abs(3 + 4j)) # -> 5
 Rounds `number` to `ndigits` decimal places (default: 0).
 
 ```python
-print(round(3.14159, 2))  # -> 3.14
 print(round(4.56))        # -> 5
+print(round(3.14159, 2))  # -> 3.14
 print(round(123456, -3))  # -> 123000
 ```
 
@@ -84,6 +84,16 @@ Returns the number of items in a collection `obj`.
 ```python
 print(len([1, 2, 3]))   # -> 3
 print(len("some text")) # -> 9
+print(len("a b\n"))     # -> 4
+print(len([1, (2, 3)])) # -> 2
+```
+
+## `.index(sub, start=0, stop=None)`
+
+Returns the index of the first occurrence of `sub` in the collection. Throws a `Value Error` if `value` is not in the list. You can use `start` and `stop` to only search in a slice of the collection.
+
+```python
+print([4, 2, 7, 3, 1, 3].index(3)) # -> 3
 ```
 
 ## `sorted(iterable, *, key=None, reverse=False)`
@@ -109,7 +119,7 @@ print(list(reversed([1, 2, 3])))  # -> [3, 2, 1]
 Returns an iterator with `(index, value)` pairs from `iterable`. You can set a `start` value for indexing (default: 0)
 
 ```python
-print(list(enumerate([33, 66, 99], start=1)))  # -> [(0, 33), (1, 66), (2, 99)]
+print(list(enumerate([33, 66, 99])))     # -> [(0, 33), (1, 66), (2, 99)]
 print(list(enumerate("abc", start=10)))  # -> [(10, 'a'), (11, 'b'), (12, 'c')]
 ```
 
@@ -124,7 +134,7 @@ print(list(zip([1,2,3], (1j,2j,3j,4j), "abcdef")))  # -> [(1, 1j, 'a'), (2, 2j,
 
 ## `filter(function, iterable)`
 
-Filters elements for which `function` returns `True`.
+Filters so that only elements for which`function` returns `True` are remaining.
 
 ```python
 print(list(filter(lambda x: x>0, [-1, 2, -3, 4])))  # -> [2, 4]
@@ -163,11 +173,11 @@ print("  \n, ,,;; test, message,, ,;; \n".strip(" \n,;"))  # -> test message
 
 ## `.split(sep=" ", maxsplit=-1)`
 
-Splits a string into a list whenever `sep` occurs. `maxsplit` is the maximum number of splits, or -1 for unlimited. 
+Splits a string into a list. Whenever `sep` occurs, a new element will start. Default `sep` is a space " ". `maxsplit` is the maximum number of splits, or -1 for unlimited. 
 
 ```python
 print("hello world text".split())                      # -> ['hello', 'world', 'text']
-print("some|random|string".split(sep="|"))             # -> ['some', 'random', 'string']
+print("some | random | string".split(sep=" | "))       # -> ['some', 'random', 'string']
 print("some long hello world text".split(maxsplit=2))  # -> ['some', 'long', 'hello world text']
 ```
 
@@ -176,31 +186,13 @@ print("some long hello world text".split(maxsplit=2))  # -> ['some', 'long', 'h
 Joins string elements from an iterable with the string as separator.
 
 ```python
+print("".join(["a", "b", "c"]))   # -> abc
 print("-".join(["a", "b", "c"]))  # -> a-b-c
 ```
 
-## `.replace(old, new, count=-1)`
+## `.find(sub, start=0, stop=None)`
 
-Replaces the `old` string with a `new` string. It will replace a maximum of `count` times, or -1 for unlimited.
-
-```python
-print("hello".replace("l", "x"))         # -> hexxo
-print("hellllllo".replace("l", "x", 2))  # -> hexxllllo
-```
-
-## `.startswith(string)` / `.endswith(string)`
-
-Checks if a string starts or ends with a substring.
-
-```python
-print("hello".startswith("he"))  # -> True
-print("hello".startswith("lo"))  # -> False
-print("hello".endswith("lo"))    # -> True
-```
-
-## `.find(sub, start=0, end=None)`
-
-Returns the index of the first occurance of `sub`, or `-1` if not found. You can use `start` and `end` to only search in a slice of the string
+Returns the index of the first occurrence of `sub`, or `-1` if not found. You can use `start` and `stop` to only search in a slice of the string.
 
 ```python
 print("hello".find("l"))  # -> 2
@@ -212,6 +204,26 @@ Counts how often `sub` occurs. You can use `start` and `end` to only search in a
 
 ```python
 print("banana".count("a"))  # -> 3
+```
+
+## `.replace(old, new, count=-1)`
+
+Replaces the `old` string with a `new` string. It will replace a maximum of `count` times, or -1 for unlimited.
+
+```python
+print("hello".replace("l", "x"))        # -> hexxo
+print("hellllllo".replace("l", "x", 2)) # -> hexxllllo
+print("hellllllo".replace("lll", "l"))  # -> hello
+```
+
+## `.startswith(string)` / `.endswith(string)`
+
+Checks if a string starts or ends with a substring.
+
+```python
+print("hello".startswith("he"))  # -> True
+print("hello".startswith("lo"))  # -> False
+print("hello".endswith("lo"))    # -> True
 ```
 
 # List Methods

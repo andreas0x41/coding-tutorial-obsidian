@@ -15,8 +15,8 @@ tags:
 # Summary
 
 - **`print()`:** Outputs values of any [[5 Datatype|datatype]] to the console.
-- **End (`end`)** for what follows the output. Default is a [[5 Datatype#Special Characters|newline]] (`\n`).
-- **Separator (`sep`)** for value separation.
+- Use `end` to define what follows the output. Default is a [[5 Datatype#Special Characters|newline]].
+- Use `sep` to define what separates the values.
 
 # Simple Print
 

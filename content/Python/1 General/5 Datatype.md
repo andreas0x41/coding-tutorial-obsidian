@@ -90,8 +90,7 @@ Below are some key properties of the collection datatypes available in Python.
 | [[5 Datatype#Generator\|Generator]]   | No      | Yes                    | No       | No      | Efficient iteration over large datasets             |
 
 ### Mutable
-
-A mutable object can be modified after it is created. This means you can change, add, or remove parts or all of its content without creating a new [[6 Variable#Memory Objects|object]]. For example, you can change the value of the second item in a list, but you can not change the value of the second item in a tuple or string. All basic datatypes are immutable. So when it seems like the value changes, it is actually a completely new [[6 Variable#Memory Objects|object]]. You can find the difference in behavior between mutable and immutable variables [[6 Variable#Mutability Behaviour|here]].
+A mutable object can be modified after it is created, a immutable object can not. This means you can change, add, or remove parts or all of its content without creating a new [[6 Variable#Memory Objects|object]]. For example, you can change the value of the second item in a list, but you can not change the value of the second item in a tuple or string. All basic datatypes are immutable. So when it seems like the value changes, it is actually a completely new [[6 Variable#Memory Objects|object]]. You can find the difference in behavior between mutable and immutable variables [[6 Variable#Mutability Behaviour|here]].
 
 ### Iterable
 
@@ -146,25 +145,27 @@ print(listName[::3])              # every third element from the whole sequence 
 print(listName[-5:-1:1])          # elements from the 5th last (inclusive) to the last (exclusive) -> [7, 4, 5, 2]
 print(listName[::-1])             # all elements in reverse order -> [9, 2, 5, 4, 7, 1, 3]
 print(listName[6:1:-2])           # every second element from the 7th to the 2nd in reverse order -> [9, 5, 7]
+
+print("abcde"[::-1])              # all elements in reverse order -> edcba
 ```
 
 > [!todo]- not exam relevant
 > Not exam relevant, rarely used, but sometimes helpful.
 
-You can also set multiple values at the same time using slicing. If you don't give the correct numbers of values to set/replace, you might get an error.
+You can also set multiple values at the same time using slicing. If you don't give the correct numbers of values to set/replace, you might get unexpected behaviour or an error.
 
 ```python
-listName = [3, 1, 7, 4, 5, 2, 9]  # Create a list and save it in variable listName
-listName[1:4] = [10, 20, 30]  # replace elements from the 2nd to the 5th -> [3, 10, 20, 30, 5, 2, 9]
-listName[-2:] = [400, 500]  # replace elements from the 2nd last to the last -> [3, 10, 20, 30, 5, 400, 500]
-listName[::2] = [1, 2, 3, 4]  # replace every second element -> [1, 10, 2, 30, 3, 400, 4]
-listName[:0] = [-1, -2]  # insert two new elements at the start of the sequence -> [-1, -2, 1, 10, 2, 30, 3, 400, 4]
-listName[2:5] = []  # remove the elements from the 3rd to the 6th -> [-1, -2, 30, 3, 400, 4]
+listName = [3, 1, 7, 4, 5, 2, 9] # create a list and save it in variable listName
+listName[1:4] = [10, 20, 30]     # replace elements from the 2nd to the 5th -> [3, 10, 20, 30, 5, 2, 9]
+listName[-2:] = [400, 500]       # replace elements from the 2nd last to the last -> [3, 10, 20, 30, 5, 400, 500]
+listName[::2] = [1, 2, 3, 4]     # replace every second element -> [1, 10, 2, 30, 3, 400, 4]
+listName[:0] = [-1, -2]          # insert two new elements at the start of the sequence -> [-1, -2, 1, 10, 2, 30, 3, 400, 4]
+listName[2:5] = []               # remove the elements from the 3rd to the 6th -> [-1, -2, 30, 3, 400, 4]
 ```
 
 ## String
 
-The datatype String can hold any text including numbers and [[#Special Characters|special characters]]. In Python, all strings have to be within quotes single `'string'` or double `"string"` quotes, using [[#Multiple Line String|triple quotes]] has a special behavior. You can use the function `str()` to convert a value to a String or create one with the value `""` if no argument is given. Strings also supports [[#Indexing|indexing]], [[#Slicing|slicing]] and some list functions/methods. But it is impossible to change individual elements/characters of a string because it is not [[#Mutable|mutable]].
+The datatype String can hold any text including numbers and [[#Special Characters|special characters]]. In Python, all strings have to be within quotes single `'string'` or double `"string"` quotes, using [[#Multiple Line String|triple quotes]] has a special behavior. You can use the function `str()` to convert a value to a String or create one with the value `""` if no argument is given. Strings also supports [[#Indexing|indexing]], [[#Slicing|slicing]] and some list functions/methods. But it is impossible to change individual elements/characters of a string because it is [[#Mutable|immutable]].
 
 ```python
 "text" 'string' "some long message" "line 1\nline 2" """triple quotes string"""
@@ -272,7 +273,7 @@ You can think of a tuple like a [[#List]] where it is impossible to add, change 
 > [!todo]- not exam relevant
 > This topic is not exam relevant, but it is still good to know that this datatype exists and its general behavior.
 
-A set is similar to a [[#List]] but the elements are not stored in any specific order. Because of this, [[#Indexing]] and [[#Slicing]] is not possible. [[#Iterable|Iterating]] is possible, but there is no order defined for the elements. The set elements are within curly brackets `{}` and separated by commas `,`. You can use the function `set()` to convert an [[#Iterable]] value to a set or create an empty set if no arguments are given. You can only create an empty set using the `set()` function because a [[#Dictionary]] also uses curly brackets. You can add or remove elements, because it is [[#Mutable|mutable]]. A set can only store not [[#Mutable|mutable]] elements. A set does not allow for any duplicate elements, if you have duplicates only one of them will be stored. A few list operators, functions, and methods will work and there are multiple special ones for sets.
+A set is similar to a [[#List]] but the elements are not stored in any specific order. Because of this, [[#Indexing]] and [[#Slicing]] is not possible. [[#Iterable|Iterating]] is possible, but there is no order defined for the elements. The set elements are within curly brackets `{}` and separated by commas `,`. You can use the function `set()` to convert an [[#Iterable]] value to a set or create an empty set if no arguments are given. You can only create an empty set using the `set()` function because a [[#Dictionary]] also uses curly brackets. You can add or remove elements, because it is [[#Mutable|mutable]]. A set can only store [[#Mutable|immutable]] elements. A set does not allow for any duplicate elements, if you have duplicates only one of them will be stored. A few list operators, functions, and methods will work and there are multiple special ones for sets.
 
 ```python
 {1, 2, 3} set() {1, 3.14, "hello"} {"hello", True, 2, 3.14}
@@ -281,7 +282,7 @@ print({1, 2, 1, 1, 3, 2, 3, 4, 5}) # duplicates removed, no specific order -> {3
 
 ## Dictionary
 
-The datatype Dictionary creates a 1 to 1 mapping between keys and values. So instead of using an index, the values are uniquely identified by their key. A value can be any datatype. A key has to be unique (every key can only exist once) and not [[#Mutable|mutable]]. The dictionary elements are within curly brackets `{}` and separated by commas `,`. One element is a combination of a key and a value separated by a colon `:` like this `key:value`.
+The datatype Dictionary creates a 1 to 1 mapping between keys and values. So instead of using an index, the values are uniquely identified by their key. A value can be any datatype. A key has to be unique (every key can only exist once) and [[#Mutable|immutable]]. The dictionary elements are within curly brackets `{}` and separated by commas `,`. One element is a combination of a key and a value separated by a colon `:` like this `key:value`.
 
 ```python
 {"a": 1, "c": "5"} {} {1: "test", "1": 123, "a": 1, (1,2): 1}

@@ -117,7 +117,6 @@ for num in range(2, 10):
 ```
 
 # List Comprehension
-
 List comprehensions provide a shorter and more readable way to create lists using a `for` loop in a single line. Instead of using a normal `for` loop to build a new list, list comprehension lets you do it directly. The syntax to do this is `[new_element for element in iterable]`, as you can see in the example below. When calculating the new element you can use operators, functions, ...
 
 ```python
@@ -133,7 +132,7 @@ print(squares2) # -> [0, 1, 4, 9, 16]
 ```
 
 Both ways have the exactly same result, the only difference is that the second one is shorter.
-## Conditional List Comprehension
+## Condition
 
 You can add a condition to include only certain elements with the syntax `[new_element for element in iterable if condition]`. An element will only be added to the list, if the condition is `True`. If the condition is `False`, it will be ignored
 

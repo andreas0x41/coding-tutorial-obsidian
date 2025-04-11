@@ -18,6 +18,7 @@ Operators in Python are special symbols or keywords used to perform operations o
 	- Standard operators like `+`, `-`, `*`, `/`, `//`, `%`, `**` for mathematical operations.
 	- Floor Division `//` rounds down to nearest whole number.
 	- Modulo `%` returns the remainder of a division.
+	- String concatenation done using `+` operator
 - **Relational Operators** are used for comparisons, returning boolean results: `==`, `!=`, `>`, `<`, `>=`, `<=`.
 - **Logical Operators** chain conditions together	
 	-  **`and`**: [[5 Datatype#Truthy and Falsy|Truthy]] if both conditions are Truthy.
@@ -153,7 +154,7 @@ print(5.9 // 2)   # -> 2.0
 
 When using operators with collections the result datatype is the same as the datatype of the collection you use.
 ## Collection Usage
-The operators `+` and `*` can also be used with [[5 Datatype#Collection Datatypes|sequence datatypes]]. The `+` operator is used to concatenate/combine two strings, lists, or tuples of the **same** datatype.
+The operators `+` and `*` can also be used with [[5 Datatype#Collection Datatypes|sequence datatypes]]. The `+` operator is used to concatenate / combine two strings, lists, or tuples of the **same** datatype.
 
 ```python
 print("Hello" + " " + "World")      # -> Hello World
