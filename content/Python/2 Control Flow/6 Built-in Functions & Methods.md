@@ -228,9 +228,9 @@ print("hello".endswith("lo"))    # -> True
 
 # List Methods
 
-## `.append(x)`, `.extend(iterable)`, `.insert(i, x)`
+## Add Elements
 
-Add elements by`.append()` element at the end of the list, `extend()` at the end with multiple values from iterable, or`.insert()` element at index.
+Add elements by`.append(value)` element with `value` at the end of the list, `extend(iterable)` at the end with multiple values from `iterable`, or`.insert(index, value)` element with `value` at `index`.
 
 ```python
 l = [1]
@@ -242,7 +242,8 @@ l.insert(1, 5)
 print(l)            # -> [1, 5, 2, 3, 4, 2]
 ```
 
-## `.remove(x)`, `.pop(index=-1)`, `.clear()`
+## Remove Elements
+
 
 `.remove()` first element with specific value, `.pop()` (remove and return) element at index, or `.clear()` the whole list.
 

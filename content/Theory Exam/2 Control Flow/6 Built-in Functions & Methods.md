@@ -15,14 +15,14 @@ Python has many built-in [[content/Theory Exam/2 Control Flow/5 Function|functio
 
 # Overview
 
-| Category                  | Function/Method                                                                |
-| ------------------------- | ------------------------------------------------------------------------------ |
-| **Type & Casting**        | `type()`, `int()`, `float()`, `str()`, `bool()`, `list()`, `tuple()`, `dict()` |
-| **Mathematical**          | `abs()`, `round()`, `sum()`, `min()`, `max()`                                  |
-| **Iterables & Sequences** | `len()`, `sorted()`                                                            |
-| **String Handling**       | `.lower()`, `.upper()`, `.replace()`, `.count()`                               |
-| **List Methods**          | `.append()`, `.extend()`, `.insert()`, `.remove()`, `.index()`                 |
-| **Dictionary Methods**    | `.keys()`, `.values()`, `.items()`                                             |
+| Category               | Function/Method                                                                |
+| ---------------------- | ------------------------------------------------------------------------------ |
+| **Type & Casting**     | `type()`, `int()`, `float()`, `str()`, `bool()`, `list()`, `tuple()`, `dict()` |
+| **Mathematical**       | `abs()`, `round()`, `sum()`, `min()`, `max()`                                  |
+| **Collections**        | `len()`                                                                        |
+| **String Handling**    | `.lower()`, `.upper()`, `.count()`, `.replace()`                               |
+| **List Methods**       | `.append()`, `.extend()`, `.insert()`, `.remove()`                             |
+| **Dictionary Methods** | `.keys()`, `.values()`, `.items()`                                             |
 
 # Mathematical Functions
 
@@ -76,14 +76,6 @@ print(len("a b\n"))     # -> 4
 print(len([1, (2, 3)])) # -> 2
 ```
 
-## `sorted(iterable)`
-
-Returns a new sorted list from `iterable`. Default is ascending (smallest to largest).
-
-```python
-print(sorted([3, 1, 2]))  # -> [1, 2, 3]
-```
-
 # String Methods
 
 ## `.lower()` / `.upper()`
@@ -114,9 +106,9 @@ print("hellllllo".replace("lll", "l"))  # -> hello
 
 # List Methods
 
-## `.append(x)`, `.extend(iterable)`, `.insert(i, x)`
+## Add Elements
 
-Add elements by`.append()` element at the end of the list, `extend()` at the end with multiple values from iterable, or`.insert()` element at index.
+Add elements by`.append(value)` element with `value` at the end of the list, `extend(iterable)` at the end with multiple values from `iterable`, or`.insert(index, value)` element with `value` at `index`.
 
 ```python
 l = [1]
@@ -128,9 +120,9 @@ l.insert(1, 5)
 print(l)            # -> [1, 5, 2, 3, 4, 2]
 ```
 
-## `.remove(x)`, `.pop(index=-1)`, `.clear()`
+## Remove Elements
 
-`.remove()` first element with specific value, `.pop()` (remove and return) element at index, or `.clear()` the whole list.
+Remove the first element with specific value using `.remove()` or remove element at index using the keyword [[content/Theory Exam/1 General/6 Variable#Deleting|del]].
 
 ```python
 l = [1, 5, 2, 3, 4, 2]
