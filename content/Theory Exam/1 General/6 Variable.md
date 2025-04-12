@@ -31,7 +31,6 @@ Variables are used to store data. You can think of them like a container. The sh
 - **Scope:**
 	- **Global:** Accessible program-wide.
 	- **Local:** Restricted to within functions.
-- **Type Hinting:** Use optional annotations (e.g., `x: int = 5`) for better clarity and debugging.
 
 # Memory Objects
 Python variables store references to the objects in memory. A **reference** points to a location/address in computer memory where an object is stored.

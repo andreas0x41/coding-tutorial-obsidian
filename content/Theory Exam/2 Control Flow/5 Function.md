@@ -167,15 +167,6 @@ returnValue = l2.sort()  # sorting with method, method belongs to the list, no r
 print(returnValue, l2) # -> None [0, 1, 2, 2, 3, 5, 7]
 ```
 
-> [!quote]- Additional not exam relevant topics for later
-> Type Hinting
-> Default Arguments
-> lambda
-> \*args And \*\*kwargs
-> Decorators
-> Recursion
-> Generator
-
 # Questions
 
 - [ ] Explain in your own words what a function is, and why it is useful.

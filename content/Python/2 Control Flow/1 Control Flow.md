@@ -120,11 +120,11 @@ print("Done")
 ```
 
 # Errors
-Errors and Exceptions are ways in which Control Flow is interrupted when something goes wrong. A well written program should not contain errors on the programmers side and prevent or properly handle exceptions caused by the user.
+Errors and Exceptions are ways in which Control Flow is interrupted when something goes wrong. A well written program should not contain errors on the programmers side. It should also prevent or properly handle exceptions caused by the user.
 
 **(Syntax-)Errors** are usually unrecoverable issues disrupting the program's flow, leading to failure. These are caused by the programmer not writing code in the correct Python syntax.
 
-If something has correct syntax, but causes an error when executing it, it is called an **Exception**. These are recoverable issues that allow for controlled interruption, where the program can recover or provide feedback to the user. These can be caused both by the programmer (e.g. incorrect [[content/Python/1 General/6 Variable|variable]]/[[content/Python/2 Control Flow/5 Function|function]]/... name; incorrect [[content/Python/1 General/5 Datatype|datatype]]; incorrect import; ...) and the user (incorrect input of any kind; file not found; internet connection error; ...). In Python you can prevent exceptions or use `try-except` blocks to handle them to not let your program crash.
+If something has correct syntax, but causes an error when executing it, it is called an **Exception**. These are recoverable issues that allow for controlled interruption. So the program can recover or provide feedback to the user. These can be caused both by the programmer (e.g. incorrect [[content/Theory Exam/1 General/6 Variable|variable]]/[[content/Theory Exam/2 Control Flow/5 Function|function]]/... name; incorrect [[content/Theory Exam/1 General/5 Datatype|datatype]]; incorrect import; ...) and the user (incorrect input of any kind; file not found; internet connection error; ...). In Python you can prevent exceptions or use `try-except` blocks to handle them to not let your program crash.
 
 ```python
 # Error because of incorrect function name and string never closed

@@ -70,9 +70,6 @@ print(f"This means that 5 fully fits into 12 {13//5} times")          # This mea
 print(f"When fitting 5 into 13, there will be a remainder of {13%5}") # When fitting 5 into 13, there will be a remainder of 3
 ```
 
-> [!todo]- less exam relevant
-> Less exam relevant, but still good/helpful to know.
-
 One common use case for the Modulus is to check divisibility by checking if the remainder is 0. It can also be used to separate parts of a number. You can also think of the modulo in terms of a circle. For example, working with modulo 360 means `0° = 360° = 720°`...
 
 ```python
@@ -192,16 +189,6 @@ print((1, 2) in (1, 2, 3 , 4))         # -> False
 print(3 in [(1,2), (3,4), (5,6)])      # -> False
 print([3,4] in [(1,2), (3,4), (5,6)])  # -> False
 print((3,4) in [(1,2), (3,4), (5,6)])  # -> True
-```
-
-This operator can be used with a [[content/Theory Exam/1 General/5 Datatype#Dictionary|dictionary]] to check if a specific **key** exists in the dictionary. If you want to check if a value exists in a dictionary you have to use the built-in method `.values()`.
-
-```python
-data = {"name": "Alice", "age": 25, "city": "New York", 1: "test"}
-print("name" in data)           # -> True
-print(1 in data)                # -> True
-print("Alice" in data)          # -> False
-print("Alice" in data.values()) # -> True
 ```
 
 When using this operator with a [[content/Theory Exam/1 General/5 Datatype#String|string]] it checks if the value is a substring of the whole string.

@@ -230,12 +230,6 @@ print(acc.get_balance())       # Access via method (safe) -> 1000
 acc.deposit("0112345678", 500) # Change via method (safe) -> 1500
 ```
 
-> [!quote]- Additional not exam relevant topics for later
-> class and static methods
-> class attributes
-> magic methods
-> property
-> polymorphism 
 
 # Inheritance
 **Inheritance** allows one class to inherit (=take over) attributes and methods from another class. It’s like saying, “A car is a vehicle.” So the **Car** class can inherit its basic structure, attributes, and methods from a more general **Vehicle** class.

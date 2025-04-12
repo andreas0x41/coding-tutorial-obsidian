@@ -136,9 +136,6 @@ You might think of a string as a base datatype, but it actually behaves very sim
 
 ### Special Characters
 
-> [!todo]- partly exam relevant
-> Basics are relevant, more advanced usage is not necessary. The first 5 rows of the table are relevant, the others are not.
-
 Python strings support many special characters. To use a special character first write a backslash `\` to escape the string and inform Python that what follows is a special character. After the backslash, you can put one of the supported special characters.
 
 | Character    | Description                                                                               | Example                                     |
@@ -148,31 +145,8 @@ Python strings support many special characters. To use a special character first
 | `\\`         | Backslash. Escapes the backslash itself.                                                  | `"Path: C:\\Users"` → `Path: C:\Users`      |
 | `\'` or `''` | Escapes a single quote **within** single-quoted strings.                                  | `'It\'s a test'` → `It's a test`            |
 | `\"` or `""` | Escapes a double quote **within** double-quoted strings.                                  | `"She said ""Hello\""` → `She said "Hello"` |
-| `\r`         | Carriage return. Moves the cursor to the beginning of the line and overwrites characters. | `"123456789\rWorld"` → `World6789`          |
-| `\b`         | Backspace. Removes the character before it.                                               | `"Hello\bWorld"` → `HellWorld`              |
-| `\x**`       | Character with a with a 2-digit hex code.                                                 | `"\x48"` → `H`                              |
-| `\u****`     | Unicode character with a 4-digit hex code.                                                | `"\u2764"` → `❤`                            |
-| `\U********` | Unicode character with an 8-digit hex code.                                               | `"\U0001F600"` → 😀                         |
-
-If you want to prevent special characters from being interpreted you can use raw strings `r"string"`. 
-
-```python
-print("\tline1\nline2")        # normal string 
-print(r"\tline1\nstill line1") # raw string
-print(r"Test\of\raw\string")   # raw string
-```
-
-```output
-	line1
-line2
-\tline1\nstill line1
-Test\of\raw\string
-```
 
 ### Formatted String
-
-> [!todo]- partly exam relevant
-> Basics are relevant, advanced usage is not necessary.
 
 Formatted strings in Python provide an easy way to insert values into a string. To make a formatted string put an `f` in front of the the starting string quotes. Inside a formatted string, all the values within curly brackets `{value}` will be inserted into the string. The datatype will automatically be converted and there is also support for operators, functions, and special formatting. If you want to print a curly bracket within an f-string, you have to put a double curly bracket `{{`.
 
@@ -183,9 +157,6 @@ name = "Andreas"
 print(f"My name is {name} and I am {19} years old.") # -> My name is Andreas and I am 19 years old.
 print(f"The sum of {a} and {b} is {a+b}")            # -> The sum of 1 and 5 is 6
 print(f"The user inputted: {input()}")               # -> The user inputted: {?}
-# There are many advanced formatting options
-print(f"Pi with two decimal places: {pi:.2f}")       # -> Pi with two decimal places: 3.14
-print(f"Documenting operations: {1 + 3 * 2 = }")     # -> Documenting operations: 1 + 3 * 2 = 7
 ```
 
 ## List
