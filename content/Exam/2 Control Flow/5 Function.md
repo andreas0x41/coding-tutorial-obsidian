@@ -47,7 +47,7 @@ Hello, world!     # second function call: 5, 1, 2, return to after 5
 ```
 
 # Parameters
-Functions can accept parameters to work with, which are special [[content/Theory Exam/1 General/6 Variable#Scope|local variables]]. A parameter is a variable listed in a function's definition. An argument is the actual value passed to that parameter when the function is called. You have to list all the parameter names in the function definition. When calling a function you have to give the same amount of arguments, as there are parameters. 
+Functions can accept parameters to work with, which are special [[content/Exam/1 General/6 Variable#Scope|local variables]]. A parameter is a variable listed in a function's definition. An argument is the actual value passed to that parameter when the function is called. You have to list all the parameter names in the function definition. When calling a function you have to give the same amount of arguments, as there are parameters. 
 
 ```python
 def functionName(parName1, parName2, parName3):
@@ -93,7 +93,7 @@ print(add("1", "a", "23"))
 1a23
 ```
 
-The function execution ends as soon as it hits a `return`, everything after that will not be executed. You can see in the following code example, that the [[content/Theory Exam/2 Control Flow/2 Conditions#Else|else]] keywords are not necessary here, because the execution will only continue if the condition before was `False`.
+The function execution ends as soon as it hits a `return`, everything after that will not be executed. You can see in the following code example, that the [[content/Exam/2 Control Flow/2 Conditions#Else|else]] keywords are not necessary here, because the execution will only continue if the condition before was `False`.
 
 ```python
 def greater_number(a, b):
@@ -116,14 +116,14 @@ for b in range(5):
 2, 4: b is greater than a
 ```
 
-If a function does not return anything, it returns [[content/Theory Exam/1 General/5 Datatype#None|None]] by default.
+If a function does not return anything, it returns [[content/Exam/1 General/5 Datatype#None|None]] by default.
 
 ```python
 print(print())   # print the return value of print -> None
 ```
 
 # Scope
-The general principle of scope is explained on the [[content/Theory Exam/1 General/6 Variable#Scope|variables]] page. You can refer to a global variable from inside a function using the `global`[[content/Theory Exam/1 General/8 Keyword|keyword]].
+The general principle of scope is explained on the [[content/Exam/1 General/6 Variable#Scope|variables]] page. You can refer to a global variable from inside a function using the `global`[[content/Exam/1 General/8 Keyword|keyword]].
 
 ```python
 x = 5

@@ -190,6 +190,16 @@ print("".join(["a", "b", "c"]))   # -> abc
 print("-".join(["a", "b", "c"]))  # -> a-b-c
 ```
 
+## `.replace(old, new, count=-1)`
+
+Replaces the `old` string with a `new` string. It will replace a maximum of `count` times, or -1 for unlimited.
+
+```python
+print("hello".replace("l", "x"))        # -> hexxo
+print("hellllllo".replace("l", "x", 2)) # -> hexxllllo
+print("hellllllo".replace("lll", "l"))  # -> hello
+```
+
 ## `.find(sub, start=0, stop=None)`
 
 Returns the index of the first occurrence of `sub`, or `-1` if not found. You can use `start` and `stop` to only search in a slice of the string.
@@ -204,16 +214,6 @@ Counts how often `sub` occurs. You can use `start` and `end` to only search in a
 
 ```python
 print("banana".count("a"))  # -> 3
-```
-
-## `.replace(old, new, count=-1)`
-
-Replaces the `old` string with a `new` string. It will replace a maximum of `count` times, or -1 for unlimited.
-
-```python
-print("hello".replace("l", "x"))        # -> hexxo
-print("hellllllo".replace("l", "x", 2)) # -> hexxllllo
-print("hellllllo".replace("lll", "l"))  # -> hello
 ```
 
 ## `.startswith(string)` / `.endswith(string)`
@@ -245,7 +245,7 @@ print(l)            # -> [1, 5, 2, 3, 4, 2]
 ## Remove Elements
 
 
-`.remove()` first element with specific value, `.pop()` (remove and return) element at index, or `.clear()` the whole list.
+`.remove()` first element with specific `value`, `.pop()` (remove and return) element at `index`, or `.clear()` the whole list.
 
 ```python
 l = [1, 5, 2, 3, 4, 2]

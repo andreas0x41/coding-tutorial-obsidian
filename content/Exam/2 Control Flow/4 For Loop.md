@@ -12,10 +12,10 @@ tags:
   - GEES
 ---
 
-A `for` loop is used to iterate over a [[content/Theory Exam/1 General/5 Datatype#Collection Datatypes|collection of elements]] or a [[content/Theory Exam/1 General/5 Datatype#Range|range]] of numbers.  
+A `for` loop is used to iterate over a [[content/Exam/1 General/5 Datatype#Collection Datatypes|collection of elements]] or a [[content/Exam/1 General/5 Datatype#Range|range]] of numbers.  
 
 # Summary
-- **Basic Usage**: Iterates over all elements in a [[content/Theory Exam/1 General/5 Datatype#Collection Datatypes|collection]] or [[content/Theory Exam/1 General/5 Datatype#Range|range]] automatically.
+- **Basic Usage**: Iterates over all elements in a [[content/Exam/1 General/5 Datatype#Collection Datatypes|collection]] or [[content/Exam/1 General/5 Datatype#Range|range]] automatically.
 - **Break**: Exits the loop immediately.
 - **Continue**: Skips the rest of the current iteration and moves to the next iteration.
 
@@ -27,7 +27,7 @@ for element in collection:
     # Code to execute for each element
 ```
 
-A `for` loop does not use a condition. Instead, it iterates through the collection using the elements one by one. So the first iteration uses, the first element, and the second iteration uses the second element, ... Below you can see a `for` loop iterating repeating 5 times using `range()` and then iterating through all elements of a [[content/Theory Exam/1 General/5 Datatype#List|list]].
+A `for` loop does not use a condition. Instead, it iterates through the collection using the elements one by one. So the first iteration uses, the first element, and the second iteration uses the second element, ... Below you can see a `for` loop iterating repeating 5 times using `range()` and then iterating through all elements of a [[content/Exam/1 General/5 Datatype#List|list]].
 
 ```python
 for num in range(5):
@@ -51,7 +51,7 @@ I like cherry
 
 # Break
 
-The [[content/Theory Exam/1 General/8 Keyword|keyword]] `break` works exactly the same as with a [[content/Theory Exam/2 Control Flow/3 While Loop#Break|while loop]] and is used to immediately exit the loop.
+The [[content/Exam/1 General/8 Keyword|keyword]] `break` works exactly the same as with a [[content/Exam/2 Control Flow/3 While Loop#Break|while loop]] and is used to immediately exit the loop.
 
 ```python
 for num in range(10):
@@ -70,7 +70,7 @@ for num in range(10):
 
 # Continue
 
-The [[content/Theory Exam/1 General/8 Keyword|keyword]] `continue` works exactly the same as with a [[content/Theory Exam/2 Control Flow/3 While Loop#Break|while loop]] and is used to skip the rest of the current iteration and move to the next one.
+The [[content/Exam/1 General/8 Keyword|keyword]] `continue` works exactly the same as with a [[content/Exam/2 Control Flow/3 While Loop#Break|while loop]] and is used to skip the rest of the current iteration and move to the next one.
 
 ```python
 for num in range(10):

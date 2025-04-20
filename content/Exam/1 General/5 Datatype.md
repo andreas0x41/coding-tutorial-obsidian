@@ -12,23 +12,23 @@ tags:
   - GEES
 ---
 
-A datatype defines how different types of information/data are stored and behave. Examples of the behavior can be found on the pages [[content/Theory Exam/1 General/7 Operator|Operators]], [[content/Theory Exam/2 Control Flow/6 Built-in Functions & Methods|Built-in Functions & Methods]], ...
+A datatype defines how different types of information/data are stored and behave. Examples of the behavior can be found on the pages [[content/Exam/1 General/7 Operator|Operators]], [[content/Exam/2 Control Flow/6 Built-in Functions & Methods|Built-in Functions & Methods]], ...
 
 
 For almost every datatype in Python, there is a function with the same (or similar) name that is used to create an object of that datatype or convert something from a different datatype.
 
 | Name                                                                | Function  | Example                       | Explanation                                                                                      |
 | ------------------------------------------------------------------- | --------- | ----------------------------- | ------------------------------------------------------------------------------------------------ |
-| [[content/Theory Exam/1 General/5 Datatype#Integer\|Integer]]       | int()     | `0`, `11`, `-3`               | whole number                                                                                     |
-| [[content/Theory Exam/1 General/5 Datatype#Float\|Float]]           | float()   | `1.5`, `-0.321`               | rational/floating-point number                                                                   |
-| [[content/Theory Exam/1 General/5 Datatype#Boolean\|Boolean]]       | bool()    | `True`, `False`               | truth value, can only be True or False                                                           |
-| [[content/Theory Exam/1 General/5 Datatype#String\|String]]         | str()     | `'abc'`, `f"x:\n{x}"`         | text, can include, numbers, special characters, ...                                              |
-| [[content/Theory Exam/1 General/5 Datatype#List\|List]]             | list()    | `[1, 1, 2, 3]`                | [[#Mutable\|mutable]] collection of any datatype                                                 |
-| [[content/Theory Exam/1 General/5 Datatype#Tuple\|Tuple]]           | tuple()   | `(1, 1, 2, 3`)                | [[#Mutable\|unmutable]] collection of any datatype                                               |
-| [[content/Theory Exam/1 General/5 Datatype#Dictionary\|Dictionary]] | dict()    | `{"a": 1, "c": "5"}`          | 1 to 1 mapping of not [[#Mutable\|mutable]] keys to [[#Mutable\|mutable]] values of any datatype |
-| [[content/Theory Exam/1 General/5 Datatype#None\|None]]             |           | `None`                        | None means that there is no value                                                                |
-| [[content/Theory Exam/1 General/5 Datatype#Complex\|Complex]]       | complex() | `1j`, `1.2-0.5j`              | complex number with real and imaginary part                                                      |
-| [[content/Theory Exam/1 General/5 Datatype#Range\|Range]]           | range()   | `range(8)`, `range(2, 99, 3)` | range of numbers                                                                                 |
+| [[content/Exam/1 General/5 Datatype#Integer\|Integer]]       | int()     | `0`, `11`, `-3`               | whole number                                                                                     |
+| [[content/Exam/1 General/5 Datatype#Float\|Float]]           | float()   | `1.5`, `-0.321`               | rational/floating-point number                                                                   |
+| [[content/Exam/1 General/5 Datatype#Boolean\|Boolean]]       | bool()    | `True`, `False`               | truth value, can only be True or False                                                           |
+| [[content/Exam/1 General/5 Datatype#String\|String]]         | str()     | `'abc'`, `f"x:\n{x}"`         | text, can include, numbers, special characters, ...                                              |
+| [[content/Exam/1 General/5 Datatype#List\|List]]             | list()    | `[1, 1, 2, 3]`                | [[#Mutable\|mutable]] collection of any datatype                                                 |
+| [[content/Exam/1 General/5 Datatype#Tuple\|Tuple]]           | tuple()   | `(1, 1, 2, 3`)                | [[#Mutable\|unmutable]] collection of any datatype                                               |
+| [[content/Exam/1 General/5 Datatype#Dictionary\|Dictionary]] | dict()    | `{"a": 1, "c": "5"}`          | 1 to 1 mapping of not [[#Mutable\|mutable]] keys to [[#Mutable\|mutable]] values of any datatype |
+| [[content/Exam/1 General/5 Datatype#None\|None]]             |           | `None`                        | None means that there is no value                                                                |
+| [[content/Exam/1 General/5 Datatype#Complex\|Complex]]       | complex() | `1j`, `1.2-0.5j`              | complex number with real and imaginary part                                                      |
+| [[content/Exam/1 General/5 Datatype#Range\|Range]]           | range()   | `range(8)`, `range(2, 99, 3)` | range of numbers                                                                                 |
 # Basic Datatypes
 
 ## Integer
@@ -49,7 +49,7 @@ The datatype Float can hold any rational/floating-point number including negativ
 
 ## Boolean
 
-The datatype Boolean can hold a truth value. There are only two possible options for this value True or False (can also be thought of as 1/0 Yes/No On/Off). This datatype is very important for Control Flow like [[content/Theory Exam/2 Control Flow/2 Conditions|Conditions]] because it is usually based on many "Yes/No Questions", which are answered with a Boolean value. You can use the function `bool()` to convert a value to a Boolean, or create one with value `False` if no argument is given.
+The datatype Boolean can hold a truth value. There are only two possible options for this value True or False (can also be thought of as 1/0 Yes/No On/Off). This datatype is very important for Control Flow like [[content/Exam/2 Control Flow/2 Conditions|Conditions]] because it is usually based on many "Yes/No Questions", which are answered with a Boolean value. You can use the function `bool()` to convert a value to a Boolean, or create one with value `False` if no argument is given.
 
 ```python
 True False bool(1)
@@ -63,14 +63,14 @@ Below are some key properties of the collection datatypes available in Python.
 
 | Name                                                                | Mutable | Iterable               | Indexing | Slicing | Common Use Case                                     |
 | ------------------------------------------------------------------- | ------- | ---------------------- | -------- | ------- | --------------------------------------------------- |
-| [[content/Theory Exam/1 General/5 Datatype#String\|String]]         | No      | Yes                    | Yes      | Yes     | Text processing and manipulation                    |
-| [[content/Theory Exam/1 General/5 Datatype#List\|List]]             | Yes     | Yes                    | Yes      | Yes     | Storing and manipulating mutable sequences          |
-| [[content/Theory Exam/1 General/5 Datatype#Tuple\|Tuple]]           | No      | Yes                    | Yes      | Yes     | Fixed/Constant collections of items                 |
-| [[content/Theory Exam/1 General/5 Datatype#Set\|Set]]               | Yes     | Yes (but no order)     | No       | No      | Ensuring unique elements in a collection, Set Logic |
-| [[content/Theory Exam/1 General/5 Datatype#Dictionary\|Dictionary]] | Yes     | keys, values, or pairs | Keys     | No      | Key-value pair storage and lookups                  |
-| [[content/Theory Exam/1 General/5 Datatype#Range\|Range]]           | No      | Yes                    | Yes      | Yes     | Generating sequences of numbers                     |
+| [[content/Exam/1 General/5 Datatype#String\|String]]         | No      | Yes                    | Yes      | Yes     | Text processing and manipulation                    |
+| [[content/Exam/1 General/5 Datatype#List\|List]]             | Yes     | Yes                    | Yes      | Yes     | Storing and manipulating mutable sequences          |
+| [[content/Exam/1 General/5 Datatype#Tuple\|Tuple]]           | No      | Yes                    | Yes      | Yes     | Fixed/Constant collections of items                 |
+| [[content/Exam/1 General/5 Datatype#Set\|Set]]               | Yes     | Yes (but no order)     | No       | No      | Ensuring unique elements in a collection, Set Logic |
+| [[content/Exam/1 General/5 Datatype#Dictionary\|Dictionary]] | Yes     | keys, values, or pairs | Keys     | No      | Key-value pair storage and lookups                  |
+| [[content/Exam/1 General/5 Datatype#Range\|Range]]           | No      | Yes                    | Yes      | Yes     | Generating sequences of numbers                     |
 ### Mutable
-A mutable object can be modified after it is created, a immutable object can not. This means you can change, add, or remove parts or all of its content without creating a new [[content/Theory Exam/1 General/6 Variable#Memory Objects|object]]. For example, you can change the value of the second item in a list, but you can not change the value of the second item in a tuple or string. All basic datatypes are immutable. So when it seems like the value changes, it is actually a completely new [[content/Theory Exam/1 General/6 Variable#Memory Objects|object]]. You can find the difference in behavior between mutable and immutable variables [[content/Theory Exam/1 General/6 Variable#Mutability Behaviour|here]].
+A mutable object can be modified after it is created, a immutable object can not. This means you can change, add, or remove parts or all of its content without creating a new [[content/Exam/1 General/6 Variable#Memory Objects|object]]. For example, you can change the value of the second item in a list, but you can not change the value of the second item in a tuple or string. All basic datatypes are immutable. So when it seems like the value changes, it is actually a completely new [[content/Exam/1 General/6 Variable#Memory Objects|object]]. You can find the difference in behavior between mutable and immutable variables [[content/Exam/1 General/6 Variable#Mutability Behaviour|here]].
 
 ### Iterable
 An iterable is an object that can return its elements one at a time, allowing it to be used in a loop (e.g., `for` loops).
@@ -93,7 +93,7 @@ listName[0] = -1 # Set the first element of the list to -1
 print(listName) # print the whole list -> [-1, 1, 7, 4, 5, 2]
 ```
 
-A [[content/Theory Exam/1 General/5 Datatype#Dictionary|dictionary]] does not have classic ordered indexing with numbers. Instead, each element is a combination of key and value, and you use the key instead of an index
+A [[content/Exam/1 General/5 Datatype#Dictionary|dictionary]] does not have classic ordered indexing with numbers. Instead, each element is a combination of key and value, and you use the key instead of an index
 ### Slicing
 
 Slicing is used to select a subsequence/portion of a sequence, instead of only one element. You can specify a start, stop, and step.
@@ -183,7 +183,7 @@ The datatype Dictionary creates a 1 to 1 mapping between keys and values. So ins
 {"a": 1, "c": "5"} {} {1: "test", "1": 123, "a": 1, (1,2): 1}
 ```
 
-You can use the function `dict()` to convert values to a dictionary or create an empty dictionary `{}` if no arguments are given. You can use `dict()` with no [[content/Theory Exam/2 Control Flow/5 Function#Parameters|arguments]], an [[#Iterable]] of key and value pairs, or keyword arguments.
+You can use the function `dict()` to convert values to a dictionary or create an empty dictionary `{}` if no arguments are given. You can use `dict()` with no [[content/Exam/2 Control Flow/5 Function#Parameters|arguments]], an [[#Iterable]] of key and value pairs, or keyword arguments.
 
 ```python
 print(dict())                                                 # empty dictionary -> {}
@@ -251,7 +251,7 @@ You can basically define and use your very own datatypes using Object Oriented P
 
 # Internal Details
 ## Truthy and Falsy
-In Python, any value can be evaluated (e.g. in a [[content/Theory Exam/1 General/7 Operator#Logical Operators|logical operator]], [[content/Theory Exam/2 Control Flow/2 Conditions|condition]], ...) like a boolean. Python will treat it as truthy (`True`) or falsy (`False`) based on its type and value.
+In Python, any value can be evaluated (e.g. in a [[content/Exam/1 General/7 Operator#Logical Operators|logical operator]], [[content/Exam/2 Control Flow/2 Conditions|condition]], ...) like a boolean. Python will treat it as truthy (`True`) or falsy (`False`) based on its type and value.
 - **Falsy Values**: `False`, `0`, `0.0`, `0j`, `""`, `[]`, `()`, `set()`, `{}`, `None`, `range(0)`
 - **Truthy Values**: Everything else so not empty collections and not zero numeric values
 

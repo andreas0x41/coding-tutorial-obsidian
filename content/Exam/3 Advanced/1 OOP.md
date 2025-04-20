@@ -18,7 +18,7 @@ Object-Oriented Programming (OOP) helps to structure code by bundling data and t
 - **Object**: A specific instance of a class.
 - **Initialization**: Creating/Constructing a new object with the special method `__init__()`.
 - **Attributes**: Data stored inside and object.
-- **[[content/Theory Exam/2 Control Flow/5 Function#Methods|Methods]]**: Functions inside classes that define behavior.
+- **[[content/Exam/2 Control Flow/5 Function#Methods|Methods]]**: Functions inside classes that define behavior.
 - **Encapsulation**: Hiding internal data, exposing only necessary parts. Access levels: public (`name`), protected (`_name`), and private (`__name`)
 - **Inheritance**: A class can inherit/reuse methods from another class.
 
@@ -82,9 +82,9 @@ BMW with 240km/h discounted to 36000.0$
 
 You can see that after the class once, you can use it as a blueprint to make as many objects as you want.
 # Class Definition
-A class defines attributes and behavior. An object is an instance of a class. Defining a class is like creating your own new [[content/Theory Exam/1 General/5 Datatype|datatype]]. Then you can create objects of that datatype you defined yourself. You datatype/class can have value and methods. You have to define everything your datatype/class should store and do.
+A class defines attributes and behavior. An object is an instance of a class. Defining a class is like creating your own new [[content/Exam/1 General/5 Datatype|datatype]]. Then you can create objects of that datatype you defined yourself. You datatype/class can have value and methods. You have to define everything your datatype/class should store and do.
 ## Basics
-You can define a new class by using the [[content/Theory Exam/1 General/8 Keyword|keyword]] `class`. Inside the class, you have the definition of all the attributes and methods that belong to the class. When creating an object, all its structure, values, and behavior are defined by the class.
+You can define a new class by using the [[content/Exam/1 General/8 Keyword|keyword]] `class`. Inside the class, you have the definition of all the attributes and methods that belong to the class. When creating an object, all its structure, values, and behavior are defined by the class.
 
 ```python
 class className:
@@ -156,7 +156,7 @@ print(car1.info)                 # -> Toyota with 180km/h for 20000$.
 ```
 
 ## Methods
-A [[content/Theory Exam/2 Control Flow/5 Function#Methods|method]] is a [[content/Theory Exam/2 Control Flow/5 Function|function]] that belongs to an object/class. Because of this it can directly access and change the attributes of the object/class. You can call a method with the syntax `objectName.methodName(...)`. When defining a method, the first parameter is [[1 OOP#Self|self]]. When calling the method, Python automatically passes the calling object as the first argument. So the calling object will be stored in `self`, which makes it easy to use and manipulate its data. All the other behavior like parameters, return values, ... are similar to normal [[content/Theory Exam/2 Control Flow/5 Function|functions]].
+A [[content/Exam/2 Control Flow/5 Function#Methods|method]] is a [[content/Exam/2 Control Flow/5 Function|function]] that belongs to an object/class. Because of this it can directly access and change the attributes of the object/class. You can call a method with the syntax `objectName.methodName(...)`. When defining a method, the first parameter is [[1 OOP#Self|self]]. When calling the method, Python automatically passes the calling object as the first argument. So the calling object will be stored in `self`, which makes it easy to use and manipulate its data. All the other behavior like parameters, return values, ... are similar to normal [[content/Exam/2 Control Flow/5 Function|functions]].
 
 Lets add a discount method that directly uses and updates the price of a car to be discounted.
 
