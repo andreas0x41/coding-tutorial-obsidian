@@ -35,7 +35,7 @@ x = 5 # assign the value 5 to the variable x
 
 > [!todo]- less/not exam relevant
 > The following 3 subchapters show more advanced usage. It can be helpful to know about this, but especially the last two are not exam relevant.
-## Augmented Assignment
+## Augmented/In Place Assignment
 You can combine the assignment operator with an arithmetic or bitwise operator. This will apply the operation to the current value of the variable and then assign the resulting value to the variable again. This is done by putting the other operator between the variable name and the assignment with the syntax `var_name operator= value`.
 
 ```python

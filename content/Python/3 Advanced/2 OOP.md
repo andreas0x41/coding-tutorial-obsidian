@@ -21,6 +21,7 @@ Object-Oriented Programming (OOP) helps to structure code by bundling data and t
 - **[[content/Python/2 Control Flow/5 Function#Methods|Methods]]**: Functions inside classes that define behavior.
 - **Encapsulation**: Hiding internal data, exposing only necessary parts. Access levels: public (`name`), protected (`_name`), and private (`__name`)
 - **Inheritance**: A class can inherit/reuse methods from another class.
+- **Magic/Dunder Methods:** Define Operators and special behaviour 
 
 # Basics
 Object-Oriented Programming (OOP) is a way of writing programs based on **objects** that bundle both **data** and **behavior** together. It imitates objects from the real world.
@@ -229,13 +230,6 @@ print(acc._Account__balance)   # Works, but NEVER DO -> 1000
 print(acc.get_balance())       # Access via method (safe) -> 1000
 acc.deposit("0112345678", 500) # Change via method (safe) -> 1500
 ```
-
-> [!quote]- Additional not exam relevant topics for later
-> class and static methods
-> class attributes
-> magic methods
-> property
-> polymorphism 
 
 # Inheritance
 **Inheritance** allows one class to inherit (=take over) attributes and methods from another class. It’s like saying, “A car is a vehicle.” So the **Car** class can inherit its basic structure, attributes, and methods from a more general **Vehicle** class.
@@ -447,6 +441,156 @@ bmw.drive()        # from Car -> Driving
 bmw.play_music()   # from MusicSystem -> Playing music
 bmw.cool()         # from AirConditioning -> Cooling the air
 ```
+
+# Magic/Dunder Methods
+Magic/Dunder methods are used to define special behavior in a class. Their most common use is to define what happens when using a operator or a special function is used with the object. The name Dunder comes from double underscore, because their name starts and ends with a double underscore `__name__(...)`. It is important that, when creating a class, you define everything you need explicitly. You are defining what it can do and how, in a way that python understands.
+## Operators
+One use case of these methods is to define/override the usage of operators, with your custom objects. Most of the operators can be defined. These methods take the operands as parameters and return the result of the operation.
+
+| Operator | Description         | Method       | Example                      |
+| -------- | ------------------- | ------------ | ---------------------------- |
+| +        | Addition            | **add**      | `a + b → a.__add__(b)`       |
+| -        | Subtraction         | **sub**      | `a - b → a.__sub__(b)`       |
+| *        | Multiplication      | **mul**      | `a * b → a.__mul__(b)`       |
+| /        | Division            | **truediv**  | `a / b → a.__truediv__(b)`   |
+| //       | Floor division      | **floordiv** | `a // b → a.__floordiv__(b)` |
+| %        | Modulo              | **mod**      | `a % b → a.__mod__(b)`       |
+| **       | Exponentiation      | **pow**      | `a ** b → a.__pow__(b)`      |
+| ==       | Equal               | **eq**       | `a == b → a.__eq__(b)`       |
+| !=       | Not equal           | **ne**       | `a != b → a.__ne__(b)`       |
+| <        | Less than           | **lt**       | `a < b → a.__lt__(b)`        |
+| <=       | Less than or equal  | **le**       | `a <= b → a.__le__(b)`       |
+| >        | Greater than        | **gt**       | `a > b → a.__gt__(b)`        |
+| >=       | Greater than or eq. | **ge**       | `a >= b → a.__ge__(b)`       |
+| &        | Bitwise AND         | **and**      | `a & b → a.__and__(b)`       |
+| \|       | Bitwise OR          | **or**       | `a \| b → a.__or__(b)`       |
+| ~        | Bitwise NOT         | **invert**   | `~a → a.__invert__()`        |
+| ^        | Bitwise XOR         | **xor**      | `a ^ b → a.__xor__(b)`       |
+| <<       | Left shift          | **lshift**   | `a << 1 → a.__lshift__(1)`   |
+| >>       | Right shift         | **rshift**   | `a >> 1 → a.__rshift__(1)`   |
+| -obj     | Negation            | **neg**      | `-a → a.__neg__()`           |
+| +obj     | Unary plus          | **pos**      | `+a → a.__pos__()`           |
+
+All the operators that have two operands also support [[content/Python/1 General/7 Operator#Augmented/In Place Assignment|in place/augmented assignment]]. To do define this, you simply put an `i` before the method name. For example `a + b → a.__add__(b)` becomes `a += b → a.__iadd__(b)`.
+
+Let's see a practical example of how this actually works. Below you can see a 2D vector class which has attributes for x and y. We also define addition and subtraction of to vectors and scaling a vector by a number.
+
+```python
+class vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __add__(self, other):
+        new_x = self.x + other.x
+        new_y = self.y + other.y
+        return vector(new_x, new_y)
+
+    def __sub__(self, other):
+        new_x = self.x - other.x
+        new_y = self.y - other.y
+        return vector(new_x, new_y)
+
+    def __mul__(self, scalar):
+        new_x = self.x * scalar
+        new_y = self.y * scalar
+        return vector(new_x, new_y)
+
+V1 = vector(1, 1)
+V2 = vector(-3, 1)
+V3 = vector(4, -2)
+
+V_res1 = V1 + V2
+print(f"x: {V_res1.x}, y: {V_res1.y}, V_res1: {V_res1}")  
+# -> x: -2, y: 2, V_res1: <__main__.vector object at 0x000001F661F49E90>
+V_res2 = V1 - V2
+print(f"x: {V_res2.x}, y: {V_res2.y}, V_res2: {V_res2}")  
+# -> x: 4, y: 0, V_res2: <__main__.vector object at 0x000001F661F49F10>
+V_res3 = V1 * 2
+print(f"x: {V_res3.x}, y: {V_res3.y}, V_res3: {V_res3}")  
+# -> x: 2, y: 2, V_res3: <__main__.vector object at 0x000001F661F49F50>
+V_res4 = V1 - V2 * 2 + V3
+print(f"x: {V_res4.x}, y: {V_res4.y}, V_res4: {V_res4}")  
+# -> x: 9, y: -2, V_res4: <__main__.vector object at 0x000001F661F49F90>
+```
+
+A few important things to notice/understand. These operator methods take the operands as parameters. We usually call them `self` and `other`, for consistency. `a + b` → `a.__add__(b)`→ `self=a, other=b`. They return the result of the operation. In this case the result of adding, subtracting, or scaling vectors is also a vector. Because of this, we create a new vector object, with the calculated x and y values, and return this object. This is important to keep the class and therefore structure of behaviour of the return value the same as the operands. This is not strictly necessary, but usually necessary to insure usability, consistency and predictable behavior. Below, you can see and counter example of returning a string with `new_x new_y`, and what problems will result from this. The proper way to do is on top, below you see ho **not** to do it and why!
+
+```python
+class vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __add__(self, other):
+        new_x = self.x + other.x
+        new_y = self.y + other.y
+        return f"{new_x} {new_y}"
+
+V1 = vector(1, 1)
+V2 = vector(-3, 1)
+V3 = vector(4, -2)
+
+V_res1 = V1 + V2
+print(f"V_res1: {V_res1}") # V_res1: -2 2
+# print(f"x: {V_res1.x}")  # AttributeError: 'str' object has no attribute 'x'
+V_res2 = V3 + V_res1       # AttributeError: 'str' object has no attribute 'x'
+                          # TypeError: can only concatenate str (not "vector") to str
+```
+
+You can see, that this inconsistency in class/datatype can easily destroy the usability for the future. Therefore it is best to have a return value that is the same as the operands, intuitive, and or well documented.
+## Type Conversion
+| Method      | Description           | Example                                    |
+| ----------- | --------------------- | ------------------------------------------ |
+| **str**     | Human-readable string | `str(obj) → obj.__str__()`                 |
+| **repr**    | Debug/official repr   | `repr(obj) → obj.__repr__()`               |
+| **bytes**   | Convert to bytes      | `bytes(obj) → obj.__bytes__()`             |
+| **format**  | Custom formatting     | `format(obj, spec) → obj.__format__(spec)` |
+| **bool**    | Truth value           | `bool(obj) → obj.__bool__()`               |
+| **int**     | Integer conversion    | `int(obj) → obj.__int__()`                 |
+| **float**   | Float conversion      | `float(obj) → obj.__float__()`             |
+| **complex** | Complex number        | `complex(obj) → obj.__complex__()`         |
+| **hash**    | Hash value            | `hash(obj) → obj.__hash__()`               |
+| **index**   | Integer for slicing   | `mylist[obj] → obj.__index__()`            |
+| **round**   | Round object          | `round(obj) → obj.__round__()`             |
+| **abs**     | Absolute value        | `abs(a) → a.__abs__()`                     |
+## Collection Usage
+| Method       | Description           | Example                              |
+| ------------ | --------------------- | ------------------------------------ |
+| **len**      | Length                | `len(obj) → obj.__len__()`           |
+| **getitem**  | Get item by key/index | `obj[0] → obj.__getitem__(0)`        |
+| **setitem**  | Set item              | `obj[0] = x → obj.__setitem__(0, x)` |
+| **delitem**  | Delete item           | `del obj[0] → obj.__delitem__(0)`    |
+| **iter**     | Iterator object       | `for i in obj → obj.__iter__()`      |
+| **next**     | Next item (iterators) | `next(obj) → obj.__next__()`         |
+| **reversed** | Reverse iteration     | `reversed(obj) → obj.__reversed__()` |
+| **contains** | Membership test       | `'x' in obj → obj.__contains__('x')` |
+## Object Lifecycle
+| Method   | Description                   | Example                          |
+| -------- | ----------------------------- | -------------------------------- |
+| **new**  | Creates new instance          | `obj = MyClass.__new__(MyClass)` |
+| **init** | Initializes instance          | `obj.__init__(...)`              |
+| **del**  | Called before object deletion | `del obj → obj.__del__()`        |
+## Attribute Management
+| Method     | Description                 | Example                                         |
+| ---------- | --------------------------- | ----------------------------------------------- |
+| **get**    | Accessing managed attribute | `obj.attr → descriptor.__get__(obj, type)`      |
+| **set**    | Setting managed attribute   | `obj.attr = val → descriptor.__set__(obj, val)` |
+| **delete** | Deleting managed attribute  | `del obj.attr → descriptor.__delete__(obj)`     |
+## Call and Context
+| Method    | Description          | Example                         |
+| --------- | -------------------- | ------------------------------- |
+| **call**  | Make object callable | `obj() → obj.__call__()`        |
+| **enter** | With statement entry | `with obj: → obj.__enter__()`   |
+| **exit**  | With statement exit  | `with obj: → obj.__exit__(...)` |
+
+> [!quote]- Additional not exam relevant topics for later
+> class and static methods
+> class attributes
+> property
+> polymorphism 
+
+
 
 # Questions
 - [ ] What is Object-Oriented Programming?

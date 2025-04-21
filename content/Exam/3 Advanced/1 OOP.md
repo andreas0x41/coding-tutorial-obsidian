@@ -21,6 +21,7 @@ Object-Oriented Programming (OOP) helps to structure code by bundling data and t
 - **[[content/Exam/2 Control Flow/5 Function#Methods|Methods]]**: Functions inside classes that define behavior.
 - **Encapsulation**: Hiding internal data, exposing only necessary parts. Access levels: public (`name`), protected (`_name`), and private (`__name`)
 - **Inheritance**: A class can inherit/reuse methods from another class.
+- **Magic/Dunder Methods:** Define Operators and special behaviour 
 
 # Basics
 Object-Oriented Programming (OOP) is a way of writing programs based on **objects** that bundle both **data** and **behavior** together. It imitates objects from the real world.
@@ -230,7 +231,6 @@ print(acc.get_balance())       # Access via method (safe) -> 1000
 acc.deposit("0112345678", 500) # Change via method (safe) -> 1500
 ```
 
-
 # Inheritance
 **Inheritance** allows one class to inherit (=take over) attributes and methods from another class. It’s like saying, “A car is a vehicle.” So the **Car** class can inherit its basic structure, attributes, and methods from a more general **Vehicle** class.
 
@@ -380,6 +380,82 @@ bmw.play_music()   # from MusicSystem -> Playing music
 bmw.cool()         # from AirConditioning -> Cooling the air
 ```
 
+# Magic/Dunder Methods
+Magic/Dunder methods are used to define special behavior in a class. Their most common use is to define what happens when using a operator or a special function is used with the object. The name Dunder comes from double underscore, because their name starts and ends with a double underscore `__name__(...)`. It is important that, when creating a class, you define everything you need explicitly. You are defining what it can do and how, in a way that python understands.
+## Operators
+One use case of these methods is to define/override the usage of operators, with your custom objects. Most of the operators can be defined. These methods take the operands as parameters and return the result of the operation.
+
+| Operator | Description    | Method     | Example                    |
+| -------- | -------------- | ---------- | -------------------------- |
+| +        | Addition       | **add**    | `a + b → a.__add__(b)`     |
+| -        | Subtraction    | **sub**    | `a - b → a.__sub__(b)`     |
+| *        | Multiplication | **mul**    | `a * b → a.__mul__(b)`     |
+Let's see a practical example of how this actually works. Below you can see a 2D vector class which has attributes for x and y. We also define addition and subtraction of to vectors and scaling a vector by a number.
+
+```python
+class vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __add__(self, other):
+        new_x = self.x + other.x
+        new_y = self.y + other.y
+        return vector(new_x, new_y)
+
+    def __sub__(self, other):
+        new_x = self.x - other.x
+        new_y = self.y - other.y
+        return vector(new_x, new_y)
+
+    def __mul__(self, scalar):
+        new_x = self.x * scalar
+        new_y = self.y * scalar
+        return vector(new_x, new_y)
+
+V1 = vector(1, 1)
+V2 = vector(-3, 1)
+V3 = vector(4, -2)
+
+V_res1 = V1 + V2
+print(f"x: {V_res1.x}, y: {V_res1.y}, V_res1: {V_res1}")  
+# -> x: -2, y: 2, V_res1: <__main__.vector object at 0x000001F661F49E90>
+V_res2 = V1 - V2
+print(f"x: {V_res2.x}, y: {V_res2.y}, V_res2: {V_res2}")  
+# -> x: 4, y: 0, V_res2: <__main__.vector object at 0x000001F661F49F10>
+V_res3 = V1 * 2
+print(f"x: {V_res3.x}, y: {V_res3.y}, V_res3: {V_res3}")  
+# -> x: 2, y: 2, V_res3: <__main__.vector object at 0x000001F661F49F50>
+V_res4 = V1 - V2 * 2 + V3
+print(f"x: {V_res4.x}, y: {V_res4.y}, V_res4: {V_res4}")  
+# -> x: 9, y: -2, V_res4: <__main__.vector object at 0x000001F661F49F90>
+```
+
+A few important things to notice/understand. These operator methods take the operands as parameters. We usually call them `self` and `other`, for consistency. `a + b` → `a.__add__(b)`→ `self=a, other=b`. They return the result of the operation. In this case the result of adding, subtracting, or scaling vectors is also a vector. Because of this, we create a new vector object, with the calculated x and y values, and return this object. This is important to keep the class and therefore structure of behaviour of the return value the same as the operands. This is not strictly necessary, but usually necessary to insure usability, consistency and predictable behavior. Below, you can see and counter example of returning a string with `new_x new_y`, and what problems will result from this. The proper way to do is on top, below you see ho **not** to do it and why!
+
+```python
+class vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __add__(self, other):
+        new_x = self.x + other.x
+        new_y = self.y + other.y
+        return f"{new_x} {new_y}"
+
+V1 = vector(1, 1)
+V2 = vector(-3, 1)
+V3 = vector(4, -2)
+
+V_res1 = V1 + V2
+print(f"V_res1: {V_res1}") # V_res1: -2 2
+# print(f"x: {V_res1.x}")  # AttributeError: 'str' object has no attribute 'x'
+V_res2 = V3 + V_res1       # AttributeError: 'str' object has no attribute 'x'
+                           # TypeError: can only concatenate str (not "vector") to str
+```
+
+You can see, that this inconsistency in class/datatype can easily destroy the usability for the future. Therefore it is best to have a return value that is the same as the operands, intuitive, and or well documented.
 # Questions
 - [ ] What is Object-Oriented Programming?
 	- [ ] Explain class and object.
@@ -397,3 +473,5 @@ bmw.cool()         # from AirConditioning -> Cooling the air
 	- [ ] Can a child class use methods that is only defined in its parent class? What happens if both parent and child define a method with the same name?
 	- [ ] Explain Multilevel Inheritance
 	- [ ] Explain Multiple Inheritance
+- [ ] Explain magic/dunder methods and why they are useful.
+	- [ ] Show the use of defining +, - and * with an example.

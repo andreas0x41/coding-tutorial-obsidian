@@ -10,311 +10,153 @@ tags:
   - AECD
   - GEES
 ---
-# Python Built-in Functions and Methods
+# 🧮 Operator Overloading
 
-## Mathematical Functions
+| Operator | Description    | Method       | Example                      |
+| -------- | -------------- | ------------ | ---------------------------- |
+| +        | Addition       | __add__      | `a + b → a.__add__(b)`       |
+| -        | Subtraction    | __sub__      | `a - b → a.__sub__(b)`       |
+| *        | Multiplication | __mul__      | `a * b → a.__mul__(b)`       |
+| /        | Division       | __truediv__  | `a / b → a.__truediv__(b)`   |
+| //       | Floor division | __floordiv__ | `a // b → a.__floordiv__(b)` |
+| %        | Modulo         | __mod__      | `a % b → a.__mod__(b)`       |
+| **       | Exponentiation | __pow__      | `a ** b → a.__pow__(b)`      |
+| &        | Bitwise AND    | __and__      | `a & b → a.__and__(b)`       |
+| \|       | Bitwise OR     | __or__       | `a \| b → a.__or__(b)`       |
+| ~        | Bitwise NOT    | __invert__   | `~a → a.__invert__()`        |
+| ^        | Bitwise XOR    | __xor__      | `a ^ b → a.__xor__(b)`       |
+| <<       | Left shift     | __lshift__   | `a << 1 → a.__lshift__(1)`   |
+| >>       | Right shift    | __rshift__   | `a >> 1 → a.__rshift__(1)`   |
+| -obj     | Negation       | __neg__      | `-a → a.__neg__()`           |
+| +obj     | Unary plus     | __pos__      | `+a → a.__pos__()`           |
+| abs()    | Absolute value | __abs__      | `abs(a) → a.__abs__()`       |
+``
 
-### `abs(x)`
+---
 
-Returns the absolute value of `x`.
+# ✏️ In-place Operators
 
-```python
-print(abs(-5))  # -> 5
-```
 
-### `round(number, ndigits=None)`
+| Operator | Description             | Method        | Example                        |
+| -------- | ----------------------- | ------------- | ------------------------------ |
+| +=       | In-place addition       | __iadd__      | `a += b → a.__iadd__(b)`       |
+| -=       | In-place subtraction    | __isub__      | `a -= b → a.__isub__(b)`       |
+| *=       | In-place multiplication | __imul__      | `a *= b → a.__imul__(b)`       |
+| /=       | In-place division       | __itruediv__  | `a /= b → a.__itruediv__(b)`   |
+| //=      | In-place floor div      | __ifloordiv__ | `a //= b → a.__ifloordiv__(b)` |
+| %=       | In-place modulo         | __imod__      | `a %= b → a.__imod__(b)`       |
+| **=      | In-place power          | __ipow__      | `a **= b → a.__ipow__(b)`      |
+| &=       | In-place AND            | __iand__      | `a &= b → a.__iand__(b)`       |
+| \|=      | In-place OR             | __ior__       | `a \|= b → a.__ior__(b)`       |
+| ^=       | In-place XOR            | __ixor__      | `a ^= b → a.__ixor__(b)`       |
+| <<=      | In-place left shift     | __ilshift__   | `a <<= 1 → a.__ilshift__(1)`   |
+| >>=      | In-place right shift    | __irshift__   | `a >>= 1 → a.__irshift__(1)`   |
 
-Rounds `number` to `ndigits` decimal places (default: 0).
 
-```python
-print(round(3.14159, 2))  # -> 3.14
-print(round(4.56))  # -> 5
-print(round(123456, -3))  # -> 123000
-```
+---
 
-### `pow(base, exp, mod=None)`
+# 🔁 Comparison Operators
 
-Computes `base**exp`. If `mod` is provided, computes `(base**exp) % mod`.
 
-```python
-print(pow(2, 3))  # -> 8
-print(pow(2, 3, 5))  # -> 3
-```
+| Operator | Description         | Method | Example                |
+| -------- | ------------------- | ------ | ---------------------- |
+| ==       | Equal               | __eq__ | `a == b → a.__eq__(b)` |
+| !=       | Not equal           | __ne__ | `a != b → a.__ne__(b)` |
+| <        | Less than           | __lt__ | `a < b → a.__lt__(b)`  |
+| <=       | Less than or equal  | __le__ | `a <= b → a.__le__(b)` |
+| >        | Greater than        | __gt__ | `a > b → a.__gt__(b)`  |
+| >=       | Greater than or eq. | __ge__ | `a >= b → a.__ge__(b)` |
 
-### `sum(iterable, start=0)`
 
-Returns the sum of `iterable`, starting from `start` (default: 0).
+---
 
-```python
-print(sum([1, 2, 3]))  # -> 6
-```
+# 🎭 Object Lifecycle
 
-### `min(iterable, *, key=None, default=None)`
 
-Returns the smallest item in `iterable` or the `default` if empty.
+| Method   | Description                   | Example                          |
+| -------- | ----------------------------- | -------------------------------- |
+| __new__  | Creates new instance          | `obj = MyClass.__new__(MyClass)` |
+| __init__ | Initializes instance          | `obj.__init__(...)`              |
+| __del__  | Called before object deletion | `del obj → obj.__del__()`        |
 
-```python
-print(min([3, 1, 4]))  # -> 1
-print(min(['apple', 'banana'], key=len))  # -> 'apple'
-```
 
-### `max(iterable, *, key=None, default=None)`
+---
 
-Returns the largest item in `iterable` or `default` if empty.
+# 🔄 Type Conversion & Representation
 
-```python
-print(max([3, 1, 4]))  # -> 4
-print(max(['apple', 'banana'], key=len))  # -> 'banana'
-```
 
-## Iterables & Sequences
+| Method      | Description           | Example                                    |
+| ----------- | --------------------- | ------------------------------------------ |
+| __str__     | Human-readable string | `str(obj) → obj.__str__()`                 |
+| __repr__    | Debug/official repr   | `repr(obj) → obj.__repr__()`               |
+| __bytes__   | Convert to bytes      | `bytes(obj) → obj.__bytes__()`             |
+| __format__  | Custom formatting     | `format(obj, spec) → obj.__format__(spec)` |
+| __hash__    | Hash value            | `hash(obj) → obj.__hash__()`               |
+| __bool__    | Truth value           | `bool(obj) → obj.__bool__()`               |
+| __int__     | Integer conversion    | `int(obj) → obj.__int__()`                 |
+| __float__   | Float conversion      | `float(obj) → obj.__float__()`             |
+| __complex__ | Complex number        | `complex(obj) → obj.__complex__()`         |
+| __index__   | Integer for slicing   | `mylist[obj] → obj.__index__()`            |
+| __round__   | Round object          | `round(obj) → obj.__round__()`             |
+| **abs**     | Absolute value        | `abs(a) → a.__abs__()`                     |
 
-### `len(obj)`
 
-Returns the number of items in `obj`.
 
-```python
-print(len([1, 2, 3]))  # -> 3
-```
+---
 
-### `sorted(iterable, *, key=None, reverse=False)`
+# 📦 Container Emulation
 
-Returns a sorted list from `iterable`. `.sort()` modifies lists in-place.
 
-```python
-print(sorted([3, 1, 2]))  # -> [1, 2, 3]
-```
+| Method       | Description           | Example                              |
+| ------------ | --------------------- | ------------------------------------ |
+| __len__      | Length                | `len(obj) → obj.__len__()`           |
+| __getitem__  | Get item by key/index | `obj[0] → obj.__getitem__(0)`        |
+| __setitem__  | Set item              | `obj[0] = x → obj.__setitem__(0, x)` |
+| __delitem__  | Delete item           | `del obj[0] → obj.__delitem__(0)`    |
+| __iter__     | Iterator object       | `for i in obj → obj.__iter__()`      |
+| __next__     | Next item (iterators) | `next(obj) → obj.__next__()`         |
+| __reversed__ | Reverse iteration     | `reversed(obj) → obj.__reversed__()` |
+| __contains__ | Membership test       | `'x' in obj → obj.__contains__('x')` |
 
-### `reversed(iterable)`
 
-Returns an iterator reversing `iterable`.
+---
 
-```python
-print(list(reversed([1, 2, 3])))  # -> [3, 2, 1]
-```
+# 🧭 Attribute Access
 
-### `enumerate(iterable, start=0)`
 
-Yields `(index, value)` pairs from `iterable`.
+| Method            | Description                          | Example                                |
+|-------------------|--------------------------------------|----------------------------------------|
+| __getattr__       | Fallback for undefined attributes    | `obj.foo → obj.__getattr__('foo')`     |
+| __getattribute__  | Called for all attr access           | `obj.foo → obj.__getattribute__('foo')`|
+| __setattr__       | On attribute set                     | `obj.foo = 5 → obj.__setattr__('foo', 5)` |
+| __delattr__       | On attribute delete                  | `del obj.foo → obj.__delattr__('foo')` |
+| __dir__           | Customize dir(obj)                   | `dir(obj) → obj.__dir__()`             |
 
-```python
-print(list(enumerate(['a', 'b'], start=1)))  # -> [(1, 'a'), (2, 'b')]
-```
 
-### `zip(*iterables)`
+---
 
-Combines iterables element-wise.
+# 🔧 Callable & Context Management
 
-```python
-print(list(zip([1, 2], ['a', 'b'])))  # -> [(1, 'a'), (2, 'b')]
-```
 
-### `filter(function, iterable)`
+| Method    | Description          | Example                         |
+| --------- | -------------------- | ------------------------------- |
+| __call__  | Make object callable | `obj() → obj.__call__()`        |
+| __enter__ | With statement entry | `with obj: → obj.__enter__()`   |
+| __exit__  | With statement exit  | `with obj: → obj.__exit__(...)` |
 
-Filters elements for which `function` returns `True`.
 
-```python
-print(list(filter(lambda x: x > 0, [-1, 2, -3, 4])))  # -> [2, 4]
-```
+---
 
-### `map(function, iterable)`
+# 🧩 Descriptor Protocol
 
-Applies `function` to each item.
 
-```python
-print(list(map(str, [1, 2, 3])))  # -> ['1', '2', '3']
-```
+| Method     | Description                 | Example                                         |
+| ---------- | --------------------------- | ----------------------------------------------- |
+| __get__    | Accessing managed attribute | `obj.attr → descriptor.__get__(obj, type)`      |
+| __set__    | Setting managed attribute   | `obj.attr = val → descriptor.__set__(obj, val)` |
+| __delete__ | Deleting managed attribute  | `del obj.attr → descriptor.__delete__(obj)`     |
 
-### `all(iterable)`
 
-Returns `True` if all elements are truthy.
+---
 
-```python
-print(all([True, 1, 'a']))  # -> True
-```
-
-### `any(iterable)`
-
-Returns `True` if any element is truthy.
-
-```python
-print(any([0, '', False, 1]))  # -> True
-```
-
-## String Methods
-
-### `.lower()` / `.upper()`
-
-Converts string to lowercase or uppercase.
-
-```python
-print('Hello'.lower())  # -> 'hello'
-```
-
-### `.strip()`
-
-Removes whitespace from both ends.
-
-```python
-print(' hello '.strip())  # -> 'hello'
-```
-
-### `.split(sep=None, maxsplit=-1)`
-
-Splits a string into a list.
-
-```python
-print('hello world'.split())  # -> ['hello', 'world']
-```
-
-### `.join(iterable)`
-
-Joins elements with the string as separator.
-
-```python
-print('-'.join(['a', 'b']))  # -> 'a-b'
-```
-
-### `.replace(old, new, count=-1)`
-
-Replaces `old` with `new`, up to `count` times.
-
-```python
-print('hello'.replace('l', 'x'))  # -> 'hexxo'
-```
-
-### `.startswith(prefix)` / `.endswith(suffix)`
-
-Checks if a string starts or ends with a substring.
-
-```python
-print('hello'.startswith('he'))  # -> True
-```
-
-### `.find(sub, start=0, end=None)`
-
-Returns the index of `sub`, or `-1` if not found.
-
-```python
-print('hello'.find('l'))  # -> 2
-```
-
-### `.count(sub, start=0, end=None)`
-
-Counts occurrences of `sub`.
-
-```python
-print('banana'.count('a'))  # -> 3
-```
-
-## List Methods
-
-### Modification Methods
-
-#### `.append(x)`, `.extend(iterable)`, `.insert(i, x)`
-
-Modifies the list by adding elements.
-
-```python
-l = [1]
-l.append(2)  # -> [1, 2]
-l.extend([3, 4])  # -> [1, 2, 3, 4]
-l.insert(1, 5)  # -> [1, 5, 2, 3, 4]
-```
-
-### Removal Methods
-
-#### `.remove(x)`, `.pop(i=-1)`, `.clear()`
-
-Removes elements from the list.
-
-```python
-l.pop()  # -> Removes last item
-```
-
-### Search Methods
-
-#### `.index(x)`, `.count(x)`
-
-Finds index or counts occurrences.
-
-```python
-print([1, 2, 3, 2].count(2))  # -> 2
-```
-
-### Sorting & Reversing
-
-#### `.sort(key=None, reverse=False)`, `.reverse()`
-
-Sorts or reverses the list in-place.
-
-```python
-l.sort(reverse=True)
-```
-
-### Copying
-
-#### `.copy()`
-
-Returns a shallow copy.
-
-## System & Debugging
-
-### Exiting & Help
-
-#### `exit()`
-
-Exits the interpreter.
-
-#### `help(obj)`
-
-Shows help.
-
-### Introspection
-
-#### `repr(obj)`
-
-Returns a string representation.
-
-#### `callable(obj)`
-
-Checks if `obj` is callable.
-
-### Code Execution
-
-#### `exec(code)`, `eval(expr)`
-
-Executes Python code.
-
-### Namespace Handling
-
-#### `globals()`, `locals()`
-
-Returns the global or local namespace.
-
-## Dictionary Methods
-
-### `.keys()`
-
-Returns a view of all keys in the dictionary.
-
-```python
-d = {'a': 1, 'b': 2}
-print(list(d.keys()))  # -> ['a', 'b']
-```
-
-### `.values()`
-
-Returns a view of all values in the dictionary.
-
-```python
-print(list(d.values()))  # -> [1, 2]
-```
-
-### `.items()`
-
-Returns a view of `(key, value)` pairs.
-
-```python
-print(list(d.items()))  # -> [('a', 1), ('b', 2)]
-```
+Let me know if you'd like these bundled into a `.md` file, split across pages/sections, or visualized differently (e.g., flashcards or searchable table).
