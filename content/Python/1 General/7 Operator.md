@@ -184,6 +184,7 @@ Relational Operators always compare two values and return a [[Python/1 General/5
 | Less Than        | `<`      | `a < b`  | True if `a` is less than `b`.                   | `>=`     |
 | Greater or Equal | `>=`     | `a >= b` | True if `a` is greater than or equal to `b`.    | `<`      |
 | Less or Equal    | `<=`     | `a <= b` | True if `a` is less than or equal to `b`.       | `>`      |
+
 If you look at the logic, you can see that there is an exact opposite (`not` operator) version of each comparison.
 
 ## (In-)Equality
