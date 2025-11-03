@@ -3,13 +3,10 @@ title: 2.2 Conditions
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases: 
+aliases:
 tags:
   - Python
   - ControlFlow
-  - SDML
-  - AECD
-  - GEES
 ---
 Conditions allow code to make decisions. Each individual decision is based on one [[Python/1 General/5 Datatype#Boolean|boolean]] and the only two options are "run some code" or "don't run the code". The boolean is usually created using a series of [[Python/1 General/7 Operator#Relational/Comparison Operators|comparison]] and [[Python/1 General/7 Operator#Logical Operators|logical]] operators. 
 

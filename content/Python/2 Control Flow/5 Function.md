@@ -3,13 +3,10 @@ title: 2.5 Function
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases: 
+aliases:
 tags:
   - Python
   - ControlFlow
-  - SDML
-  - AECD
-  - GEES
 ---
 A `function` is a reusable block of code that performs a specific task. It splits code into independent logical blocks and helps to organize it, avoid repetition, and improve readability.  
 # Summary

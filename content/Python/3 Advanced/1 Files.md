@@ -3,13 +3,10 @@ title: 3.1 Files
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases: 
+aliases:
 tags:
   - Python
   - Advanced
-  - SDML
-  - AECD
-  - GEES
 ---
 
 Python allows you to read data from a file and write data to a file.

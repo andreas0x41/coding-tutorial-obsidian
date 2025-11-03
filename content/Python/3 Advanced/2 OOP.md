@@ -3,13 +3,10 @@ title: 3.2 Object Oriented Programming
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases: 
+aliases:
 tags:
   - Python
   - Advanced
-  - SDML
-  - AECD
-  - GEES
 ---
 
 Object-Oriented Programming (OOP) helps to structure code by bundling data and the methods that operate on that data together.  

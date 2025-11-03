@@ -3,13 +3,10 @@ title: 2.4 For Loop
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases: 
+aliases:
 tags:
   - Python
   - ControlFlow
-  - SDML
-  - AECD
-  - GEES
 ---
 
 A `for` loop is used to iterate over a [[Python/1 General/5 Datatype#Collection Datatypes|collection of elements]] or a [[Python/1 General/5 Datatype#Range|range]] of numbers.  

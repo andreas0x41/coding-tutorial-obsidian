@@ -3,14 +3,11 @@ title: 2.1 Control Flow
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases: 
+aliases:
 tags:
   - Overview
   - Python
   - ControlFlow
-  - SDML
-  - AECD
-  - GEES
 ---
 
 Control Flow refers to the order in which individual statements, instructions, functions, ... are executed/evaluated in a program. Control Flow is essential for managing the program's behavior and making decisions. Computers, and therefore also programs, are completely deterministic. This means you can always determine what will happen next when going through code. 

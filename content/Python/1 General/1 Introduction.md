@@ -3,15 +3,12 @@ title: 1.1 Introduction
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases: 
+aliases:
 tags:
   - ReadFirst
   - Overview
   - Python
   - General
-  - SDML
-  - AECD
-  - GEES
 ---
 # Programming Language
 A programming language is used to give instructions to a computer to execute them. You have to use a specific syntax for the computer to understand the instructions. Programming languages are used to create software, automate tasks, build websites, analyze data, control hardware, and more. You need a programming language to communicate with computers. You have to give explicit instructions in a format that can be understood by the computer.

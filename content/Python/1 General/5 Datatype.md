@@ -3,13 +3,10 @@ title: 1.5 Datatypes
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases: 
+aliases:
 tags:
   - Python
   - General
-  - SDML
-  - AECD
-  - GEES
 ---
 
 A datatype defines how different types of information/data are stored and behave. Examples of the behavior can be found on the pages [[Python/1 General/7 Operator|Operators]], [[Python/2 Control Flow/6 Built-in Functions & Methods|Built-in Functions & Methods]], ...

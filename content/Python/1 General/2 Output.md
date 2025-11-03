@@ -3,13 +3,10 @@ title: 1.2 Output
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases: 
+aliases:
 tags:
   - Python
   - General
-  - SDML
-  - AECD
-  - GEES
 ---
 
 # Summary

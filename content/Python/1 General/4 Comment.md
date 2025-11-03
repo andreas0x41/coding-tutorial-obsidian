@@ -3,13 +3,10 @@ title: 1.4 Comments
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases: 
+aliases:
 tags:
   - Python
   - General
-  - SDML
-  - AECD
-  - GEES
 ---
 Comments are for the Programmers and are completely ignored by the computer. They are usually used to document and explain code. 
 

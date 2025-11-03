@@ -3,13 +3,10 @@ title: 2.6 Built-in Functions & Methods
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases: 
+aliases:
 tags:
   - Python
   - ControlFlow
-  - SDML
-  - AECD
-  - GEES
 ---
 Python has many built-in [[Python/2 Control Flow/5 Function|functions]] and methods. Below or online you can find a overview of these functions and methods. The relevant ones are either already explained in other chapters, or after the table.
 

@@ -3,13 +3,10 @@ title: 2.3 While Loop
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases: 
+aliases:
 tags:
   - Python
   - ControlFlow
-  - SDML
-  - AECD
-  - GEES
 ---
 A `while` loop is used to repeat a block of code as long as a specified condition is [[Python/1 General/5 Datatype#Truthy and Falsy|truthy]].
 # Summary

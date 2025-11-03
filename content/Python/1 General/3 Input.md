@@ -3,13 +3,10 @@ title: 1.3 Input
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases: 
+aliases:
 tags:
   - Python
   - General
-  - SDML
-  - AECD
-  - GEES
 ---
 # Summary
 - **`input()`:** Waits for user input and always returns it as a [[Python/1 General/5 Datatype#String|string]].

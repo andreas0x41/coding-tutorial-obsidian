@@ -3,13 +3,10 @@ title: 1.8 Keywords
 author: Andreas Patuzzi
 company: Auroville Institute of Applied Technology
 draft: false
-aliases: 
+aliases:
 tags:
   - Python
   - General
-  - SDML
-  - AECD
-  - GEES
 ---
 
 In Python, **keywords** are reserved words that have a special predefined meaning and cannot be used as identifiers (e.g., variable names, function names). Keywords are the building blocks of Python syntax and structure. 
