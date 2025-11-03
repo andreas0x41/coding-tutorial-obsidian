@@ -21,13 +21,13 @@ Operators in Python are special symbols or keywords used to perform operations o
 	- String concatenation done using `+` operator
 - **Relational Operators** are used for comparisons, returning boolean results: `==`, `!=`, `>`, `<`, `>=`, `<=`.
 - **Logical Operators** chain conditions together	
-	-  **`and`**: [[content/Exam/1 General/5 Datatype#Truthy and Falsy|Truthy]] if both conditions are Truthy.
-	-  **`or`**: [[content/Exam/1 General/5 Datatype#Truthy and Falsy|Truthy]] if at least one condition is Truthy.
+	-  **`and`**: [[AIAT-Exam/1 General/5 Datatype#Truthy and Falsy|Truthy]] if both conditions are Truthy.
+	-  **`or`**: [[AIAT-Exam/1 General/5 Datatype#Truthy and Falsy|Truthy]] if at least one condition is Truthy.
 	- **`not`**: Inverts the boolean value.
 - Operators are evaluated based on precedence, e.g. `()`, `**`, `*` `/`, `+` `-`, comparison, logical, assignment
 
 # Assignment Operator
-The assignment operator `=` is used to [[content/Exam/1 General/6 Variable#Creating/Assigning|assign]] a value to a [[content/Exam/1 General/6 Variable|variable]] .
+The assignment operator `=` is used to [[AIAT-Exam/1 General/6 Variable#Creating/Assigning|assign]] a value to a [[AIAT-Exam/1 General/6 Variable|variable]] .
 
 ```python
 x = 5 # assign the value 5 to the variable x
@@ -83,11 +83,11 @@ print(10%360, 370%360, 730%360, 3610%360)     # -> 10 10 10 10
 Mathematically speaking you can also calculate/understand the modulo as `a % b = a - b*(a//b)`. 
 
 ## Result Datatype
-The [[content/Exam/1 General/5 Datatype|datatype]] of the result of an operation only depends on the datatypes or the two operands. 
+The [[AIAT-Exam/1 General/5 Datatype|datatype]] of the result of an operation only depends on the datatypes or the two operands. 
 
-Addition `+`, Subtraction `-`, Multiplication `*`, Floor Division `//`, Modulus `%` and Exponentiation `**` will return an integer if both of the operands are [[content/Exam/1 General/5 Datatype#Integer|integers]]. If one of them is [[content/Exam/1 General/5 Datatype#Complex|complex]] the result is complex. Otherwise, if one of them is a [[content/Exam/1 General/5 Datatype#Float|float]], the result will be float. 
+Addition `+`, Subtraction `-`, Multiplication `*`, Floor Division `//`, Modulus `%` and Exponentiation `**` will return an integer if both of the operands are [[AIAT-Exam/1 General/5 Datatype#Integer|integers]]. If one of them is [[AIAT-Exam/1 General/5 Datatype#Complex|complex]] the result is complex. Otherwise, if one of them is a [[AIAT-Exam/1 General/5 Datatype#Float|float]], the result will be float. 
 
-The true Division `/` will always return a [[content/Exam/1 General/5 Datatype#Float|float]]. If one of the operands is [[content/Exam/1 General/5 Datatype#Complex|complex]], it will return complex. 
+The true Division `/` will always return a [[AIAT-Exam/1 General/5 Datatype#Float|float]]. If one of the operands is [[AIAT-Exam/1 General/5 Datatype#Complex|complex]], it will return complex. 
 
 ```python
 a = 3
@@ -112,7 +112,7 @@ print("Hello" + [1, 2])             # ERROR because they have different datatype
 ```
 
 # Relational/Comparison Operators
-Relational Operators always compare two values and return a [[content/Exam/1 General/5 Datatype#Boolean|boolean]].
+Relational Operators always compare two values and return a [[AIAT-Exam/1 General/5 Datatype#Boolean|boolean]].
 
 | Name             | Operator | Example  | Explanation                                     | Opposite |
 | ---------------- | -------- | -------- | ----------------------------------------------- | -------- |
@@ -174,9 +174,9 @@ print(2 == 1 or 2 == 2 or 2 == 3) # -> True
 ```
 
 # Collection Operators
-[[content/Exam/1 General/5 Datatype#Indexing|Indexing]] and [[content/Exam/1 General/5 Datatype#Slicing|Slicing]] are explained in detail on the datatypes page.
+[[AIAT-Exam/1 General/5 Datatype#Indexing|Indexing]] and [[AIAT-Exam/1 General/5 Datatype#Slicing|Slicing]] are explained in detail on the datatypes page.
 ## Membership Checking
-The operator `in` is used to check if a value/element exists in a collection. It always returns a [[content/Exam/1 General/5 Datatype#Boolean|boolean]] and uses the syntax `value in collection`. So basically it checks if any of the elements in the collection is [[#(In-)Equality|equal]] to the value.
+The operator `in` is used to check if a value/element exists in a collection. It always returns a [[AIAT-Exam/1 General/5 Datatype#Boolean|boolean]] and uses the syntax `value in collection`. So basically it checks if any of the elements in the collection is [[#(In-)Equality|equal]] to the value.
 
 ```python
 print(1 in [0, 1, 2])                  # -> True
@@ -191,7 +191,7 @@ print([3,4] in [(1,2), (3,4), (5,6)])  # -> False
 print((3,4) in [(1,2), (3,4), (5,6)])  # -> True
 ```
 
-When using this operator with a [[content/Exam/1 General/5 Datatype#String|string]] it checks if the value is a substring of the whole string.
+When using this operator with a [[AIAT-Exam/1 General/5 Datatype#String|string]] it checks if the value is a substring of the whole string.
 
 ```python
 print("d" in "andreas")                 # -> True

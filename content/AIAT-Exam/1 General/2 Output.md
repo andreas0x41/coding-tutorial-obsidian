@@ -1,0 +1,85 @@
+---
+title: 1.2 Output
+author: Andreas Patuzzi
+company: Auroville Institute of Applied Technology
+draft: false
+aliases: 
+tags:
+  - Python
+  - General
+  - SDML
+  - AECD
+  - GEES
+---
+
+# Summary
+- **`print()`:** Outputs values of any [[AIAT-Exam/1 General/5 Datatype|datatype]] to the console.
+
+# Simple Print
+
+You can output to the console with the [[AIAT-Exam/2 Control Flow/5 Function|function]] `print()`. You can give `print()` any values of any [[AIAT-Exam/1 General/5 Datatype|datatype]] as [[AIAT-Exam/2 Control Flow/5 Function#Parameters|arguments]] and it will print it to the console.
+
+## Hello World
+
+In this example, we give the `print()` function the [[AIAT-Exam/1 General/5 Datatype#String|string]] "Hello World". This text will be outputted to the console.
+
+```python
+print("Hello World") # -> Hello World
+```
+
+## Multiple Datatypes
+
+You can also print any other values of any [[AIAT-Exam/1 General/5 Datatype|datatype]] using this function.
+
+```python
+print(12)               # -> 12
+print(2.5)              # -> 2.5
+print(True)             # -> True
+print("Some more text") # -> Some more text
+```
+
+By default, after every printed value, there will be a [[AIAT-Exam/1 General/5 Datatype#Special Characters|line break]]. So the next value will be at the start of a new line. The code above will output the following text to the console. You can see that each output is in its own line.
+
+```output
+12
+2.5
+True
+Some more text
+```
+
+## Without Any Arguments
+
+If call the print function without any arguments, it will only output the [[AIAT-Exam/1 General/5 Datatype#Special Characters|newline]].
+
+```python
+print(1)
+print()
+print(2)
+print()
+print()
+print(3)
+```
+
+Below you see the exact output of these print statements.
+
+```output
+1
+
+2
+
+
+3
+```
+
+# Multiple Values
+The `print()` function can take multiple comma-separated [[AIAT-Exam/2 Control Flow/5 Function#Parameters|arguments]] and output them. By default, these values will be separated with spaces.
+
+```python
+print("Hello", "World", "Python") # -> Hello World Python
+```
+
+# Questions
+
+- [ ] Explain `print()` in your own words.
+- [ ] If the `print()` function is called without any arguments, what will happen? Give and explain an example with multiple `print()` functions.
+- [ ] Explain `print()` multiple values.

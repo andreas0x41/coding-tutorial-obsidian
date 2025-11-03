@@ -11,21 +11,21 @@ tags:
   - AECD
   - GEES
 ---
-A `while` loop is used to repeat a block of code as long as a specified condition is [[content/Exam/1 General/5 Datatype#Truthy and Falsy|truthy]].
+A `while` loop is used to repeat a block of code as long as a specified condition is [[AIAT-Exam/1 General/5 Datatype#Truthy and Falsy|truthy]].
 # Summary
-- **Basic Usage**: Similar to an [[content/Exam/2 Control Flow/2 Conditions|if condition]] but runs repeatedly. The condition value should eventually change to avoid infinite loops.
+- **Basic Usage**: Similar to an [[AIAT-Exam/2 Control Flow/2 Conditions|if condition]] but runs repeatedly. The condition value should eventually change to avoid infinite loops.
 - **Break**: Exits the loop immediately, regardless of the condition.
 - **Continue**: Skips the rest of the current iteration, goes back to the top of the loop, and checks the condition again.
 
 # Basic
-A `while` loop is similar to a [[content/Exam/2 Control Flow/2 Conditions|if statement]] and also has a [[content/Exam/1 General/5 Datatype#Boolean|boolean]] condition. But instead of executing the code block inside once, it is executed repeatedly as long as the condition is [[content/Exam/1 General/5 Datatype#Truthy and Falsy|truthy]].
+A `while` loop is similar to a [[AIAT-Exam/2 Control Flow/2 Conditions|if statement]] and also has a [[AIAT-Exam/1 General/5 Datatype#Boolean|boolean]] condition. But instead of executing the code block inside once, it is executed repeatedly as long as the condition is [[AIAT-Exam/1 General/5 Datatype#Truthy and Falsy|truthy]].
 
 ```python
 while condition:
     # Code to execute while the condition is True
 ```
 
-If the condition stays [[content/Exam/1 General/5 Datatype#Truthy and Falsy|truthy]], and there is no other reason for exiting, the loop will run infinitely. So to control the while loop, the condition has to change over time.
+If the condition stays [[AIAT-Exam/1 General/5 Datatype#Truthy and Falsy|truthy]], and there is no other reason for exiting, the loop will run infinitely. So to control the while loop, the condition has to change over time.
 
 ```python
 count = 0
@@ -69,7 +69,7 @@ The sum of all numbers from 1 to 10 is 55
 ```
 
 # Break
-The [[content/Exam/1 General/8 Keyword|keyword]] `break` is used to immediately exit the loop, independent from the condition. If you are inside a nested loop, it will only exit the inner loop. 
+The [[AIAT-Exam/1 General/8 Keyword|keyword]] `break` is used to immediately exit the loop, independent from the condition. If you are inside a nested loop, it will only exit the inner loop. 
 
 ```python
 count = 0
@@ -92,7 +92,7 @@ Count is 4
 
 You should usually handle the main behavior of the loop with the condition and not overuse `break`.
 # Continue
-The [[content/Exam/1 General/8 Keyword|keyword]] `continue` is used to skip forward to the next iteration of the loop. So it immediately goes back to the top and checks the condition again. If you are inside a nested loop, it will only skip ahead the inner loop.
+The [[AIAT-Exam/1 General/8 Keyword|keyword]] `continue` is used to skip forward to the next iteration of the loop. So it immediately goes back to the top and checks the condition again. If you are inside a nested loop, it will only skip ahead the inner loop.
 
 ```python
 count = 1

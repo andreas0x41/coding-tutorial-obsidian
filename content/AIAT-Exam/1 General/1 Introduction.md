@@ -42,12 +42,12 @@ Python is used in a wide range of applications, some of the most common are list
 - **Automation**: Python is commonly used to write scripts for automating repetitive tasks, such as file management, web scraping, ...
 
 # Syntax
-Python's syntax is minimal and highly readable. In general Python code will run line by line from top to bottom. More complex behavior is possible using [[content/Exam/2 Control Flow/1 Control Flow|Control Flow]]. 
-- **`print()`** is used for [[content/Exam/1 General/2 Output|output]], **`input()`** for [[content/Exam/1 General/3 Input|input]], and **`#`** for line [[content/Exam/1 General/4 Comment|comments]]
-- Python supports all basic (mathematical) [[content/Exam/1 General/7 Operator|Operators]] and many more
-- [[content/Exam/1 General/6 Variable|Variables]] automatically get a [[content/Exam/1 General/5 Datatype|datatype]] that can change at any time
+Python's syntax is minimal and highly readable. In general Python code will run line by line from top to bottom. More complex behavior is possible using [[AIAT-Exam/2 Control Flow/1 Control Flow|Control Flow]]. 
+- **`print()`** is used for [[AIAT-Exam/1 General/2 Output|output]], **`input()`** for [[AIAT-Exam/1 General/3 Input|input]], and **`#`** for line [[AIAT-Exam/1 General/4 Comment|comments]]
+- Python supports all basic (mathematical) [[AIAT-Exam/1 General/7 Operator|Operators]] and many more
+- [[AIAT-Exam/1 General/6 Variable|Variables]] automatically get a [[AIAT-Exam/1 General/5 Datatype|datatype]] that can change at any time
 - Python is **case sensitive**. So it is very significant if a character is upper or lower case. For example `print()` is not the same as `Print()`
-- **Indentation**: Python uses indentation to define code blocks, many other languages use curly brackets `{}` instead. Proper indentation is required, otherwise there will be errors. A colon `:` is used to indicate the start of a new block, e.g. [[content/Exam/2 Control Flow/2 Conditions|conditions]], [[content/Exam/2 Control Flow/3 While Loop|loops]], [[content/Exam/2 Control Flow/5 Function|functions]], ...
+- **Indentation**: Python uses indentation to define code blocks, many other languages use curly brackets `{}` instead. Proper indentation is required, otherwise there will be errors. A colon `:` is used to indicate the start of a new block, e.g. [[AIAT-Exam/2 Control Flow/2 Conditions|conditions]], [[AIAT-Exam/2 Control Flow/3 While Loop|loops]], [[AIAT-Exam/2 Control Flow/5 Function|functions]], ...
 
 ```python
 # A simple comment

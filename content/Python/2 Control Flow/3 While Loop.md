@@ -11,22 +11,22 @@ tags:
   - AECD
   - GEES
 ---
-A `while` loop is used to repeat a block of code as long as a specified condition is [[content/Python/1 General/5 Datatype#Truthy and Falsy|truthy]].
+A `while` loop is used to repeat a block of code as long as a specified condition is [[Python/1 General/5 Datatype#Truthy and Falsy|truthy]].
 # Summary
-- **Basic Usage**: Similar to an [[content/Python/2 Control Flow/2 Conditions|if condition]] but runs repeatedly. The condition value should eventually change to avoid infinite loops.
+- **Basic Usage**: Similar to an [[Python/2 Control Flow/2 Conditions|if condition]] but runs repeatedly. The condition value should eventually change to avoid infinite loops.
 - **Break**: Exits the loop immediately, regardless of the condition.
 - **Continue**: Skips the rest of the current iteration, goes back to the top of the loop, and checks the condition again.
 - **Else**: Runs only if the loop ends normally (not because of `break`).
 
 # Basic
-A `while` loop is similar to a [[content/Python/2 Control Flow/2 Conditions|if statement]] and also has a [[content/Python/1 General/5 Datatype#Boolean|boolean]] condition. But instead of executing the code block inside once, it is executed repeatedly as long as the condition is [[content/Python/1 General/5 Datatype#Truthy and Falsy|truthy]].
+A `while` loop is similar to a [[Python/2 Control Flow/2 Conditions|if statement]] and also has a [[Python/1 General/5 Datatype#Boolean|boolean]] condition. But instead of executing the code block inside once, it is executed repeatedly as long as the condition is [[Python/1 General/5 Datatype#Truthy and Falsy|truthy]].
 
 ```python
 while condition:
     # Code to execute while the condition is True
 ```
 
-If the condition stays [[content/Python/1 General/5 Datatype#Truthy and Falsy|truthy]], and there is no other reason for exiting, the loop will run infinitely. So to control the while loop, the condition has to change over time.
+If the condition stays [[Python/1 General/5 Datatype#Truthy and Falsy|truthy]], and there is no other reason for exiting, the loop will run infinitely. So to control the while loop, the condition has to change over time.
 
 ```python
 count = 0
@@ -70,7 +70,7 @@ The sum of all numbers from 1 to 10 is 55
 ```
 
 # Break
-The [[content/Python/1 General/8 Keyword|keyword]] `break` is used to immediately exit the loop, independent from the condition. If you are inside a nested loop, it will only exit the inner loop. 
+The [[Python/1 General/8 Keyword|keyword]] `break` is used to immediately exit the loop, independent from the condition. If you are inside a nested loop, it will only exit the inner loop. 
 
 ```python
 count = 0
@@ -93,7 +93,7 @@ Count is 4
 
 You should usually handle the main behavior of the loop with the condition and not overuse `break`.
 # Continue
-The [[content/Python/1 General/8 Keyword|keyword]] `continue` is used to skip forward to the next iteration of the loop. So it immediately goes back to the top and checks the condition again. If you are inside a nested loop, it will only skip ahead the inner loop.
+The [[Python/1 General/8 Keyword|keyword]] `continue` is used to skip forward to the next iteration of the loop. So it immediately goes back to the top and checks the condition again. If you are inside a nested loop, it will only skip ahead the inner loop.
 
 ```python
 count = 1
@@ -129,7 +129,7 @@ end with count=3 and i=10      # lines: 4, 10
 > [!todo]- not exam relevant
 > Not exam relevant, very rarely used.
 
-The [[content/Python/1 General/8 Keyword|keyword]] `else` can be used with a while loop. The code inside will only execute if the loop ends normally after all the iterations. If the loop stops because of a `break`, the code inside `else` will be ignored.
+The [[Python/1 General/8 Keyword|keyword]] `else` can be used with a while loop. The code inside will only execute if the loop ends normally after all the iterations. If the loop stops because of a `break`, the code inside `else` will be ignored.
 
 ```python
 num = int(input("Please input a integer number: "))

@@ -47,7 +47,7 @@ Hello, world!     # second function call: 5, 1, 2, return to after 5
 ```
 
 # Parameters
-Functions can accept parameters to work with, which are special [[content/Python/1 General/6 Variable#Scope|local variables]]. A parameter is a variable listed in a function's definition. An argument is the actual value passed to that parameter when the function is called. You have to list all the parameter names in the function definition. When calling a function you have to give the same amount of arguments, as there are parameters. 
+Functions can accept parameters to work with, which are special [[Python/1 General/6 Variable#Scope|local variables]]. A parameter is a variable listed in a function's definition. An argument is the actual value passed to that parameter when the function is called. You have to list all the parameter names in the function definition. When calling a function you have to give the same amount of arguments, as there are parameters. 
 
 ```python
 def functionName(parName1, parName2, parName3):
@@ -75,7 +75,7 @@ Hello, !
 ```
 
 ## Parameter Mutability
-Using a variable as an argument will create a new pointer to the same [[content/Python/1 General/6 Variable#Memory Objects|memory object]]. So you have to be careful with the [[content/Python/1 General/6 Variable#Mutability Behaviour|mutability behavior]]. 
+Using a variable as an argument will create a new pointer to the same [[Python/1 General/6 Variable#Memory Objects|memory object]]. So you have to be careful with the [[Python/1 General/6 Variable#Mutability Behaviour|mutability behavior]]. 
 
 ```python
 def mutabilityExample(immutable, mutable):
@@ -97,7 +97,7 @@ print(a, b)
 1 [1, 20, 3, 4]
 ```
 
-You can see that changing the value of [[content/Python/1 General/6 Variable#Mutability Behaviour|mutable variables]] applies to the [[content/Python/1 General/6 Variable#Memory Objects|memory object]] itself and therefore also outside the function.
+You can see that changing the value of [[Python/1 General/6 Variable#Mutability Behaviour|mutable variables]] applies to the [[Python/1 General/6 Variable#Memory Objects|memory object]] itself and therefore also outside the function.
 # Return
 A function can return a value using the `return` keyword. The return value will be put exactly where the function call happened. 
 
@@ -117,7 +117,7 @@ print(add("1", "a", "23"))
 1a23
 ```
 
-The function execution ends as soon as it hits a `return`, everything after that will not be executed. You can see in the following code example, that the [[content/Python/2 Control Flow/2 Conditions#Else|else]] keywords are not necessary here, because the execution will only continue if the condition before was `False`.
+The function execution ends as soon as it hits a `return`, everything after that will not be executed. You can see in the following code example, that the [[Python/2 Control Flow/2 Conditions#Else|else]] keywords are not necessary here, because the execution will only continue if the condition before was `False`.
 
 ```python
 def greater_number(a, b):
@@ -140,14 +140,14 @@ for b in range(5):
 2, 4: b is greater than a
 ```
 
-If a function does not return anything, it returns [[content/Python/1 General/5 Datatype#None|None]] by default.
+If a function does not return anything, it returns [[Python/1 General/5 Datatype#None|None]] by default.
 
 ```python
 print(print())   # print the return value of print -> None
 ```
 
 ## Return Multiple Values
-You can return multiple comma-separated values, which will be interpreted like a [[content/Python/1 General/5 Datatype#Tuple|tuple]]. You can extract the individual values using [[content/Python/1 General/5 Datatype#Indexing|indexing]] or [[content/Python/1 General/7 Operator#Multiple Value Assignment|multiple value assignment]].
+You can return multiple comma-separated values, which will be interpreted like a [[Python/1 General/5 Datatype#Tuple|tuple]]. You can extract the individual values using [[Python/1 General/5 Datatype#Indexing|indexing]] or [[Python/1 General/7 Operator#Multiple Value Assignment|multiple value assignment]].
 
 ```python
 def example():
@@ -159,7 +159,7 @@ print(f"[0]: {a}, [1]: {b}, [2]: {c}") # -> [0]: 1, [1]: a, [2]: 0.4
 ```
 
 # Scope
-The general principle of scope is explained on the [[content/Python/1 General/6 Variable#Scope|variables]] page. You can refer to a global variable from inside a function using the `global`[[content/Python/1 General/8 Keyword|keyword]].
+The general principle of scope is explained on the [[Python/1 General/6 Variable#Scope|variables]] page. You can refer to a global variable from inside a function using the `global`[[Python/1 General/8 Keyword|keyword]].
 
 ```python
 x = 5
@@ -192,7 +192,7 @@ variable value after usingGlobal(): 9 10709776
 > [!todo]- not exam relevant
 > Nonlocal is rarely used and not exam relevant.
 
-You can refer to a variable one layer outside of the current function using the `nonlocal`[[content/Python/1 General/8 Keyword|keyword]].
+You can refer to a variable one layer outside of the current function using the `nonlocal`[[Python/1 General/8 Keyword|keyword]].
 
 ```python
 def outer_function():
@@ -219,7 +219,7 @@ outer_function()
 ```
 
 # Methods
-A method is a function that belongs to an object/class. Because of this it can directly access and change the value of the object/class. You can find details about creating your own classes, objects, and methods under [[content/Python/3 Advanced/2 OOP|Object Oriented Programming]].
+A method is a function that belongs to an object/class. Because of this it can directly access and change the value of the object/class. You can find details about creating your own classes, objects, and methods under [[Python/3 Advanced/2 OOP|Object Oriented Programming]].
 
 ```python
 l1 = [2, 1, 5, 3, 2, 7, 0]

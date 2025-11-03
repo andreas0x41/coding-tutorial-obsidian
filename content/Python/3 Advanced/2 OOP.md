@@ -18,7 +18,7 @@ Object-Oriented Programming (OOP) helps to structure code by bundling data and t
 - **Object**: A specific instance of a class.
 - **Initialization**: Creating/Constructing a new object with the special method `__init__()`.
 - **Attributes**: Data stored inside and object.
-- **[[content/Python/2 Control Flow/5 Function#Methods|Methods]]**: Functions inside classes that define behavior.
+- **[[Python/2 Control Flow/5 Function#Methods|Methods]]**: Functions inside classes that define behavior.
 - **Encapsulation**: Hiding internal data, exposing only necessary parts. Access levels: public (`name`), protected (`_name`), and private (`__name`)
 - **Inheritance**: A class can inherit/reuse methods from another class.
 - **Magic/Dunder Methods:** Define Operators and special behaviour 
@@ -83,9 +83,9 @@ BMW with 240km/h discounted to 36000.0$
 
 You can see that after the class once, you can use it as a blueprint to make as many objects as you want.
 # Class Definition
-A class defines attributes and behavior. An object is an instance of a class. Defining a class is like creating your own new [[content/Python/1 General/5 Datatype|datatype]]. Then you can create objects of that datatype you defined yourself. You datatype/class can have value and methods. You have to define everything your datatype/class should store and do.
+A class defines attributes and behavior. An object is an instance of a class. Defining a class is like creating your own new [[Python/1 General/5 Datatype|datatype]]. Then you can create objects of that datatype you defined yourself. You datatype/class can have value and methods. You have to define everything your datatype/class should store and do.
 ## Basics
-You can define a new class by using the [[content/Python/1 General/8 Keyword|keyword]] `class`. Inside the class, you have the definition of all the attributes and methods that belong to the class. When creating an object, all its structure, values, and behavior are defined by the class.
+You can define a new class by using the [[Python/1 General/8 Keyword|keyword]] `class`. Inside the class, you have the definition of all the attributes and methods that belong to the class. When creating an object, all its structure, values, and behavior are defined by the class.
 
 ```python
 class className:
@@ -157,7 +157,7 @@ print(car1.info)                 # -> Toyota with 180km/h for 20000$.
 ```
 
 ## Methods
-A [[content/Python/2 Control Flow/5 Function#Methods|method]] is a [[content/Python/2 Control Flow/5 Function|function]] that belongs to an object/class. Because of this it can directly access and change the attributes of the object/class. You can call a method with the syntax `objectName.methodName(...)`. When defining a method, the first parameter is [[content/Python/3 Advanced/2 OOP#Self|self]]. When calling the method, Python automatically passes the calling object as the first argument. So the calling object will be stored in `self`, which makes it easy to use and manipulate its data. All the other behavior like parameters, return values, ... are similar to normal [[content/Python/2 Control Flow/5 Function|functions]].
+A [[Python/2 Control Flow/5 Function#Methods|method]] is a [[Python/2 Control Flow/5 Function|function]] that belongs to an object/class. Because of this it can directly access and change the attributes of the object/class. You can call a method with the syntax `objectName.methodName(...)`. When defining a method, the first parameter is [[Python/3 Advanced/2 OOP#Self|self]]. When calling the method, Python automatically passes the calling object as the first argument. So the calling object will be stored in `self`, which makes it easy to use and manipulate its data. All the other behavior like parameters, return values, ... are similar to normal [[Python/2 Control Flow/5 Function|functions]].
 
 Lets add a discount method that directly uses and updates the price of a car to be discounted.
 
@@ -471,7 +471,7 @@ One use case of these methods is to define/override the usage of operators, with
 | -obj     | Negation            | **neg**      | `-a → a.__neg__()`           |
 | +obj     | Unary plus          | **pos**      | `+a → a.__pos__()`           |
 
-All the operators that have two operands also support [[content/Python/1 General/7 Operator#Augmented/In Place Assignment|in place/augmented assignment]]. To do define this, you simply put an `i` before the method name. For example `a + b → a.__add__(b)` becomes `a += b → a.__iadd__(b)`.
+All the operators that have two operands also support [[Python/1 General/7 Operator#Augmented/In Place Assignment|in place/augmented assignment]]. To do define this, you simply put an `i` before the method name. For example `a + b → a.__add__(b)` becomes `a += b → a.__iadd__(b)`.
 
 Let's see a practical example of how this actually works. Below you can see a 2D vector class which has attributes for x and y. We also define addition and subtraction of to vectors and scaling a vector by a number.
 

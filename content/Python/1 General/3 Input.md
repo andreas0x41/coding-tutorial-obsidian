@@ -12,18 +12,18 @@ tags:
   - GEES
 ---
 # Summary
-- **`input()`:** Waits for user input and always returns it as a [[content/Python/1 General/5 Datatype#String|string]].
-- **Prompting:** Can take a [[content/Python/1 General/5 Datatype#String|string]] argument to display as a prompt before taking input.
+- **`input()`:** Waits for user input and always returns it as a [[Python/1 General/5 Datatype#String|string]].
+- **Prompting:** Can take a [[Python/1 General/5 Datatype#String|string]] argument to display as a prompt before taking input.
 # Standard Usage
-Python uses the [[content/Python/2 Control Flow/5 Function|function]] `input()` to get console input from the user. It will wait for the user to input something on the console. As soon as the user presses `Enter` the function will [[content/Python/2 Control Flow/5 Function#Return|return]] the value entered by the user and continue with the program. 
+Python uses the [[Python/2 Control Flow/5 Function|function]] `input()` to get console input from the user. It will wait for the user to input something on the console. As soon as the user presses `Enter` the function will [[Python/2 Control Flow/5 Function#Return|return]] the value entered by the user and continue with the program. 
 
-Input will **always** return the value as [[content/Python/1 General/5 Datatype#String|string]]. If you need the input to be a different [[content/Python/1 General/5 Datatype|datatype]], you have to explicitly convert it. But you have to be careful, because taking input that has an unexpected datatype or [[content/Python/1 General/5 Datatype|datatype]] is one of the most common error cases. If you take input you should tell the user what you expect, check if the entered value is valid, and include exception handling.
+Input will **always** return the value as [[Python/1 General/5 Datatype#String|string]]. If you need the input to be a different [[Python/1 General/5 Datatype|datatype]], you have to explicitly convert it. But you have to be careful, because taking input that has an unexpected datatype or [[Python/1 General/5 Datatype|datatype]] is one of the most common error cases. If you take input you should tell the user what you expect, check if the entered value is valid, and include exception handling.
 
 ```python
 input()
 ```
 
-You can use the value returned by `input` directly or store it in a [[content/Python/1 General/6 Variable|variable]] to use it later/multiple times.
+You can use the value returned by `input` directly or store it in a [[Python/1 General/6 Variable|variable]] to use it later/multiple times.
 
 ```python
 # direct usage

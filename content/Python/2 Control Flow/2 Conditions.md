@@ -11,17 +11,17 @@ tags:
   - AECD
   - GEES
 ---
-Conditions allow code to make decisions. Each individual decision is based on one [[content/Python/1 General/5 Datatype#Boolean|boolean]] and the only two options are "run some code" or "don't run the code". The boolean is usually created using a series of [[content/Python/1 General/7 Operator#Relational/Comparison Operators|comparison]] and [[content/Python/1 General/7 Operator#Logical Operators|logical]] operators. 
+Conditions allow code to make decisions. Each individual decision is based on one [[Python/1 General/5 Datatype#Boolean|boolean]] and the only two options are "run some code" or "don't run the code". The boolean is usually created using a series of [[Python/1 General/7 Operator#Relational/Comparison Operators|comparison]] and [[Python/1 General/7 Operator#Logical Operators|logical]] operators. 
 
 # Summary
-- **If**: Executes a block if the condition is [[content/Python/1 General/5 Datatype#Truthy and Falsy|truthy]].
-- **Else**: Follows an `if` or `elif`, executing only if all prior conditions are [[content/Python/1 General/5 Datatype#Truthy and Falsy|falsy]].
-- **Elif**: Allows checking multiple conditions. The first [[content/Python/1 General/5 Datatype#Truthy and Falsy|truthy]] condition is executed, and the rest are skipped.
-- **Combined Usage**: A conditional starts with `if`, can have multiple `elif`, and at most one `else`. Execution stops at the first [[content/Python/1 General/5 Datatype#Truthy and Falsy|truthy]] condition.
+- **If**: Executes a block if the condition is [[Python/1 General/5 Datatype#Truthy and Falsy|truthy]].
+- **Else**: Follows an `if` or `elif`, executing only if all prior conditions are [[Python/1 General/5 Datatype#Truthy and Falsy|falsy]].
+- **Elif**: Allows checking multiple conditions. The first [[Python/1 General/5 Datatype#Truthy and Falsy|truthy]] condition is executed, and the rest are skipped.
+- **Combined Usage**: A conditional starts with `if`, can have multiple `elif`, and at most one `else`. Execution stops at the first [[Python/1 General/5 Datatype#Truthy and Falsy|truthy]] condition.
 - **Ternary Operator**: A short `if-else` expression (`valueIfTrue if condition else valueIfFalse`) used for conditional assignments.
 
 # If
-The `if` statement checks a condition. If the condition is [[content/Python/1 General/5 Datatype#Truthy and Falsy|truthy]], the code block inside is executed. If the condition is [[content/Python/1 General/5 Datatype#Truthy and Falsy|falsy]], the code block inside is ignored/skipped. 
+The `if` statement checks a condition. If the condition is [[Python/1 General/5 Datatype#Truthy and Falsy|truthy]], the code block inside is executed. If the condition is [[Python/1 General/5 Datatype#Truthy and Falsy|falsy]], the code block inside is ignored/skipped. 
 
 ```python
 if condition:
@@ -166,7 +166,7 @@ You could explain what is happening similar to this. Create a new variable calle
 > [!todo]- not exam relevant
 > Not exam relevant, but can be really helpful.
 
-The ternary operator is a short way to write a `if-else` statement, that returns a value. The syntax for this is `valueIfTrue if condition else valueIfFalse`. This is often used to assign a value to a [[content/Python/1 General/6 Variable|variable]] based on a condition. The following code shows you how to do this using the classic `if-else` and the ternary operator.
+The ternary operator is a short way to write a `if-else` statement, that returns a value. The syntax for this is `valueIfTrue if condition else valueIfFalse`. This is often used to assign a value to a [[Python/1 General/6 Variable|variable]] based on a condition. The following code shows you how to do this using the classic `if-else` and the ternary operator.
 
 ```python
 condition = True

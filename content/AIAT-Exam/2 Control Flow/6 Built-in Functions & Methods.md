@@ -11,7 +11,7 @@ tags:
   - AECD
   - GEES
 ---
-Python has many built-in [[content/Python/2 Control Flow/5 Function|functions]] and methods. Below or online you can find a overview of these functions and methods. The relevant ones are either already explained in other chapters, or after the table.
+Python has many built-in [[Python/2 Control Flow/5 Function|functions]] and methods. Below or online you can find a overview of these functions and methods. The relevant ones are either already explained in other chapters, or after the table.
 # Overview
 
 | Category                  | Function/Method                                                                             |
@@ -55,7 +55,7 @@ print(sum([1, 2, 3]))                # -> 6
 
 ## `min/max(iterable, key=None)`
 
-Returns the smallest/largest item in `iterable` or the `default` if empty. The `key` can take a [[content/Python/2 Control Flow/5 Function|function]] that will be executed for each element to determine its value.
+Returns the smallest/largest item in `iterable` or the `default` if empty. The `key` can take a [[Python/2 Control Flow/5 Function|function]] that will be executed for each element to determine its value.
 
 ```python
 print(min([3, 1, 4]))                       # -> 1
@@ -81,7 +81,7 @@ print(len([1, (2, 3)])) # -> 2
 
 ## `sorted(iterable, key=None, reverse=False)`
 
-Returns a new sorted list from `iterable`. Default is ascending (smallest to largest), but you can `reverse` it. The `key` can take a [[content/Python/2 Control Flow/5 Function|function]] that will be executed for each element to determine the value that will be used for sorting. You can also sort a existing list in place with the method `.sort()`.
+Returns a new sorted list from `iterable`. Default is ascending (smallest to largest), but you can `reverse` it. The `key` can take a [[Python/2 Control Flow/5 Function|function]] that will be executed for each element to determine the value that will be used for sorting. You can also sort a existing list in place with the method `.sort()`.
 
 ```python
 print(sorted([3, 1, 2]))  # -> [1, 2, 3]

@@ -12,7 +12,7 @@ tags:
   - GEES
 ---
 
-Variables are used to store data. You can think of them like a container. The shape of the container is defined by the [[content/Exam/1 General/5 Datatype|Datatype]] and then you can put any fitting value inside the container. Python variables are labels that point to an object in memory that stores a value.
+Variables are used to store data. You can think of them like a container. The shape of the container is defined by the [[AIAT-Exam/1 General/5 Datatype|Datatype]] and then you can put any fitting value inside the container. Python variables are labels that point to an object in memory that stores a value.
 
 # Summary
 
@@ -38,7 +38,7 @@ Python variables store references to the objects in memory. A **reference** poin
 The main characteristics of a memory object in Python are.
 
 - A unique **identifier** (memory address/location) that distinguishes it from other objects. This is returned by the `id()` function.
-- The [[content/Exam/1 General/5 Datatype|(data-)type]] of the object that defines what kind of object it is (e.g., `int`, `str`, `list`). This is returned by the `type()` function.
+- The [[AIAT-Exam/1 General/5 Datatype|(data-)type]] of the object that defines what kind of object it is (e.g., `int`, `str`, `list`). This is returned by the `type()` function.
 - The **value** which is the actual data contained in the object (e.g., `42`, `"Hello"`, `[1, 2, 3]`). This is returned by default when just putting the name of the variable
 - Depending on the type of object, they can have additional Attributes and Methods.
 
@@ -49,7 +49,7 @@ print(type(x)) # print the type of the object -> <class 'int'>
 print(x)       # print the value of the object -> 5
 ```
 
-You can check if two variables point to the same object in memory (have the same identifier) using the `is` [[content/Exam/1 General/8 Keyword|keyword]].
+You can check if two variables point to the same object in memory (have the same identifier) using the `is` [[AIAT-Exam/1 General/8 Keyword|keyword]].
 # Creating/Assigning
 Use the assignment operator `=`, with the Syntax `variable_name = value`, to create and assign values to a variable.
 
@@ -79,7 +79,7 @@ print(is_ready) # -> True
 ```
 
 # Deleting
-You can use the [[content/Exam/1 General/8 Keyword|keyword]] `del` to delete a variable/the object reference it stores. With list or dictionary you can also use indexing and slicing to remove individual items.
+You can use the [[AIAT-Exam/1 General/8 Keyword|keyword]] `del` to delete a variable/the object reference it stores. With list or dictionary you can also use indexing and slicing to remove individual items.
 
 ```python
 x = 10             # creating x with value 10
@@ -96,7 +96,7 @@ print(my_list)     # -> [1, 3, 5, 7, 8, 9]
 There are a few rules that all variable names must follow. The same rules apply to functions, classes, attributes and methods.
 1. **Start with a letter or an underscore**: A variable name must begin with a letter (a-z, A-Z) or an underscore `_`.
 2. **Can contain letters, numbers, and underscores**: A variable name can contain any amount of letters, numbers, and underscores, but no special characters or spaces.
-3. **Cannot be a reserved [[content/Exam/1 General/8 Keyword|keyword]]**: Avoid Python’s built-in keywords like `if`, `for`, `class`, `del`, ...
+3. **Cannot be a reserved [[AIAT-Exam/1 General/8 Keyword|keyword]]**: Avoid Python’s built-in keywords like `if`, `for`, `class`, `del`, ...
 
 Example of correct variable names: `x`,`_valid_name`, `variable123`, `_123_`, ...
 
@@ -121,7 +121,7 @@ Python is case sensitive, so it makes a difference if a character is upper or lo
 Variable scope means when/where variables are defined and can be accessed. In Python you are not directly accessing locations in memory, instead, you are using context dependent variables. 
 - **Global Scope** variables are outside of functions and can be accessed everywhere (after their creation).
 - **Local Scope** variables are created inside a function and because of that only exist inside that function. So after running the function is finished, all the references will be deleted again.
-You can find detailed examples and usage of the `global` and `nonlocal` [[content/Exam/1 General/8 Keyword|keywords]] on the page about [[content/Exam/2 Control Flow/5 Function#Variable Scope|functions]].
+You can find detailed examples and usage of the `global` and `nonlocal` [[AIAT-Exam/1 General/8 Keyword|keywords]] on the page about [[AIAT-Exam/2 Control Flow/5 Function#Variable Scope|functions]].
 
 # Questions
 - [ ] Explain variables and their usage in your own words.

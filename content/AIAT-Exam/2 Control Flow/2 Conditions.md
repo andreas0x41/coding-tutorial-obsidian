@@ -11,16 +11,16 @@ tags:
   - AECD
   - GEES
 ---
-Conditions allow code to make decisions. Each individual decision is based on one [[content/Exam/1 General/5 Datatype#Boolean|boolean]] and the only two options are "run some code" or "don't run the code". The boolean is usually created using a series of [[content/Exam/1 General/7 Operator#Relational/Comparison Operators|comparison]] and [[content/Exam/1 General/7 Operator#Logical Operators|logical]] operators. 
+Conditions allow code to make decisions. Each individual decision is based on one [[AIAT-Exam/1 General/5 Datatype#Boolean|boolean]] and the only two options are "run some code" or "don't run the code". The boolean is usually created using a series of [[AIAT-Exam/1 General/7 Operator#Relational/Comparison Operators|comparison]] and [[AIAT-Exam/1 General/7 Operator#Logical Operators|logical]] operators. 
 
 # Summary
-- **If**: Executes a block if the condition is [[content/Exam/1 General/5 Datatype#Truthy and Falsy|truthy]].
-- **Else**: Follows an `if` or `elif`, executing only if all prior conditions are [[content/Exam/1 General/5 Datatype#Truthy and Falsy|falsy]].
-- **Elif**: Allows checking multiple conditions. The first [[content/Exam/1 General/5 Datatype#Truthy and Falsy|truthy]] condition is executed, and the rest are skipped.
-- **Combined Usage**: A conditional starts with `if`, can have multiple `elif`, and at most one `else`. Execution stops at the first [[content/Exam/1 General/5 Datatype#Truthy and Falsy|truthy]] condition.
+- **If**: Executes a block if the condition is [[AIAT-Exam/1 General/5 Datatype#Truthy and Falsy|truthy]].
+- **Else**: Follows an `if` or `elif`, executing only if all prior conditions are [[AIAT-Exam/1 General/5 Datatype#Truthy and Falsy|falsy]].
+- **Elif**: Allows checking multiple conditions. The first [[AIAT-Exam/1 General/5 Datatype#Truthy and Falsy|truthy]] condition is executed, and the rest are skipped.
+- **Combined Usage**: A conditional starts with `if`, can have multiple `elif`, and at most one `else`. Execution stops at the first [[AIAT-Exam/1 General/5 Datatype#Truthy and Falsy|truthy]] condition.
 
 # If
-The `if` statement checks a condition. If the condition is [[content/Exam/1 General/5 Datatype#Truthy and Falsy|truthy]], the code block inside is executed. If the condition is [[content/Exam/1 General/5 Datatype#Truthy and Falsy|falsy]], the code block inside is ignored/skipped. 
+The `if` statement checks a condition. If the condition is [[AIAT-Exam/1 General/5 Datatype#Truthy and Falsy|truthy]], the code block inside is executed. If the condition is [[AIAT-Exam/1 General/5 Datatype#Truthy and Falsy|falsy]], the code block inside is ignored/skipped. 
 
 ```python
 if condition:

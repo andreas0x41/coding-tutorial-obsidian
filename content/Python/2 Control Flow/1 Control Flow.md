@@ -18,10 +18,10 @@ Control Flow refers to the order in which individual statements, instructions, f
 # Summary
 Control Flow determines the execution order of code in a program.
 - **Line by Line**: Code executes sequentially, top to bottom.
-- **Selection**: [[content/Python/2 Control Flow/2 Conditions|Conditional statements]] like`if-else` allow decisions based on conditions.
-- **Iteration**: Loops like [[content/Python/2 Control Flow/3 While Loop|while]] or [[content/Python/2 Control Flow/4 For Loop|for]] repeat code while a condition is true or for a number of iterations.
+- **Selection**: [[Python/2 Control Flow/2 Conditions|Conditional statements]] like`if-else` allow decisions based on conditions.
+- **Iteration**: Loops like [[Python/2 Control Flow/3 While Loop|while]] or [[Python/2 Control Flow/4 For Loop|for]] repeat code while a condition is true or for a number of iterations.
 - **Jumps**: `break` exits loops, `continue` skips to the next iteration, and `goto` jumps to a specific line/block.
-- **Subroutines**: [[content/Python/2 Control Flow/5 Function|Functions]] encapsulate reusable code, called with arguments and return values.
+- **Subroutines**: [[Python/2 Control Flow/5 Function|Functions]] encapsulate reusable code, called with arguments and return values.
 - **Errors & Exceptions**: Interrupt the normal execution; Exceptions can be recovered using `try-except`.
 
 # Line By Line
@@ -40,7 +40,7 @@ print(1+2)
 ```
 
 # Selection (Conditional Statements)
-Selection allows the program to make decisions. The program chooses what code to execute next based on a condition. The basis for the decisions is **[[content/Python/2 Control Flow/2 Conditions|if]]** a [[content/Python/1 General/5 Datatype#Boolean|boolean]] is `True`, or whether a pattern matches.
+Selection allows the program to make decisions. The program chooses what code to execute next based on a condition. The basis for the decisions is **[[Python/2 Control Flow/2 Conditions|if]]** a [[Python/1 General/5 Datatype#Boolean|boolean]] is `True`, or whether a pattern matches.
 
 ```python
 x = 6
@@ -57,7 +57,7 @@ End of the example
 ```
 
 # Repetition/Iteration
-This allows you to repeat a block of code multiple times. The block is repeatedly executed **[[content/Python/2 Control Flow/3 While Loop|while]]** a [[content/Python/1 General/5 Datatype#Boolean|boolean]] condition is true or **[[content/Python/2 Control Flow/4 For Loop|for]]** a fixed number of iterations. 
+This allows you to repeat a block of code multiple times. The block is repeatedly executed **[[Python/2 Control Flow/3 While Loop|while]]** a [[Python/1 General/5 Datatype#Boolean|boolean]] condition is true or **[[Python/2 Control Flow/4 For Loop|for]]** a fixed number of iterations. 
 
 ```python
 x = 0
@@ -81,7 +81,7 @@ Iteration number 4
 ```
 
 # Jumps
-Jumps allow the program to exit the normal flow of execution and skip part of the code or go to a completely different position. Python allows you to exit a loop using **[[content/Python/2 Control Flow/3 While Loop#Break|break]]** or go to the next iteration of a loop using **[[content/Python/2 Control Flow/3 While Loop#Continue|continue]]**.
+Jumps allow the program to exit the normal flow of execution and skip part of the code or go to a completely different position. Python allows you to exit a loop using **[[Python/2 Control Flow/3 While Loop#Break|break]]** or go to the next iteration of a loop using **[[Python/2 Control Flow/3 While Loop#Continue|continue]]**.
 
 ```python
 for i in range(99):
@@ -124,7 +124,7 @@ Errors and Exceptions are ways in which Control Flow is interrupted when somethi
 
 **(Syntax-)Errors** are usually unrecoverable issues disrupting the program's flow, leading to failure. These are caused by the programmer not writing code in the correct Python syntax.
 
-If something has correct syntax, but causes an error when executing it, it is called an **Exception**. These are recoverable issues that allow for controlled interruption. So the program can recover or provide feedback to the user. These can be caused both by the programmer (e.g. incorrect [[content/Exam/1 General/6 Variable|variable]]/[[content/Exam/2 Control Flow/5 Function|function]]/... name; incorrect [[content/Exam/1 General/5 Datatype|datatype]]; incorrect import; ...) and the user (incorrect input of any kind; file not found; internet connection error; ...). In Python you can prevent exceptions or use `try-except` blocks to handle them to not let your program crash.
+If something has correct syntax, but causes an error when executing it, it is called an **Exception**. These are recoverable issues that allow for controlled interruption. So the program can recover or provide feedback to the user. These can be caused both by the programmer (e.g. incorrect [[AIAT-Exam/1 General/6 Variable|variable]]/[[AIAT-Exam/2 Control Flow/5 Function|function]]/... name; incorrect [[AIAT-Exam/1 General/5 Datatype|datatype]]; incorrect import; ...) and the user (incorrect input of any kind; file not found; internet connection error; ...). In Python you can prevent exceptions or use `try-except` blocks to handle them to not let your program crash.
 
 ```python
 # Error because of incorrect function name and string never closed
