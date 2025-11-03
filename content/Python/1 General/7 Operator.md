@@ -346,6 +346,8 @@ Operator precedence determines the order in which operators are evaluated. If tw
 
 > [!quote]- Additional not exam relevant topics for later
 > 
+> Mod with negative numbers
+> 
 > Set Operators 
 > 
 > Dictionary Operators 

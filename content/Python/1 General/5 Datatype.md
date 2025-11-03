@@ -17,10 +17,10 @@ A datatype defines how different types of information/data are stored and behave
 
 For almost every datatype in Python, there is a function with the same (or similar) name that is used to create an object of that datatype or convert something from a different datatype.
 
-| Name                                  | Function  | Example                       | Explanation                                                                                      |
-| ------------------------------------- | --------- | ----------------------------- | ------------------------------------------------------------------------------------------------ |
-| [[content/Python/1 General/5 Datatype#Integer\|Integer]]       | int()     | `0`, `11`, `-3`               | whole number                                                                                     |
-| [[content/Python/1 General/5 Datatype#Float\|Float]]           | float()   | `1.5`, `1e-4`                 | rational/floating-point number                                                                   |
+| Name                                                           | Function  | Example                       | Explanation                                                                                      |
+| -------------------------------------------------------------- | --------- | ----------------------------- | ------------------------------------------------------------------------------------------------ |
+| [[Python/1 General/5 Datatype#Integer\|Integer]]               | int()     | `0`, `11`, `-3`               | whole number                                                                                     |
+| [[Python/1 General/5 Datatype#Float\|Float]]                   | float()   | `1.5`, `1e-4`                 | rational/floating-point number                                                                   |
 | [[content/Python/1 General/5 Datatype#Boolean\|Boolean]]       | bool()    | `True`, `False`               | truth value, can only be True or False                                                           |
 | [[content/Python/1 General/5 Datatype#String\|String]]         | str()     | `'abc'`, `f"x:\n{x}"`         | text, can include, numbers, special characters, ...                                              |
 | [[content/Python/1 General/5 Datatype#List\|List]]             | list()    | `[1, 1, 2, 3]`                | [[#Mutable\|mutable]] collection of any datatype                                                 |

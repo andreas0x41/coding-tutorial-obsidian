@@ -589,6 +589,7 @@ You can see, that this inconsistency in class/datatype can easily destroy the us
 > class attributes
 > property
 > polymorphism 
+> explain __new__ https://www.youtube.com/watch?v=axU_RFVahCU
 
 
 
