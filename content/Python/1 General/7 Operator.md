@@ -30,8 +30,6 @@ The assignment operator `=` is used to [[Python/1 General/6 Variable#Creating/As
 x = 5 # assign the value 5 to the variable x
 ```
 
-> [!todo]- less/not exam relevant
-> The following 3 subchapters show more advanced usage. It can be helpful to know about this, but especially the last two are not exam relevant.
 ## Augmented/In Place Assignment
 You can combine the assignment operator with an arithmetic or bitwise operator. This will apply the operation to the current value of the variable and then assign the resulting value to the variable again. This is done by putting the other operator between the variable name and the assignment with the syntax `var_name operator= value`.
 
@@ -71,9 +69,6 @@ print(c)                       # -> t
 ```
 
 ## Walrus Operator
-> [!todo]- not exam relevant
-> Not exam relevant, rarely used, but sometimes really helpful.
-
 The walrus operator `:=` does the assignment and returns the value for further use. This can be helpful to reduce code duplication, especially with conditions or loops. The walrus operator can also be combined with augmented assignment.
 
 ```python
@@ -115,9 +110,6 @@ print(f"This means that 5 fully fits into 12 {13//5} times")          # This mea
 print(f"When fitting 5 into 13, there will be a remainder of {13%5}") # When fitting 5 into 13, there will be a remainder of 3
 ```
 
-> [!todo]- less exam relevant
-> Less exam relevant, but still good/helpful to know.
-
 One common use case for the Modulus is to check divisibility by checking if the remainder is 0. It can also be used to separate parts of a number. You can also think of the modulo in terms of a circle. For example, working with modulo 360 means `0° = 360° = 720°`...
 
 ```python
@@ -158,9 +150,6 @@ print([1, 2] + [3, 4])              # -> [1, 2, 3, 4]
 print((1, 2) + (3, (True, "Test"))) # -> (1, 2, 3, (True, 'Test'))
 print("Hello" + [1, 2])             # ERROR because they have different datatypes
 ```
-
-> [!todo]- not exam relevant
-> Not exam relevant, rarely used, but sometimes really helpful.
 
 The `*` operator is used to repeat a string, list, or tuple multiple times. You have to give the sequence you want to repeat and how often you want to repeat as a positive integer.
 
@@ -212,9 +201,6 @@ print(1 >= 1.0)  # -> True
 print(1 <= 1.0)  # -> True
 ```
 
-> [!todo]- not exam relevant
-> Not exam relevant, advanced and rarely used.
-
 These operators can also be used with the [[Python/1 General/5 Datatype#Collection Datatypes|sequence datatypes]] string, list, and tuple. Both operands must be of the same datatype. This will check the operation for all pairs of elements one by one. So as soon as there is a pair of elements that do not have the same value it will result in a total result of either `True` or `False`. If they have different lengths but the element pairs are all equal, the shorter sequence is considered smaller.
 
 ```python
@@ -229,9 +215,6 @@ print("computer" < "compare")     # because "....u..." < "....a..." -> False
 ```
 
 ## Chained Comparison
-> [!todo]- not exam relevant
-> Not exam relevant, basic usage is good to know, advanced versions are rarely used.
-
 Python allows you to chain comparisons together. This will behave the same way as having an `and` between the individual operations. For example `a < b == c >= d` is the same as `a<b and b==c and c>=d`. The easiest use case is to check if a number is between two others.
 
 ```python
@@ -263,9 +246,6 @@ print(2 == 1 or 2 == 2 or 2 == 3) # -> True
 ```
 
 ## Not Boolean Operands
-> [!todo]- not exam relevant
-> Not exam relevant, rarely used, but sometimes really helpful.
-
 As long the operands are boolean, the result will also be boolean. However in Python logical operators also work with operands that are not boolean. They will keep their general behavior and `not` will always return a boolean. The `and` operator stops as soon as it encounters a [[Python/1 General/5 Datatype#Truthy and Falsy|Falsy]] value and returns it. If all values are [[Python/1 General/5 Datatype#Truthy and Falsy|Truthy]], it returns the last operand. The `or` operator stops as soon as it encounters a Truthy value and returns it. If all values are Falsy, it returns the last operand.
 
 ```python
@@ -342,7 +322,7 @@ Operator precedence determines the order in which operators are evaluated. If tw
 
 
 
-> [!quote]- Additional not exam relevant topics for later
+> [!quote]- Additional topics for later
 > 
 > Mod with negative numbers
 > 

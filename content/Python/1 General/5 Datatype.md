@@ -28,9 +28,6 @@ For almost every datatype in Python, there is a function with the same (or simil
 | [[Python/1 General/5 Datatype#Complex\|Complex]]       | complex() | `1j`, `1.2-0.5j`              | complex number with real and imaginary part                                                      |
 | [[Python/1 General/5 Datatype#Range\|Range]]           | range()   | `range(8)`, `range(2, 99, 3)` | range of numbers                                                                                 |
 
-> [!todo]- not exam relevant
-> These functions/methods are mostly not exam relevant.
-
 There are a few built-in functions/methods to check if something is a specific type of data. These are helpful to check input, potentially before converting it.
 
 - **String Methods:** `.isdigit()`, `.isalpha()`, `.isalnum()`, `.isdecimal()`, `.isnumeric()`, `.isspace()`.
@@ -56,10 +53,6 @@ The datatype Float can hold any rational/floating-point number including negativ
 ```
 
 ### Scientific Number Notation
-
-> [!todo]- not exam relevant
-> This topic is not exam relevant.
-
 Python supports the scientific notation of writing numbers as a power of 10 for integers and floats. To do this you can give numbers in the format "`number`e`power`". So for example `1e3 == 1 * 10**3 == 1000` or `-1.5e-2 == -1.5 * 10**-2 == -0.015`.
 
 ## Boolean
@@ -114,10 +107,6 @@ print(listName) # print the whole list -> [-1, 1, 7, 4, 5, 2]
 
 A [[Python/1 General/5 Datatype#Dictionary|dictionary]] does not have classic ordered indexing with numbers. Instead, each element is a combination of key and value, and you use the key instead of an index
 ### Slicing
-
-> [!todo]- partly exam relevant
-> Basics are relevant, advanced usage is not necessary.
-
 Slicing is used to select a subsequence/portion of a sequence, instead of only one element. You can specify a start, stop, and step.
 
 ```python
@@ -146,9 +135,6 @@ print(listName[6:1:-2])           # every second element from the 7th to the 2nd
 print("abcde"[::-1])              # all elements in reverse order -> edcba
 ```
 
-> [!todo]- not exam relevant
-> Not exam relevant, rarely used, but sometimes helpful.
-
 You can also set multiple values at the same time using slicing. If you don't give the correct numbers of values to set/replace, you might get unexpected behaviour or an error.
 
 ```python
@@ -171,10 +157,6 @@ The datatype String can hold any text including numbers and [[#Special Character
 You might think of a string as a base datatype, but it actually behaves very similar to a [[#Tuple|tuple]] of individual characters. So especially in low-level languages you will find `character` as a base datatype and the string is just a collection of characters.
 
 ### Special Characters
-
-> [!todo]- partly exam relevant
-> Basics are relevant, more advanced usage is not necessary. The first 5 rows of the table are relevant, the others are not.
-
 Python strings support many special characters. To use a special character first write a backslash `\` to escape the string and inform Python that what follows is a special character. After the backslash, you can put one of the supported special characters.
 
 | Character    | Description                                                                               | Example                                     |
@@ -206,10 +188,6 @@ Test\of\raw\string
 ```
 
 ### Formatted String
-
-> [!todo]- partly exam relevant
-> Basics are relevant, advanced usage is not necessary.
-
 Formatted strings in Python provide an easy way to insert values into a string. To make a formatted string put an `f` in front of the the starting string quotes. Inside a formatted string, all the values within curly brackets `{value}` will be inserted into the string. The datatype will automatically be converted and there is also support for operators, functions, and special formatting. If you want to print a curly bracket within an f-string, you have to put a double curly bracket `{{`.
 
 ```python
@@ -225,10 +203,6 @@ print(f"Documenting operations: {1 + 3 * 2 = }")     # -> Documenting operations
 ```
 
 ### Multiple Line String
-
-> [!todo]- less exam relevant
-> Less exam relevant, but still good/helpful to know.
-
 Instead of using single or double quotes at the start and end of a string, you can also use them three times (`'''` or `"""`) to create a multiline string. So within triple quotes, you can have multiple lines of text and it will keep the format, linebreaks, and spacing. You can also combine this with [[#Formatted String]].
 
 ```python
@@ -266,10 +240,6 @@ You can think of a tuple like a [[#List]] where it is impossible to add, change 
 ```
 
 ## Set
-
-> [!todo]- not exam relevant
-> This topic is not exam relevant, but it is still good to know that this datatype exists and its general behavior.
-
 A set is similar to a [[#List]] but the elements are not stored in any specific order. Because of this, [[#Indexing]] and [[#Slicing]] is not possible. [[#Iterable|Iterating]] is possible, but there is no order defined for the elements. The set elements are within curly brackets `{}` and separated by commas `,`. You can use the function `set()` to convert an [[#Iterable]] value to a set or create an empty set if no arguments are given. You can only create an empty set using the `set()` function because a [[#Dictionary]] also uses curly brackets. You can add or remove elements, because it is [[#Mutable|mutable]]. A set can only store [[#Mutable|immutable]] elements. A set does not allow for any duplicate elements, if you have duplicates only one of them will be stored. A few list operators, functions, and methods will work and there are multiple special ones for sets.
 
 ```python
@@ -317,10 +287,6 @@ print(x)    # -> None
 ```
 
 ## Complex
-
-> [!todo]- less exam relevant
-> Less exam relevant, rarely used.
-
 The datatype Complex represents a complex number. It has a real and an imaginary part, represented as `a + bj`, where `a` is the real part and `b` is the imaginary part. If you have a number with an imaginary part in Python, it will treat/save it as a complex number. You can use the function `complex()` to convert a value to a Complex, or create one with value `0j` if no argument is given. This function can take two numbers, the real part `a` and the complex part `b`, as arguments `complex(a, b)`.
 
 ```python
@@ -336,10 +302,6 @@ print(z.imag)  # -> 4.0
 ```
 
 ## Range
-
-> [!todo]- partly exam relevant
-> Basic usage for looping and creating number sequences is necessary. It is good to understand that this is different from list because it does not store all elements in memory and instead generates them on demand. Advanced usage and explanation are not necessary.
-
 The datatype Range is created with the `range()` function and generates a sequence of numbers. It might seem very similar to a list, but the key difference is that not all elements are saved in memory. Instead, they are generated only when they are actually used. It is commonly used in loops and is a memory-efficient [[#Iterable]]. You can not add, remove, or change elements of a range because it is [[#Mutable||immutable]].
 
 The `range()` function generates a range of numbers. The arguments are similar to slicing and you can use `range(stop)`, `range(start, stop)`, or `range(start, stop, step)`
@@ -354,9 +316,6 @@ print(list(range(-10, 10, 2))) # -> [-10, -8, -6, -4, -2, 0, 2, 4, 6, 8]
 print(list(range(100, 0, -9))) # -> [100, 91, 82, 73, 64, 55, 46, 37, 28, 19, 10, 1]
 ```
 
-> [!todo]- not exam relevant
-> This is rarely used and not exam relevant.
-
  [[#Indexing|Indexing]] is possible and returns a number. [[#Slicing|Slicing]] is possible and returns a new range.
 
 ```python
@@ -367,27 +326,15 @@ print(list(range(20)[:5:-3])) # -> [19, 16, 13, 10, 7]
 ```
 
 ## Generator
-
-> [!todo]- not exam relevant
-> This topic is not exam relevant. It is a bit advanced and rarely used.
-
 The datatype Generator is very similar to [[#Range]] in supporting memory efficient one by one [[#Iterable|iterating]] of elements. The key difference is that it supports all datatypes and you can define your own sequence generators. But they do not support [[#Indexing|indexing]] or [[#Slicing|slicing]] and it is [[#Mutable||immutable]].
 
 ## OOP
-
-> [!todo]- only SDML and AECD
-> This topic is an advanced topic that is only relevant for the SDM and AECD departments. There will be a note only for this at the end.
-
 You can basically define and use your very own datatypes using Object Oriented Programming. You can also import special datatypes created by others. First, you have to define all the attributes (=data) and methods (=behavior) in a class. Then you can create objects based on the class.
 
 # Internal Details
-
-> [!todo]- less exam relevant
-> Less exam relevant, rarely used.
-
 ## Truthy and Falsy
 In Python, any value can be evaluated (e.g. in a [[Python/1 General/7 Operator#Logical Operators|logical operator]], [[Python/2 Control Flow/2 Conditions|condition]], ...) like a boolean. Python will treat it as truthy (`True`) or falsy (`False`) based on its type and value.
-- **Falsy Values**: `False`, `0`, `0.0`, `0j`, `""`, `[]`, `()`, `set()`, `{}`, `None`, `range(0)`
+- **Falsy Values**: `False`, `0`, `0.0`, `0j`, `""`, `[]`, `()`, `set()`, `{}`, `None`, `range(0)`, ...
 - **Truthy Values**: Everything else so not empty collections and not zero numeric values
 
 ```python
@@ -399,7 +346,7 @@ print(bool(""))       # False
 print(bool(" "))      # True
 ```
 
-> [!quote]- Additional not exam relevant topics for later
+> [!quote]- Additional topics for later
 > Contents
 > 
 > Converting between Datatypes

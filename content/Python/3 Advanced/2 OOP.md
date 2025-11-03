@@ -327,10 +327,6 @@ car1.info()                        # -> Car from BMW for 40000$.
 ```
 
 ## super()
-
-> [!todo]- less exam relevant
-> Less exam relevant, rarely used.
-
 You can use the special function `super()` inside a class to access its parent class. It makes it easy to call methods or the constructor from the parent. This is especially useful when you want to **extend** behavior, not just replace it. To use it, you can use the syntax `super().methodName()` to call `methodName()` of the parent class. 
 
 Lets use this to extend the behavior of Vehicle `__init__` and `info()` instead of replacing it.
@@ -581,7 +577,7 @@ You can see, that this inconsistency in class/datatype can easily destroy the us
 | **enter** | With statement entry | `with obj: → obj.__enter__()`   |
 | **exit**  | With statement exit  | `with obj: → obj.__exit__(...)` |
 
-> [!quote]- Additional not exam relevant topics for later
+> [!quote]- Additional topics for later
 > class and static methods
 > class attributes
 > property

@@ -160,9 +160,6 @@ You could explain what is happening similar to this. Create a new variable calle
 
 
 # Ternary Operator
-> [!todo]- not exam relevant
-> Not exam relevant, but can be really helpful.
-
 The ternary operator is a short way to write a `if-else` statement, that returns a value. The syntax for this is `valueIfTrue if condition else valueIfFalse`. This is often used to assign a value to a [[Python/1 General/6 Variable|variable]] based on a condition. The following code shows you how to do this using the classic `if-else` and the ternary operator.
 
 ```python

@@ -13,10 +13,6 @@ In Python, **keywords** are reserved words that have a special predefined meanin
 
 Most keywords are explained on a different page, so the "Context" column will link to the details.
 
-> [!todo]- partly exam relevant
-> The keywords `match`, `case`, `default`, `pass`, `yield`, `nonlocal`, `assert`, `async`, and `await` are not exam relevant. Some of the others are also only partly or for some departments exam relevant.
-
-
 | Context                                      | Keyword    | Description                                                                                                                                                 |
 | -------------------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [[Python/1 General/5 Datatype#Boolean\|Datatype]]             | `False`    | Boolean value representing False.                                                                                                                           |

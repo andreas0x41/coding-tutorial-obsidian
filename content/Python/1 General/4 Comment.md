@@ -44,10 +44,6 @@ print(3)
 ```
 
 ## Documenting Functions/Methods
-
-> [!todo]- less exam relevant
-> Less exam relevant, but still good/helpful to know.
-
 Docstrings are often used to document the definition of a [[Python/2 Control Flow/5 Function|function]], method, or class. You can put an explanation of what the function is doing, its parameters, return values, ... directly under the def/class keyword. Most IDEs will even display this explanation to the programmer when using the function/method/class.
 
 ```python

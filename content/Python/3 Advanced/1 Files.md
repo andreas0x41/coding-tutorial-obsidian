@@ -144,9 +144,6 @@ This demonstrates file reading.
 # File Pointer
 The file pointer stores your current position in a file. The starting position of operations like reading and writing is the current position of the file pointer. 
 
-> [!todo]- not exam relevant
-> This is not exam relevant, but good to know and very helpful for working with specific positions/parts of a file.
-
 The method `tell()` returns the current position of the file pointer with 0 being the start of the file. The method `seek(offset, whence)`goes to a specific position (in bytes) and returns the current absolute position. The `offset` is the number of bytes to move. The argument `whence` sets the origin point where `0` is the default and means the start of the file, `1` means the current position, and `2` means the end of the file. Seeking relative to the current or end position only works in binary mode.
 
 ```example.txt

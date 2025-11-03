@@ -31,10 +31,6 @@ Variables are used to store data. You can think of them like a container. The sh
 - **Type Hinting:** Use optional annotations (e.g., `x: int = 5`) for better clarity and debugging.
 
 # Memory Objects
-
-> [!todo]- partly exam relevant
-> Please try to understand the basics, even if the details seem hard. This topic might seem complicated and like an unnecessarily detailed description. However, working with memory references is extremely significant for low-level languages. And in Python you also can't ignore it. If you don't understand it you will regularly make hard to find mistakes and struggle. The details of how this works/behaves are also different between languages. 
-
 In Python, variables do **not** directly store the values themselves. Instead, they store references to the objects in memory. A **reference** points to a location/address in computer memory where an object is stored.
 
 The main characteristics of a memory object in Python are.
@@ -94,9 +90,6 @@ del my_list[1:7:2] # delete every second item from the 2nd to the 8th
 print(my_list)     # -> [1, 3, 5, 7, 8, 9]
 ```
 
-> [!todo]- not exam relevant
-> This is good to know, but not really exam relevant. To actually understand this it is good to first read [[#Objects Value vs. Reference]].
-
 If the reference count (how many times it is pointed to by variables) of an object in memory gets down to zero it is no longer needed. Then Pythons automatic garbage collector will free up the storage so that it can be used for a different purpose. So using `del` or exiting the [[#Scope|scope]] of a variable will delete the reference. And as soon as there are no more references anywhere the object in memory will be deleted.
 
 # Naming Rules
@@ -125,9 +118,6 @@ Variable names should be descriptive. So just by reading you should have a basic
 
 Python is case sensitive, so it makes a difference if a character is upper or lower case. Variable names are usually lowercase (except for camel case). Constants, which are variables that can not/never change their value, are not directly supported in Python. By convention, they are named all uppercase(`PI = 3.14159`).
 # Mutability Behaviour
-> [!todo]- partly exam relevant
-> Please try to understand the basics, even if the details seem hard. This topic might seem complicated and like an unnecessarily detailed description. However, working with memory references is extremely significant for low level languages. And in Python you also can't ignore it. If you don't understand it you will regularly make hard to find mistakes and struggle. The details of how this works/behaves are also different between languages. 
-
 Depending on whether a variable is storing a [[Python/1 General/5 Datatype#Mutable|mutable]] or immutable object the behavior can be significantly different. When assigning one variable to another `var2 = var1`, initially both of them will point to the exactly **same** location and therefore [[Python/1 General/6 Variable#Memory Objects|object in memory]]. If you just want to copy the value by creating a new object you have to explicitly use methods like `.copy()`.
 
 The interesting part starts when you change one of the variables. If the object is not [[Python/1 General/5 Datatype#Mutable|mutable]], it is impossible to change its value in place. Instead, a new object storing the new value will be created and assigned to the variable. So in the end both of the variables will point at different objects with different values.
@@ -167,10 +157,6 @@ Variable scope means when/where variables are defined and can be accessed. In Py
 You can find detailed examples and usage of the `global` and `nonlocal` [[Python/1 General/8 Keyword|keywords]] on the page about [[Python/2 Control Flow/5 Function#Variable Scope|functions]].
 
 # Type Hinting
-
-> [!todo]- not exam relevant
-> This topic is not exam relevant but good to no, so you can write cleaner code.
-
 Even though Python automatically picks datatypes of variables based on their value, it supports type annotations for variables. This makes it easier to understand their intended type and can even be used by some debuggers. The syntax for variable type hinting is `varName: datatype = value`.
 
 ```python

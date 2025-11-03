@@ -86,10 +86,6 @@ for num in range(10):
 ```
 
 # Else
-
-> [!todo]- not exam relevant  
-> Not exam relevant, very rarely used.
-
 A `for` loop can have an `else` block, which works the same as with a [[Python/2 Control Flow/3 While Loop#Break|while loop]]. It runs only if the loop finishes normally (without `break`).
 
 ```python

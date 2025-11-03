@@ -123,9 +123,6 @@ end with count=3 and i=10      # lines: 4, 10
 ```
 
 # Else
-> [!todo]- not exam relevant
-> Not exam relevant, very rarely used.
-
 The [[Python/1 General/8 Keyword|keyword]] `else` can be used with a while loop. The code inside will only execute if the loop ends normally after all the iterations. If the loop stops because of a `break`, the code inside `else` will be ignored.
 
 ```python

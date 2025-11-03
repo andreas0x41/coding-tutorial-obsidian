@@ -72,9 +72,6 @@ Below you see the exact output of these print statements.
 ```
 
 # Multiple Values
-> [!todo]- less exam relevant
-> Less exam relevant, but still good/helpful to know.
-
 The `print()` function can take multiple comma-separated [[Python/2 Control Flow/5 Function#Parameters|arguments]] and output them. By default, these values will be separated with spaces.
 
 ```python
@@ -82,9 +79,6 @@ print("Hello", "World", "Python") # -> Hello World Python
 ```
 
 # End Parameter
-> [!todo]- less exam relevant
-> Less exam relevant, but still good/helpful to know.
-
 The parameter `end` defines what will be outputted after all of the printed values. You can use any [[Python/1 General/5 Datatype#string|string]], default is a [[Python/1 General/5 Datatype#Special Characters|newline]].
 
 ```python
@@ -98,9 +92,6 @@ This doesn't end with a newline ---> This continues on the same line.
 ```
 
 # Sep Parameter
-> [!todo]- less exam relevant
-> Less exam relevant, but still good/helpful to know.
-
 The parameter `sep` defines how multiple printed values should be separated. You can use any [[Python/1 General/5 Datatype#string|string]], default is a space.
 
 ```python

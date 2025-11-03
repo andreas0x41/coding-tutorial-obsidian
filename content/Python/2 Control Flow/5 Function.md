@@ -186,9 +186,6 @@ variable value inside usingGlobal(): 5 10709616
 variable value after usingGlobal(): 9 10709776
 ```
 
-> [!todo]- not exam relevant
-> Nonlocal is rarely used and not exam relevant.
-
 You can refer to a variable one layer outside of the current function using the `nonlocal`[[Python/1 General/8 Keyword|keyword]].
 
 ```python
@@ -229,7 +226,7 @@ returnValue = l2.sort()  # sorting with method, method belongs to the list, no r
 print(returnValue, l2) # -> None [0, 1, 2, 2, 3, 5, 7]
 ```
 
-> [!quote]- Additional not exam relevant topics for later
+> [!quote]- Additional topics for later
 > Type Hinting
 > Default Arguments
 > lambda

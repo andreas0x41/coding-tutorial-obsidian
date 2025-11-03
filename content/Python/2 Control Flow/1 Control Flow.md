@@ -100,10 +100,7 @@ for i in range(99):
 14
 ```
 
-> [!todo]- not exam relevant
-> This is good to know, but not directly exam relevant.
-
-In many languages, there is some kind of `goto` statement. This allows you to jump to a specific line or block of code and continue the normal execution from there. However, this is not possible in Python and is nowadays usually thought of as a bad coding style. You can do basically everything with other Control Flow methods than a `goto`. Still, it is good to know the general idea, since a few languages heavily use it. You can even think of, or sometimes see an implementation where, `goto` and `conditional goto` are the only Control Flow, or at least the building blocks for all others.
+In many low level languages, there is some kind of `goto` statement. This allows you to jump to a specific line or block of code and continue the normal execution from there. However, this is not possible in Python and is nowadays usually thought of as a bad coding style. You can do basically everything with other Control Flow methods than a `goto`. Still, it is good to know the general idea, since a few languages heavily use it. You can even think of, or sometimes see an implementation where, `goto` and `conditional goto` are the only Control Flow, or at least the building blocks for all others.
 
 # Subroutines
 A subroutine is a reusable block of code that performs a specific task. The most common type of subroutine is a function. When a function is called, the program jumps to the definition of the function, executes the code inside, and then returns the position where it was called. Additionally, you can give values to a function using arguments and receive values using return.
@@ -121,7 +118,7 @@ Errors and Exceptions are ways in which Control Flow is interrupted when somethi
 
 **(Syntax-)Errors** are usually unrecoverable issues disrupting the program's flow, leading to failure. These are caused by the programmer not writing code in the correct Python syntax.
 
-If something has correct syntax, but causes an error when executing it, it is called an **Exception**. These are recoverable issues that allow for controlled interruption. So the program can recover or provide feedback to the user. These can be caused both by the programmer (e.g. incorrect [[AIAT-Exam/1 General/6 Variable|variable]]/[[AIAT-Exam/2 Control Flow/5 Function|function]]/... name; incorrect [[AIAT-Exam/1 General/5 Datatype|datatype]]; incorrect import; ...) and the user (incorrect input of any kind; file not found; internet connection error; ...). In Python you can prevent exceptions or use `try-except` blocks to handle them to not let your program crash.
+If something has correct syntax, but causes an error when executing it, it is called an **Exception**. These are recoverable issues that allow for controlled interruption. So the program can recover or provide feedback to the user. These can be caused both by the programmer (e.g. incorrect [[Python/1 General/6 Variable|variable]]/[[Python/2 Control Flow/5 Function|function]]/... name; incorrect [[Python/1 General/5 Datatype|datatype]]; incorrect import; ...) and the user (incorrect input of any kind; file not found; internet connection error; ...). In Python you can prevent exceptions or use `try-except` blocks to handle them to not let your program crash.
 
 ```python
 # Error because of incorrect function name and string never closed

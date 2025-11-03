@@ -61,9 +61,6 @@ if x > 5:
 ```
 
 # Run Python Online
-> [!todo]- not exam relevant
-> These websites are not exam relevant, but very helpful for learning, practicing, and working with code.
-
 The are websites that easily allow you to run Python code online. If you want to run Python online you have to be careful that what you want to do works and behaves similarly to actually running the code on your machine. Many online compilers struggle with error messages, debugging, input, imports, multiple files, (web-)applications, ....
 
 Below you can find a few websites that overall do a good job. It can be very helpful to have one of them open on the side while reading this tutorial so that you can always copy, paste, run, edit, ... code from the notes to understand it better.
@@ -89,9 +86,6 @@ Google Colab is a powerful online tool for running Python and Jupyter Notebooks[
 Even though there are good online tools, running Python on your own machine still has many benefits. To install Python, go to the [official website](https://www.python.org/downloads/), download, execute and follow the instructions. Please don't forget to click the checkbox "Add to PATH[^2]" at the very start of the installation.
 
 # Visual Studio Code Installation
-> [!todo]- not exam relevant
-> This is not exam relevant, but very helpful to learn, practice, and work with code.
-
 In theory, you can use any text editor to write your code. In practice, it is much easier and better to use a specialized Code Editor usually called IDE (Integrated Development Environment). They have a lot of additional features like syntax highlighting, auto suggestions and completions, documentation, debugging, combining multiple parts of the coding workflow, search and replace, keyboard shortcuts, and version management, ... There are a lot of options, also depending on coding language and application. One of the best and most versatile options is Visual Studio Code.
 
 To install it just go to the [official website](https://code.visualstudio.com/download), download, execute, and follow the instructions. To understand VSCode you can read the [documentation](https://code.visualstudio.com/docs) or watch one of the many videos (e.g. [Video 1](https://www.youtube.com/watch?v=KMxo3T_MTvY), [Video 2](https://www.youtube.com/watch?v=6i3e-j3wSf0)). To properly use Python you will need to install the "Python" Extensions, which you can do in the VSCode Extensions tab.

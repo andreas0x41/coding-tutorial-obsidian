@@ -9,9 +9,6 @@ tags:
   - ControlFlow
 ---
 Python has many built-in [[Python/2 Control Flow/5 Function|functions]] and methods. Below or online you can find a overview of these functions and methods. The relevant ones are either already explained in other chapters, or after the table.
-
-> [!todo]- partly exam relevant
-> Only some of these Functions and Methods ae actually exam relevant.
 # Overview
 
 | Category                    | Function/Method                                                                                                                                                                            |
