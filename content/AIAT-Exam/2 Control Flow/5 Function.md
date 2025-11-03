@@ -154,7 +154,7 @@ variable value after usingGlobal(): 9 10709776
 ```
 
 # Methods
-A method is a function that belongs to an object/class. Because of this it can directly access and change the value of the object/class. You can find details about creating your own classes, objects, and methods under [[content/AIAT/3 Advanced/2 OOP|Object Oriented Programming]].
+A method is a function that belongs to an object/class. Because of this it can directly access and change the value of the object/class. You can find details about creating your own classes, objects, and methods under [[AIAT/3 Advanced/2 OOP|Object Oriented Programming]].
 
 ```python
 l1 = [2, 1, 5, 3, 2, 7, 0]

@@ -21,13 +21,13 @@ Operators in Python are special symbols or keywords used to perform operations o
 	- String concatenation done using `+` operator
 - **Relational Operators** are used for comparisons, returning boolean results: `==`, `!=`, `>`, `<`, `>=`, `<=`.
 - **Logical Operators** chain conditions together	
-	-  **`and`**: [[content/AIAT/1 General/5 Datatype#Truthy and Falsy|Truthy]] if both conditions are Truthy.
-	-  **`or`**: [[content/AIAT/1 General/5 Datatype#Truthy and Falsy|Truthy]] if at least one condition is Truthy.
+	-  **`and`**: [[AIAT/1 General/5 Datatype#Truthy and Falsy|Truthy]] if both conditions are Truthy.
+	-  **`or`**: [[AIAT/1 General/5 Datatype#Truthy and Falsy|Truthy]] if at least one condition is Truthy.
 	- **`not`**: Inverts the boolean value.
 - Operators are evaluated based on precedence, e.g. `()`, `**`, `*` `/`, `+` `-`, comparison, logical, assignment
 
 # Assignment Operator
-The assignment operator `=` is used to [[content/AIAT/1 General/6 Variable#Creating/Assigning|assign]] a value to a [[content/AIAT/1 General/6 Variable|variable]] .
+The assignment operator `=` is used to [[AIAT/1 General/6 Variable#Creating/Assigning|assign]] a value to a [[AIAT/1 General/6 Variable|variable]] .
 
 ```python
 x = 5 # assign the value 5 to the variable x
@@ -49,7 +49,7 @@ x //= 3    # same as "x=x//3", result 2
 ```
 
 ## Multiple Value Assignment
-Python allows you to assign multiple values at once using the syntax `var1, var2, var3 = val1, val2, val3`. You can also use this with an [[content/AIAT/1 General/5 Datatype#Iterable|iterable]] with the syntax `var1, var2, var3 = (val1, val2, val3)`. If there are more values than variables, you have to tell Python which variable should take a list of multiple values by marking it with an asterisk`*` like this `var1, *others = (val1, val2, val3, val4)`.
+Python allows you to assign multiple values at once using the syntax `var1, var2, var3 = val1, val2, val3`. You can also use this with an [[AIAT/1 General/5 Datatype#Iterable|iterable]] with the syntax `var1, var2, var3 = (val1, val2, val3)`. If there are more values than variables, you have to tell Python which variable should take a list of multiple values by marking it with an asterisk`*` like this `var1, *others = (val1, val2, val3, val4)`.
 
 ```python
 a, b, c = 1, True, "test"      # multiple value assignment 
@@ -134,11 +134,11 @@ print(10%360, 370%360, 730%360, 3610%360)     # -> 10 10 10 10
 Mathematically speaking you can also calculate/understand the modulo as `a % b = a - b*(a//b)`. 
 
 ## Result Datatype
-The [[content/AIAT/1 General/5 Datatype|datatype]] of the result of an operation only depends on the datatypes or the two operands. 
+The [[AIAT/1 General/5 Datatype|datatype]] of the result of an operation only depends on the datatypes or the two operands. 
 
-Addition `+`, Subtraction `-`, Multiplication `*`, Floor Division `//`, Modulus `%` and Exponentiation `**` will return an integer if both of the operands are [[content/AIAT/1 General/5 Datatype#Integer|integers]]. If one of them is [[content/AIAT/1 General/5 Datatype#Complex|complex]] the result is complex. Otherwise, if one of them is a [[content/AIAT/1 General/5 Datatype#Float|float]], the result will be float. 
+Addition `+`, Subtraction `-`, Multiplication `*`, Floor Division `//`, Modulus `%` and Exponentiation `**` will return an integer if both of the operands are [[AIAT/1 General/5 Datatype#Integer|integers]]. If one of them is [[AIAT/1 General/5 Datatype#Complex|complex]] the result is complex. Otherwise, if one of them is a [[AIAT/1 General/5 Datatype#Float|float]], the result will be float. 
 
-The true Division `/` will always return a [[content/AIAT/1 General/5 Datatype#Float|float]]. If one of the operands is [[content/AIAT/1 General/5 Datatype#Complex|complex]], it will return complex. 
+The true Division `/` will always return a [[AIAT/1 General/5 Datatype#Float|float]]. If one of the operands is [[AIAT/1 General/5 Datatype#Complex|complex]], it will return complex. 
 
 ```python
 a = 3
@@ -153,7 +153,7 @@ print(5.9 // 2)   # -> 2.0
 
 When using operators with collections the result datatype is the same as the datatype of the collection you use.
 ## Collection Usage
-The operators `+` and `*` can also be used with [[content/AIAT/1 General/5 Datatype#Collection Datatypes|sequence datatypes]]. The `+` operator is used to concatenate / combine two strings, lists, or tuples of the **same** datatype.
+The operators `+` and `*` can also be used with [[AIAT/1 General/5 Datatype#Collection Datatypes|sequence datatypes]]. The `+` operator is used to concatenate / combine two strings, lists, or tuples of the **same** datatype.
 
 ```python
 print("Hello" + " " + "World")      # -> Hello World
@@ -174,7 +174,7 @@ print((1,2,3) * 2) # -> (1, 2, 3, 1, 2, 3)
 ```
 
 # Relational/Comparison Operators
-Relational Operators always compare two values and return a [[content/AIAT/1 General/5 Datatype#Boolean|boolean]].
+Relational Operators always compare two values and return a [[AIAT/1 General/5 Datatype#Boolean|boolean]].
 
 | Name             | Operator | Example  | Explanation                                     | Opposite |
 | ---------------- | -------- | -------- | ----------------------------------------------- | -------- |
@@ -218,7 +218,7 @@ print(1 <= 1.0)  # -> True
 > [!todo]- not exam relevant
 > Not exam relevant, advanced and rarely used.
 
-These operators can also be used with the [[content/AIAT/1 General/5 Datatype#Collection Datatypes|sequence datatypes]] string, list, and tuple. Both operands must be of the same datatype. This will check the operation for all pairs of elements one by one. So as soon as there is a pair of elements that do not have the same value it will result in a total result of either `True` or `False`. If they have different lengths but the element pairs are all equal, the shorter sequence is considered smaller.
+These operators can also be used with the [[AIAT/1 General/5 Datatype#Collection Datatypes|sequence datatypes]] string, list, and tuple. Both operands must be of the same datatype. This will check the operation for all pairs of elements one by one. So as soon as there is a pair of elements that do not have the same value it will result in a total result of either `True` or `False`. If they have different lengths but the element pairs are all equal, the shorter sequence is considered smaller.
 
 ```python
 print([1] < [2])                  # because 1<2 -> True
@@ -269,7 +269,7 @@ print(2 == 1 or 2 == 2 or 2 == 3) # -> True
 > [!todo]- not exam relevant
 > Not exam relevant, rarely used, but sometimes really helpful.
 
-As long the operands are boolean, the result will also be boolean. However in Python logical operators also work with operands that are not boolean. They will keep their general behavior and `not` will always return a boolean. The `and` operator stops as soon as it encounters a [[content/AIAT/1 General/5 Datatype#Truthy and Falsy|Falsy]] value and returns it. If all values are [[content/AIAT/1 General/5 Datatype#Truthy and Falsy|Truthy]], it returns the last operand. The `or` operator stops as soon as it encounters a Truthy value and returns it. If all values are Falsy, it returns the last operand.
+As long the operands are boolean, the result will also be boolean. However in Python logical operators also work with operands that are not boolean. They will keep their general behavior and `not` will always return a boolean. The `and` operator stops as soon as it encounters a [[AIAT/1 General/5 Datatype#Truthy and Falsy|Falsy]] value and returns it. If all values are [[AIAT/1 General/5 Datatype#Truthy and Falsy|Truthy]], it returns the last operand. The `or` operator stops as soon as it encounters a Truthy value and returns it. If all values are Falsy, it returns the last operand.
 
 ```python
 print(0.0 and 1)                    # -> 0.0
@@ -280,10 +280,10 @@ print((5 or 0) and ("" or "World")) # -> World
 ```
 
 # Collection Operators
-[[content/AIAT/1 General/5 Datatype#Indexing|Indexing]] and [[content/AIAT/1 General/5 Datatype#Slicing|Slicing]] are explained in detail on the datatypes page.
+[[AIAT/1 General/5 Datatype#Indexing|Indexing]] and [[AIAT/1 General/5 Datatype#Slicing|Slicing]] are explained in detail on the datatypes page.
 
 ## Membership Checking
-The operator `in` is used to check if a value/element exists in a collection. It always returns a [[content/AIAT/1 General/5 Datatype#Boolean|boolean]] and uses the syntax `value in collection`. So basically it checks if any of the elements in the collection is [[#(In-)Equality|equal]] to the value.
+The operator `in` is used to check if a value/element exists in a collection. It always returns a [[AIAT/1 General/5 Datatype#Boolean|boolean]] and uses the syntax `value in collection`. So basically it checks if any of the elements in the collection is [[#(In-)Equality|equal]] to the value.
 
 ```python
 print(1 in [0, 1, 2])                  # -> True
@@ -298,7 +298,7 @@ print([3,4] in [(1,2), (3,4), (5,6)])  # -> False
 print((3,4) in [(1,2), (3,4), (5,6)])  # -> True
 ```
 
-This operator can be used with a [[content/AIAT/1 General/5 Datatype#Dictionary|dictionary]] to check if a specific **key** exists in the dictionary. If you want to check if a value exists in a dictionary you have to use the built-in method `.values()`.
+This operator can be used with a [[AIAT/1 General/5 Datatype#Dictionary|dictionary]] to check if a specific **key** exists in the dictionary. If you want to check if a value exists in a dictionary you have to use the built-in method `.values()`.
 
 ```python
 data = {"name": "Alice", "age": 25, "city": "New York", 1: "test"}
@@ -308,7 +308,7 @@ print("Alice" in data)          # -> False
 print("Alice" in data.values()) # -> True
 ```
 
-When using this operator with a [[content/AIAT/1 General/5 Datatype#String|string]] it checks if the value is a substring of the whole string.
+When using this operator with a [[AIAT/1 General/5 Datatype#String|string]] it checks if the value is a substring of the whole string.
 
 ```python
 print("d" in "andreas")                 # -> True
@@ -339,7 +339,7 @@ Operator precedence determines the order in which operators are evaluated. If tw
 | `not`                            | Logical NOT                                           |
 | `and`                            | Logical AND                                           |
 | `or`                             | Logical OR                                            |
-| `if` ... `else`                  | [[content/AIAT/2 Control Flow/2 Conditions#Ternary Operator\|Ternary Operator]] |
+| `if` ... `else`                  | [[AIAT/2 Control Flow/2 Conditions#Ternary Operator\|Ternary Operator]] |
 | `=` , `+=`, `-=`, etc.           | Assignment and augmented assignment operators         |
 | `lambda`                         | Lambda function declaration                           |
 

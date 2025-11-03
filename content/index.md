@@ -11,9 +11,13 @@ tags:
   - AECD
   - GEES
 ---
-Welcome to the Auroville Institute of Applied Technology Coding Notes. These were written by Andreas Patuzzi, with the primary focus of enabling first-year colleague students to learn Python.
+Welcome to Andreas Coding Notes. These were initially written to enabling first-year colleague students at the Auroville Institute of Applied Technology to learn Python.
 
-# Department/Exam Relevance
+# Code Examples
+Most topics include short examples in a code block. You will find the [[AIAT/1 General/2 Output|output]] `print()` functions as a line comment directly after ` -> `. Alternatively, the output can also be in its own code block. If the code involves user [[AIAT/1 General/3 Input|input]] either the input is marked with `{?}` or an example value will be given and used.
+
+# AIAT Department/Exam Relevance
+Initially all chapters included tags and comments to inform if they are exam relevant. Since Andreas is no longer actively teaching, this information might be outdated/incorrect. The chapter "AIAT" stays in its original form for now, while all other chapters might change. The following information is regarding these original notes.
 
 Each note/page has hashtags `#` to categorize its content and link it with other topics.
 The hashtags `#SDML`, `#AECD`, and `GEES` inform you if this page is relevant for a specific department.
@@ -23,7 +27,3 @@ These notes also include a few additional details that are not directly exam rel
 > Less exam relevant, but still good/helpful to know. There are use cases like....
 
 So all topics that are not exam relevant for all departments listed in the hashtags will have an infobox that explains if and for whom they are exam relevant. If an infobox like this is at the start of a header/topic, it applies to the whole topic and all subtopics. If it is in the middle of a topic, it applies to the rest of the topic or only a small part and you will find details in the description. 
-
-
-# Code Examples
-Most topics include short examples in a code block. You will find the [[content/AIAT/1 General/2 Output|output]] `print()` functions as a line comment directly after ` -> `. Alternatively, the output can also be in its own code block. If the code involves user [[content/AIAT/1 General/3 Input|input]] either the input is marked with `{?}` or an example value will be given and used.

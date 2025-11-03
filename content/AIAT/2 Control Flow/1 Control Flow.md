@@ -18,10 +18,10 @@ Control Flow refers to the order in which individual statements, instructions, f
 # Summary
 Control Flow determines the execution order of code in a program.
 - **Line by Line**: Code executes sequentially, top to bottom.
-- **Selection**: [[content/AIAT/2 Control Flow/2 Conditions|Conditional statements]] like`if-else` allow decisions based on conditions.
-- **Iteration**: Loops like [[content/AIAT/2 Control Flow/3 While Loop|while]] or [[content/AIAT/2 Control Flow/4 For Loop|for]] repeat code while a condition is true or for a number of iterations.
+- **Selection**: [[AIAT/2 Control Flow/2 Conditions|Conditional statements]] like`if-else` allow decisions based on conditions.
+- **Iteration**: Loops like [[AIAT/2 Control Flow/3 While Loop|while]] or [[AIAT/2 Control Flow/4 For Loop|for]] repeat code while a condition is true or for a number of iterations.
 - **Jumps**: `break` exits loops, `continue` skips to the next iteration, and `goto` jumps to a specific line/block.
-- **Subroutines**: [[content/AIAT/2 Control Flow/5 Function|Functions]] encapsulate reusable code, called with arguments and return values.
+- **Subroutines**: [[AIAT/2 Control Flow/5 Function|Functions]] encapsulate reusable code, called with arguments and return values.
 - **Errors & Exceptions**: Interrupt the normal execution; Exceptions can be recovered using `try-except`.
 
 # Line By Line
@@ -40,7 +40,7 @@ print(1+2)
 ```
 
 # Selection (Conditional Statements)
-Selection allows the program to make decisions. The program chooses what code to execute next based on a condition. The basis for the decisions is **[[content/AIAT/2 Control Flow/2 Conditions|if]]** a [[content/AIAT/1 General/5 Datatype#Boolean|boolean]] is `True`, or whether a pattern matches.
+Selection allows the program to make decisions. The program chooses what code to execute next based on a condition. The basis for the decisions is **[[AIAT/2 Control Flow/2 Conditions|if]]** a [[AIAT/1 General/5 Datatype#Boolean|boolean]] is `True`, or whether a pattern matches.
 
 ```python
 x = 6
@@ -57,7 +57,7 @@ End of the example
 ```
 
 # Repetition/Iteration
-This allows you to repeat a block of code multiple times. The block is repeatedly executed **[[content/AIAT/2 Control Flow/3 While Loop|while]]** a [[content/AIAT/1 General/5 Datatype#Boolean|boolean]] condition is true or **[[content/AIAT/2 Control Flow/4 For Loop|for]]** a fixed number of iterations. 
+This allows you to repeat a block of code multiple times. The block is repeatedly executed **[[AIAT/2 Control Flow/3 While Loop|while]]** a [[AIAT/1 General/5 Datatype#Boolean|boolean]] condition is true or **[[AIAT/2 Control Flow/4 For Loop|for]]** a fixed number of iterations. 
 
 ```python
 x = 0
@@ -81,7 +81,7 @@ Iteration number 4
 ```
 
 # Jumps
-Jumps allow the program to exit the normal flow of execution and skip part of the code or go to a completely different position. Python allows you to exit a loop using **[[content/AIAT/2 Control Flow/3 While Loop#Break|break]]** or go to the next iteration of a loop using **[[content/AIAT/2 Control Flow/3 While Loop#Continue|continue]]**.
+Jumps allow the program to exit the normal flow of execution and skip part of the code or go to a completely different position. Python allows you to exit a loop using **[[AIAT/2 Control Flow/3 While Loop#Break|break]]** or go to the next iteration of a loop using **[[AIAT/2 Control Flow/3 While Loop#Continue|continue]]**.
 
 ```python
 for i in range(99):

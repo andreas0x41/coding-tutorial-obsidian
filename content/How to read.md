@@ -14,7 +14,7 @@ tags:
 Welcome to Andreas Coding Notes. These were initially written to enabling first-year colleague students at the Auroville Institute of Applied Technology to learn Python.
 
 # Code Examples
-Most topics include short examples in a code block. You will find the [[content/AIAT/1 General/2 Output|output]] `print()` functions as a line comment directly after ` -> `. Alternatively, the output can also be in its own code block. If the code involves user [[content/AIAT/1 General/3 Input|input]] either the input is marked with `{?}` or an example value will be given and used.
+Most topics include short examples in a code block. You will find the [[AIAT/1 General/2 Output|output]] `print()` functions as a line comment directly after ` -> `. Alternatively, the output can also be in its own code block. If the code involves user [[AIAT/1 General/3 Input|input]] either the input is marked with `{?}` or an example value will be given and used.
 
 # AIAT Department/Exam Relevance
 Initially all chapters included tags and comments to inform if they are exam relevant. Since Andreas is no longer actively teaching, this information might be outdated/incorrect. The chapter "AIAT" stays in its original form for now, while all other chapters might change. The following information is regarding these original notes.

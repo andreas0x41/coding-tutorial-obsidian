@@ -21,7 +21,7 @@ Python allows you to read data from a file and write data to a file.
 - **Write:** Use `.write(string)` to write a string to a file.
 - **File Pointer:** Tracks read/write position; use `tell()` to check and `seek(offset, whence)` to move.
 # Open
-To work with a file you first have to open it. The [[content/AIAT/2 Control Flow/5 Function|function]] `open(filePath, mode="rt")` opens the file located at `filePath` and returns it as a file object for further usage. 
+To work with a file you first have to open it. The [[AIAT/2 Control Flow/5 Function|function]] `open(filePath, mode="rt")` opens the file located at `filePath` and returns it as a file object for further usage. 
 
 ```python
 file = open("example.txt")
@@ -72,7 +72,7 @@ print(file.closed)         # True
 ```
 
 # Context Manager
-The context manager is an alternative way to open and close a file. t automatically closes the file once you exit the context, even if it is because of an [[content/AIAT/2 Control Flow/7 Errors|error or exception]]. This makes safe file handling significantly easier and is almost always the better way to handle files. The syntax for opening a file is `with open(filePath) as varName:`.
+The context manager is an alternative way to open and close a file. t automatically closes the file once you exit the context, even if it is because of an [[AIAT/2 Control Flow/7 Errors|error or exception]]. This makes safe file handling significantly easier and is almost always the better way to handle files. The syntax for opening a file is `with open(filePath) as varName:`.
 
 ```python
 with open("example.txt") as file:
@@ -87,7 +87,7 @@ The context manager only ensures proper closing and freeing up the resources. To
 
 The context manager works when an object has the magic methods `__enter__` and `__exit__`. So you can also use it with some other resources, database connections, your own classes, ... 
 # Read
-The method `read(n)` returns the first n characters (including [[content/AIAT/1 General/5 Datatype#Special Characters|special characters]]) from a file. By default, it returns all the data until the end of a file as a string. You can also use `readline()` to read till the end of a line or `readlines()` to read all remaining lines as a list of strings. To properly understand reading parts of a file, you have to understand the [[content/AIAT/3 Advanced/1 Files#File Pointer|file pointer]].
+The method `read(n)` returns the first n characters (including [[AIAT/1 General/5 Datatype#Special Characters|special characters]]) from a file. By default, it returns all the data until the end of a file as a string. You can also use `readline()` to read till the end of a line or `readlines()` to read all remaining lines as a list of strings. To properly understand reading parts of a file, you have to understand the [[AIAT/3 Advanced/1 Files#File Pointer|file pointer]].
 
 Here is an example with the following data inside "example.txt".
 
